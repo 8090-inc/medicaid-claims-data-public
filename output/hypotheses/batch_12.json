@@ -1,0 +1,752 @@
+[
+  {
+    "id": "H0614",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #14 (home_health)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "home_health",
+      "contamination": 0.01,
+      "rank": 14
+    }
+  },
+  {
+    "id": "H0615",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #15 (home_health)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "home_health",
+      "contamination": 0.01,
+      "rank": 15
+    }
+  },
+  {
+    "id": "H0616",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #16 (home_health)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "home_health",
+      "contamination": 0.01,
+      "rank": 16
+    }
+  },
+  {
+    "id": "H0617",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #17 (home_health)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "home_health",
+      "contamination": 0.01,
+      "rank": 17
+    }
+  },
+  {
+    "id": "H0618",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #18 (home_health)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "home_health",
+      "contamination": 0.01,
+      "rank": 18
+    }
+  },
+  {
+    "id": "H0619",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #19 (home_health)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "home_health",
+      "contamination": 0.01,
+      "rank": 19
+    }
+  },
+  {
+    "id": "H0620",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #20 (home_health)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "home_health",
+      "contamination": 0.01,
+      "rank": 20
+    }
+  },
+  {
+    "id": "H0621",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #21 (behavioral)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "behavioral",
+      "contamination": 0.01,
+      "rank": 21
+    }
+  },
+  {
+    "id": "H0622",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #22 (behavioral)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "behavioral",
+      "contamination": 0.01,
+      "rank": 22
+    }
+  },
+  {
+    "id": "H0623",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #23 (behavioral)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "behavioral",
+      "contamination": 0.01,
+      "rank": 23
+    }
+  },
+  {
+    "id": "H0624",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #24 (behavioral)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "behavioral",
+      "contamination": 0.01,
+      "rank": 24
+    }
+  },
+  {
+    "id": "H0625",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #25 (behavioral)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "behavioral",
+      "contamination": 0.01,
+      "rank": 25
+    }
+  },
+  {
+    "id": "H0626",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #26 (behavioral)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "behavioral",
+      "contamination": 0.01,
+      "rank": 26
+    }
+  },
+  {
+    "id": "H0627",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #27 (behavioral)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "behavioral",
+      "contamination": 0.01,
+      "rank": 27
+    }
+  },
+  {
+    "id": "H0628",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #28 (behavioral)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "behavioral",
+      "contamination": 0.01,
+      "rank": 28
+    }
+  },
+  {
+    "id": "H0629",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #29 (behavioral)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "behavioral",
+      "contamination": 0.01,
+      "rank": 29
+    }
+  },
+  {
+    "id": "H0630",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #30 (behavioral)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "behavioral",
+      "contamination": 0.01,
+      "rank": 30
+    }
+  },
+  {
+    "id": "H0631",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #31 (high_volume)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "high_volume",
+      "contamination": 0.01,
+      "rank": 31
+    }
+  },
+  {
+    "id": "H0632",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #32 (high_volume)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "high_volume",
+      "contamination": 0.01,
+      "rank": 32
+    }
+  },
+  {
+    "id": "H0633",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #33 (high_volume)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "high_volume",
+      "contamination": 0.01,
+      "rank": 33
+    }
+  },
+  {
+    "id": "H0634",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #34 (high_volume)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "high_volume",
+      "contamination": 0.01,
+      "rank": 34
+    }
+  },
+  {
+    "id": "H0635",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #35 (high_volume)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "high_volume",
+      "contamination": 0.01,
+      "rank": 35
+    }
+  },
+  {
+    "id": "H0636",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #36 (high_volume)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "high_volume",
+      "contamination": 0.01,
+      "rank": 36
+    }
+  },
+  {
+    "id": "H0637",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #37 (high_volume)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "high_volume",
+      "contamination": 0.01,
+      "rank": 37
+    }
+  },
+  {
+    "id": "H0638",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #38 (high_volume)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "high_volume",
+      "contamination": 0.01,
+      "rank": 38
+    }
+  },
+  {
+    "id": "H0639",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #39 (high_volume)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "high_volume",
+      "contamination": 0.01,
+      "rank": 39
+    }
+  },
+  {
+    "id": "H0640",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #40 (high_volume)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "high_volume",
+      "contamination": 0.01,
+      "rank": 40
+    }
+  },
+  {
+    "id": "H0641",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #1",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 1
+    }
+  },
+  {
+    "id": "H0642",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #2",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 2
+    }
+  },
+  {
+    "id": "H0643",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #3",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 3
+    }
+  },
+  {
+    "id": "H0644",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #4",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 4
+    }
+  },
+  {
+    "id": "H0645",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #5",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 5
+    }
+  },
+  {
+    "id": "H0646",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #6",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 6
+    }
+  },
+  {
+    "id": "H0647",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #7",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 7
+    }
+  },
+  {
+    "id": "H0648",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #8",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 8
+    }
+  },
+  {
+    "id": "H0649",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #9",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 9
+    }
+  },
+  {
+    "id": "H0650",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #10",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 10
+    }
+  },
+  {
+    "id": "H0651",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #11",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 11
+    }
+  },
+  {
+    "id": "H0652",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #12",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 12
+    }
+  },
+  {
+    "id": "H0653",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #13",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 13
+    }
+  },
+  {
+    "id": "H0654",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #14",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 14
+    }
+  },
+  {
+    "id": "H0655",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #15",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 15
+    }
+  },
+  {
+    "id": "H0656",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #16",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 16
+    }
+  },
+  {
+    "id": "H0657",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #17",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 17
+    }
+  },
+  {
+    "id": "H0658",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #18",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 18
+    }
+  },
+  {
+    "id": "H0659",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #19",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 19
+    }
+  },
+  {
+    "id": "H0660",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #20",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 20
+    }
+  },
+  {
+    "id": "H0661",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #21",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 21
+    }
+  },
+  {
+    "id": "H0662",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #22",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 22
+    }
+  },
+  {
+    "id": "H0663",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #23",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 23
+    }
+  }
+]

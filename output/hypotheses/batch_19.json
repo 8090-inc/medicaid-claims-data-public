@@ -1,0 +1,864 @@
+[
+  {
+    "id": "H0964",
+    "category": "9",
+    "subcategory": "9D",
+    "description": "Provider on OIG exclusion list still billing",
+    "method": "crossref",
+    "acceptance_criteria": "Provider on OIG exclusion list still billing",
+    "analysis_function": "crossref.excluded_provider",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "excluded_provider"
+    }
+  },
+  {
+    "id": "H0965",
+    "category": "9",
+    "subcategory": "9D",
+    "description": "NPI not found in NPPES registry",
+    "method": "crossref",
+    "acceptance_criteria": "NPI not found in NPPES registry",
+    "analysis_function": "crossref.no_nppes_record",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "no_nppes_record"
+    }
+  },
+  {
+    "id": "H0966",
+    "category": "9",
+    "subcategory": "9D",
+    "description": "No NPPES record with > $1M billing",
+    "method": "crossref",
+    "acceptance_criteria": "No NPPES record with > $1M billing",
+    "analysis_function": "crossref.no_nppes_high_billing",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "no_nppes_high_billing"
+    }
+  },
+  {
+    "id": "H0967",
+    "category": "9",
+    "subcategory": "9E",
+    "description": "State per-code spending > 2x national median",
+    "method": "crossref",
+    "acceptance_criteria": "State per-code spending > 2x national median",
+    "analysis_function": "crossref.state_spending_2x",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "state_spending_2x"
+    }
+  },
+  {
+    "id": "H0968",
+    "category": "9",
+    "subcategory": "9E",
+    "description": "State per-code spending > 3x national median",
+    "method": "crossref",
+    "acceptance_criteria": "State per-code spending > 3x national median",
+    "analysis_function": "crossref.state_spending_3x",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "state_spending_3x"
+    }
+  },
+  {
+    "id": "H0969",
+    "category": "9",
+    "subcategory": "9E",
+    "description": "State per-code spending > 5x national median",
+    "method": "crossref",
+    "acceptance_criteria": "State per-code spending > 5x national median",
+    "analysis_function": "crossref.state_spending_5x",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "state_spending_5x"
+    }
+  },
+  {
+    "id": "H0970",
+    "category": "9",
+    "subcategory": "9E",
+    "description": "State spending growth > 3x national growth",
+    "method": "crossref",
+    "acceptance_criteria": "State spending growth > 3x national growth",
+    "analysis_function": "crossref.state_growth_outlier",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "state_growth_outlier"
+    }
+  },
+  {
+    "id": "H0971",
+    "category": "9",
+    "subcategory": "9E",
+    "description": "State per-beneficiary cost > 2x national",
+    "method": "crossref",
+    "acceptance_criteria": "State per-beneficiary cost > 2x national",
+    "analysis_function": "crossref.state_bene_cost_outlier",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "state_bene_cost_outlier"
+    }
+  },
+  {
+    "id": "H0972",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "5+ NPIs at same NPPES address",
+    "method": "crossref",
+    "acceptance_criteria": "5+ NPIs at same NPPES address",
+    "analysis_function": "crossref.address_cluster_5",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "address_cluster_5"
+    }
+  },
+  {
+    "id": "H0973",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "10+ NPIs at same NPPES address",
+    "method": "crossref",
+    "acceptance_criteria": "10+ NPIs at same NPPES address",
+    "analysis_function": "crossref.address_cluster_10",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "address_cluster_10"
+    }
+  },
+  {
+    "id": "H0974",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Address cluster with combined anomalous billing",
+    "method": "crossref",
+    "acceptance_criteria": "Address cluster with combined anomalous billing",
+    "analysis_function": "crossref.address_cluster_anomalous",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "address_cluster_anomalous"
+    }
+  },
+  {
+    "id": "H0975",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "High-billing NPI at residential address",
+    "method": "crossref",
+    "acceptance_criteria": "High-billing NPI at residential address",
+    "analysis_function": "crossref.address_residential",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "address_residential"
+    }
+  },
+  {
+    "id": "H0976",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "High-billing NPI at PO Box",
+    "method": "crossref",
+    "acceptance_criteria": "High-billing NPI at PO Box",
+    "analysis_function": "crossref.address_po_box",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "address_po_box"
+    }
+  },
+  {
+    "id": "H0977",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "High-billing NPI at virtual office address",
+    "method": "crossref",
+    "acceptance_criteria": "High-billing NPI at virtual office address",
+    "analysis_function": "crossref.address_virtual_office",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "address_virtual_office"
+    }
+  },
+  {
+    "id": "H0978",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Provider changed taxonomy code during period",
+    "method": "crossref",
+    "acceptance_criteria": "Provider changed taxonomy code during period",
+    "analysis_function": "crossref.taxonomy_change",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "taxonomy_change"
+    }
+  },
+  {
+    "id": "H0979",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Provider with multiple active taxonomies",
+    "method": "crossref",
+    "acceptance_criteria": "Provider with multiple active taxonomies",
+    "analysis_function": "crossref.multiple_taxonomies",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "multiple_taxonomies"
+    }
+  },
+  {
+    "id": "H0980",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Multiple NPIs with similar names same address",
+    "method": "crossref",
+    "acceptance_criteria": "Multiple NPIs with similar names same address",
+    "analysis_function": "crossref.name_similarity",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "name_similarity"
+    }
+  },
+  {
+    "id": "H0981",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Multiple NPIs sharing phone number",
+    "method": "crossref",
+    "acceptance_criteria": "Multiple NPIs sharing phone number",
+    "analysis_function": "crossref.phone_cluster",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "phone_cluster"
+    }
+  },
+  {
+    "id": "H0982",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Recently enrolled provider with high immediate billing",
+    "method": "crossref",
+    "acceptance_criteria": "Recently enrolled provider with high immediate billing",
+    "analysis_function": "crossref.recently_enrolled",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "recently_enrolled"
+    }
+  },
+  {
+    "id": "H0983",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Urban-specialty provider billing rural codes",
+    "method": "crossref",
+    "acceptance_criteria": "Urban-specialty provider billing rural codes",
+    "analysis_function": "crossref.rural_urban_mismatch",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "rural_urban_mismatch"
+    }
+  },
+  {
+    "id": "H0984",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Facility type inconsistent with billing codes",
+    "method": "crossref",
+    "acceptance_criteria": "Facility type inconsistent with billing codes",
+    "analysis_function": "crossref.facility_type_mismatch",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "facility_type_mismatch"
+    }
+  },
+  {
+    "id": "H0985",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Same NPI billing both Medicare and Medicaid anomalously",
+    "method": "crossref",
+    "acceptance_criteria": "Same NPI billing both Medicare and Medicaid anomalously",
+    "analysis_function": "crossref.cross_program_billing",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "cross_program_billing"
+    }
+  },
+  {
+    "id": "H0986",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Provider ownership change followed by billing spike",
+    "method": "crossref",
+    "acceptance_criteria": "Provider ownership change followed by billing spike",
+    "analysis_function": "crossref.ownership_change",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "ownership_change"
+    }
+  },
+  {
+    "id": "H0987",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Billing during licensure gap period",
+    "method": "crossref",
+    "acceptance_criteria": "Billing during licensure gap period",
+    "analysis_function": "crossref.licensure_gap",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "licensure_gap"
+    }
+  },
+  {
+    "id": "H0988",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Provider with prior sanctions or penalties",
+    "method": "crossref",
+    "acceptance_criteria": "Provider with prior sanctions or penalties",
+    "analysis_function": "crossref.sanctions_history",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "sanctions_history"
+    }
+  },
+  {
+    "id": "H0989",
+    "category": "9",
+    "subcategory": "9B",
+    "description": "Related entities with combined anomalous billing",
+    "method": "crossref",
+    "acceptance_criteria": "Related entities with combined anomalous billing",
+    "analysis_function": "crossref.related_entity",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "related_entity"
+    }
+  },
+  {
+    "id": "H0990",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Beneficial ownership links to excluded providers",
+    "method": "crossref",
+    "acceptance_criteria": "Beneficial ownership links to excluded providers",
+    "analysis_function": "crossref.beneficial_ownership",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "beneficial_ownership"
+    }
+  },
+  {
+    "id": "H0991",
+    "category": "9",
+    "subcategory": "9E",
+    "description": "Billing in state different from NPPES registration",
+    "method": "crossref",
+    "acceptance_criteria": "Billing in state different from NPPES registration",
+    "analysis_function": "crossref.cross_state_billing",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "cross_state_billing"
+    }
+  },
+  {
+    "id": "H0992",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Billing from address no longer active",
+    "method": "crossref",
+    "acceptance_criteria": "Billing from address no longer active",
+    "analysis_function": "crossref.inactive_address",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "inactive_address"
+    }
+  },
+  {
+    "id": "H0993",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Billing from known mail drop location",
+    "method": "crossref",
+    "acceptance_criteria": "Billing from known mail drop location",
+    "analysis_function": "crossref.mail_drop_address",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "mail_drop_address"
+    }
+  },
+  {
+    "id": "H0994",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Provider with foreign NPPES address",
+    "method": "crossref",
+    "acceptance_criteria": "Provider with foreign NPPES address",
+    "analysis_function": "crossref.foreign_address",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "foreign_address"
+    }
+  },
+  {
+    "id": "H0995",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Multiple NPIs resolving to same provider",
+    "method": "crossref",
+    "acceptance_criteria": "Multiple NPIs resolving to same provider",
+    "analysis_function": "crossref.duplicate_npi",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "duplicate_npi"
+    }
+  },
+  {
+    "id": "H0996",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Shell company indicators (recent formation, minimal info)",
+    "method": "crossref",
+    "acceptance_criteria": "Shell company indicators (recent formation, minimal info)",
+    "analysis_function": "crossref.shell_company_indicators",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "shell_company_indicators"
+    }
+  },
+  {
+    "id": "H0997",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Nominee provider indicators",
+    "method": "crossref",
+    "acceptance_criteria": "Nominee provider indicators",
+    "analysis_function": "crossref.nominee_provider",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "nominee_provider"
+    }
+  },
+  {
+    "id": "H0998",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Multiple billing layers between patient and payer",
+    "method": "crossref",
+    "acceptance_criteria": "Multiple billing layers between patient and payer",
+    "analysis_function": "crossref.layered_billing",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "layered_billing"
+    }
+  },
+  {
+    "id": "H0999",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Frequent billing address changes",
+    "method": "crossref",
+    "acceptance_criteria": "Frequent billing address changes",
+    "analysis_function": "crossref.billing_address_change",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "billing_address_change"
+    }
+  },
+  {
+    "id": "H1000",
+    "category": "9",
+    "subcategory": "9F",
+    "description": "Credentials not verifiable through external sources",
+    "method": "crossref",
+    "acceptance_criteria": "Credentials not verifiable through external sources",
+    "analysis_function": "crossref.credential_verification",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "credential_verification"
+    }
+  },
+  {
+    "id": "H1001",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "Provider billing >32 units (8hr) of ABA per beneficiary per day",
+    "method": "impossible_aba_volume",
+    "acceptance_criteria": "claims_per_bene > 32 in single month for ABA codes",
+    "analysis_function": "domain_rules.impossible_aba_volume",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "check": "units_per_bene_per_day",
+      "threshold": 32,
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1002",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "Provider billing ABA on federal holidays",
+    "method": "aba_holiday_billing",
+    "acceptance_criteria": "ABA claims on known federal holidays",
+    "analysis_function": "domain_rules.aba_holiday_billing",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "check": "holiday_billing",
+      "holidays": [
+        "01-01",
+        "07-04",
+        "12-25",
+        "11-25",
+        "11-26"
+      ],
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1003",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "Provider with >90% revenue from ABA codes and total >$1M",
+    "method": "aba_concentration",
+    "acceptance_criteria": ">90% revenue from ABA codes, total >$1M",
+    "analysis_function": "domain_rules.aba_concentration",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 1000000,
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1004",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider with claims_per_bene >3x state peer median",
+    "method": "aba_peer_cpb",
+    "acceptance_criteria": "claims_per_bene >3x state peer median for ABA",
+    "analysis_function": "domain_rules.aba_peer_cpb",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "ratio_threshold": 3.0,
+      "peer_level": "state",
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1005",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider rate (paid_per_claim) >2x state peer median",
+    "method": "aba_peer_rate",
+    "acceptance_criteria": "paid_per_claim >2x state peer median for ABA",
+    "analysis_function": "domain_rules.aba_peer_rate",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "ratio_threshold": 2.0,
+      "peer_level": "state",
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1006",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider active <12 months with total >$500K (rapid entrant)",
+    "method": "aba_rapid_entrant",
+    "acceptance_criteria": "active <12 months, total >$500K in ABA",
+    "analysis_function": "domain_rules.aba_rapid_entrant",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "max_months": 12,
+      "min_revenue": 500000,
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1007",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider billing more than 6 distinct beneficiaries per day (impossible caseload)",
+    "method": "aba_impossible_caseload",
+    "acceptance_criteria": ">6 distinct beneficiaries per day for ABA",
+    "analysis_function": "domain_rules.aba_impossible_caseload",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "max_bene_per_day": 6,
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1008",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider with zero supervision codes alongside high treatment volume",
+    "method": "aba_no_supervision",
+    "acceptance_criteria": "High ABA treatment volume with zero 97155/97156 supervision codes",
+    "analysis_function": "domain_rules.aba_no_supervision",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "supervision_codes": [
+        "97155",
+        "97156"
+      ],
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1009",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider billing in multiple states same month",
+    "method": "aba_multi_state",
+    "acceptance_criteria": "ABA provider in >1 state same month",
+    "analysis_function": "domain_rules.aba_multi_state",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "min_states": 2,
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1010",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider with month-over-month growth >5x",
+    "method": "aba_spike",
+    "acceptance_criteria": "ABA billing month-over-month >5x",
+    "analysis_function": "domain_rules.aba_spike",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "growth_threshold": 5.0,
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1011",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider where billing NPI is individual but bills at organization volume",
+    "method": "aba_individual_org_volume",
+    "acceptance_criteria": "Individual NPI ABA billing >$500K",
+    "analysis_function": "domain_rules.aba_individual_org_volume",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "min_paid": 500000,
+      "entity_type": "1",
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1012",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA billing network with >10 servicing NPIs, all started same month (batch creation)",
+    "method": "aba_batch_creation",
+    "acceptance_criteria": ">10 ABA servicing NPIs starting same month",
+    "analysis_function": "domain_rules.aba_batch_creation",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "min_servicing": 10,
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1013",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider with identical beneficiary count every month (phantom pattern)",
+    "method": "aba_phantom_pattern",
+    "acceptance_criteria": "ABA bene count CV < 0.05 across 12+ months",
+    "analysis_function": "domain_rules.aba_phantom_pattern",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "max_bene_cv": 0.05,
+      "min_months": 12,
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  }
+]

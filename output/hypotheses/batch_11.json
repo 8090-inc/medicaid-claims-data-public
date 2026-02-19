@@ -1,0 +1,730 @@
+[
+  {
+    "id": "H0564",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (transport)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "transport"
+    }
+  },
+  {
+    "id": "H0565",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (pharmacy)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "pharmacy"
+    }
+  },
+  {
+    "id": "H0566",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (high_spending_codes)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "high_spending_codes"
+    }
+  },
+  {
+    "id": "H0567",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 5000 for HCPCS code (high_spending_codes)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 5000",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 5000,
+      "filter": "high_spending_codes"
+    }
+  },
+  {
+    "id": "H0568",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (increasing_hhi)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "increasing_hhi"
+    }
+  },
+  {
+    "id": "H0569",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (single_dominant)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "single_dominant"
+    }
+  },
+  {
+    "id": "H0570",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (new_monopoly)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "new_monopoly"
+    }
+  },
+  {
+    "id": "H0571",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (all)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0572",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 60% state-level share (all)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 60% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.6,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0573",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 80% state-level share (all)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 80% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.8,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0574",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (home_health)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0575",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (behavioral)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0576",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (dme)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "dme"
+    }
+  },
+  {
+    "id": "H0577",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (transport)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "transport"
+    }
+  },
+  {
+    "id": "H0578",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (small_states)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "small_states"
+    }
+  },
+  {
+    "id": "H0579",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 60% state-level share (small_states)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 60% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.6,
+      "filter": "small_states"
+    }
+  },
+  {
+    "id": "H0580",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (large_states)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "large_states"
+    }
+  },
+  {
+    "id": "H0581",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (growing_share)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "growing_share"
+    }
+  },
+  {
+    "id": "H0582",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (individual_npi)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "individual_npi"
+    }
+  },
+  {
+    "id": "H0583",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 60% state-level share (individual_npi)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 60% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.6,
+      "filter": "individual_npi"
+    }
+  },
+  {
+    "id": "H0584",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (high_spending)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "high_spending"
+    }
+  },
+  {
+    "id": "H0585",
+    "category": "5",
+    "subcategory": "5D",
+    "description": "Geographic monopoly: > 40% state-level share (new_monopoly)",
+    "method": "geographic_monopoly",
+    "acceptance_criteria": "> 40% of state spending for a code",
+    "analysis_function": "concentration_analyzer._state_level_share",
+    "financial_impact_method": "monopoly premium estimate",
+    "parameters": {
+      "share_threshold": 0.4,
+      "filter": "new_monopoly"
+    }
+  },
+  {
+    "id": "H0586",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 1 month(s) (all)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 1,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0587",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 2 month(s) (all)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 2 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 2,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0588",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 50% annual revenue in 1 month(s) (all)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 50% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.5,
+      "max_months": 1,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0589",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 1 month(s) (home_health)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 1,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0590",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 1 month(s) (behavioral)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 1,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0591",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 1 month(s) (dme)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 1,
+      "filter": "dme"
+    }
+  },
+  {
+    "id": "H0592",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 1 month(s) (repeated_years)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 1,
+      "filter": "repeated_years"
+    }
+  },
+  {
+    "id": "H0593",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 50% annual revenue in 1 month(s) (repeated_years)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 50% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.5,
+      "max_months": 1,
+      "filter": "repeated_years"
+    }
+  },
+  {
+    "id": "H0594",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 1 month(s) (december_concentrated)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 1,
+      "filter": "december_concentrated"
+    }
+  },
+  {
+    "id": "H0595",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 1 month(s) (quarter_concentrated)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 1,
+      "filter": "quarter_concentrated"
+    }
+  },
+  {
+    "id": "H0596",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 60% annual revenue in 1 month(s) (all)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 60% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.6,
+      "max_months": 1,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0597",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 1 month(s) (high_value)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 1,
+      "filter": "high_value"
+    }
+  },
+  {
+    "id": "H0598",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 50% annual revenue in 2 month(s) (high_value)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 50% of annual revenue in 2 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.5,
+      "max_months": 2,
+      "filter": "high_value"
+    }
+  },
+  {
+    "id": "H0599",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 1 month(s) (growing)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 1,
+      "filter": "growing"
+    }
+  },
+  {
+    "id": "H0600",
+    "category": "5",
+    "subcategory": "5E",
+    "description": "> 40% annual revenue in 1 month(s) (new_providers)",
+    "method": "temporal_concentration",
+    "acceptance_criteria": "> 40% of annual revenue in 1 month(s)",
+    "analysis_function": "concentration_analyzer._temporal_revenue_concentration",
+    "financial_impact_method": "concentrated revenue amount",
+    "parameters": {
+      "share_threshold": 0.4,
+      "max_months": 1,
+      "filter": "new_providers"
+    }
+  },
+  {
+    "id": "H0601",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #1 (overall)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "overall",
+      "contamination": 0.01,
+      "rank": 1
+    }
+  },
+  {
+    "id": "H0602",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #2 (overall)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "overall",
+      "contamination": 0.01,
+      "rank": 2
+    }
+  },
+  {
+    "id": "H0603",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #3 (overall)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "overall",
+      "contamination": 0.01,
+      "rank": 3
+    }
+  },
+  {
+    "id": "H0604",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #4 (overall)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "overall",
+      "contamination": 0.01,
+      "rank": 4
+    }
+  },
+  {
+    "id": "H0605",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #5 (overall)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "overall",
+      "contamination": 0.01,
+      "rank": 5
+    }
+  },
+  {
+    "id": "H0606",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #6 (overall)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "overall",
+      "contamination": 0.01,
+      "rank": 6
+    }
+  },
+  {
+    "id": "H0607",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #7 (overall)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "overall",
+      "contamination": 0.01,
+      "rank": 7
+    }
+  },
+  {
+    "id": "H0608",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #8 (overall)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "overall",
+      "contamination": 0.01,
+      "rank": 8
+    }
+  },
+  {
+    "id": "H0609",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #9 (overall)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "overall",
+      "contamination": 0.01,
+      "rank": 9
+    }
+  },
+  {
+    "id": "H0610",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #10 (overall)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "overall",
+      "contamination": 0.01,
+      "rank": 10
+    }
+  },
+  {
+    "id": "H0611",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #11 (home_health)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "home_health",
+      "contamination": 0.01,
+      "rank": 11
+    }
+  },
+  {
+    "id": "H0612",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #12 (home_health)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "home_health",
+      "contamination": 0.01,
+      "rank": 12
+    }
+  },
+  {
+    "id": "H0613",
+    "category": "6",
+    "subcategory": "6A",
+    "description": "Isolation Forest anomaly #13 (home_health)",
+    "method": "isolation_forest",
+    "acceptance_criteria": "anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",
+    "analysis_function": "ml_pipeline.isolation_forest",
+    "financial_impact_method": "total_paid for anomalous provider",
+    "parameters": {
+      "segment": "home_health",
+      "contamination": 0.01,
+      "rank": 13
+    }
+  }
+]

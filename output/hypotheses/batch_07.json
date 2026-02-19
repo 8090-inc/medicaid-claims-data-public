@@ -1,0 +1,682 @@
+[
+  {
+    "id": "H0364",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Nurse Practitioner)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Nurse Practitioner 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Nurse Practitioner",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0365",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Clinical Social Worker)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Clinical Social Worker 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Clinical Social Worker",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0366",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Psychologist)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Psychologist 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Psychologist",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0367",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Physical Therapist)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Physical Therapist 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Physical Therapist",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0368",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Occupational Therapist)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Occupational Therapist 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Occupational Therapist",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0369",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Speech-Language Pathologist)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Speech-Language Pathologist 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Speech-Language Pathologist",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0370",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Home Health Agency)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Home Health Agency 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Home Health Agency",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0371",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Community/Behavioral Health)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Community/Behavioral Health 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Community/Behavioral Health",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0372",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Pharmacist)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Pharmacist 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Pharmacist",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0373",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Dentist)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Dentist 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Dentist",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0374",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Chiropractor)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Chiropractor 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Chiropractor",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0375",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (DME Supplier)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> DME Supplier 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "DME Supplier",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0376",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Ambulance)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Ambulance 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Ambulance",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0377",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Skilled Nursing Facility)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Skilled Nursing Facility 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Skilled Nursing Facility",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0378",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Clinic/Center)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Clinic/Center 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Clinic/Center",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0379",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Counselor)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Counselor 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Counselor",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0380",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Mental Health Counselor)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Mental Health Counselor 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Mental Health Counselor",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0381",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: High paid but low claims (extreme rate)",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: high_paid_low_claims",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "high_paid_low_claims"
+    }
+  },
+  {
+    "id": "H0382",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: High claims but low beneficiaries (high intensity)",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: high_claims_low_bene",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "high_claims_low_bene"
+    }
+  },
+  {
+    "id": "H0383",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Individual NPI billing at organization scale",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: individual_org_scale",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "individual_org_scale"
+    }
+  },
+  {
+    "id": "H0384",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Single HCPCS code with > $10M total",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: single_code_10m",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "single_code_10m"
+    }
+  },
+  {
+    "id": "H0385",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Active all 84 months with increasing paid",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: all_84_months_increasing",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "all_84_months_increasing"
+    }
+  },
+  {
+    "id": "H0386",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: High paid with very few unique codes",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: high_paid_few_codes",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "high_paid_few_codes"
+    }
+  },
+  {
+    "id": "H0387",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Many beneficiaries but low total paid",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: high_bene_low_paid",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "high_bene_low_paid"
+    }
+  },
+  {
+    "id": "H0388",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Extreme paid-per-claim variance across codes",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: extreme_rate_variance",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "extreme_rate_variance"
+    }
+  },
+  {
+    "id": "H0389",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Individual NPI with large servicing network",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: individual_high_network",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "individual_high_network"
+    }
+  },
+  {
+    "id": "H0390",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Organization with only 1 servicing NPI",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: org_single_servicing",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "org_single_servicing"
+    }
+  },
+  {
+    "id": "H0391",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: New provider with rapid growth to top tier",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: rapid_growth_new",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "rapid_growth_new"
+    }
+  },
+  {
+    "id": "H0392",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: High total paid concentrated in single month",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: high_paid_single_month",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "high_paid_single_month"
+    }
+  },
+  {
+    "id": "H0393",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Beneficiary count inconsistent with claims",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: bene_count_mismatch",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "bene_count_mismatch"
+    }
+  },
+  {
+    "id": "H0394",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Extreme average paid per beneficiary",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: extreme_avg_per_bene",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "extreme_avg_per_bene"
+    }
+  },
+  {
+    "id": "H0395",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Unusually many codes for provider type",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: code_diversity_outlier",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "code_diversity_outlier"
+    }
+  },
+  {
+    "id": "H0396",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Unusually few codes with high paid",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: code_homogeneity_outlier",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "code_homogeneity_outlier"
+    }
+  },
+  {
+    "id": "H0397",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Extreme monthly billing volatility",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: monthly_volatility_extreme",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "monthly_volatility_extreme"
+    }
+  },
+  {
+    "id": "H0398",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Unusually stable high-value billing",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: stable_high_billing",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "stable_high_billing"
+    }
+  },
+  {
+    "id": "H0399",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Top decile on 5+ metrics simultaneously",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: top_decile_all_metrics",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "top_decile_all_metrics"
+    }
+  },
+  {
+    "id": "H0400",
+    "category": "3",
+    "subcategory": "3F",
+    "description": "Size tier mismatch: Uses rarely-billed codes but has high total paid",
+    "method": "size_mismatch",
+    "acceptance_criteria": "Size tier mismatch: bottom_codes_top_paid",
+    "analysis_function": "peer_analyzer._size_tier_mismatch",
+    "financial_impact_method": "total_paid for mismatched providers",
+    "parameters": {
+      "mismatch_type": "bottom_codes_top_paid"
+    }
+  },
+  {
+    "id": "H0401",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 50 servicing NPIs (all)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 50 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 50,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0402",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 100 servicing NPIs (all)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 100 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 100,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0403",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 200 servicing NPIs (all)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 200 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 200,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0404",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 50 servicing NPIs (captive_50pct)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 50 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 50,
+      "filter": "captive_50pct"
+    }
+  },
+  {
+    "id": "H0405",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 100 servicing NPIs (captive_50pct)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 100 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 100,
+      "filter": "captive_50pct"
+    }
+  },
+  {
+    "id": "H0406",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 20 servicing NPIs (high_value_10m)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 20 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 20,
+      "filter": "high_value_10m"
+    }
+  },
+  {
+    "id": "H0407",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 20 servicing NPIs (high_value_50m)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 20 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 20,
+      "filter": "high_value_50m"
+    }
+  },
+  {
+    "id": "H0408",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 20 servicing NPIs (high_value_100m)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 20 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 20,
+      "filter": "high_value_100m"
+    }
+  },
+  {
+    "id": "H0409",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 50 servicing NPIs (new_24mo)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 50 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 50,
+      "filter": "new_24mo"
+    }
+  },
+  {
+    "id": "H0410",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 20 servicing NPIs (rapid_expansion)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 20 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 20,
+      "filter": "rapid_expansion"
+    }
+  },
+  {
+    "id": "H0411",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 50 servicing NPIs (home_health)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 50 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 50,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0412",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 50 servicing NPIs (behavioral)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 50 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 50,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0413",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 100 servicing NPIs (individual_npi)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 100 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 100,
+      "filter": "individual_npi"
+    }
+  }
+]

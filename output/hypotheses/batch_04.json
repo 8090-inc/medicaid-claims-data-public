@@ -1,0 +1,718 @@
+[
+  {
+    "id": "H0214",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 500% (code_expansion)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 5x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 5,
+      "filter": "code_expansion"
+    }
+  },
+  {
+    "id": "H0215",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 300% (post_covid)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 3x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 3,
+      "filter": "post_covid"
+    }
+  },
+  {
+    "id": "H0216",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: flat_in_seasonal (Home Health)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "flat_in_seasonal",
+      "filter": "Home Health"
+    }
+  },
+  {
+    "id": "H0217",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: flat_in_seasonal (Behavioral Health)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "flat_in_seasonal",
+      "filter": "Behavioral Health"
+    }
+  },
+  {
+    "id": "H0218",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: flat_in_seasonal (E&M)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "flat_in_seasonal",
+      "filter": "E&M"
+    }
+  },
+  {
+    "id": "H0219",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: flat_in_seasonal (Therapy)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "flat_in_seasonal",
+      "filter": "Therapy"
+    }
+  },
+  {
+    "id": "H0220",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: flat_in_seasonal (DME)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "flat_in_seasonal",
+      "filter": "DME"
+    }
+  },
+  {
+    "id": "H0221",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: inverse_seasonality (all)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "inverse_seasonality",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0222",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: inverse_seasonality (Home Health)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "inverse_seasonality",
+      "filter": "Home Health"
+    }
+  },
+  {
+    "id": "H0223",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: uniform_monthly (all)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "uniform_monthly",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0224",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: uniform_monthly (high_paid)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "uniform_monthly",
+      "filter": "high_paid"
+    }
+  },
+  {
+    "id": "H0225",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: single_month_dominance (all)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "single_month_dominance",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0226",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: single_month_dominance (home_health)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "single_month_dominance",
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0227",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: cv_extremely_low (all)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "cv_extremely_low",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0228",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: cv_extremely_low (high_paid)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "cv_extremely_low",
+      "filter": "high_paid"
+    }
+  },
+  {
+    "id": "H0229",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: weekend_holiday_billing (all)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "weekend_holiday_billing",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0230",
+    "category": "2",
+    "subcategory": "2E",
+    "description": "Seasonal violation: quarterly_pattern (all)",
+    "method": "seasonal_violation",
+    "acceptance_criteria": "billing pattern deviates from expected seasonal norm",
+    "analysis_function": "temporal_analyzer._seasonality_anomaly",
+    "financial_impact_method": "total paid from seasonally anomalous providers",
+    "parameters": {
+      "pattern": "quarterly_pattern",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0231",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >2x pre-COVID (all)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 2x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 2,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0232",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >3x pre-COVID (all)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 3x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 3,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0233",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >5x pre-COVID (all)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 5x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 5,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0234",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >2x pre-COVID (home_health)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 2x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 2,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0235",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >3x pre-COVID (home_health)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 3x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 3,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0236",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >2x pre-COVID (behavioral)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 2x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 2,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0237",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >3x pre-COVID (behavioral)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 3x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 3,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0238",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >2x pre-COVID (non_covid_codes)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 2x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 2,
+      "filter": "non_covid_codes"
+    }
+  },
+  {
+    "id": "H0239",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >3x pre-COVID (non_covid_codes)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 3x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 3,
+      "filter": "non_covid_codes"
+    }
+  },
+  {
+    "id": "H0240",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >2x pre-COVID (dme)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 2x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 2,
+      "filter": "dme"
+    }
+  },
+  {
+    "id": "H0241",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >3x pre-COVID (dme)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 3x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 3,
+      "filter": "dme"
+    }
+  },
+  {
+    "id": "H0242",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >2x pre-COVID (telehealth_surge)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 2x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 2,
+      "filter": "telehealth_surge"
+    }
+  },
+  {
+    "id": "H0243",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >3x pre-COVID (telehealth_surge)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 3x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 3,
+      "filter": "telehealth_surge"
+    }
+  },
+  {
+    "id": "H0244",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >2x pre-COVID (post_covid_sustained)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 2x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 2,
+      "filter": "post_covid_sustained"
+    }
+  },
+  {
+    "id": "H0245",
+    "category": "2",
+    "subcategory": "2F",
+    "description": "COVID-period anomaly: >3x pre-COVID (post_covid_sustained)",
+    "method": "covid_anomaly",
+    "acceptance_criteria": "COVID billing > 3x pre-COVID and > 2x peer COVID growth",
+    "analysis_function": "temporal_analyzer._covid_comparison",
+    "financial_impact_method": "covid_period_paid - pre_covid_annualized",
+    "parameters": {
+      "ratio": 3,
+      "filter": "post_covid_sustained"
+    }
+  },
+  {
+    "id": "H0246",
+    "category": "2",
+    "subcategory": "2G",
+    "description": "December billing > 2x monthly avg (all)",
+    "method": "december_surge",
+    "acceptance_criteria": "December paid > 2x average monthly paid",
+    "analysis_function": "temporal_analyzer._december_spike",
+    "financial_impact_method": "december_excess above average",
+    "parameters": {
+      "ratio": 2,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0247",
+    "category": "2",
+    "subcategory": "2G",
+    "description": "December billing > 3x monthly avg (all)",
+    "method": "december_surge",
+    "acceptance_criteria": "December paid > 3x average monthly paid",
+    "analysis_function": "temporal_analyzer._december_spike",
+    "financial_impact_method": "december_excess above average",
+    "parameters": {
+      "ratio": 3,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0248",
+    "category": "2",
+    "subcategory": "2G",
+    "description": "December billing > 2x monthly avg (home_health)",
+    "method": "december_surge",
+    "acceptance_criteria": "December paid > 2x average monthly paid",
+    "analysis_function": "temporal_analyzer._december_spike",
+    "financial_impact_method": "december_excess above average",
+    "parameters": {
+      "ratio": 2,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0249",
+    "category": "2",
+    "subcategory": "2G",
+    "description": "December billing > 3x monthly avg (home_health)",
+    "method": "december_surge",
+    "acceptance_criteria": "December paid > 3x average monthly paid",
+    "analysis_function": "temporal_analyzer._december_spike",
+    "financial_impact_method": "december_excess above average",
+    "parameters": {
+      "ratio": 3,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0250",
+    "category": "2",
+    "subcategory": "2G",
+    "description": "December billing > 2x monthly avg (behavioral)",
+    "method": "december_surge",
+    "acceptance_criteria": "December paid > 2x average monthly paid",
+    "analysis_function": "temporal_analyzer._december_spike",
+    "financial_impact_method": "december_excess above average",
+    "parameters": {
+      "ratio": 2,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0251",
+    "category": "2",
+    "subcategory": "2G",
+    "description": "December billing > 3x monthly avg (behavioral)",
+    "method": "december_surge",
+    "acceptance_criteria": "December paid > 3x average monthly paid",
+    "analysis_function": "temporal_analyzer._december_spike",
+    "financial_impact_method": "december_excess above average",
+    "parameters": {
+      "ratio": 3,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0252",
+    "category": "2",
+    "subcategory": "2G",
+    "description": "December billing > 2x monthly avg (repeated_years)",
+    "method": "december_surge",
+    "acceptance_criteria": "December paid > 2x average monthly paid",
+    "analysis_function": "temporal_analyzer._december_spike",
+    "financial_impact_method": "december_excess above average",
+    "parameters": {
+      "ratio": 2,
+      "filter": "repeated_years"
+    }
+  },
+  {
+    "id": "H0253",
+    "category": "2",
+    "subcategory": "2G",
+    "description": "December billing > 3x monthly avg (repeated_years)",
+    "method": "december_surge",
+    "acceptance_criteria": "December paid > 3x average monthly paid",
+    "analysis_function": "temporal_analyzer._december_spike",
+    "financial_impact_method": "december_excess above average",
+    "parameters": {
+      "ratio": 3,
+      "filter": "repeated_years"
+    }
+  },
+  {
+    "id": "H0254",
+    "category": "2",
+    "subcategory": "2G",
+    "description": "December billing > 2x monthly avg (high_value)",
+    "method": "december_surge",
+    "acceptance_criteria": "December paid > 2x average monthly paid",
+    "analysis_function": "temporal_analyzer._december_spike",
+    "financial_impact_method": "december_excess above average",
+    "parameters": {
+      "ratio": 2,
+      "filter": "high_value"
+    }
+  },
+  {
+    "id": "H0255",
+    "category": "2",
+    "subcategory": "2G",
+    "description": "December billing > 3x monthly avg (high_value)",
+    "method": "december_surge",
+    "acceptance_criteria": "December paid > 3x average monthly paid",
+    "analysis_function": "temporal_analyzer._december_spike",
+    "financial_impact_method": "december_excess above average",
+    "parameters": {
+      "ratio": 3,
+      "filter": "high_value"
+    }
+  },
+  {
+    "id": "H0256",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (cusum): post/pre > 1.0x (all)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 1.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "cusum",
+      "change_ratio": 1.0,
+      "filter": "all",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0257",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (cusum): post/pre > 2.0x (all)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 2.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "cusum",
+      "change_ratio": 2.0,
+      "filter": "all",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0258",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (cusum): post/pre > 5.0x (all)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 5.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "cusum",
+      "change_ratio": 5.0,
+      "filter": "all",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0259",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (pelt): post/pre > 1.0x (all)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 1.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "pelt",
+      "change_ratio": 1.0,
+      "filter": "all",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0260",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (pelt): post/pre > 2.0x (all)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 2.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "pelt",
+      "change_ratio": 2.0,
+      "filter": "all",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0261",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (pelt): post/pre > 5.0x (all)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 5.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "pelt",
+      "change_ratio": 5.0,
+      "filter": "all",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0262",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (cusum): post/pre > 1.0x (home_health)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 1.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "cusum",
+      "change_ratio": 1.0,
+      "filter": "home_health",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0263",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (cusum): post/pre > 2.0x (home_health)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 2.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "cusum",
+      "change_ratio": 2.0,
+      "filter": "home_health",
+      "p_threshold": 0.01
+    }
+  }
+]

@@ -1,0 +1,504 @@
+[
+  {
+    "id": "H1064",
+    "category": "8",
+    "subcategory": "8K",
+    "description": "Addiction treatment provider with December billing >5x average (year-end dump)",
+    "method": "addiction_december_dump",
+    "acceptance_criteria": "December billing >5x monthly average",
+    "analysis_function": "domain_rules.addiction_december_dump",
+    "financial_impact_method": "total flagged addiction treatment payments",
+    "parameters": {
+      "ratio_threshold": 5.0
+    }
+  },
+  {
+    "id": "H1065",
+    "category": "8",
+    "subcategory": "8K",
+    "description": "Substance abuse provider appearing then disappearing within 18 months with >$1M",
+    "method": "addiction_rapid_exit",
+    "acceptance_criteria": "active <18 months, >$1M, then vanished",
+    "analysis_function": "domain_rules.addiction_rapid_exit",
+    "financial_impact_method": "total flagged addiction treatment payments",
+    "parameters": {
+      "max_months": 18,
+      "min_revenue": 1000000
+    }
+  },
+  {
+    "id": "H1066",
+    "category": "8",
+    "subcategory": "8L",
+    "description": "Genetic testing provider (81XXX codes) with >$5M total and <100 beneficiaries",
+    "method": "genetic_high_per_bene",
+    "acceptance_criteria": ">$5M genetic testing, <100 benes",
+    "analysis_function": "domain_rules.genetic_high_per_bene",
+    "financial_impact_method": "total flagged genetic testing payments",
+    "parameters": {
+      "min_revenue": 5000000,
+      "max_bene": 100,
+      "code_prefix": "81"
+    }
+  },
+  {
+    "id": "H1067",
+    "category": "8",
+    "subcategory": "8L",
+    "description": "Genetic testing claims with >$1000 per test from telehealth-only referring providers",
+    "method": "genetic_telehealth_referral",
+    "acceptance_criteria": ">$1K/test from telehealth referrers",
+    "analysis_function": "domain_rules.genetic_telehealth_referral",
+    "financial_impact_method": "total flagged genetic testing payments",
+    "parameters": {
+      "min_per_test": 1000
+    }
+  },
+  {
+    "id": "H1068",
+    "category": "8",
+    "subcategory": "8L",
+    "description": "Genetic testing provider serving beneficiaries from >10 states",
+    "method": "genetic_multi_state",
+    "acceptance_criteria": "genetic testing benes from >10 states",
+    "analysis_function": "domain_rules.genetic_multi_state",
+    "financial_impact_method": "total flagged genetic testing payments",
+    "parameters": {
+      "min_states": 10
+    }
+  },
+  {
+    "id": "H1069",
+    "category": "8",
+    "subcategory": "8L",
+    "description": "New genetic testing provider (<12 months) billing >$1M",
+    "method": "genetic_rapid_entrant",
+    "acceptance_criteria": "genetic testing <12mo, >$1M",
+    "analysis_function": "domain_rules.genetic_rapid_entrant",
+    "financial_impact_method": "total flagged genetic testing payments",
+    "parameters": {
+      "max_months": 12,
+      "min_revenue": 1000000
+    }
+  },
+  {
+    "id": "H1070",
+    "category": "8",
+    "subcategory": "8L",
+    "description": "Genetic testing code with >50% of national volume from <5 providers",
+    "method": "genetic_market_concentration",
+    "acceptance_criteria": ">50% national volume from <5 providers",
+    "analysis_function": "domain_rules.genetic_market_concentration",
+    "financial_impact_method": "total flagged genetic testing payments",
+    "parameters": {
+      "pct_threshold": 0.5,
+      "max_providers": 5
+    }
+  },
+  {
+    "id": "H1071",
+    "category": "9",
+    "subcategory": "9H",
+    "description": "Beneficiary appearing in >10 unrelated billing networks same month",
+    "method": "bene_network_spread",
+    "acceptance_criteria": "bene in >10 billing networks/month",
+    "analysis_function": "crossref.bene_network_spread",
+    "financial_impact_method": "total payments to/for flagged beneficiaries",
+    "parameters": {
+      "min_networks": 10
+    }
+  },
+  {
+    "id": "H1072",
+    "category": "9",
+    "subcategory": "9H",
+    "description": "Beneficiary with >$100K in claims same month from >5 providers",
+    "method": "bene_high_multi_provider",
+    "acceptance_criteria": "bene >$100K/month from >5 providers",
+    "analysis_function": "crossref.bene_high_multi_provider",
+    "financial_impact_method": "total payments to/for flagged beneficiaries",
+    "parameters": {
+      "min_paid": 100000,
+      "min_providers": 5
+    }
+  },
+  {
+    "id": "H1073",
+    "category": "9",
+    "subcategory": "9H",
+    "description": "Beneficiary count identical across multiple providers (shared patient list)",
+    "method": "shared_bene_count",
+    "acceptance_criteria": "identical bene count at multiple providers",
+    "analysis_function": "crossref.shared_bene_count",
+    "financial_impact_method": "total payments to/for flagged beneficiaries",
+    "parameters": {
+      "min_providers": 3
+    }
+  },
+  {
+    "id": "H1074",
+    "category": "9",
+    "subcategory": "9H",
+    "description": "Provider pairs with >80% beneficiary overlap (potential billing ring)",
+    "method": "bene_overlap_ring",
+    "acceptance_criteria": "provider pair >80% bene overlap",
+    "analysis_function": "crossref.bene_overlap_ring",
+    "financial_impact_method": "total payments to/for flagged beneficiaries",
+    "parameters": {
+      "pct_threshold": 0.8
+    }
+  },
+  {
+    "id": "H1075",
+    "category": "9",
+    "subcategory": "9H",
+    "description": "Beneficiary receiving services from providers in >3 states same month",
+    "method": "bene_multi_state",
+    "acceptance_criteria": "bene in >3 provider states/month",
+    "analysis_function": "crossref.bene_multi_state",
+    "financial_impact_method": "total payments to/for flagged beneficiaries",
+    "parameters": {
+      "min_states": 3
+    }
+  },
+  {
+    "id": "H1076",
+    "category": "9",
+    "subcategory": "9H",
+    "description": "Provider with >50% of beneficiaries also appearing at another flagged provider",
+    "method": "shared_flagged_benes",
+    "acceptance_criteria": ">50% benes shared with flagged provider",
+    "analysis_function": "crossref.shared_flagged_benes",
+    "financial_impact_method": "total payments to/for flagged beneficiaries",
+    "parameters": {
+      "pct_threshold": 0.5
+    }
+  },
+  {
+    "id": "H1077",
+    "category": "9",
+    "subcategory": "9H",
+    "description": "Cluster of providers sharing >20% of the same beneficiary pool",
+    "method": "bene_pool_cluster",
+    "acceptance_criteria": "provider cluster >20% shared bene pool",
+    "analysis_function": "crossref.bene_pool_cluster",
+    "financial_impact_method": "total payments to/for flagged beneficiaries",
+    "parameters": {
+      "pct_threshold": 0.2,
+      "min_cluster": 3
+    }
+  },
+  {
+    "id": "H1078",
+    "category": "9",
+    "subcategory": "9H",
+    "description": "Beneficiary receiving >$50K in personal care services per month",
+    "method": "bene_excessive_personal_care",
+    "acceptance_criteria": "bene >$50K personal care/month",
+    "analysis_function": "crossref.bene_excessive_personal_care",
+    "financial_impact_method": "total payments to/for flagged beneficiaries",
+    "parameters": {
+      "min_paid": 50000,
+      "codes": [
+        "T1019",
+        "T1020",
+        "S5125"
+      ]
+    }
+  },
+  {
+    "id": "H1079",
+    "category": "9",
+    "subcategory": "9H",
+    "description": "Provider with beneficiary count growing >3x while paid grows >10x (phantom additions)",
+    "method": "bene_phantom_growth",
+    "acceptance_criteria": "bene count 3x growth but paid 10x growth",
+    "analysis_function": "crossref.bene_phantom_growth",
+    "financial_impact_method": "total payments to/for flagged beneficiaries",
+    "parameters": {
+      "bene_growth": 3.0,
+      "paid_growth": 10.0
+    }
+  },
+  {
+    "id": "H1080",
+    "category": "9",
+    "subcategory": "9H",
+    "description": "Seasonal beneficiary pattern: same beneficiaries added/dropped synchronously across providers",
+    "method": "bene_synchronized_churn",
+    "acceptance_criteria": "synchronized bene add/drop across providers",
+    "analysis_function": "crossref.bene_synchronized_churn",
+    "financial_impact_method": "total payments to/for flagged beneficiaries",
+    "parameters": {
+      "check": "synchronized_churn"
+    }
+  },
+  {
+    "id": "H1081",
+    "category": "9",
+    "subcategory": "9I",
+    "description": "Multiple NPIs at identical NPPES address with combined >$10M and any flagged NPI",
+    "method": "address_cluster_flagged",
+    "acceptance_criteria": "address cluster >$10M with flagged NPI",
+    "analysis_function": "crossref.address_cluster_flagged",
+    "financial_impact_method": "total payments at flagged address cluster",
+    "parameters": {
+      "min_combined": 10000000,
+      "check": "flagged_npi"
+    }
+  },
+  {
+    "id": "H1082",
+    "category": "9",
+    "subcategory": "9I",
+    "description": "New NPI at address of recently deactivated NPI with similar billing pattern",
+    "method": "address_npi_replacement",
+    "acceptance_criteria": "new NPI replacing deactivated NPI at same address",
+    "analysis_function": "crossref.address_npi_replacement",
+    "financial_impact_method": "total payments at flagged address cluster",
+    "parameters": {
+      "check": "replacement_pattern"
+    }
+  },
+  {
+    "id": "H1083",
+    "category": "9",
+    "subcategory": "9I",
+    "description": "Provider with NPPES address change followed by >3x billing increase",
+    "method": "address_change_spike",
+    "acceptance_criteria": "address change then >3x billing increase",
+    "analysis_function": "crossref.address_change_spike",
+    "financial_impact_method": "total payments at flagged address cluster",
+    "parameters": {
+      "growth_threshold": 3.0
+    }
+  },
+  {
+    "id": "H1084",
+    "category": "9",
+    "subcategory": "9I",
+    "description": ">5 NPIs with sequential NPI numbers at same address (batch enrollment)",
+    "method": "sequential_npi_address",
+    "acceptance_criteria": ">5 sequential NPIs at same address",
+    "analysis_function": "crossref.sequential_npi_address",
+    "financial_impact_method": "total payments at flagged address cluster",
+    "parameters": {
+      "min_sequential": 5
+    }
+  },
+  {
+    "id": "H1085",
+    "category": "9",
+    "subcategory": "9I",
+    "description": "Address cluster where >50% of NPIs started billing within 3 months of each other",
+    "method": "coordinated_address_start",
+    "acceptance_criteria": ">50% of address NPIs started within 3 months",
+    "analysis_function": "crossref.coordinated_address_start",
+    "financial_impact_method": "total payments at flagged address cluster",
+    "parameters": {
+      "pct_threshold": 0.5,
+      "max_spread_months": 3
+    }
+  },
+  {
+    "id": "H1086",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Zipf's Law deviation: billing amounts don't follow expected power-law distribution",
+    "method": "zipf_billing",
+    "acceptance_criteria": "Billing distribution deviates from Zipf's Law",
+    "analysis_function": "ml_pipeline.zipf_billing",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "test": "zipf",
+      "target": "billing_amounts"
+    }
+  },
+  {
+    "id": "H1087",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Zipf's Law on referral concentration: single provider receives disproportionate referrals",
+    "method": "zipf_referral",
+    "acceptance_criteria": "Referral concentration violates Zipf's Law",
+    "analysis_function": "ml_pipeline.zipf_referral",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "test": "zipf",
+      "target": "referral_counts"
+    }
+  },
+  {
+    "id": "H1088",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Association rule mining: unusual HCPCS code combinations (clinically impossible pairings)",
+    "method": "association_rules",
+    "acceptance_criteria": "unusual code combinations via apriori/FP-growth",
+    "analysis_function": "ml_pipeline.association_rules",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "min_support": 0.01,
+      "min_confidence": 0.5
+    }
+  },
+  {
+    "id": "H1089",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Billing pattern cosine similarity: provider whose monthly pattern matches known fraud profiles",
+    "method": "cosine_similarity_fraud",
+    "acceptance_criteria": "monthly billing cosine similarity to fraud profiles",
+    "analysis_function": "ml_pipeline.cosine_similarity_fraud",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "min_similarity": 0.9
+    }
+  },
+  {
+    "id": "H1090",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Entropy analysis: provider with unusually low entropy in billing distribution (too uniform)",
+    "method": "low_entropy_billing",
+    "acceptance_criteria": "billing distribution entropy below 1st percentile",
+    "analysis_function": "ml_pipeline.low_entropy_billing",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "percentile": 1
+    }
+  },
+  {
+    "id": "H1091",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Provider billing codes from >3 unrelated clinical families (scope-of-practice violation proxy)",
+    "method": "scope_of_practice",
+    "acceptance_criteria": ">3 unrelated clinical code families",
+    "analysis_function": "ml_pipeline.scope_of_practice",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "max_families": 3
+    }
+  },
+  {
+    "id": "H1092",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Geospatial outlier: provider's beneficiaries' state distribution inconsistent with provider location",
+    "method": "geospatial_bene_mismatch",
+    "acceptance_criteria": "beneficiary states inconsistent with provider location",
+    "analysis_function": "ml_pipeline.geospatial_bene_mismatch",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "check": "state_distribution"
+    }
+  },
+  {
+    "id": "H1093",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Temporal autocorrelation: provider with zero autocorrelation in monthly series (random/fabricated)",
+    "method": "zero_autocorrelation",
+    "acceptance_criteria": "monthly billing series autocorrelation near zero",
+    "analysis_function": "ml_pipeline.zero_autocorrelation",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "max_autocorr": 0.1,
+      "min_months": 24
+    }
+  },
+  {
+    "id": "H1094",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Claim-to-beneficiary ratio changes direction abruptly (suggests record manipulation)",
+    "method": "cpb_direction_change",
+    "acceptance_criteria": "abrupt reversal in claims-per-bene trend",
+    "analysis_function": "ml_pipeline.cpb_direction_change",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "check": "trend_reversal"
+    }
+  },
+  {
+    "id": "H1095",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Claims-per-day exceeds physical capacity based on provider type (individual vs org)",
+    "method": "capacity_based_limit",
+    "acceptance_criteria": "claims/day exceeds individual provider capacity",
+    "analysis_function": "ml_pipeline.capacity_based_limit",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "individual_max": 40,
+      "org_max": 500
+    }
+  },
+  {
+    "id": "H1096",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Provider with negative payments >10% but only in specific months (selective reversal)",
+    "method": "selective_reversal",
+    "acceptance_criteria": "negative payments concentrated in specific months",
+    "analysis_function": "ml_pipeline.selective_reversal",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "min_neg_pct": 0.1,
+      "check": "temporal_concentration"
+    }
+  },
+  {
+    "id": "H1097",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Code pair frequency deviation: two codes that typically co-occur nationally appear at anomalous ratio",
+    "method": "code_pair_deviation",
+    "acceptance_criteria": "code pair ratio deviates from national norm",
+    "analysis_function": "ml_pipeline.code_pair_deviation",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "min_deviation": 3.0
+    }
+  },
+  {
+    "id": "H1098",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Network motif detection: triangles in billing graph where A->B->C->A all have high-value edges",
+    "method": "network_triangles",
+    "acceptance_criteria": "billing graph triangles with high-value edges",
+    "analysis_function": "ml_pipeline.network_triangles",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "min_edge_value": 100000
+    }
+  },
+  {
+    "id": "H1099",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "Provider with Benford violation PLUS temporal spike PLUS peer outlier (triple signal)",
+    "method": "triple_signal",
+    "acceptance_criteria": "Benford's + temporal spike + peer outlier combined",
+    "analysis_function": "ml_pipeline.triple_signal",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "min_signals": 3
+    }
+  },
+  {
+    "id": "H1100",
+    "category": "6",
+    "subcategory": "6G",
+    "description": "GNN-inspired feature: provider's neighborhood risk score based on connected providers' anomaly scores",
+    "method": "neighborhood_risk",
+    "acceptance_criteria": "provider risk score from network neighbor anomalies",
+    "analysis_function": "ml_pipeline.neighborhood_risk",
+    "financial_impact_method": "total payments from novel-method flagged providers",
+    "parameters": {
+      "check": "neighborhood_propagation"
+    }
+  }
+]

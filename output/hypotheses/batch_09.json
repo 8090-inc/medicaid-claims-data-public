@@ -1,0 +1,730 @@
+[
+  {
+    "id": "H0464",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.5 (components_50m)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.5",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.5,
+      "filter": "components_50m"
+    }
+  },
+  {
+    "id": "H0465",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.3 (small_dense)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.3",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.3,
+      "filter": "small_dense"
+    }
+  },
+  {
+    "id": "H0466",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.5 (small_dense)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.5",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.5,
+      "filter": "small_dense"
+    }
+  },
+  {
+    "id": "H0467",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.3 (large_sparse)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.3",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.3,
+      "filter": "large_sparse"
+    }
+  },
+  {
+    "id": "H0468",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.3 (recent_formation)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.3",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.3,
+      "filter": "recent_formation"
+    }
+  },
+  {
+    "id": "H0469",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.5 (recent_formation)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.5",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.5,
+      "filter": "recent_formation"
+    }
+  },
+  {
+    "id": "H0470",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.3 (multi_state)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.3",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.3,
+      "filter": "multi_state"
+    }
+  },
+  {
+    "id": "H0471",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $1,000,000 in first 12 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $1,000,000 in first 12 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 1000000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0472",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $5,000,000 in first 12 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $5,000,000 in first 12 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 5000000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0473",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $10,000,000 in first 12 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $10,000,000 in first 12 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 10000000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0474",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $1,000,000 in first 6 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $1,000,000 in first 6 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 1000000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0475",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $5,000,000 in first 6 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $5,000,000 in first 6 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 5000000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0476",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $500,000 in first 12 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $500,000 in first 12 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 500000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0477",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $1,000,000 in first 24 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $1,000,000 in first 24 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 1000000,
+      "max_months": 24
+    }
+  },
+  {
+    "id": "H0478",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $500,000 in first 6 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $500,000 in first 6 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 500000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0479",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $2,500,000 in first 12 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $2,500,000 in first 12 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 2500000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0480",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $1,000,000 in first 12 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $1,000,000 in first 12 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 1000000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0481",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $5,000,000 in first 12 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $5,000,000 in first 12 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 5000000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0482",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $500,000 in first 12 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $500,000 in first 12 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 500000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0483",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $2,000,000 in first 6 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $2,000,000 in first 6 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 2000000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0484",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $10,000,000 in first 24 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $10,000,000 in first 24 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 10000000,
+      "max_months": 24
+    }
+  },
+  {
+    "id": "H0485",
+    "category": "4",
+    "subcategory": "4E",
+    "description": "New network > $250,000 in first 6 months",
+    "method": "new_network",
+    "acceptance_criteria": "> $250,000 in first 6 months",
+    "analysis_function": "network_analyzer._new_network_high_paid",
+    "financial_impact_method": "total payments in new network",
+    "parameters": {
+      "min_paid": 250000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0486",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $1,000,000, >= 5 servicing (all)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $1,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 1000000,
+      "min_servicing": 5,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0487",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $5,000,000, >= 5 servicing (all)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $5,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 5000000,
+      "min_servicing": 5,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0488",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $10,000,000, >= 5 servicing (all)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $10,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 10000000,
+      "min_servicing": 5,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0489",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $1,000,000, >= 10 servicing (all)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $1,000,000, >= 10 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 1000000,
+      "min_servicing": 10,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0490",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $5,000,000, >= 10 servicing (all)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $5,000,000, >= 10 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 5000000,
+      "min_servicing": 10,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0491",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $1,000,000, >= 5 servicing (individual_npi)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $1,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 1000000,
+      "min_servicing": 5,
+      "filter": "individual_npi"
+    }
+  },
+  {
+    "id": "H0492",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $5,000,000, >= 5 servicing (individual_npi)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $5,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 5000000,
+      "min_servicing": 5,
+      "filter": "individual_npi"
+    }
+  },
+  {
+    "id": "H0493",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $1,000,000, >= 5 servicing (cross_state)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $1,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 1000000,
+      "min_servicing": 5,
+      "filter": "cross_state"
+    }
+  },
+  {
+    "id": "H0494",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $5,000,000, >= 5 servicing (cross_state)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $5,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 5000000,
+      "min_servicing": 5,
+      "filter": "cross_state"
+    }
+  },
+  {
+    "id": "H0495",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $1,000,000, >= 5 servicing (single_code)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $1,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 1000000,
+      "min_servicing": 5,
+      "filter": "single_code"
+    }
+  },
+  {
+    "id": "H0496",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $1,000,000, >= 5 servicing (new_entity)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $1,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 1000000,
+      "min_servicing": 5,
+      "filter": "new_entity"
+    }
+  },
+  {
+    "id": "H0497",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $500,000, >= 3 servicing (all)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $500,000, >= 3 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 500000,
+      "min_servicing": 3,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0498",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $2,500,000, >= 5 servicing (all)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $2,500,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 2500000,
+      "min_servicing": 5,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0499",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $1,000,000, >= 5 servicing (growing)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $1,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 1000000,
+      "min_servicing": 5,
+      "filter": "growing"
+    }
+  },
+  {
+    "id": "H0500",
+    "category": "4",
+    "subcategory": "4F",
+    "description": "Pure billing entity: > $1,000,000, >= 5 servicing (high_rate)",
+    "method": "pure_billing",
+    "acceptance_criteria": "never servicing, > $1,000,000, >= 5 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_only_providers",
+    "financial_impact_method": "total payments through pure biller",
+    "parameters": {
+      "min_paid": 1000000,
+      "min_servicing": 5,
+      "filter": "high_rate"
+    }
+  },
+  {
+    "id": "H0501",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: single_biller",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: single_biller",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "single_biller",
+      "min_paid": 500000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0502",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: single_biller",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: single_biller",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "single_biller",
+      "min_paid": 1000000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0503",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: single_biller",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: single_biller",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "single_biller",
+      "min_paid": 500000,
+      "max_months": 3
+    }
+  },
+  {
+    "id": "H0504",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: no_nppes",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: no_nppes",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "no_nppes",
+      "min_paid": 500000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0505",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: no_nppes",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: no_nppes",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "no_nppes",
+      "min_paid": 100000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0506",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: deactivated_npi",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: deactivated_npi",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "deactivated_npi",
+      "min_paid": 100000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0507",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: identical_pattern",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: identical_pattern",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "identical_pattern",
+      "min_paid": 0,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0508",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: sequential_npi",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: sequential_npi",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "sequential_npi",
+      "min_paid": 0,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0509",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: batch_creation_5",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: batch_creation_5",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "batch_creation_5",
+      "min_paid": 0,
+      "max_months": 1
+    }
+  },
+  {
+    "id": "H0510",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: batch_creation_10",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: batch_creation_10",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "batch_creation_10",
+      "min_paid": 0,
+      "max_months": 1
+    }
+  },
+  {
+    "id": "H0511",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: short_lived",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: short_lived",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "short_lived",
+      "min_paid": 500000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0512",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: short_lived",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: short_lived",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "short_lived",
+      "min_paid": 250000,
+      "max_months": 3
+    }
+  },
+  {
+    "id": "H0513",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: mirror_billing",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: mirror_billing",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "mirror_billing",
+      "min_paid": 0,
+      "max_months": 12
+    }
+  }
+]

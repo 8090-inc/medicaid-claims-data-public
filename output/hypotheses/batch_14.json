@@ -1,0 +1,739 @@
+[
+  {
+    "id": "H0714",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #24",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 24
+    }
+  },
+  {
+    "id": "H0715",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #25",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 25
+    }
+  },
+  {
+    "id": "H0716",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #26",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 26
+    }
+  },
+  {
+    "id": "H0717",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #27",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 27
+    }
+  },
+  {
+    "id": "H0718",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #28",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 28
+    }
+  },
+  {
+    "id": "H0719",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #29",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 29
+    }
+  },
+  {
+    "id": "H0720",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #30",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 30
+    }
+  },
+  {
+    "id": "H0721",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #1",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 1
+    }
+  },
+  {
+    "id": "H0722",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #2",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 2
+    }
+  },
+  {
+    "id": "H0723",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #3",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 3
+    }
+  },
+  {
+    "id": "H0724",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #4",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 4
+    }
+  },
+  {
+    "id": "H0725",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #5",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 5
+    }
+  },
+  {
+    "id": "H0726",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #6",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 6
+    }
+  },
+  {
+    "id": "H0727",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #7",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 7
+    }
+  },
+  {
+    "id": "H0728",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #8",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 8
+    }
+  },
+  {
+    "id": "H0729",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #9",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 9
+    }
+  },
+  {
+    "id": "H0730",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #10",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 10
+    }
+  },
+  {
+    "id": "H0731",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #11",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 11
+    }
+  },
+  {
+    "id": "H0732",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #12",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 12
+    }
+  },
+  {
+    "id": "H0733",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #13",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 13
+    }
+  },
+  {
+    "id": "H0734",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #14",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 14
+    }
+  },
+  {
+    "id": "H0735",
+    "category": "6",
+    "subcategory": "6E",
+    "description": "K-means distance outlier #15",
+    "method": "kmeans",
+    "acceptance_criteria": "distance > 3x cluster mean distance",
+    "analysis_function": "ml_pipeline.kmeans_outlier",
+    "financial_impact_method": "total_paid for distance outlier",
+    "parameters": {
+      "k": 20,
+      "distance_multiplier": 3.0,
+      "rank": 15
+    }
+  },
+  {
+    "id": "H0736",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #1",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 1
+    }
+  },
+  {
+    "id": "H0737",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #2",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 2
+    }
+  },
+  {
+    "id": "H0738",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #3",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 3
+    }
+  },
+  {
+    "id": "H0739",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #4",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 4
+    }
+  },
+  {
+    "id": "H0740",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #5",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 5
+    }
+  },
+  {
+    "id": "H0741",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #6",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 6
+    }
+  },
+  {
+    "id": "H0742",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #7",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 7
+    }
+  },
+  {
+    "id": "H0743",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #8",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 8
+    }
+  },
+  {
+    "id": "H0744",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #9",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 9
+    }
+  },
+  {
+    "id": "H0745",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #10",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 10
+    }
+  },
+  {
+    "id": "H0746",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #11",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 11
+    }
+  },
+  {
+    "id": "H0747",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #12",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 12
+    }
+  },
+  {
+    "id": "H0748",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #13",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 13
+    }
+  },
+  {
+    "id": "H0749",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #14",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 14
+    }
+  },
+  {
+    "id": "H0750",
+    "category": "6",
+    "subcategory": "6F",
+    "description": "Local Outlier Factor anomaly #15",
+    "method": "lof",
+    "acceptance_criteria": "LOF score > 2.0",
+    "analysis_function": "ml_pipeline.lof",
+    "financial_impact_method": "total_paid * lof_score",
+    "parameters": {
+      "n_neighbors": 20,
+      "min_lof": 2.0,
+      "rank": 15
+    }
+  },
+  {
+    "id": "H0751",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #1 (overall)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "overall",
+      "rank": 1
+    }
+  },
+  {
+    "id": "H0752",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #2 (overall)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "overall",
+      "rank": 2
+    }
+  },
+  {
+    "id": "H0753",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #3 (overall)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "overall",
+      "rank": 3
+    }
+  },
+  {
+    "id": "H0754",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #4 (overall)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "overall",
+      "rank": 4
+    }
+  },
+  {
+    "id": "H0755",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #5 (overall)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "overall",
+      "rank": 5
+    }
+  },
+  {
+    "id": "H0756",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #6 (overall)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "overall",
+      "rank": 6
+    }
+  },
+  {
+    "id": "H0757",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #7 (overall)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "overall",
+      "rank": 7
+    }
+  },
+  {
+    "id": "H0758",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #8 (overall)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "overall",
+      "rank": 8
+    }
+  },
+  {
+    "id": "H0759",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #9 (overall)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "overall",
+      "rank": 9
+    }
+  },
+  {
+    "id": "H0760",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #10 (overall)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "overall",
+      "rank": 10
+    }
+  },
+  {
+    "id": "H0761",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #11 (home_health)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "home_health",
+      "rank": 11
+    }
+  },
+  {
+    "id": "H0762",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #12 (home_health)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "home_health",
+      "rank": 12
+    }
+  },
+  {
+    "id": "H0763",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #13 (home_health)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "home_health",
+      "rank": 13
+    }
+  }
+]

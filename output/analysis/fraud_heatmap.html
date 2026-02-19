@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicaid Fraud, Waste, and Abuse Pattern Heat Map</title>
+<style>
+  /* ── 8090 Design System ── */
+  :root {
+    --primary:    #0052CC;
+    --secondary:  #1a1d29;
+    --tertiary:   #374151;
+    --background: #f5f3ef;
+    --headlines:  #000000;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "SF Mono", "Cascadia Code", "Fira Code", "JetBrains Mono", monospace;
+    background: var(--background);
+    color: var(--headlines);
+    padding: 48px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Typography ── */
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    font-size: 16px;
+    color: var(--tertiary);
+    margin-bottom: 36px;
+    line-height: 1.5;
+  }
+
+  /* ── Legends ── */
+  .legends {
+    display: flex;
+    gap: 36px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .legend-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .legend-group-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .scale-bar {
+    display: flex;
+    height: 14px;
+    width: 160px;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+  .scale-bar span { flex: 1; }
+  .scale-label {
+    font-size: 13px;
+    color: var(--tertiary);
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--tertiary);
+  }
+  .legend-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+  }
+
+  /* ── Heat Map Grid ── */
+  .heatmap-container {
+    margin-bottom: 32px;
+    overflow-x: auto;
+  }
+  .heatmap {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1000px;
+    table-layout: fixed;
+    box-shadow: 0 1px 4px rgba(26,29,41,0.12);
+  }
+  .heatmap th, .heatmap td {
+    padding: 0;
+    border: 1px solid rgba(26,29,41,0.08);
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /* Column group headers */
+  .heatmap thead tr.group-row th {
+    background: var(--secondary);
+    color: rgba(255,255,255,0.6);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-color: rgba(255,255,255,0.08);
+  }
+  .heatmap thead tr.group-row th.group-intensity {
+    background: rgba(0,82,204,0.15);
+    color: var(--primary);
+  }
+  .heatmap thead tr.group-row th.group-nature {
+    background: rgba(26,29,41,0.06);
+    color: var(--tertiary);
+  }
+
+  /* Column headers */
+  .heatmap thead tr.col-row th {
+    background: var(--secondary);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    padding: 12px 10px;
+    border-color: rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  .heatmap thead tr.col-row th:first-child {
+    text-align: left;
+    padding-left: 18px;
+    min-width: 340px;
+  }
+  .heatmap thead tr.col-row th.metric-col {
+    min-width: 120px;
+  }
+  .heatmap thead tr.col-row th.nature-col {
+    min-width: 100px;
+  }
+  .heatmap thead tr.col-row th.divider {
+    min-width: 3px;
+    max-width: 3px;
+    padding: 0;
+    background: var(--background);
+    border: none;
+  }
+
+  .heatmap tbody tr {
+    transition: box-shadow 0.15s;
+  }
+  .heatmap tbody tr:hover {
+    box-shadow: inset 0 0 0 2px var(--primary);
+    z-index: 1;
+    position: relative;
+  }
+
+  /* Row label */
+  .row-label {
+    text-align: left !important;
+    padding: 16px 18px !important;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    border-right: 2px solid rgba(26,29,41,0.12) !important;
+  }
+  .row-label .pattern-num {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 4px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+  .row-label .label-text {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 380px;
+  }
+  .row-label .pattern-name {
+    white-space: nowrap;
+  }
+  .row-label .systemic-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: var(--tertiary);
+    background: rgba(55,65,81,0.08);
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-left: 8px;
+  }
+  .row-label .pattern-desc {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--tertiary);
+    margin-top: 4px;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  /* Heat cell (blue intensity) */
+  .heat-cell {
+    padding: 14px 10px !important;
+    position: relative;
+  }
+  .heat-value {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+  .heat-sub {
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0.7;
+  }
+
+  /* Nature cell (colored by type) */
+  .nature-cell {
+    padding: 14px 10px !important;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  /* Divider cell */
+  td.divider, th.divider {
+    width: 4px !important;
+    min-width: 4px !important;
+    max-width: 4px !important;
+    padding: 0 !important;
+    background: var(--background) !important;
+    border: none !important;
+  }
+
+  /* ── Callout Box ── */
+  .callout {
+    border-left: 3px solid var(--primary);
+    background: #fff;
+    padding: 16px 20px;
+    margin: 24px 0 36px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--tertiary);
+    box-shadow: 0 1px 3px rgba(26,29,41,0.08);
+  }
+  .callout strong {
+    color: var(--headlines);
+  }
+
+  /* ── Footer ── */
+  .footer {
+    font-size: 13px;
+    color: var(--tertiary);
+    border-top: 1px solid rgba(26,29,41,0.1);
+    padding-top: 16px;
+    margin-top: 40px;
+    line-height: 1.6;
+  }
+
+  @media print {
+    body { padding: 20px; }
+    .heatmap tbody tr:hover { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Medicaid Fraud, Waste, and Abuse Pattern Heat Map</h1>
+<div class="subtitle">
+  Health and Human Services Provider Spending Dataset &middot; $1.09T across 227M records &middot; Jan 2018 &ndash; Dec 2024<br>
+  Provider-level exposure: $355B &middot; Systemic exposure: $116B
+</div>
+
+<!-- Legends -->
+<div class="legends">
+  <div class="legend-group">
+    <span class="legend-group-label">Scale:</span>
+    <div class="scale-bar">
+      <span style="background:#eceae5"></span>
+      <span style="background:#cddcf0"></span>
+      <span style="background:#8db4e2"></span>
+      <span style="background:#4d8cd4"></span>
+      <span style="background:#0052CC"></span>
+    </div>
+    <span class="scale-label">Low &rarr; High</span>
+  </div>
+  <div class="legend-group">
+    <span class="legend-group-label">Nature:</span>
+    <div class="legend-item"><div class="legend-swatch" style="background:#c0392b"></div>Fraud</div>
+    <div class="legend-item"><div class="legend-swatch" style="background:#e67e22"></div>Waste</div>
+    <div class="legend-item"><div class="legend-swatch" style="background:#2980b9"></div>Policy</div>
+  </div>
+</div>
+
+<!-- ────────── MERGED HEAT MAP ────────── -->
+<div class="heatmap-container">
+<table class="heatmap" id="mergedHeatmap">
+  <colgroup>
+    <col style="width: 38%;">
+    <col style="width: 12%;">
+    <col style="width: 12%;">
+    <col style="width: 4px;">
+    <col style="width: 12%;">
+    <col style="width: 12%;">
+    <col style="width: 12%;">
+  </colgroup>
+  <thead>
+    <tr class="group-row">
+      <th rowspan="2" style="background:var(--secondary); color:#fff; text-align:left; padding-left:18px; font-size:14px; min-width:340px; vertical-align:bottom;">Pattern</th>
+      <th colspan="2" class="group-intensity">Spending</th>
+      <th rowspan="2" class="divider" style="background:var(--background); border:none;"></th>
+      <th colspan="3" class="group-nature">Risk Nature</th>
+    </tr>
+    <tr class="col-row">
+      <th class="metric-col">Providers</th>
+      <th class="metric-col">Exposure</th>
+      <th class="nature-col">Fraud</th>
+      <th class="nature-col">Waste</th>
+      <th class="nature-col">Policy</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+</div>
+
+<div class="callout">
+  <strong>Reading the heat map:</strong> Blue intensity columns are normalized independently &mdash; the darkest cell is the highest value in that column. Risk nature columns rate each pattern from &mdash; (none) to Peak based on how strongly it maps to fraud, waste, or policy/systemic issues. Most patterns are a mix.
+</div>
+
+<div class="footer">
+  Source: fraud_patterns.md &middot; All values are statistical risk indicators, not findings of fraud &middot; 8090 Design System
+</div>
+
+<script>
+// ── Data extracted from fraud_patterns.md ──
+const patterns = [
+  {
+    id: 1, name: "Home Health & Personal Care",
+    desc: "In-home aides billed in 15-minute blocks with little oversight; hard to verify if services were actually delivered.",
+    providers: 19922, exposure_b: 55.0,
+    nature: { fraud: 3, waste: 5, policy: 1 }
+  },
+  {
+    id: 2, name: "Middleman Billing Organizations",
+    desc: "Companies that submit claims on behalf of other providers but may add cost without delivering any care.",
+    providers: 1915, exposure_b: 36.5,
+    nature: { fraud: 3, waste: 3, policy: 2 }
+  },
+  {
+    id: 3, name: "Government Agencies as Outliers",
+    desc: "Public agencies whose billing rates and volumes look very different from private-sector peers. Not fraud — program design issues.",
+    providers: 20205, exposure_b: 53.5,
+    nature: { fraud: 0, waste: 2, policy: 5 }
+  },
+  {
+    id: 4, name: "Providers That Cannot Exist",
+    desc: "Billing under deactivated or unregistered identifiers, including entities with no name or specialty on file.",
+    providers: 407, exposure_b: 0.9,
+    nature: { fraud: 4, waste: 1, policy: 2 }
+  },
+  {
+    id: 5, name: "Billing Every Single Day",
+    desc: "Providers that billed Medicaid every calendar day across multiple years without any breaks.",
+    providers: 20, exposure_b: 9.6,
+    nature: { fraud: 2, waste: 3, policy: 0 }
+  },
+  {
+    id: 6, name: "Sudden Starts and Stops",
+    desc: "Providers that appeared suddenly with high billing, disappeared abruptly, or had extreme spikes in monthly totals.",
+    providers: 2433, exposure_b: 91.8,
+    nature: { fraud: 2, waste: 2, policy: 1 }
+  },
+  {
+    id: 7, name: "Billing Networks & Circular Billing",
+    desc: "Suspicious billing relationships where providers bill through each other or charge rates far above peers.",
+    providers: 852, exposure_b: 16.1,
+    nature: { fraud: 5, waste: 1, policy: 0 }
+  },
+  {
+    id: 8, name: "State-Level Spending Differences",
+    desc: "States paying more than double the national average for specific services. Policy decisions, not provider behavior.",
+    providers: 20, exposure_b: 77.5,
+    nature: { fraud: 0, waste: 1, policy: 5 }
+  },
+  {
+    id: 9, name: "Upcoding & Impossible Volumes",
+    desc: "Billing for more expensive services than delivered, or claiming more hours in a day than physically possible.",
+    providers: 36, exposure_b: 3.4,
+    nature: { fraud: 4, waste: 2, policy: 0 }
+  },
+  {
+    id: 10, name: "Shared Beneficiary Counts",
+    desc: "Provider pairs serving the exact same number of patients, suggesting shared ownership or coordinated billing.",
+    providers: 19, exposure_b: 2.4,
+    nature: { fraud: 3, waste: 1, policy: 2 }
+  }
+];
+
+// ── Color functions ──
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+function heatColor(t) {
+  const stops = [
+    { pos: 0.0, r: 236, g: 234, b: 229 },
+    { pos: 0.25, r: 205, g: 220, b: 240 },
+    { pos: 0.50, r: 141, g: 180, b: 226 },
+    { pos: 0.75, r: 77,  g: 140, b: 212 },
+    { pos: 1.0,  r: 0,   g: 82,  b: 204 },
+  ];
+  t = Math.max(0, Math.min(1, t));
+  let lo = stops[0], hi = stops[stops.length - 1];
+  for (let i = 0; i < stops.length - 1; i++) {
+    if (t >= stops[i].pos && t <= stops[i + 1].pos) {
+      lo = stops[i]; hi = stops[i + 1]; break;
+    }
+  }
+  const f = hi.pos === lo.pos ? 0 : (t - lo.pos) / (hi.pos - lo.pos);
+  return `rgb(${Math.round(lerp(lo.r,hi.r,f))},${Math.round(lerp(lo.g,hi.g,f))},${Math.round(lerp(lo.b,hi.b,f))})`;
+}
+
+function heatText(t) { return t > 0.55 ? "#fff" : "#1a1d29"; }
+
+function natureColor(val, type) {
+  const t = val / 5;
+  const p = {
+    fraud:  { r: [245, 192], g: [240, 57],  b: [238, 43] },
+    waste:  { r: [245, 230], g: [240, 126], b: [238, 34] },
+    policy: { r: [236, 0],   g: [234, 82],  b: [229, 204] }
+  }[type];
+  if (!p) return "#eceae5";
+  return `rgb(${Math.round(lerp(p.r[0],p.r[1],t))},${Math.round(lerp(p.g[0],p.g[1],t))},${Math.round(lerp(p.b[0],p.b[1],t))})`;
+}
+
+function natureText(val, type) {
+  if (type === "fraud" && val >= 4) return "#fff";
+  if (type === "policy" && val >= 4) return "#fff";
+  return "#1a1d29";
+}
+
+// ── Normalize blue columns ──
+const blueMetrics = ["providers", "exposure_b"];
+const maxes = {}, mins = {};
+blueMetrics.forEach(m => {
+  const vals = patterns.map(p => p[m]);
+  maxes[m] = Math.max(...vals);
+  mins[m] = Math.min(...vals);
+});
+
+function norm(val, metric) {
+  if (maxes[metric] === mins[metric]) return 0;
+  if (metric === "providers") {
+    const lv = Math.log10(val + 1), lx = Math.log10(maxes[metric] + 1), ln = Math.log10(mins[metric] + 1);
+    return lx === ln ? 0 : (lv - ln) / (lx - ln);
+  }
+  return (val - mins[metric]) / (maxes[metric] - mins[metric]);
+}
+
+// ── Render ──
+const natureLabels = { 0: "—", 1: "Low", 2: "Mod", 3: "High", 4: "V.High", 5: "Peak" };
+const tbody = document.querySelector("#mergedHeatmap tbody");
+
+patterns.forEach(p => {
+  const tr = document.createElement("tr");
+
+  // Pattern label
+  const labelTd = document.createElement("td");
+  labelTd.className = "row-label";
+  const desc = p.desc ? `<span class="pattern-desc">${p.desc}</span>` : "";
+  labelTd.innerHTML = `<span class="pattern-num">${p.id}</span><span class="label-text"><span class="pattern-name">${p.name}</span>${desc}</span>`;
+  tr.appendChild(labelTd);
+
+  // Providers
+  let t = norm(p.providers, "providers");
+  let td = document.createElement("td");
+  td.className = "heat-cell";
+  td.style.background = heatColor(t);
+  td.style.color = heatText(t);
+  td.innerHTML = `<div class="heat-value">${p.providers.toLocaleString()}</div><div class="heat-sub">providers</div>`;
+  tr.appendChild(td);
+
+  // Exposure
+  t = norm(p.exposure_b, "exposure_b");
+  td = document.createElement("td");
+  td.className = "heat-cell";
+  td.style.background = heatColor(t);
+  td.style.color = heatText(t);
+  td.innerHTML = `<div class="heat-value">$${p.exposure_b.toFixed(1)}B</div><div class="heat-sub">exposure</div>`;
+  tr.appendChild(td);
+
+  // Divider
+  td = document.createElement("td");
+  td.className = "divider";
+  tr.appendChild(td);
+
+  // Nature: Fraud, Waste, Policy
+  ["fraud", "waste", "policy"].forEach(key => {
+    const val = p.nature[key];
+    td = document.createElement("td");
+    td.className = "nature-cell";
+    td.style.background = natureColor(val, key);
+    td.style.color = natureText(val, key);
+    td.textContent = natureLabels[val];
+    tr.appendChild(td);
+  });
+
+  tbody.appendChild(tr);
+});
+</script>
+</body>
+</html>

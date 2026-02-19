@@ -1,0 +1,216 @@
+# Hypothesis Validation Summary
+
+- Total hypotheses: 1087
+- Supported (>=1 finding): 481
+- Not supported (0 findings): 606
+
+## Top 20 by Total Estimated Impact
+
+- H0520: $543,129,270,437 across 556521 findings — Ghost network indicator: ghost_network_cluster
+- H0510: $543,129,270,437 across 556521 findings — Ghost network indicator: batch_creation_10
+- H0509: $543,129,270,437 across 556521 findings — Ghost network indicator: batch_creation_5
+- H0514: $543,129,270,437 across 556521 findings — Ghost network indicator: phantom_address
+- H0515: $543,129,270,437 across 556521 findings — Ghost network indicator: ghost_composite_3plus
+- H0508: $543,129,270,437 across 556521 findings — Ghost network indicator: sequential_npi
+- H0507: $543,129,270,437 across 556521 findings — Ghost network indicator: identical_pattern
+- H0513: $543,129,270,437 across 556521 findings — Ghost network indicator: mirror_billing
+- H0505: $538,189,378,366 across 48569 findings — Ghost network indicator: no_nppes
+- H0506: $538,189,378,366 across 48569 findings — Ghost network indicator: deactivated_npi
+- H0512: $536,515,413,282 across 37592 findings — Ghost network indicator: short_lived
+- H0511: $535,126,722,175 across 33653 findings — Ghost network indicator: short_lived
+- H0519: $535,126,722,175 across 33653 findings — Ghost network indicator: concentrated_codes
+- H0504: $535,126,722,175 across 33653 findings — Ghost network indicator: no_nppes
+- H0501: $535,126,722,175 across 33653 findings — Ghost network indicator: single_biller
+- H0518: $535,126,722,175 across 33653 findings — Ghost network indicator: no_independent_billing
+- H0503: $535,126,722,175 across 33653 findings — Ghost network indicator: single_biller
+- H0502: $533,061,722,940 across 30802 findings — Ghost network indicator: single_biller
+- H0517: $533,061,722,940 across 30802 findings — Ghost network indicator: rapid_billing
+- H0516: $527,652,937,292 across 27108 findings — Ghost network indicator: single_biller_high
+
+## Top 20 by Finding Count
+
+- H0507: 556521 findings, $543,129,270,437 — Ghost network indicator: identical_pattern
+- H0508: 556521 findings, $543,129,270,437 — Ghost network indicator: sequential_npi
+- H0509: 556521 findings, $543,129,270,437 — Ghost network indicator: batch_creation_5
+- H0510: 556521 findings, $543,129,270,437 — Ghost network indicator: batch_creation_10
+- H0513: 556521 findings, $543,129,270,437 — Ghost network indicator: mirror_billing
+- H0514: 556521 findings, $543,129,270,437 — Ghost network indicator: phantom_address
+- H0515: 556521 findings, $543,129,270,437 — Ghost network indicator: ghost_composite_3plus
+- H0520: 556521 findings, $543,129,270,437 — Ghost network indicator: ghost_network_cluster
+- H0117: 340182 findings, $194,901,999,957 — GEV extreme value analysis for Other (total_paid)
+- H0116: 340181 findings, $205,885,284,780 — GEV extreme value analysis for Other (paid_per_claim)
+- H0102: 262092 findings, $153,279,676,391 — GEV extreme value analysis for E&M (paid_per_claim)
+- H0103: 253659 findings, $143,182,361,231 — GEV extreme value analysis for E&M (total_paid)
+- H0100: 90111 findings, $175,413,302,963 — GEV extreme value analysis for Behavioral Health (paid_per_claim)
+- H0101: 90110 findings, $174,720,689,846 — GEV extreme value analysis for Behavioral Health (total_paid)
+- H0106: 69041 findings, $31,757,583,414 — GEV extreme value analysis for Lab (paid_per_claim)
+- H0107: 63080 findings, $28,996,167,582 — GEV extreme value analysis for Lab (total_paid)
+- H0099: 57134 findings, $320,480,649,632 — GEV extreme value analysis for Home Health (total_paid)
+- H0098: 57132 findings, $370,974,192,351 — GEV extreme value analysis for Home Health (paid_per_claim)
+- H0505: 48569 findings, $538,189,378,366 — Ghost network indicator: no_nppes
+- H0506: 48569 findings, $538,189,378,366 — Ghost network indicator: deactivated_npi
+
+## Totals by Method
+
+- ghost_network: 20 hypotheses, 4877528 findings, $10,762,465,049,729
+- gev_extreme: 20 hypotheses, 1846639 findings, $2,140,794,996,040
+- change_point: 15 hypotheses, 17280 findings, $2,070,735,475,519
+- single_code: 15 hypotheses, 15000 findings, $1,872,145,422,088
+- hub_spoke: 20 hypotheses, 20000 findings, $1,547,624,877,623
+- iqr_outlier: 7 hypotheses, 5968 findings, $837,074,137,812
+- z_score_paid_per_bene: 30 hypotheses, 30000 findings, $540,789,040,587
+- pure_billing: 15 hypotheses, 15000 findings, $504,333,157,388
+- shared_servicing: 20 hypotheses, 10940 findings, $424,647,792,105
+- sudden_disappearance: 15 hypotheses, 15000 findings, $408,405,850,322
+- yoy_growth: 15 hypotheses, 30000 findings, $375,102,379,053
+- provider_dominance: 20 hypotheses, 1400 findings, $290,896,638,642
+- covid_anomaly: 15 hypotheses, 15000 findings, $205,227,577,278
+- peer_volume: 20 hypotheses, 8113 findings, $178,225,596,204
+- hhi_concentration: 15 hypotheses, 6700 findings, $147,018,709,184
+- peer_rate: 30 hypotheses, 13417 findings, $27,821,796,353
+- peer_concentration: 20 hypotheses, 3421 findings, $20,718,625,206
+- seasonal_violation: 15 hypotheses, 1200 findings, $20,501,217,224
+- size_mismatch: 20 hypotheses, 10000 findings, $20,450,909,508
+- month_spike: 20 hypotheses, 40000 findings, $17,997,071,885
+- circular_billing: 15 hypotheses, 7500 findings, $17,050,602,736
+- z_score_paid_per_claim: 30 hypotheses, 6847 findings, $11,526,528,208
+- december_surge: 10 hypotheses, 10000 findings, $7,501,118,374
+- new_network: 15 hypotheses, 3503 findings, $6,346,033,218
+- z_score_claims_per_bene: 30 hypotheses, 8000 findings, $5,380,558,568
+- sudden_appearance: 15 hypotheses, 990 findings, $2,818,635,710
+- temporal_concentration: 15 hypotheses, 0 findings, $0
+- vae: 20 hypotheses, 0 findings, $0
+- upcoding: 15 hypotheses, 0 findings, $0
+- aba_peer_cpb: 1 hypotheses, 0 findings, $0
+- aba_peer_rate: 1 hypotheses, 0 findings, $0
+- no_nppes_high_billing: 1 hypotheses, 0 findings, $0
+- lab_single_referrer: 1 hypotheses, 0 findings, $0
+- genetic_rapid_entrant: 1 hypotheses, 0 findings, $0
+- bene_pool_cluster: 1 hypotheses, 0 findings, $0
+- sequential_npi_address: 1 hypotheses, 0 findings, $0
+- random_forest: 20 hypotheses, 0 findings, $0
+- specialty_mismatch: 20 hypotheses, 0 findings, $0
+- leie_billing_npi: 1 hypotheses, 0 findings, $0
+- captive_servicing: 1 hypotheses, 0 findings, $0
+- addiction_high_per_bene: 1 hypotheses, 0 findings, $0
+- pharmacy_bene_shopping: 1 hypotheses, 0 findings, $0
+- bene_synchronized_churn: 1 hypotheses, 0 findings, $0
+- association_rules: 1 hypotheses, 0 findings, $0
+- triple_signal: 1 hypotheses, 0 findings, $0
+- aba_florida_moratorium: 1 hypotheses, 0 findings, $0
+- geographic_peer: 20 hypotheses, 0 findings, $0
+- xgboost: 30 hypotheses, 0 findings, $0
+- impossible_volume: 15 hypotheses, 0 findings, $0
+- captive_referral: 1 hypotheses, 0 findings, $0
+- transport_single_entity: 1 hypotheses, 0 findings, $0
+- pharmacy_no_em: 1 hypotheses, 0 findings, $0
+- pharmacy_spike: 1 hypotheses, 0 findings, $0
+- shared_flagged_benes: 1 hypotheses, 0 findings, $0
+- aba_holiday_billing: 1 hypotheses, 0 findings, $0
+- leie_name_address_match: 1 hypotheses, 0 findings, $0
+- pharmacy_identical_amounts: 1 hypotheses, 0 findings, $0
+- bene_phantom_growth: 1 hypotheses, 0 findings, $0
+- address_npi_replacement: 1 hypotheses, 0 findings, $0
+- coordinated_address_start: 1 hypotheses, 0 findings, $0
+- isolation_forest: 40 hypotheses, 0 findings, $0
+- address_multiple_exclusions: 1 hypotheses, 0 findings, $0
+- entity_type_change: 1 hypotheses, 0 findings, $0
+- sober_home_no_em: 1 hypotheses, 0 findings, $0
+- zipf_referral: 1 hypotheses, 0 findings, $0
+- new: 1 hypotheses, 0 findings, $0
+- impossible_provider_day_24h: 1 hypotheses, 0 findings, $0
+- lstm: 15 hypotheses, 0 findings, $0
+- impossible_sustained_16h: 1 hypotheses, 0 findings, $0
+- kmeans: 15 hypotheses, 0 findings, $0
+- aba_rapid_entrant: 1 hypotheses, 0 findings, $0
+- aba_phantom_pattern: 1 hypotheses, 0 findings, $0
+- dme_single_prescriber: 1 hypotheses, 0 findings, $0
+- pharmacy_rate_outlier: 1 hypotheses, 0 findings, $0
+- addiction_rapid_exit: 1 hypotheses, 0 findings, $0
+- geospatial_bene_mismatch: 1 hypotheses, 0 findings, $0
+- zero_autocorrelation: 1 hypotheses, 0 findings, $0
+- cpb_direction_change: 1 hypotheses, 0 findings, $0
+- network_density: 15 hypotheses, 0 findings, $0
+- regulatory: 1 hypotheses, 0 findings, $0
+- aba_individual_org_volume: 1 hypotheses, 0 findings, $0
+- concurrent_services: 1 hypotheses, 0 findings, $0
+- code_pair_deviation: 1 hypotheses, 0 findings, $0
+- reciprocal_referral: 1 hypotheses, 0 findings, $0
+- genetic_multi_state: 1 hypotheses, 0 findings, $0
+- bene_high_multi_provider: 1 hypotheses, 0 findings, $0
+- shared_bene_count: 1 hypotheses, 0 findings, $0
+- bene_multi_state: 1 hypotheses, 0 findings, $0
+- specialty_peer: 20 hypotheses, 0 findings, $0
+- lof: 15 hypotheses, 0 findings, $0
+- aba_spike: 1 hypotheses, 0 findings, $0
+- aba_code_concentration: 1 hypotheses, 0 findings, $0
+- impossible_psychotherapy_day: 1 hypotheses, 0 findings, $0
+- impossible_em_visits_day: 1 hypotheses, 0 findings, $0
+- no_days_off: 1 hypotheses, 0 findings, $0
+- leie_servicing_npi: 1 hypotheses, 0 findings, $0
+- post_deactivation_billing: 1 hypotheses, 0 findings, $0
+- new_npi_excluded_address: 1 hypotheses, 0 findings, $0
+- enumeration_after_claims: 1 hypotheses, 0 findings, $0
+- kickback_premium: 1 hypotheses, 0 findings, $0
+- referral_shift: 1 hypotheses, 0 findings, $0
+- addiction_churning: 1 hypotheses, 0 findings, $0
+- unbundling: 15 hypotheses, 0 findings, $0
+- impossible_home_health_day: 1 hypotheses, 0 findings, $0
+- impossible_service_days: 1 hypotheses, 0 findings, $0
+- addiction_patient_brokering: 1 hypotheses, 0 findings, $0
+- low_entropy_billing: 1 hypotheses, 0 findings, $0
+- capacity_based_limit: 1 hypotheses, 0 findings, $0
+- geographic_monopoly: 15 hypotheses, 0 findings, $0
+- autoencoder: 30 hypotheses, 0 findings, $0
+- fraud: 1 hypotheses, 0 findings, $0
+- aba_concentration: 1 hypotheses, 0 findings, $0
+- aba_batch_creation: 1 hypotheses, 0 findings, $0
+- oig_settlement: 1 hypotheses, 0 findings, $0
+- new_relationship_high_volume: 1 hypotheses, 0 findings, $0
+- hha_concentrated_referrals: 1 hypotheses, 0 findings, $0
+- pharmacy_multi_state: 1 hypotheses, 0 findings, $0
+- addiction_udt_concentration: 1 hypotheses, 0 findings, $0
+- bene_excessive_personal_care: 1 hypotheses, 0 findings, $0
+- address_change_spike: 1 hypotheses, 0 findings, $0
+- selective_reversal: 1 hypotheses, 0 findings, $0
+- high: 1 hypotheses, 0 findings, $0
+- crossref: 50 hypotheses, 0 findings, $0
+- genetic_high_per_bene: 1 hypotheses, 0 findings, $0
+- address_cluster_flagged: 1 hypotheses, 0 findings, $0
+- exit: 1 hypotheses, 0 findings, $0
+- neighborhood_risk: 1 hypotheses, 0 findings, $0
+- duplicate: 11 hypotheses, 0 findings, $0
+- organized: 1 hypotheses, 0 findings, $0
+- impossible_units_per_day: 1 hypotheses, 0 findings, $0
+- pharmacy_rapid_entrant: 1 hypotheses, 0 findings, $0
+- addiction_dual_billing: 1 hypotheses, 0 findings, $0
+- lab_sober_home_referrals: 1 hypotheses, 0 findings, $0
+- phantom: 11 hypotheses, 0 findings, $0
+- bene_network_spread: 1 hypotheses, 0 findings, $0
+- genetic_telehealth_referral: 1 hypotheses, 0 findings, $0
+- high_risk_category: 15 hypotheses, 0 findings, $0
+- addiction_december_dump: 1 hypotheses, 0 findings, $0
+- aba_impossible_caseload: 1 hypotheses, 0 findings, $0
+- aba_no_supervision: 1 hypotheses, 0 findings, $0
+- aba_multi_state: 1 hypotheses, 0 findings, $0
+- servicing_multi_biller_day: 1 hypotheses, 0 findings, $0
+- pharmacy_single_drug: 1 hypotheses, 0 findings, $0
+- zipf_billing: 1 hypotheses, 0 findings, $0
+- pharmacy_specialty_concentration: 1 hypotheses, 0 findings, $0
+- escalating: 1 hypotheses, 0 findings, $0
+- benfords_law: 20 hypotheses, 0 findings, $0
+- dbscan: 30 hypotheses, 0 findings, $0
+- transformer: 15 hypotheses, 0 findings, $0
+- adjustment: 11 hypotheses, 0 findings, $0
+- impossible_aba_volume: 1 hypotheses, 0 findings, $0
+- pharmacy_controlled_substances: 1 hypotheses, 0 findings, $0
+- addiction_residential_cluster: 1 hypotheses, 0 findings, $0
+- genetic_market_concentration: 1 hypotheses, 0 findings, $0
+- cosine_similarity_fraud: 1 hypotheses, 0 findings, $0
+- scope_of_practice: 1 hypotheses, 0 findings, $0
+- network_triangles: 1 hypotheses, 0 findings, $0
+- bene_overlap_ring: 1 hypotheses, 0 findings, $0
+
+## Ghost Network (Collapsed View)
+
+- Composite ghost_network: 20 hypotheses, 4877528 findings, $10,762,465,049,729

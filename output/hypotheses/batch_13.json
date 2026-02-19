@@ -1,0 +1,712 @@
+[
+  {
+    "id": "H0664",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #24",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 24
+    }
+  },
+  {
+    "id": "H0665",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #25",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 25
+    }
+  },
+  {
+    "id": "H0666",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #26",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 26
+    }
+  },
+  {
+    "id": "H0667",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #27",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 27
+    }
+  },
+  {
+    "id": "H0668",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #28",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 28
+    }
+  },
+  {
+    "id": "H0669",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #29",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 29
+    }
+  },
+  {
+    "id": "H0670",
+    "category": "6",
+    "subcategory": "6B",
+    "description": "DBSCAN noise/small cluster anomaly #30",
+    "method": "dbscan",
+    "acceptance_criteria": "cluster=-1 or cluster size <= 3",
+    "analysis_function": "ml_pipeline.dbscan",
+    "financial_impact_method": "total_paid for noise provider",
+    "parameters": {
+      "eps": 2.0,
+      "min_samples": 10,
+      "rank": 30
+    }
+  },
+  {
+    "id": "H0671",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #1",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 1
+    }
+  },
+  {
+    "id": "H0672",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #2",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 2
+    }
+  },
+  {
+    "id": "H0673",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #3",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 3
+    }
+  },
+  {
+    "id": "H0674",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #4",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 4
+    }
+  },
+  {
+    "id": "H0675",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #5",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 5
+    }
+  },
+  {
+    "id": "H0676",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #6",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 6
+    }
+  },
+  {
+    "id": "H0677",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #7",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 7
+    }
+  },
+  {
+    "id": "H0678",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #8",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 8
+    }
+  },
+  {
+    "id": "H0679",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #9",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 9
+    }
+  },
+  {
+    "id": "H0680",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #10",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 10
+    }
+  },
+  {
+    "id": "H0681",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #11",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 11
+    }
+  },
+  {
+    "id": "H0682",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #12",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 12
+    }
+  },
+  {
+    "id": "H0683",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #13",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 13
+    }
+  },
+  {
+    "id": "H0684",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #14",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 14
+    }
+  },
+  {
+    "id": "H0685",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #15",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 15
+    }
+  },
+  {
+    "id": "H0686",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #16",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 16
+    }
+  },
+  {
+    "id": "H0687",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #17",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 17
+    }
+  },
+  {
+    "id": "H0688",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #18",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 18
+    }
+  },
+  {
+    "id": "H0689",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #19",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 19
+    }
+  },
+  {
+    "id": "H0690",
+    "category": "6",
+    "subcategory": "6C",
+    "description": "Random Forest top feature importance anomaly #20",
+    "method": "random_forest",
+    "acceptance_criteria": "extreme tail of top importance feature",
+    "analysis_function": "ml_pipeline.random_forest_importance",
+    "financial_impact_method": "total_paid for extreme-feature provider",
+    "parameters": {
+      "rank": 20
+    }
+  },
+  {
+    "id": "H0691",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #1",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 1
+    }
+  },
+  {
+    "id": "H0692",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #2",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 2
+    }
+  },
+  {
+    "id": "H0693",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #3",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 3
+    }
+  },
+  {
+    "id": "H0694",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #4",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 4
+    }
+  },
+  {
+    "id": "H0695",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #5",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 5
+    }
+  },
+  {
+    "id": "H0696",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #6",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 6
+    }
+  },
+  {
+    "id": "H0697",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #7",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 7
+    }
+  },
+  {
+    "id": "H0698",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #8",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 8
+    }
+  },
+  {
+    "id": "H0699",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #9",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 9
+    }
+  },
+  {
+    "id": "H0700",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #10",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 10
+    }
+  },
+  {
+    "id": "H0701",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #11",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 11
+    }
+  },
+  {
+    "id": "H0702",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #12",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 12
+    }
+  },
+  {
+    "id": "H0703",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #13",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 13
+    }
+  },
+  {
+    "id": "H0704",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #14",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 14
+    }
+  },
+  {
+    "id": "H0705",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #15",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 15
+    }
+  },
+  {
+    "id": "H0706",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #16",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 16
+    }
+  },
+  {
+    "id": "H0707",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #17",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 17
+    }
+  },
+  {
+    "id": "H0708",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #18",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 18
+    }
+  },
+  {
+    "id": "H0709",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #19",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 19
+    }
+  },
+  {
+    "id": "H0710",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #20",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 20
+    }
+  },
+  {
+    "id": "H0711",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #21",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 21
+    }
+  },
+  {
+    "id": "H0712",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #22",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 22
+    }
+  },
+  {
+    "id": "H0713",
+    "category": "6",
+    "subcategory": "6D",
+    "description": "XGBoost semi-supervised novel finding #23",
+    "method": "xgboost",
+    "acceptance_criteria": "probability > 0.8, total paid > $100K, not in Categories 1-4",
+    "analysis_function": "ml_pipeline.xgboost_semisupervised",
+    "financial_impact_method": "total_paid for novel high-probability provider",
+    "parameters": {
+      "min_prob": 0.8,
+      "min_paid": 100000,
+      "rank": 23
+    }
+  }
+]

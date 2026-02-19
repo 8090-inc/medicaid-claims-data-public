@@ -1,0 +1,802 @@
+[
+  {
+    "id": "H0264",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (pelt): post/pre > 1.0x (behavioral)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 1.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "pelt",
+      "change_ratio": 1.0,
+      "filter": "behavioral",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0265",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (cusum): post/pre > 1.0x (high_value)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 1.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "cusum",
+      "change_ratio": 1.0,
+      "filter": "high_value",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0266",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (pelt): post/pre > 2.0x (high_value)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 2.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "pelt",
+      "change_ratio": 2.0,
+      "filter": "high_value",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0267",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (cusum): post/pre > 1.0x (last_12_months)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 1.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "cusum",
+      "change_ratio": 1.0,
+      "filter": "last_12_months",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0268",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (pelt): post/pre > 1.0x (last_12_months)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 1.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "pelt",
+      "change_ratio": 1.0,
+      "filter": "last_12_months",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0269",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (variance_change): post/pre > 2.0x (all)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 2.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "variance_change",
+      "change_ratio": 2.0,
+      "filter": "all",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0270",
+    "category": "2",
+    "subcategory": "2H",
+    "description": "Change-point detection (variance_change): post/pre > 3.0x (all)",
+    "method": "change_point",
+    "acceptance_criteria": "p < 0.01, post-change mean > 3.0x pre-change mean",
+    "analysis_function": "temporal_analyzer._change_point_detection",
+    "financial_impact_method": "post_change_total - pre_change_total_annualized",
+    "parameters": {
+      "method": "variance_change",
+      "change_ratio": 3.0,
+      "filter": "all",
+      "p_threshold": 0.01
+    }
+  },
+  {
+    "id": "H0271",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for T1019",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1019' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T1019' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "T1019",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0272",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for T1015",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1015' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T1015' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "T1015",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0273",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 99213",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99213' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99213' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "99213",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0274",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 99214",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99214' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99214' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "99214",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0275",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for H0015",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0015' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'H0015' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "H0015",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0276",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for T2003",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2003' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T2003' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "T2003",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0277",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for T1005",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1005' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T1005' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "T1005",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0278",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 99215",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99215' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99215' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "99215",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0279",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for T2025",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2025' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T2025' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "T2025",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0280",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 99212",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99212' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99212' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "99212",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0281",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for T1020",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1020' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T1020' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "T1020",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0282",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for H2015",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H2015' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'H2015' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "H2015",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0283",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for H2016",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H2016' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'H2016' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "H2016",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0284",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 99203",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99203' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99203' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "99203",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0285",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 99204",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99204' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99204' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "99204",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0286",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 99202",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99202' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99202' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "99202",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0287",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 99211",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99211' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99211' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "99211",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0288",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for T2024",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2024' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T2024' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "T2024",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0289",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 97110",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '97110' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '97110' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "97110",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0290",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 97530",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '97530' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '97530' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "97530",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0291",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 92507",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '92507' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '92507' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "92507",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0292",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 97140",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '97140' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '97140' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "97140",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0293",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 97116",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '97116' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '97116' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "97116",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0294",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 90834",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '90834' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '90834' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "90834",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0295",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 90837",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '90837' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '90837' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "90837",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0296",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for 90832",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '90832' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '90832' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "90832",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0297",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for H0031",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0031' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'H0031' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "H0031",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0298",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for H0036",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0036' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'H0036' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "H0036",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0299",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for H0004",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0004' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'H0004' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "H0004",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0300",
+    "category": "3",
+    "subcategory": "3A",
+    "description": "Paid per claim > 2x peer median for T1017",
+    "method": "peer_rate",
+    "acceptance_criteria": "> 2x peer median, >= 50 claims, >= 30 peers",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1017' AND claims >= 50\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       ph.paid_per_claim / NULLIF(cp.median_ppc, 0) AS ratio, cp.median_ppc\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T1017' AND ph.claims >= 50 AND cp.num_peers >= 30\n                  AND ph.paid_per_claim > 2 * cp.median_ppc\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median) * claims",
+    "parameters": {
+      "hcpcs_code": "T1017",
+      "ratio_threshold": 2.0,
+      "min_claims": 50,
+      "min_peers": 30
+    }
+  },
+  {
+    "id": "H0301",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for T1019",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1019' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T1019' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "T1019",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0302",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for T1015",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1015' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T1015' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "T1015",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0303",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for 99213",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = '99213' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99213' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "99213",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0304",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for 99214",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = '99214' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99214' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "99214",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0305",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for H0015",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0015' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'H0015' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "H0015",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0306",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for T2003",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2003' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T2003' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "T2003",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0307",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for T1005",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1005' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T1005' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "T1005",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0308",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for 99215",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = '99215' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99215' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "99215",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0309",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for T2025",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2025' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T2025' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "T2025",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0310",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for 99212",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = '99212' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99212' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "99212",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0311",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for T1020",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1020' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T1020' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "T1020",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0312",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for H2015",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H2015' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'H2015' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "H2015",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0313",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for H2016",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H2016' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'H2016' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "H2016",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  }
+]

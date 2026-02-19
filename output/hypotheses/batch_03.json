@@ -1,0 +1,724 @@
+[
+  {
+    "id": "H0164",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: December spikes 5x",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 5x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 5,
+      "filter": "december",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0165",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: COVID onset spikes (Mar-Jun 2020)",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "covid_onset",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0166",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: COVID onset 5x",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 5x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 5,
+      "filter": "covid_onset",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0167",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: New code addition spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "new_code",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0168",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: Post-2022 spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "post_2022",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0169",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: High-value 10x spike (>$100K)",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 10x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 10,
+      "filter": "high_value",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0170",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: Consecutive month spikes",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "consecutive",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0171",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $500,000 (all)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $500,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 500000,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0172",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $1,000,000 (all)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $1,000,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 1000000,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0173",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $250,000 (high_risk_codes)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $250,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 250000,
+      "filter": "high_risk_codes"
+    }
+  },
+  {
+    "id": "H0174",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $500,000 (home_health)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $500,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 500000,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0175",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $500,000 (behavioral)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $500,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 500000,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0176",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $100,000 (p95_threshold)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $100,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 100000,
+      "filter": "p95_threshold"
+    }
+  },
+  {
+    "id": "H0177",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $250,000 (covid_era)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $250,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 250000,
+      "filter": "covid_era"
+    }
+  },
+  {
+    "id": "H0178",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $500,000 (covid_era)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $500,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 500000,
+      "filter": "covid_era"
+    }
+  },
+  {
+    "id": "H0179",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $100,000 (cluster_appearance)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $100,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 100000,
+      "filter": "cluster_appearance"
+    }
+  },
+  {
+    "id": "H0180",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $250,000 (cluster_appearance)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $250,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 250000,
+      "filter": "cluster_appearance"
+    }
+  },
+  {
+    "id": "H0181",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $500,000 (dme)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $500,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 500000,
+      "filter": "dme"
+    }
+  },
+  {
+    "id": "H0182",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $100,000 (transport)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $100,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 100000,
+      "filter": "transport"
+    }
+  },
+  {
+    "id": "H0183",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $250,000 (pharmacy)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $250,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 250000,
+      "filter": "pharmacy"
+    }
+  },
+  {
+    "id": "H0184",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $1,000,000 (any_category)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $1,000,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 1000000,
+      "filter": "any_category"
+    }
+  },
+  {
+    "id": "H0185",
+    "category": "2",
+    "subcategory": "2B",
+    "description": "Sudden provider appearance: first month > $500,000 (post_2022)",
+    "method": "sudden_appearance",
+    "acceptance_criteria": "first month paid > $500,000",
+    "analysis_function": "temporal_analyzer._ramp_up",
+    "financial_impact_method": "first 6 months total paid",
+    "parameters": {
+      "threshold": 500000,
+      "filter": "post_2022"
+    }
+  },
+  {
+    "id": "H0186",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$100,000/mo avg (all)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $100,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 100000,
+      "min_months": 12,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0187",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$250,000/mo avg (all)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $250,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 250000,
+      "min_months": 12,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0188",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$500,000/mo avg (all)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $500,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 500000,
+      "min_months": 12,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0189",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$1,000,000/mo avg (all)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $1,000,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 1000000,
+      "min_months": 12,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0190",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >24mo, >$100,000/mo avg (long_active)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 24+ months, avg > $100,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 100000,
+      "min_months": 24,
+      "filter": "long_active"
+    }
+  },
+  {
+    "id": "H0191",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >24mo, >$250,000/mo avg (long_active)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 24+ months, avg > $250,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 250000,
+      "min_months": 24,
+      "filter": "long_active"
+    }
+  },
+  {
+    "id": "H0192",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$100,000/mo avg (spike_then_vanish)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $100,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 100000,
+      "min_months": 12,
+      "filter": "spike_then_vanish"
+    }
+  },
+  {
+    "id": "H0193",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$250,000/mo avg (spike_then_vanish)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $250,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 250000,
+      "min_months": 12,
+      "filter": "spike_then_vanish"
+    }
+  },
+  {
+    "id": "H0194",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$500,000/mo avg (spike_then_vanish)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $500,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 500000,
+      "min_months": 12,
+      "filter": "spike_then_vanish"
+    }
+  },
+  {
+    "id": "H0195",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$100,000/mo avg (coordinated)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $100,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 100000,
+      "min_months": 12,
+      "filter": "coordinated"
+    }
+  },
+  {
+    "id": "H0196",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$250,000/mo avg (coordinated)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $250,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 250000,
+      "min_months": 12,
+      "filter": "coordinated"
+    }
+  },
+  {
+    "id": "H0197",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$100,000/mo avg (home_health)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $100,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 100000,
+      "min_months": 12,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0198",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >12mo, >$100,000/mo avg (behavioral)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 12+ months, avg > $100,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 100000,
+      "min_months": 12,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0199",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >6mo, >$100,000/mo avg (rapid_exit)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 6+ months, avg > $100,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 100000,
+      "min_months": 6,
+      "filter": "rapid_exit"
+    }
+  },
+  {
+    "id": "H0200",
+    "category": "2",
+    "subcategory": "2C",
+    "description": "Sudden disappearance: >6mo, >$250,000/mo avg (rapid_exit)",
+    "method": "sudden_disappearance",
+    "acceptance_criteria": "active 6+ months, avg > $250,000, then stopped",
+    "analysis_function": "temporal_analyzer._abrupt_stop",
+    "financial_impact_method": "last 12 months total paid",
+    "parameters": {
+      "avg_threshold": 250000,
+      "min_months": 6,
+      "filter": "rapid_exit"
+    }
+  },
+  {
+    "id": "H0201",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 300% (all)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 3x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 3,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0202",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 500% (all)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 5x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 5,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0203",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 1000% (all)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 10x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 10,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0204",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 300% (home_health)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 3x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 3,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0205",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 500% (home_health)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 5x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 5,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0206",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 300% (behavioral)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 3x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 3,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0207",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 500% (behavioral)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 5x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 5,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0208",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 300% (rate_driven)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 3x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 3,
+      "filter": "rate_driven"
+    }
+  },
+  {
+    "id": "H0209",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 500% (rate_driven)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 5x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 5,
+      "filter": "rate_driven"
+    }
+  },
+  {
+    "id": "H0210",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 300% (sustained_3yr)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 3x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 3,
+      "filter": "sustained_3yr"
+    }
+  },
+  {
+    "id": "H0211",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 500% (sustained_3yr)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 5x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 5,
+      "filter": "sustained_3yr"
+    }
+  },
+  {
+    "id": "H0212",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 1000% (full_period)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 10x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 10,
+      "filter": "full_period"
+    }
+  },
+  {
+    "id": "H0213",
+    "category": "2",
+    "subcategory": "2D",
+    "description": "YoY growth > 300% (code_expansion)",
+    "method": "yoy_growth",
+    "acceptance_criteria": "annual growth > 3x",
+    "analysis_function": "temporal_analyzer._yoy_growth",
+    "financial_impact_method": "growth_amount above baseline",
+    "parameters": {
+      "growth_ratio": 3,
+      "filter": "code_expansion"
+    }
+  }
+]

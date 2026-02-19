@@ -1,0 +1,17 @@
+method_name,source,overlap_npis,overlap_rate,flagged_npis
+addiction_rapid_exit,LEIE,1,0.05,20
+zscore_claims_per_bene,LEIE,49,0.007494646680942184,6538
+abrupt_stop,LEIE,7,0.007,1000
+claims_per_bene_vs_median,LEIE,8,0.0027313076135199728,2929
+servicing_fan_in,LEIE,1,0.0018281535648994515,547
+paid_per_claim_vs_median,LEIE,11,0.0012062726176115801,9119
+reciprocal_billing,LEIE,1,0.001184834123222749,844
+month_over_month_spike,LEIE,2,0.001146131805157593,1745
+yoy_growth,LEIE,2,0.0011086474501108647,1804
+december_spike,LEIE,1,0.0010718113612004287,933
+billing_fan_out,LEIE,1,0.001,1000
+gev_extreme_value,LEIE,529,0.0008957705743599643,590553
+ghost_provider_indicators,LEIE,412,0.0007403134832288449,556521
+zscore_paid_per_claim,LEIE,2,0.0005166623611469904,3871
+volume_vs_median,LEIE,2,0.00035180299032541777,5685
+iqr_outlier,LEIE,1,0.0002463661000246366,4059

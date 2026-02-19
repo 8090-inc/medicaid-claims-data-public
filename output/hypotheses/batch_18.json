@@ -1,0 +1,672 @@
+[
+  {
+    "id": "H0914",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Same beneficiary billed by multiple providers",
+    "method": "duplicate",
+    "acceptance_criteria": "Same beneficiary billed by multiple providers",
+    "analysis_function": "domain_rules.duplicate_same_day_same_bene",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_same_day_same_bene"
+    }
+  },
+  {
+    "id": "H0915",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Sequential duplicate claim patterns",
+    "method": "duplicate",
+    "acceptance_criteria": "Sequential duplicate claim patterns",
+    "analysis_function": "domain_rules.duplicate_sequential_claims",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_sequential_claims"
+    }
+  },
+  {
+    "id": "H0916",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Same NPI billed in multiple states same month",
+    "method": "duplicate",
+    "acceptance_criteria": "Same NPI billed in multiple states same month",
+    "analysis_function": "domain_rules.duplicate_cross_state",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_cross_state"
+    }
+  },
+  {
+    "id": "H0917",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Same service split across code variants",
+    "method": "duplicate",
+    "acceptance_criteria": "Same service split across code variants",
+    "analysis_function": "domain_rules.duplicate_code_splitting",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_code_splitting"
+    }
+  },
+  {
+    "id": "H0918",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Duplicate where billing=servicing",
+    "method": "duplicate",
+    "acceptance_criteria": "Duplicate where billing=servicing",
+    "analysis_function": "domain_rules.duplicate_biller_servicing_same",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_biller_servicing_same"
+    }
+  },
+  {
+    "id": "H0919",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "High-frequency duplicate patterns",
+    "method": "duplicate",
+    "acceptance_criteria": "High-frequency duplicate patterns",
+    "analysis_function": "domain_rules.duplicate_high_frequency",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_high_frequency"
+    }
+  },
+  {
+    "id": "H0920",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Growing duplicate rate over time",
+    "method": "duplicate",
+    "acceptance_criteria": "Growing duplicate rate over time",
+    "analysis_function": "domain_rules.duplicate_growing",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_growing"
+    }
+  },
+  {
+    "id": "H0921",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Composite phantom billing score > 3",
+    "method": "phantom",
+    "acceptance_criteria": "Composite phantom billing score > 3",
+    "analysis_function": "domain_rules.phantom_composite",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_composite"
+    }
+  },
+  {
+    "id": "H0922",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Composite adjustment anomaly score > 3",
+    "method": "adjustment",
+    "acceptance_criteria": "Composite adjustment anomaly score > 3",
+    "analysis_function": "domain_rules.adjustment_composite",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_composite"
+    }
+  },
+  {
+    "id": "H0923",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Composite duplicate billing score > 3",
+    "method": "duplicate",
+    "acceptance_criteria": "Composite duplicate billing score > 3",
+    "analysis_function": "domain_rules.duplicate_composite",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_composite"
+    }
+  },
+  {
+    "id": "H0924",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Pressure+opportunity+rationalization indicators",
+    "method": "fraud",
+    "acceptance_criteria": "Pressure+opportunity+rationalization indicators",
+    "analysis_function": "domain_rules.fraud_triangle",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "fraud_triangle"
+    }
+  },
+  {
+    "id": "H0925",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Coordinated phantom+adjustment+duplicate",
+    "method": "organized",
+    "acceptance_criteria": "Coordinated phantom+adjustment+duplicate",
+    "analysis_function": "domain_rules.organized_scheme",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "organized_scheme"
+    }
+  },
+  {
+    "id": "H0926",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Escalating pattern across all indicators",
+    "method": "escalating",
+    "acceptance_criteria": "Escalating pattern across all indicators",
+    "analysis_function": "domain_rules.escalating_fraud",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "escalating_fraud"
+    }
+  },
+  {
+    "id": "H0927",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "New provider with multiple domain red flags",
+    "method": "new",
+    "acceptance_criteria": "New provider with multiple domain red flags",
+    "analysis_function": "domain_rules.new_provider_red_flags",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "new_provider_red_flags"
+    }
+  },
+  {
+    "id": "H0928",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "High-risk category + domain red flag composite",
+    "method": "high",
+    "acceptance_criteria": "High-risk category + domain red flag composite",
+    "analysis_function": "domain_rules.high_risk_composite",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "high_risk_composite"
+    }
+  },
+  {
+    "id": "H0929",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Bill-spike-vanish pattern",
+    "method": "exit",
+    "acceptance_criteria": "Bill-spike-vanish pattern",
+    "analysis_function": "domain_rules.exit_scam_pattern",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "exit_scam_pattern"
+    }
+  },
+  {
+    "id": "H0930",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Potential regulatory arbitrage across states",
+    "method": "regulatory",
+    "acceptance_criteria": "Potential regulatory arbitrage across states",
+    "analysis_function": "domain_rules.regulatory_arbitrage",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "regulatory_arbitrage"
+    }
+  },
+  {
+    "id": "H0931",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: Podiatrist billing behavioral_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for Podiatrist",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "Podiatrist",
+      "mismatch_type": "behavioral_codes"
+    }
+  },
+  {
+    "id": "H0932",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: Dentist billing home_health_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for Dentist",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "Dentist",
+      "mismatch_type": "home_health_codes"
+    }
+  },
+  {
+    "id": "H0933",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: Optometrist billing behavioral_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for Optometrist",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "Optometrist",
+      "mismatch_type": "behavioral_codes"
+    }
+  },
+  {
+    "id": "H0934",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: Chiropractor billing behavioral_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for Chiropractor",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "Chiropractor",
+      "mismatch_type": "behavioral_codes"
+    }
+  },
+  {
+    "id": "H0935",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: Physical Therapist billing pharmacy_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for Physical Therapist",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "Physical Therapist",
+      "mismatch_type": "pharmacy_codes"
+    }
+  },
+  {
+    "id": "H0936",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: Dermatology billing behavioral_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for Dermatology",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "Dermatology",
+      "mismatch_type": "behavioral_codes"
+    }
+  },
+  {
+    "id": "H0937",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: Pediatrics billing geriatric_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for Pediatrics",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "Pediatrics",
+      "mismatch_type": "geriatric_codes"
+    }
+  },
+  {
+    "id": "H0938",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: Psychiatrist billing surgical_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for Psychiatrist",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "Psychiatrist",
+      "mismatch_type": "surgical_codes"
+    }
+  },
+  {
+    "id": "H0939",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: any_specialty billing mismatch_50pct",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for any_specialty",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "any_specialty",
+      "mismatch_type": "mismatch_50pct"
+    }
+  },
+  {
+    "id": "H0940",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: any_specialty billing mismatch_75pct",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for any_specialty",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "any_specialty",
+      "mismatch_type": "mismatch_75pct"
+    }
+  },
+  {
+    "id": "H0941",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: any_specialty billing mismatch_90pct",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for any_specialty",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "any_specialty",
+      "mismatch_type": "mismatch_90pct"
+    }
+  },
+  {
+    "id": "H0942",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: individual billing org_specialty_mismatch",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for individual",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "individual",
+      "mismatch_type": "org_specialty_mismatch"
+    }
+  },
+  {
+    "id": "H0943",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: organization billing individual_specialty_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for organization",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "organization",
+      "mismatch_type": "individual_specialty_codes"
+    }
+  },
+  {
+    "id": "H0944",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: primary_care billing specialty_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for primary_care",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "primary_care",
+      "mismatch_type": "specialty_codes"
+    }
+  },
+  {
+    "id": "H0945",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: surgical billing behavioral_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for surgical",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "surgical",
+      "mismatch_type": "behavioral_codes"
+    }
+  },
+  {
+    "id": "H0946",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: anesthesiology billing home_health_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for anesthesiology",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "anesthesiology",
+      "mismatch_type": "home_health_codes"
+    }
+  },
+  {
+    "id": "H0947",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: radiology billing therapy_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for radiology",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "radiology",
+      "mismatch_type": "therapy_codes"
+    }
+  },
+  {
+    "id": "H0948",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: emergency billing chronic_care_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for emergency",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "emergency",
+      "mismatch_type": "chronic_care_codes"
+    }
+  },
+  {
+    "id": "H0949",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: nursing billing surgical_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for nursing",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "nursing",
+      "mismatch_type": "surgical_codes"
+    }
+  },
+  {
+    "id": "H0950",
+    "category": "9",
+    "subcategory": "9A",
+    "description": "Specialty mismatch: pharmacy billing em_codes",
+    "method": "specialty_mismatch",
+    "acceptance_criteria": "> 50% claims outside expected codes for pharmacy",
+    "analysis_function": "crossref.specialty_mismatch",
+    "financial_impact_method": "total mismatched payments",
+    "parameters": {
+      "specialty": "pharmacy",
+      "mismatch_type": "em_codes"
+    }
+  },
+  {
+    "id": "H0951",
+    "category": "9",
+    "subcategory": "9B",
+    "description": "Individual NPI > $5M total paid",
+    "method": "crossref",
+    "acceptance_criteria": "Individual NPI > $5M total paid",
+    "analysis_function": "crossref.entity_individual_high_5m",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "entity_individual_high_5m"
+    }
+  },
+  {
+    "id": "H0952",
+    "category": "9",
+    "subcategory": "9B",
+    "description": "Individual NPI > $10M total paid",
+    "method": "crossref",
+    "acceptance_criteria": "Individual NPI > $10M total paid",
+    "analysis_function": "crossref.entity_individual_high_10m",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "entity_individual_high_10m"
+    }
+  },
+  {
+    "id": "H0953",
+    "category": "9",
+    "subcategory": "9B",
+    "description": "Individual NPI > $50M total paid",
+    "method": "crossref",
+    "acceptance_criteria": "Individual NPI > $50M total paid",
+    "analysis_function": "crossref.entity_individual_high_50m",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "entity_individual_high_50m"
+    }
+  },
+  {
+    "id": "H0954",
+    "category": "9",
+    "subcategory": "9B",
+    "description": "Individual NPI with > 20 servicing NPIs",
+    "method": "crossref",
+    "acceptance_criteria": "Individual NPI with > 20 servicing NPIs",
+    "analysis_function": "crossref.entity_individual_network",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "entity_individual_network"
+    }
+  },
+  {
+    "id": "H0955",
+    "category": "9",
+    "subcategory": "9B",
+    "description": "Individual billing > 50 distinct codes",
+    "method": "crossref",
+    "acceptance_criteria": "Individual billing > 50 distinct codes",
+    "analysis_function": "crossref.entity_individual_multi_code",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "entity_individual_multi_code"
+    }
+  },
+  {
+    "id": "H0956",
+    "category": "9",
+    "subcategory": "9B",
+    "description": "Organization with single servicing NPI",
+    "method": "crossref",
+    "acceptance_criteria": "Organization with single servicing NPI",
+    "analysis_function": "crossref.entity_org_single_npi",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "entity_org_single_npi"
+    }
+  },
+  {
+    "id": "H0957",
+    "category": "9",
+    "subcategory": "9B",
+    "description": "Organization NPI not in NPPES",
+    "method": "crossref",
+    "acceptance_criteria": "Organization NPI not in NPPES",
+    "analysis_function": "crossref.entity_org_no_nppes",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "entity_org_no_nppes"
+    }
+  },
+  {
+    "id": "H0958",
+    "category": "9",
+    "subcategory": "9C",
+    "description": "Servicing NPI in > 3 states same month",
+    "method": "crossref",
+    "acceptance_criteria": "Servicing NPI in > 3 states same month",
+    "analysis_function": "crossref.geo_multi_state_3",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "geo_multi_state_3"
+    }
+  },
+  {
+    "id": "H0959",
+    "category": "9",
+    "subcategory": "9C",
+    "description": "Servicing NPI in > 5 states same month",
+    "method": "crossref",
+    "acceptance_criteria": "Servicing NPI in > 5 states same month",
+    "analysis_function": "crossref.geo_multi_state_5",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "geo_multi_state_5"
+    }
+  },
+  {
+    "id": "H0960",
+    "category": "9",
+    "subcategory": "9C",
+    "description": "Servicing NPI in > 10 states same month",
+    "method": "crossref",
+    "acceptance_criteria": "Servicing NPI in > 10 states same month",
+    "analysis_function": "crossref.geo_multi_state_10",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "geo_multi_state_10"
+    }
+  },
+  {
+    "id": "H0961",
+    "category": "9",
+    "subcategory": "9C",
+    "description": "Billing and servicing NPIs in distant states",
+    "method": "crossref",
+    "acceptance_criteria": "Billing and servicing NPIs in distant states",
+    "analysis_function": "crossref.geo_distant_billing",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "geo_distant_billing"
+    }
+  },
+  {
+    "id": "H0962",
+    "category": "9",
+    "subcategory": "9C",
+    "description": "Multiple flagged NPIs at same zip code",
+    "method": "crossref",
+    "acceptance_criteria": "Multiple flagged NPIs at same zip code",
+    "analysis_function": "crossref.geo_cluster_same_zip",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "geo_cluster_same_zip"
+    }
+  },
+  {
+    "id": "H0963",
+    "category": "9",
+    "subcategory": "9D",
+    "description": "Deactivated NPI still billing",
+    "method": "crossref",
+    "acceptance_criteria": "Deactivated NPI still billing",
+    "analysis_function": "crossref.deactivated_still_billing",
+    "financial_impact_method": "total payments to flagged provider",
+    "parameters": {
+      "rule": "deactivated_still_billing"
+    }
+  }
+]

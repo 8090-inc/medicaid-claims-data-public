@@ -1,0 +1,679 @@
+[
+  {
+    "id": "H0864",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: codes_per_bene_5x (all)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: codes_per_bene_5x",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "codes_per_bene_5x",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0865",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: codes_per_bene_3x (high_value)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: codes_per_bene_3x",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "codes_per_bene_3x",
+      "filter": "high_value"
+    }
+  },
+  {
+    "id": "H0866",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: component_vs_bundle (lab_panels)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: component_vs_bundle",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "component_vs_bundle",
+      "filter": "lab_panels"
+    }
+  },
+  {
+    "id": "H0867",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: component_vs_bundle (therapy_evals)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: component_vs_bundle",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "component_vs_bundle",
+      "filter": "therapy_evals"
+    }
+  },
+  {
+    "id": "H0868",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: component_vs_bundle (em_addons)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: component_vs_bundle",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "component_vs_bundle",
+      "filter": "em_addons"
+    }
+  },
+  {
+    "id": "H0869",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: sequential_codes_same_day (all)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: sequential_codes_same_day",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "sequential_codes_same_day",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0870",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: sequential_codes_same_day (therapy)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: sequential_codes_same_day",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "sequential_codes_same_day",
+      "filter": "therapy"
+    }
+  },
+  {
+    "id": "H0871",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: modifier_abuse (all)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: modifier_abuse",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "modifier_abuse",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0872",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: fragmented_billing (all)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: fragmented_billing",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "fragmented_billing",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0873",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: fragmented_billing (home_health)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: fragmented_billing",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "fragmented_billing",
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0874",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: excessive_distinct_codes (all)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: excessive_distinct_codes",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "excessive_distinct_codes",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0875",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: excessive_distinct_codes (individual)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: excessive_distinct_codes",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "excessive_distinct_codes",
+      "filter": "individual"
+    }
+  },
+  {
+    "id": "H0876",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Home Health with rate_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Home Health + rate_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Home Health",
+      "red_flag": "rate_outlier"
+    }
+  },
+  {
+    "id": "H0877",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Home Health with volume_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Home Health + volume_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Home Health",
+      "red_flag": "volume_outlier"
+    }
+  },
+  {
+    "id": "H0878",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Home Health with network_anomaly",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Home Health + network_anomaly",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Home Health",
+      "red_flag": "network_anomaly"
+    }
+  },
+  {
+    "id": "H0879",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Behavioral Health with rate_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Behavioral Health + rate_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Behavioral Health",
+      "red_flag": "rate_outlier"
+    }
+  },
+  {
+    "id": "H0880",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Behavioral Health with volume_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Behavioral Health + volume_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Behavioral Health",
+      "red_flag": "volume_outlier"
+    }
+  },
+  {
+    "id": "H0881",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Behavioral Health with network_anomaly",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Behavioral Health + network_anomaly",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Behavioral Health",
+      "red_flag": "network_anomaly"
+    }
+  },
+  {
+    "id": "H0882",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Personal Care with rate_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Personal Care + rate_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Personal Care",
+      "red_flag": "rate_outlier"
+    }
+  },
+  {
+    "id": "H0883",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Personal Care with volume_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Personal Care + volume_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Personal Care",
+      "red_flag": "volume_outlier"
+    }
+  },
+  {
+    "id": "H0884",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk DME with rate_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in DME + rate_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "DME",
+      "red_flag": "rate_outlier"
+    }
+  },
+  {
+    "id": "H0885",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk DME with volume_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in DME + volume_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "DME",
+      "red_flag": "volume_outlier"
+    }
+  },
+  {
+    "id": "H0886",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk ABA Therapy with rate_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in ABA Therapy + rate_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "ABA Therapy",
+      "red_flag": "rate_outlier"
+    }
+  },
+  {
+    "id": "H0887",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Transportation with rate_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Transportation + rate_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Transportation",
+      "red_flag": "rate_outlier"
+    }
+  },
+  {
+    "id": "H0888",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Transportation with volume_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Transportation + volume_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Transportation",
+      "red_flag": "volume_outlier"
+    }
+  },
+  {
+    "id": "H0889",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Pharmacy with rate_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Pharmacy + rate_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Pharmacy",
+      "red_flag": "rate_outlier"
+    }
+  },
+  {
+    "id": "H0890",
+    "category": "8",
+    "subcategory": "8D",
+    "description": "High-risk Pharmacy with volume_outlier",
+    "method": "high_risk_category",
+    "acceptance_criteria": "top 1% in Pharmacy + volume_outlier",
+    "analysis_function": "domain_rules.high_risk_category",
+    "financial_impact_method": "excess above category peer median",
+    "parameters": {
+      "category": "Pharmacy",
+      "red_flag": "volume_outlier"
+    }
+  },
+  {
+    "id": "H0891",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Constant beneficiary count with growing claims",
+    "method": "phantom",
+    "acceptance_criteria": "Constant beneficiary count with growing claims",
+    "analysis_function": "domain_rules.phantom_constant_bene",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_constant_bene"
+    }
+  },
+  {
+    "id": "H0892",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Flat beneficiaries but claims increase > 50%",
+    "method": "phantom",
+    "acceptance_criteria": "Flat beneficiaries but claims increase > 50%",
+    "analysis_function": "domain_rules.phantom_flat_bene_growing_claims",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_flat_bene_growing_claims"
+    }
+  },
+  {
+    "id": "H0893",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Identical billing amounts every month",
+    "method": "phantom",
+    "acceptance_criteria": "Identical billing amounts every month",
+    "analysis_function": "domain_rules.phantom_identical_monthly",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_identical_monthly"
+    }
+  },
+  {
+    "id": "H0894",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Round number beneficiary counts",
+    "method": "phantom",
+    "acceptance_criteria": "Round number beneficiary counts",
+    "analysis_function": "domain_rules.phantom_round_bene_counts",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_round_bene_counts"
+    }
+  },
+  {
+    "id": "H0895",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Zero variance in monthly claims",
+    "method": "phantom",
+    "acceptance_criteria": "Zero variance in monthly claims",
+    "analysis_function": "domain_rules.phantom_no_variance",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_no_variance"
+    }
+  },
+  {
+    "id": "H0896",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Sequential claim patterns",
+    "method": "phantom",
+    "acceptance_criteria": "Sequential claim patterns",
+    "analysis_function": "domain_rules.phantom_sequential_claims",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_sequential_claims"
+    }
+  },
+  {
+    "id": "H0897",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Excessive weekend/holiday billing",
+    "method": "phantom",
+    "acceptance_criteria": "Excessive weekend/holiday billing",
+    "analysis_function": "domain_rules.phantom_weekend_billing",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_weekend_billing"
+    }
+  },
+  {
+    "id": "H0898",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Impossible telehealth volumes",
+    "method": "phantom",
+    "acceptance_criteria": "Impossible telehealth volumes",
+    "analysis_function": "domain_rules.phantom_telehealth_volume",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_telehealth_volume"
+    }
+  },
+  {
+    "id": "H0899",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Claims for potentially deceased beneficiaries",
+    "method": "phantom",
+    "acceptance_criteria": "Claims for potentially deceased beneficiaries",
+    "analysis_function": "domain_rules.phantom_deceased_bene",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_deceased_bene"
+    }
+  },
+  {
+    "id": "H0900",
+    "category": "8",
+    "subcategory": "8E",
+    "description": "Generic phantom billing pattern",
+    "method": "phantom",
+    "acceptance_criteria": "Generic phantom billing pattern",
+    "analysis_function": "domain_rules.phantom_generic_pattern",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "phantom_generic_pattern"
+    }
+  },
+  {
+    "id": "H0901",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Negative payments > 20% of positive",
+    "method": "adjustment",
+    "acceptance_criteria": "Negative payments > 20% of positive",
+    "analysis_function": "domain_rules.adjustment_20pct_negative",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_20pct_negative"
+    }
+  },
+  {
+    "id": "H0902",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Negative payments > 30% of positive",
+    "method": "adjustment",
+    "acceptance_criteria": "Negative payments > 30% of positive",
+    "analysis_function": "domain_rules.adjustment_30pct_negative",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_30pct_negative"
+    }
+  },
+  {
+    "id": "H0903",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Increasing negative payment share over time",
+    "method": "adjustment",
+    "acceptance_criteria": "Increasing negative payment share over time",
+    "analysis_function": "domain_rules.adjustment_increasing_negative",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_increasing_negative"
+    }
+  },
+  {
+    "id": "H0904",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Single large negative adjustment > $500K",
+    "method": "adjustment",
+    "acceptance_criteria": "Single large negative adjustment > $500K",
+    "analysis_function": "domain_rules.adjustment_large_single",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_large_single"
+    }
+  },
+  {
+    "id": "H0905",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Pattern of bill-then-reverse",
+    "method": "adjustment",
+    "acceptance_criteria": "Pattern of bill-then-reverse",
+    "analysis_function": "domain_rules.adjustment_pattern_reversal",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_pattern_reversal"
+    }
+  },
+  {
+    "id": "H0906",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Year-end adjustment concentration",
+    "method": "adjustment",
+    "acceptance_criteria": "Year-end adjustment concentration",
+    "analysis_function": "domain_rules.adjustment_year_end",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_year_end"
+    }
+  },
+  {
+    "id": "H0907",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Net negative total paid",
+    "method": "adjustment",
+    "acceptance_criteria": "Net negative total paid",
+    "analysis_function": "domain_rules.adjustment_negative_net",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_negative_net"
+    }
+  },
+  {
+    "id": "H0908",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Adjustments concentrated in specific codes",
+    "method": "adjustment",
+    "acceptance_criteria": "Adjustments concentrated in specific codes",
+    "analysis_function": "domain_rules.adjustment_selective_codes",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_selective_codes"
+    }
+  },
+  {
+    "id": "H0909",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Adjustment patterns suggesting audit response",
+    "method": "adjustment",
+    "acceptance_criteria": "Adjustment patterns suggesting audit response",
+    "analysis_function": "domain_rules.adjustment_post_audit",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_post_audit"
+    }
+  },
+  {
+    "id": "H0910",
+    "category": "8",
+    "subcategory": "8F",
+    "description": "Growing reversal rate over time",
+    "method": "adjustment",
+    "acceptance_criteria": "Growing reversal rate over time",
+    "analysis_function": "domain_rules.adjustment_growing_reversals",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "adjustment_growing_reversals"
+    }
+  },
+  {
+    "id": "H0911",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Same biller+code+month multiple servicing",
+    "method": "duplicate",
+    "acceptance_criteria": "Same biller+code+month multiple servicing",
+    "analysis_function": "domain_rules.duplicate_same_biller_code_month",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_same_biller_code_month"
+    }
+  },
+  {
+    "id": "H0912",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Overlapping billers for same servicing NPI",
+    "method": "duplicate",
+    "acceptance_criteria": "Overlapping billers for same servicing NPI",
+    "analysis_function": "domain_rules.duplicate_overlapping_billers",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_overlapping_billers"
+    }
+  },
+  {
+    "id": "H0913",
+    "category": "8",
+    "subcategory": "8G",
+    "description": "Identical payment amounts multiple times",
+    "method": "duplicate",
+    "acceptance_criteria": "Identical payment amounts multiple times",
+    "analysis_function": "domain_rules.duplicate_identical_amounts",
+    "financial_impact_method": "total flagged payments",
+    "parameters": {
+      "rule": "duplicate_identical_amounts"
+    }
+  }
+]

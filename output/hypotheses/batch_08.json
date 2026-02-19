@@ -1,0 +1,702 @@
+[
+  {
+    "id": "H0414",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 50 servicing NPIs (single_code)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 50 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 50,
+      "filter": "single_code"
+    }
+  },
+  {
+    "id": "H0415",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 20 servicing NPIs (multi_state)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 20 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 20,
+      "filter": "multi_state"
+    }
+  },
+  {
+    "id": "H0416",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 50 servicing NPIs (cross_specialty)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 50 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 50,
+      "filter": "cross_specialty"
+    }
+  },
+  {
+    "id": "H0417",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 100 servicing NPIs (post_2022)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 100 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 100,
+      "filter": "post_2022"
+    }
+  },
+  {
+    "id": "H0418",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 20 servicing NPIs (all_captive)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 20 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 20,
+      "filter": "all_captive"
+    }
+  },
+  {
+    "id": "H0419",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 50 servicing NPIs (high_rate_variance)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 50 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 50,
+      "filter": "high_rate_variance"
+    }
+  },
+  {
+    "id": "H0420",
+    "category": "4",
+    "subcategory": "4A",
+    "description": "Hub with > 200 servicing NPIs (mega_hub)",
+    "method": "hub_spoke",
+    "acceptance_criteria": "> 200 servicing NPIs",
+    "analysis_function": "network_analyzer._billing_fan_out",
+    "financial_impact_method": "total payments through hub",
+    "parameters": {
+      "min_servicing": 200,
+      "filter": "mega_hub"
+    }
+  },
+  {
+    "id": "H0421",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (all)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0422",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 20 billers (all)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 20 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 20,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0423",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 50 billers (all)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 50 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 50,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0424",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (rate_arbitrage)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "rate_arbitrage"
+    }
+  },
+  {
+    "id": "H0425",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 20 billers (rate_arbitrage)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 20 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 20,
+      "filter": "rate_arbitrage"
+    }
+  },
+  {
+    "id": "H0426",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (duplicate_billing)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "duplicate_billing"
+    }
+  },
+  {
+    "id": "H0427",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 20 billers (duplicate_billing)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 20 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 20,
+      "filter": "duplicate_billing"
+    }
+  },
+  {
+    "id": "H0428",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (multi_state)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "multi_state"
+    }
+  },
+  {
+    "id": "H0429",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 20 billers (multi_state)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 20 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 20,
+      "filter": "multi_state"
+    }
+  },
+  {
+    "id": "H0430",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 50 billers (multi_state)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 50 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 50,
+      "filter": "multi_state"
+    }
+  },
+  {
+    "id": "H0431",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (same_code)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "same_code"
+    }
+  },
+  {
+    "id": "H0432",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 20 billers (same_code)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 20 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 20,
+      "filter": "same_code"
+    }
+  },
+  {
+    "id": "H0433",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (sequential_npis)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "sequential_npis"
+    }
+  },
+  {
+    "id": "H0434",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (high_volume)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "high_volume"
+    }
+  },
+  {
+    "id": "H0435",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 20 billers (high_volume)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 20 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 20,
+      "filter": "high_volume"
+    }
+  },
+  {
+    "id": "H0436",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (recent_only)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "recent_only"
+    }
+  },
+  {
+    "id": "H0437",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (home_health)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0438",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (behavioral)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0439",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 10 billers (transport)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 10 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 10,
+      "filter": "transport"
+    }
+  },
+  {
+    "id": "H0440",
+    "category": "4",
+    "subcategory": "4B",
+    "description": "Servicing NPI under > 5 billers (extreme_rate_spread)",
+    "method": "shared_servicing",
+    "acceptance_criteria": "appears under > 5 billing NPIs",
+    "analysis_function": "network_analyzer._servicing_fan_in",
+    "financial_impact_method": "total payments to shared NPI",
+    "parameters": {
+      "min_billers": 5,
+      "filter": "extreme_rate_spread"
+    }
+  },
+  {
+    "id": "H0441",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (bilateral): > $50,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $50,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 50000,
+      "pattern": "bilateral"
+    }
+  },
+  {
+    "id": "H0442",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (bilateral): > $100,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $100,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 100000,
+      "pattern": "bilateral"
+    }
+  },
+  {
+    "id": "H0443",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (bilateral): > $500,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $500,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 500000,
+      "pattern": "bilateral"
+    }
+  },
+  {
+    "id": "H0444",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (trilateral): > $50,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $50,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 50000,
+      "pattern": "trilateral"
+    }
+  },
+  {
+    "id": "H0445",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (trilateral): > $100,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $100,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 100000,
+      "pattern": "trilateral"
+    }
+  },
+  {
+    "id": "H0446",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (same_codes): > $50,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $50,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 50000,
+      "pattern": "same_codes"
+    }
+  },
+  {
+    "id": "H0447",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (same_codes): > $100,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $100,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 100000,
+      "pattern": "same_codes"
+    }
+  },
+  {
+    "id": "H0448",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (same_month): > $50,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $50,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 50000,
+      "pattern": "same_month"
+    }
+  },
+  {
+    "id": "H0449",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (same_month): > $100,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $100,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 100000,
+      "pattern": "same_month"
+    }
+  },
+  {
+    "id": "H0450",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (high_frequency): > $50,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $50,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 50000,
+      "pattern": "high_frequency"
+    }
+  },
+  {
+    "id": "H0451",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (high_frequency): > $100,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $100,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 100000,
+      "pattern": "high_frequency"
+    }
+  },
+  {
+    "id": "H0452",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (growing): > $50,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $50,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 50000,
+      "pattern": "growing"
+    }
+  },
+  {
+    "id": "H0453",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (growing): > $100,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $100,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 100000,
+      "pattern": "growing"
+    }
+  },
+  {
+    "id": "H0454",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (new_relationship): > $50,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $50,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 50000,
+      "pattern": "new_relationship"
+    }
+  },
+  {
+    "id": "H0455",
+    "category": "4",
+    "subcategory": "4C",
+    "description": "Circular billing (new_relationship): > $100,000 both directions",
+    "method": "circular_billing",
+    "acceptance_criteria": "bilateral edge > $100,000 both directions",
+    "analysis_function": "network_analyzer._reciprocal_billing",
+    "financial_impact_method": "total in circular flow",
+    "parameters": {
+      "min_paid": 100000,
+      "pattern": "new_relationship"
+    }
+  },
+  {
+    "id": "H0456",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.5 (all)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.5",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.5,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0457",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.3 (high_value)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.3",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.3,
+      "filter": "high_value"
+    }
+  },
+  {
+    "id": "H0458",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.5 (high_value)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.5",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.5,
+      "filter": "high_value"
+    }
+  },
+  {
+    "id": "H0459",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.3 (near_clique)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.3",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.3,
+      "filter": "near_clique"
+    }
+  },
+  {
+    "id": "H0460",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.5 (near_clique)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.5",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.5,
+      "filter": "near_clique"
+    }
+  },
+  {
+    "id": "H0461",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.3 (star_topology)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.3",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.3,
+      "filter": "star_topology"
+    }
+  },
+  {
+    "id": "H0462",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.3 (chain_topology)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.3",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.3,
+      "filter": "chain_topology"
+    }
+  },
+  {
+    "id": "H0463",
+    "category": "4",
+    "subcategory": "4D",
+    "description": "Network density > 0.3 (components_50m)",
+    "method": "network_density",
+    "acceptance_criteria": "component density > 0.3",
+    "analysis_function": "network_analyzer._network_density",
+    "financial_impact_method": "total payments in dense component",
+    "parameters": {
+      "min_density": 0.3,
+      "filter": "components_50m"
+    }
+  }
+]

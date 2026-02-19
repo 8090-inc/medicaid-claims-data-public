@@ -1,0 +1,762 @@
+[
+  {
+    "id": "H0051",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 92507",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '92507' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '92507' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "92507",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0052",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 97140",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '97140' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97140' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "97140",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0053",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 97116",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '97116' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97116' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "97116",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0054",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 90834",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '90834' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '90834' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "90834",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0055",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 90837",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '90837' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '90837' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "90837",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0056",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 90832",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '90832' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '90832' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "90832",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0057",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for H0031",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0031' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0031' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H0031",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0058",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for H0036",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0036' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0036' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H0036",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0059",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for H0004",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0004' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0004' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H0004",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0060",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for T1017",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1017' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1017' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1017",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0061",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for T1019",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1019' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1019' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1019",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0062",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for T1015",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1015' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1015' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1015",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0063",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 99213",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99213' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99213' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99213",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0064",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 99214",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99214' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99214' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99214",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0065",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for H0015",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0015' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0015' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H0015",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0066",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for T2003",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2003' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T2003' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T2003",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0067",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for T1005",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1005' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1005' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1005",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0068",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 99215",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99215' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99215' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99215",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0069",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for T2025",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2025' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T2025' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T2025",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0070",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 99212",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99212' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99212' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99212",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0071",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for T1020",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1020' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1020' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1020",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0072",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for H2015",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H2015' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H2015' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H2015",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0073",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for H2016",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H2016' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H2016' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H2016",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0074",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 99203",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99203' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99203' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99203",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0075",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 99204",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99204' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99204' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99204",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0076",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 99202",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99202' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99202' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99202",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0077",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 99211",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99211' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99211' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99211",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0078",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for T2024",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2024' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T2024' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T2024",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0079",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 97110",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '97110' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97110' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "97110",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0080",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 97530",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '97530' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97530' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "97530",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0081",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 92507",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '92507' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '92507' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "92507",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0082",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 97140",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '97140' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97140' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "97140",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0083",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 97116",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '97116' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97116' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "97116",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0084",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 90834",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '90834' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '90834' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "90834",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0085",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 90837",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '90837' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '90837' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "90837",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0086",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for 90832",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = '90832' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '90832' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "90832",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0087",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for H0031",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0031' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0031' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H0031",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0088",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for H0036",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0036' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0036' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H0036",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0089",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for H0004",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0004' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0004' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H0004",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0090",
+    "category": "1",
+    "subcategory": "1C",
+    "description": "Providers with paid-per-bene z-score > 3.0 for T1017",
+    "method": "z_score_paid_per_bene",
+    "acceptance_criteria": "z > 3.0, excess > $500/beneficiary",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid / NULLIF(beneficiaries, 0)) AS mean_ppb,\n                           STDDEV(paid / NULLIF(beneficiaries, 0)) AS std_ppb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid / NULLIF(beneficiaries, 0)) AS median_ppb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1017' AND beneficiaries > 0\n                )\n                SELECT ph.billing_npi, ph.paid / NULLIF(ph.beneficiaries, 0) AS ppb,\n                       ph.beneficiaries, ph.paid,\n                       (ph.paid / NULLIF(ph.beneficiaries, 0) - cs.mean_ppb) / NULLIF(cs.std_ppb, 0) AS z_score,\n                       cs.median_ppb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1017' AND ph.beneficiaries > 0 AND cs.std_ppb > 0\n                  AND (ph.paid / ph.beneficiaries - cs.mean_ppb) / cs.std_ppb > 3.0\n                  AND (ph.paid / ph.beneficiaries - cs.median_ppb) > 500\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_ppb - peer_median_ppb) * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1017",
+      "z_threshold": 3.0,
+      "min_excess_per_bene": 500
+    }
+  },
+  {
+    "id": "H0091",
+    "category": "1",
+    "subcategory": "1D",
+    "description": "Providers with total_paid exceeding Q3 + 3*IQR",
+    "method": "iqr_outlier",
+    "acceptance_criteria": "value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",
+    "analysis_function": "statistical_analyzer._iqr_outlier",
+    "financial_impact_method": "amount above IQR threshold",
+    "parameters": {
+      "metric": "total_paid",
+      "iqr_multiplier": 3.0,
+      "min_months": 6,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0092",
+    "category": "1",
+    "subcategory": "1D",
+    "description": "Providers with total_claims exceeding Q3 + 3*IQR",
+    "method": "iqr_outlier",
+    "acceptance_criteria": "value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",
+    "analysis_function": "statistical_analyzer._iqr_outlier",
+    "financial_impact_method": "amount above IQR threshold",
+    "parameters": {
+      "metric": "total_claims",
+      "iqr_multiplier": 3.0,
+      "min_months": 6,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0093",
+    "category": "1",
+    "subcategory": "1D",
+    "description": "Providers with total_beneficiaries exceeding Q3 + 3*IQR",
+    "method": "iqr_outlier",
+    "acceptance_criteria": "value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",
+    "analysis_function": "statistical_analyzer._iqr_outlier",
+    "financial_impact_method": "amount above IQR threshold",
+    "parameters": {
+      "metric": "total_beneficiaries",
+      "iqr_multiplier": 3.0,
+      "min_months": 6,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0094",
+    "category": "1",
+    "subcategory": "1D",
+    "description": "Providers with avg_paid_per_claim exceeding Q3 + 3*IQR",
+    "method": "iqr_outlier",
+    "acceptance_criteria": "value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",
+    "analysis_function": "statistical_analyzer._iqr_outlier",
+    "financial_impact_method": "amount above IQR threshold",
+    "parameters": {
+      "metric": "avg_paid_per_claim",
+      "iqr_multiplier": 3.0,
+      "min_months": 6,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0095",
+    "category": "1",
+    "subcategory": "1D",
+    "description": "Providers with avg_claims_per_bene exceeding Q3 + 3*IQR",
+    "method": "iqr_outlier",
+    "acceptance_criteria": "value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",
+    "analysis_function": "statistical_analyzer._iqr_outlier",
+    "financial_impact_method": "amount above IQR threshold",
+    "parameters": {
+      "metric": "avg_claims_per_bene",
+      "iqr_multiplier": 3.0,
+      "min_months": 6,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0096",
+    "category": "1",
+    "subcategory": "1D",
+    "description": "Providers with num_codes exceeding Q3 + 3*IQR",
+    "method": "iqr_outlier",
+    "acceptance_criteria": "value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",
+    "analysis_function": "statistical_analyzer._iqr_outlier",
+    "financial_impact_method": "amount above IQR threshold",
+    "parameters": {
+      "metric": "num_codes",
+      "iqr_multiplier": 3.0,
+      "min_months": 6,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0097",
+    "category": "1",
+    "subcategory": "1D",
+    "description": "Providers with num_months exceeding Q3 + 3*IQR",
+    "method": "iqr_outlier",
+    "acceptance_criteria": "value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",
+    "analysis_function": "statistical_analyzer._iqr_outlier",
+    "financial_impact_method": "amount above IQR threshold",
+    "parameters": {
+      "metric": "num_months",
+      "iqr_multiplier": 3.0,
+      "min_months": 6,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0098",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Home Health (paid_per_claim)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Home Health",
+      "metric": "paid_per_claim",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0099",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Home Health (total_paid)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Home Health",
+      "metric": "total_paid",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0100",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Behavioral Health (paid_per_claim)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Behavioral Health",
+      "metric": "paid_per_claim",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  }
+]

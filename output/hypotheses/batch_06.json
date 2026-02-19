@@ -1,0 +1,776 @@
+[
+  {
+    "id": "H0314",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for 99203",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = '99203' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99203' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "99203",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0315",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for 99204",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = '99204' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99204' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "99204",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0316",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for 99202",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = '99202' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99202' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "99202",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0317",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for 99211",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = '99211' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '99211' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "99211",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0318",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for T2024",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2024' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = 'T2024' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "T2024",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0319",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for 97110",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = '97110' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '97110' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "97110",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0320",
+    "category": "3",
+    "subcategory": "3B",
+    "description": "Total claims > 10x peer median for 97530",
+    "method": "peer_volume",
+    "acceptance_criteria": "> 10x peer median, >= 12 months, > $100K",
+    "sql_template": "\n                WITH code_peers AS (\n                    SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims) AS median_claims\n                    FROM provider_hcpcs WHERE hcpcs_code = '97530' AND months_active >= 12\n                )\n                SELECT ph.billing_npi, ph.claims, ph.paid, ph.months_active,\n                       ph.claims / NULLIF(cp.median_claims, 0) AS ratio\n                FROM provider_hcpcs ph CROSS JOIN code_peers cp\n                WHERE ph.hcpcs_code = '97530' AND ph.months_active >= 12 AND ph.paid > 100000\n                  AND ph.claims > 10 * cp.median_claims\n                ORDER BY ph.paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_claims - peer_median_claims) * peer_median_rate",
+    "parameters": {
+      "hcpcs_code": "97530",
+      "ratio_threshold": 10.0,
+      "min_months": 12,
+      "min_paid": 100000
+    }
+  },
+  {
+    "id": "H0321",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for T1019",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1019",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0322",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for T1015",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1015",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0323",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for 99213",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99213",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0324",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for 99214",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99214",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0325",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for H0015",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H0015",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0326",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for T2003",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T2003",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0327",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for T1005",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1005",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0328",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for 99215",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99215",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0329",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for T2025",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T2025",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0330",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for 99212",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99212",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0331",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for T1020",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1020",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0332",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for H2015",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H2015",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0333",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for H2016",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H2016",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0334",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for 99203",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99203",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0335",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for 99204",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99204",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0336",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for 99202",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99202",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0337",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for 99211",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99211",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0338",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for T2024",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T2024",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0339",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for 97110",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "97110",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0340",
+    "category": "3",
+    "subcategory": "3C",
+    "description": "Claims per bene > 3x peer median for 97530",
+    "method": "peer_concentration",
+    "acceptance_criteria": "> 3x peer median, persists 6+ months",
+    "analysis_function": "peer_analyzer._claims_per_bene_vs_median",
+    "financial_impact_method": "(excess_claims_per_bene) * peer_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "97530",
+      "ratio_threshold": 3.0,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H0341",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for T1019",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "T1019",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0342",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for T1015",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "T1015",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0343",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for 99213",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "99213",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0344",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for 99214",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "99214",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0345",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for H0015",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "H0015",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0346",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for T2003",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "T2003",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0347",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for T1005",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "T1005",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0348",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for 99215",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "99215",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0349",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for T2025",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "T2025",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0350",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for 99212",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "99212",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0351",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for T1020",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "T1020",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0352",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for H2015",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "H2015",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0353",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for H2016",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "H2016",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0354",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for 99203",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "99203",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0355",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for 99204",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "99204",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0356",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for 99202",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "99202",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0357",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for 99211",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "99211",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0358",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for T2024",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "T2024",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0359",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for 97110",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "97110",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0360",
+    "category": "3",
+    "subcategory": "3D",
+    "description": "Provider exceeds state-level 95th percentile for 97530",
+    "method": "geographic_peer",
+    "acceptance_criteria": "> state 95th pct, >= 20 state peers, excess > $50K",
+    "analysis_function": "peer_analyzer._state_peer_comparison",
+    "financial_impact_method": "(provider_paid - state_p95) * ratio",
+    "parameters": {
+      "hcpcs_code": "97530",
+      "percentile": 95,
+      "min_state_peers": 20,
+      "min_excess": 50000
+    }
+  },
+  {
+    "id": "H0361",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Family Medicine)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Family Medicine 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Family Medicine",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0362",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Internal Medicine)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Internal Medicine 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Internal Medicine",
+      "percentile": 95
+    }
+  },
+  {
+    "id": "H0363",
+    "category": "3",
+    "subcategory": "3E",
+    "description": "Provider exceeds specialty 95th percentile (Pediatrics)",
+    "method": "specialty_peer",
+    "acceptance_criteria": "> Pediatrics 95th percentile",
+    "analysis_function": "peer_analyzer._specialty_peer_comparison",
+    "financial_impact_method": "(provider_paid - specialty_p95)",
+    "parameters": {
+      "specialty": "Pediatrics",
+      "percentile": 95
+    }
+  }
+]

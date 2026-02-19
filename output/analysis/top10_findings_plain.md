@@ -1,0 +1,12 @@
+# Top 10 Provider-Level Findings by Standardized Impact (Plain English)
+
+1. LOS ANGELES COUNTY DEPARTMENT OF MENTAL HEALTH (NPI 1699703827, CA) was flagged for an estimated $5,470,622,024 in exposure. It billed $6,778,483,867 total and triggered 19 detection methods (primary: composite_multi_signal, confidence: high).
+2. DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN (NPI 1629436241, TN) was flagged for an estimated $2,310,755,442 in exposure. It billed $2,596,064,455 total and triggered 12 detection methods (primary: composite_multi_signal, confidence: high).
+3. ALABAMA DEPARTMENT OF MENTAL HEALTH AND MENTAL RETARDATION (NPI 1982757688, AL) was flagged for an estimated $2,143,903,298 in exposure. It billed $2,254,946,212 total and triggered 11 detection methods (primary: composite_multi_signal, confidence: high).
+4. DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN (NPI 1356709976, TN) was flagged for an estimated $1,360,272,634 in exposure. It billed $1,452,536,495 total and triggered 10 detection methods (primary: composite_multi_signal, confidence: high).
+5. GUARDIANTRAC. LLC (NPI 1710176151, MI) was flagged for an estimated $1,316,290,875 in exposure. It billed $2,683,634,592 total and triggered 15 detection methods (primary: composite_multi_signal, confidence: high).
+6. CITY OF CHICAGO (NPI 1376554592, IL) was flagged for an estimated $1,159,564,617 in exposure. It billed $1,225,040,114 total and triggered 9 detection methods (primary: composite_temporal_plus_statistical, confidence: high).
+7. DEPARTMENT OF DEVELOPMENTAL SERVICES (NPI 1750504064, MA) was flagged for an estimated $1,077,098,762 in exposure. It billed $1,349,935,088 total and triggered 13 detection methods (primary: composite_multi_signal, confidence: high).
+8. DEPARTMENT OF HEALTH AND SENIOR SERVICES (NPI 1326168840, NJ) was flagged for an estimated $973,772,851 in exposure. It billed $1,073,667,311 total and triggered 7 detection methods (primary: composite_network_plus_volume, confidence: high).
+9. MAINS'L FLORIDA, INC. (NPI 1932341898, MN) was flagged for an estimated $973,247,195 in exposure. It billed $996,801,122 total and triggered 7 detection methods (primary: kickback_premium, confidence: high).
+10. NEW PARTNERS, INC (NPI 1083783013, NY) was flagged for an estimated $911,568,858 in exposure. It billed $1,077,342,252 total and triggered 11 detection methods (primary: composite_multi_signal, confidence: high).

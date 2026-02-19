@@ -1,0 +1,736 @@
+[
+  {
+    "id": "H0814",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #14",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 14
+    }
+  },
+  {
+    "id": "H0815",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #15",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 15
+    }
+  },
+  {
+    "id": "H0816",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #1",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 1
+    }
+  },
+  {
+    "id": "H0817",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #2",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 2
+    }
+  },
+  {
+    "id": "H0818",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #3",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 3
+    }
+  },
+  {
+    "id": "H0819",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #4",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 4
+    }
+  },
+  {
+    "id": "H0820",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #5",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 5
+    }
+  },
+  {
+    "id": "H0821",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #6",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 6
+    }
+  },
+  {
+    "id": "H0822",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #7",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 7
+    }
+  },
+  {
+    "id": "H0823",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #8",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 8
+    }
+  },
+  {
+    "id": "H0824",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #9",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 9
+    }
+  },
+  {
+    "id": "H0825",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #10",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 10
+    }
+  },
+  {
+    "id": "H0826",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #11",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 11
+    }
+  },
+  {
+    "id": "H0827",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #12",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 12
+    }
+  },
+  {
+    "id": "H0828",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #13",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 13
+    }
+  },
+  {
+    "id": "H0829",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #14",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 14
+    }
+  },
+  {
+    "id": "H0830",
+    "category": "7",
+    "subcategory": "7D",
+    "description": "Transformer attention concentration anomaly #15",
+    "method": "transformer",
+    "acceptance_criteria": "attention concentration > 3x uniform",
+    "analysis_function": "dl_pipeline.transformer_attention",
+    "financial_impact_method": "total_paid for attention-anomalous provider",
+    "parameters": {
+      "concentration_threshold": 3.0,
+      "rank": 15
+    }
+  },
+  {
+    "id": "H0831",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: T1019 > 480 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 480",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'T1019' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 480 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "T1019",
+      "unit_minutes": 15,
+      "max_units": 480
+    }
+  },
+  {
+    "id": "H0832",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: T1020 > 31 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 31",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'T1020' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 31 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "T1020",
+      "unit_minutes": 1440,
+      "max_units": 31
+    }
+  },
+  {
+    "id": "H0833",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: T1005 > 480 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 480",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'T1005' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 480 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "T1005",
+      "unit_minutes": 15,
+      "max_units": 480
+    }
+  },
+  {
+    "id": "H0834",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: S5125 > 480 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 480",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'S5125' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 480 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "S5125",
+      "unit_minutes": 15,
+      "max_units": 480
+    }
+  },
+  {
+    "id": "H0835",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: S5130 > 480 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 480",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'S5130' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 480 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "S5130",
+      "unit_minutes": 15,
+      "max_units": 480
+    }
+  },
+  {
+    "id": "H0836",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: S5150 > 480 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 480",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'S5150' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 480 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "S5150",
+      "unit_minutes": 15,
+      "max_units": 480
+    }
+  },
+  {
+    "id": "H0837",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: H0015 > 192 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 192",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'H0015' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 192 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "H0015",
+      "unit_minutes": 15,
+      "max_units": 192
+    }
+  },
+  {
+    "id": "H0838",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: H2015 > 480 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 480",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'H2015' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 480 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "H2015",
+      "unit_minutes": 15,
+      "max_units": 480
+    }
+  },
+  {
+    "id": "H0839",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: H2016 > 120 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 120",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'H2016' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 120 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "H2016",
+      "unit_minutes": 60,
+      "max_units": 120
+    }
+  },
+  {
+    "id": "H0840",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: H0036 > 480 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 480",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'H0036' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 480 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "H0036",
+      "unit_minutes": 15,
+      "max_units": 480
+    }
+  },
+  {
+    "id": "H0841",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: T1016 > 192 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 192",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'T1016' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 192 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "T1016",
+      "unit_minutes": 15,
+      "max_units": 192
+    }
+  },
+  {
+    "id": "H0842",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: T1017 > 192 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 192",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'T1017' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 192 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "T1017",
+      "unit_minutes": 15,
+      "max_units": 192
+    }
+  },
+  {
+    "id": "H0843",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: H2017 > 480 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 480",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'H2017' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 480 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "H2017",
+      "unit_minutes": 15,
+      "max_units": 480
+    }
+  },
+  {
+    "id": "H0844",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: T2020 > 480 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 480",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'T2020' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 480 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "T2020",
+      "unit_minutes": 15,
+      "max_units": 480
+    }
+  },
+  {
+    "id": "H0845",
+    "category": "8",
+    "subcategory": "8A",
+    "description": "Impossible volume: H2019 > 480 units/bene/month",
+    "method": "impossible_volume",
+    "acceptance_criteria": "claims/bene exceeds physical max of 480",
+    "sql_template": "\n                SELECT billing_npi, claim_month, claims, beneficiaries, paid,\n                       claims * 1.0 / NULLIF(beneficiaries, 0) AS claims_per_bene\n                FROM claims WHERE hcpcs_code = 'H2019' AND beneficiaries > 0\n                  AND claims * 1.0 / beneficiaries > 480 AND paid > 10000\n                ORDER BY paid DESC LIMIT 50\n            ",
+    "financial_impact_method": "100% of payments above physical maximum",
+    "parameters": {
+      "hcpcs_code": "H2019",
+      "unit_minutes": 15,
+      "max_units": 480
+    }
+  },
+  {
+    "id": "H0846",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: office_established 99215 > 2.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 2.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "office_established",
+      "target_code": "99215",
+      "ratio": 2.0
+    }
+  },
+  {
+    "id": "H0847",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: office_established 99215 > 3.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 3.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "office_established",
+      "target_code": "99215",
+      "ratio": 3.0
+    }
+  },
+  {
+    "id": "H0848",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: office_established 99214 > 2.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 2.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "office_established",
+      "target_code": "99214",
+      "ratio": 2.0
+    }
+  },
+  {
+    "id": "H0849",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: office_new 99205 > 2.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 2.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "office_new",
+      "target_code": "99205",
+      "ratio": 2.0
+    }
+  },
+  {
+    "id": "H0850",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: office_new 99205 > 3.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 3.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "office_new",
+      "target_code": "99205",
+      "ratio": 3.0
+    }
+  },
+  {
+    "id": "H0851",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: office_new 99204 > 2.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 2.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "office_new",
+      "target_code": "99204",
+      "ratio": 2.0
+    }
+  },
+  {
+    "id": "H0852",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: ed_visit 99285 > 2.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 2.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "ed_visit",
+      "target_code": "99285",
+      "ratio": 2.0
+    }
+  },
+  {
+    "id": "H0853",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: ed_visit 99285 > 3.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 3.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "ed_visit",
+      "target_code": "99285",
+      "ratio": 3.0
+    }
+  },
+  {
+    "id": "H0854",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: ed_visit 99284 > 2.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 2.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "ed_visit",
+      "target_code": "99284",
+      "ratio": 2.0
+    }
+  },
+  {
+    "id": "H0855",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: level_distribution_skew highest > 2.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 2.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "level_distribution_skew",
+      "target_code": "highest",
+      "ratio": 2.0
+    }
+  },
+  {
+    "id": "H0856",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: level_distribution_skew highest > 3.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 3.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "level_distribution_skew",
+      "target_code": "highest",
+      "ratio": 3.0
+    }
+  },
+  {
+    "id": "H0857",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: progressive_upcoding increasing_level > 0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "progressive_upcoding",
+      "target_code": "increasing_level",
+      "ratio": 0
+    }
+  },
+  {
+    "id": "H0858",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: state_comparison_upcode 99215 > 2.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 2.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "state_comparison_upcode",
+      "target_code": "99215",
+      "ratio": 2.0
+    }
+  },
+  {
+    "id": "H0859",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: specialty_comparison_upcode 99215 > 2.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 2.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "specialty_comparison_upcode",
+      "target_code": "99215",
+      "ratio": 2.0
+    }
+  },
+  {
+    "id": "H0860",
+    "category": "8",
+    "subcategory": "8B",
+    "description": "Upcoding: new_provider_upcoding 99215 > 2.0x peer ratio",
+    "method": "upcoding",
+    "acceptance_criteria": "highest-level code ratio > 2.0x peer median",
+    "analysis_function": "domain_rules.upcoding",
+    "financial_impact_method": "excess_claims * (high_code_rate - appropriate_code_rate)",
+    "parameters": {
+      "family": "new_provider_upcoding",
+      "target_code": "99215",
+      "ratio": 2.0
+    }
+  },
+  {
+    "id": "H0861",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: codes_per_bene_3x (all)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: codes_per_bene_3x",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "codes_per_bene_3x",
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0862",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: codes_per_bene_3x (home_health)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: codes_per_bene_3x",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "codes_per_bene_3x",
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0863",
+    "category": "8",
+    "subcategory": "8C",
+    "description": "Unbundling: codes_per_bene_3x (behavioral)",
+    "method": "unbundling",
+    "acceptance_criteria": "unbundling pattern: codes_per_bene_3x",
+    "analysis_function": "domain_rules.unbundling",
+    "financial_impact_method": "estimated bundled rate vs sum of components",
+    "parameters": {
+      "pattern": "codes_per_bene_3x",
+      "filter": "behavioral"
+    }
+  }
+]

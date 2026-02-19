@@ -1,0 +1,812 @@
+[
+  {
+    "id": "H0001",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for T1019",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1019' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1019' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "T1019",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0002",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for T1015",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1015' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1015' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "T1015",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0003",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 99213",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99213' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99213' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "99213",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0004",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 99214",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99214' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99214' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "99214",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0005",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for H0015",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0015' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0015' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "H0015",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0006",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for T2003",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2003' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T2003' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "T2003",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0007",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for T1005",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1005' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1005' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "T1005",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0008",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 99215",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99215' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99215' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "99215",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0009",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for T2025",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2025' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T2025' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "T2025",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0010",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 99212",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99212' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99212' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "99212",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0011",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for T1020",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1020' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1020' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "T1020",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0012",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for H2015",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H2015' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H2015' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "H2015",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0013",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for H2016",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H2016' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H2016' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "H2016",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0014",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 99203",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99203' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99203' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "99203",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0015",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 99204",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99204' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99204' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "99204",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0016",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 99202",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99202' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99202' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "99202",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0017",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 99211",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '99211' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99211' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "99211",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0018",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for T2024",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2024' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T2024' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "T2024",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0019",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 97110",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '97110' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97110' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "97110",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0020",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 97530",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '97530' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97530' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "97530",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0021",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 92507",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '92507' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '92507' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "92507",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0022",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 97140",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '97140' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97140' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "97140",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0023",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 97116",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '97116' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97116' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "97116",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0024",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 90834",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '90834' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '90834' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "90834",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0025",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 90837",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '90837' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '90837' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "90837",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0026",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for 90832",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = '90832' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '90832' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "90832",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0027",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for H0031",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0031' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0031' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "H0031",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0028",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for H0036",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0036' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0036' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "H0036",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0029",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for H0004",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0004' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0004' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "H0004",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0030",
+    "category": "1",
+    "subcategory": "1A",
+    "description": "Providers with paid-per-claim z-score > 3.0 for T1017",
+    "method": "z_score_paid_per_claim",
+    "acceptance_criteria": "z > 3.0, claims >= 10, peers >= 20, excess > $10K",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(paid_per_claim) AS mean_ppc, STDDEV(paid_per_claim) AS std_ppc,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY paid_per_claim) AS median_ppc,\n                           COUNT(*) AS num_peers\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1017' AND claims >= 10\n                )\n                SELECT ph.billing_npi, ph.paid_per_claim, ph.claims, ph.paid,\n                       (ph.paid_per_claim - cs.mean_ppc) / NULLIF(cs.std_ppc, 0) AS z_score,\n                       (ph.paid_per_claim - cs.median_ppc) * ph.claims AS excess_amount,\n                       cs.median_ppc, cs.num_peers\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1017' AND ph.claims >= 10\n                  AND cs.num_peers >= 20 AND cs.std_ppc > 0\n                  AND (ph.paid_per_claim - cs.mean_ppc) / cs.std_ppc > 3.0\n                  AND (ph.paid_per_claim - cs.median_ppc) * ph.claims > 10000\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_rate - peer_median_rate) * provider_claims",
+    "parameters": {
+      "hcpcs_code": "T1017",
+      "z_threshold": 3.0,
+      "min_claims": 10,
+      "min_peers": 20,
+      "min_excess": 10000
+    }
+  },
+  {
+    "id": "H0031",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for T1019",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1019' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1019' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1019",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0032",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for T1015",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1015' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1015' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1015",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0033",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 99213",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99213' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99213' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99213",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0034",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 99214",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99214' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99214' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99214",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0035",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for H0015",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H0015' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H0015' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H0015",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0036",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for T2003",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2003' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T2003' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T2003",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0037",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for T1005",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1005' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1005' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1005",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0038",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 99215",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99215' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99215' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99215",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0039",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for T2025",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2025' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T2025' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T2025",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0040",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 99212",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99212' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99212' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99212",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0041",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for T1020",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T1020' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T1020' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T1020",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0042",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for H2015",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H2015' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H2015' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H2015",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0043",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for H2016",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'H2016' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'H2016' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "H2016",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0044",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 99203",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99203' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99203' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99203",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0045",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 99204",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99204' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99204' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99204",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0046",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 99202",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99202' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99202' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99202",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0047",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 99211",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '99211' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '99211' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "99211",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0048",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for T2024",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = 'T2024' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = 'T2024' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "T2024",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0049",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 97110",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '97110' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97110' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "97110",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  },
+  {
+    "id": "H0050",
+    "category": "1",
+    "subcategory": "1B",
+    "description": "Providers with claims-per-bene z-score > 3.0 for 97530",
+    "method": "z_score_claims_per_bene",
+    "acceptance_criteria": "z > 3.0, beneficiaries >= 12, ratio > 2x peer median",
+    "sql_template": "\n                WITH code_stats AS (\n                    SELECT AVG(claims_per_bene) AS mean_cpb, STDDEV(claims_per_bene) AS std_cpb,\n                           PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claims_per_bene) AS median_cpb\n                    FROM provider_hcpcs WHERE hcpcs_code = '97530' AND beneficiaries >= 12\n                )\n                SELECT ph.billing_npi, ph.claims_per_bene, ph.beneficiaries, ph.paid,\n                       (ph.claims_per_bene - cs.mean_cpb) / NULLIF(cs.std_cpb, 0) AS z_score,\n                       cs.median_cpb\n                FROM provider_hcpcs ph CROSS JOIN code_stats cs\n                WHERE ph.hcpcs_code = '97530' AND ph.beneficiaries >= 12 AND cs.std_cpb > 0\n                  AND (ph.claims_per_bene - cs.mean_cpb) / cs.std_cpb > 3.0\n                  AND ph.claims_per_bene > 2 * cs.median_cpb\n                ORDER BY z_score DESC LIMIT 50\n            ",
+    "financial_impact_method": "(provider_cpb - peer_median_cpb) * peer_median_rate * beneficiaries",
+    "parameters": {
+      "hcpcs_code": "97530",
+      "z_threshold": 3.0,
+      "min_bene": 12
+    }
+  }
+]

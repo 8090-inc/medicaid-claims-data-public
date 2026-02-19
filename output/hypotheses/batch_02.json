@@ -1,0 +1,769 @@
+[
+  {
+    "id": "H0101",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Behavioral Health (total_paid)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Behavioral Health",
+      "metric": "total_paid",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0102",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for E&M (paid_per_claim)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "E&M",
+      "metric": "paid_per_claim",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0103",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for E&M (total_paid)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "E&M",
+      "metric": "total_paid",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0104",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for DME (paid_per_claim)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "DME",
+      "metric": "paid_per_claim",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0105",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for DME (total_paid)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "DME",
+      "metric": "total_paid",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0106",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Lab (paid_per_claim)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Lab",
+      "metric": "paid_per_claim",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0107",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Lab (total_paid)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Lab",
+      "metric": "total_paid",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0108",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Pharmacy (paid_per_claim)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Pharmacy",
+      "metric": "paid_per_claim",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0109",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Pharmacy (total_paid)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Pharmacy",
+      "metric": "total_paid",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0110",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Therapy (paid_per_claim)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Therapy",
+      "metric": "paid_per_claim",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0111",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Therapy (total_paid)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Therapy",
+      "metric": "total_paid",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0112",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Transportation (paid_per_claim)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Transportation",
+      "metric": "paid_per_claim",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0113",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Transportation (total_paid)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Transportation",
+      "metric": "total_paid",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0114",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Temp/Waiver (paid_per_claim)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Temp/Waiver",
+      "metric": "paid_per_claim",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0115",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Temp/Waiver (total_paid)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Temp/Waiver",
+      "metric": "total_paid",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0116",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Other (paid_per_claim)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Other",
+      "metric": "paid_per_claim",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0117",
+    "category": "1",
+    "subcategory": "1E",
+    "description": "GEV extreme value analysis for Other (total_paid)",
+    "method": "gev_extreme",
+    "acceptance_criteria": "exceeds GEV 99th pct return level, p < 0.01, total > $50K",
+    "analysis_function": "statistical_analyzer._gev_extreme_value",
+    "financial_impact_method": "amount above GEV return level",
+    "parameters": {
+      "category": "Other",
+      "metric": "total_paid",
+      "p_threshold": 0.01,
+      "min_amount": 50000
+    }
+  },
+  {
+    "id": "H0118",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "First-digit Benford test on all payments",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "first_digit_overall",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0119",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "First-digit Benford test on Home Health payments",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "first_digit_home_health",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0120",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "First-digit Benford test on Behavioral Health payments",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "first_digit_behavioral",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0121",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "First-digit Benford test on E&M payments",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "first_digit_em",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0122",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "First-digit Benford test on DME payments",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "first_digit_dme",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0123",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "First-two-digit Benford test",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "first_two_digits_overall",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0124",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "First-two-digit Benford (Home Health)",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "first_two_digits_home_health",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0125",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "Round number detection (>30% ending 00)",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "round_number_overall",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0126",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "Per-provider round number detection",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "round_number_by_provider",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0127",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "Duplicate exact payment amounts",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "duplicate_amounts_overall",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0128",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "Per-provider duplicate amounts",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "duplicate_amounts_by_provider",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0129",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "Payment amount clustering analysis",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "payment_clustering_overall",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0130",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "First-digit Benford (Pharmacy)",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "first_digit_pharmacy",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0131",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "First-digit Benford (Therapy)",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "first_digit_therapy",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0132",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "First-digit Benford (Transportation)",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "first_digit_transport",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0133",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "Round numbers in Home Health",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "round_number_home_health",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0134",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "Round numbers in Behavioral Health",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "round_number_behavioral",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0135",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "Last-digit uniformity test",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "last_digit_uniformity",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0136",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "Most frequent payment amount detection",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "amount_mode_detection",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0137",
+    "category": "1",
+    "subcategory": "1F",
+    "description": "Suspicious repeating amount patterns",
+    "method": "benfords_law",
+    "acceptance_criteria": "chi-squared p < 0.001, >= 100 payment records",
+    "analysis_function": "statistical_analyzer._benfords_law",
+    "financial_impact_method": "total payments from non-conforming providers",
+    "parameters": {
+      "test_type": "suspicious_amount_patterns",
+      "p_threshold": 0.001,
+      "min_records": 100
+    }
+  },
+  {
+    "id": "H0151",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: All providers, 3x spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "all",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0152",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: All providers, 5x spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 5x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 5,
+      "filter": "all",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0153",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: All providers, 10x spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 10x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 10,
+      "filter": "all",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0154",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: Home health, 3x spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "home_health",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0155",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: Home health, 5x spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 5x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 5,
+      "filter": "home_health",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0156",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: Behavioral, 3x spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "behavioral",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0157",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: Behavioral, 5x spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 5x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 5,
+      "filter": "behavioral",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0158",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: DME, 3x spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "dme",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0159",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: Spike without bene increase",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "no_bene_increase",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0160",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: Spike without bene increase 5x",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 5x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 5,
+      "filter": "no_bene_increase",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0161",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: Rate-only spike",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "rate_only",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0162",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: Rate-only spike 5x",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 5x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 5,
+      "filter": "rate_only",
+      "min_paid": 10000
+    }
+  },
+  {
+    "id": "H0163",
+    "category": "2",
+    "subcategory": "2A",
+    "description": "Month-over-month billing spike: December spikes 3x",
+    "method": "month_spike",
+    "acceptance_criteria": "ratio > 3x, both months > $10K",
+    "analysis_function": "temporal_analyzer._month_over_month_spike",
+    "financial_impact_method": "spike_month_paid - prior_month_paid",
+    "parameters": {
+      "threshold": 3,
+      "filter": "december",
+      "min_paid": 10000
+    }
+  }
+]

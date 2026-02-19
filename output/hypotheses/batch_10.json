@@ -1,0 +1,724 @@
+[
+  {
+    "id": "H0514",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: phantom_address",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: phantom_address",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "phantom_address",
+      "min_paid": 0,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0515",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: ghost_composite_3plus",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: ghost_composite_3plus",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "ghost_composite_3plus",
+      "min_paid": 0,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0516",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: single_biller_high",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: single_biller_high",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "single_biller_high",
+      "min_paid": 2000000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0517",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: rapid_billing",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: rapid_billing",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "rapid_billing",
+      "min_paid": 1000000,
+      "max_months": 3
+    }
+  },
+  {
+    "id": "H0518",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: no_independent_billing",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: no_independent_billing",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "no_independent_billing",
+      "min_paid": 500000,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0519",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: concentrated_codes",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: concentrated_codes",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "concentrated_codes",
+      "min_paid": 500000,
+      "max_months": 6
+    }
+  },
+  {
+    "id": "H0520",
+    "category": "4",
+    "subcategory": "4G",
+    "description": "Ghost network indicator: ghost_network_cluster",
+    "method": "ghost_network",
+    "acceptance_criteria": "ghost indicator: ghost_network_cluster",
+    "analysis_function": "network_analyzer._ghost_provider_indicators",
+    "financial_impact_method": "total payments to ghost provider",
+    "parameters": {
+      "indicator": "ghost_network_cluster",
+      "min_paid": 0,
+      "max_months": 12
+    }
+  },
+  {
+    "id": "H0521",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (all)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0522",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 50% share of code spending (all)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 50% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.5,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0523",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 80% share of code spending (all)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 80% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.8,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0524",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (dominant_and_expensive)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "dominant_and_expensive"
+    }
+  },
+  {
+    "id": "H0525",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 50% share of code spending (dominant_and_expensive)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 50% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.5,
+      "filter": "dominant_and_expensive"
+    }
+  },
+  {
+    "id": "H0526",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (new_entrant)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "new_entrant"
+    }
+  },
+  {
+    "id": "H0527",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 50% share of code spending (new_entrant)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 50% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.5,
+      "filter": "new_entrant"
+    }
+  },
+  {
+    "id": "H0528",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (individual_npi)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "individual_npi"
+    }
+  },
+  {
+    "id": "H0529",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 50% share of code spending (individual_npi)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 50% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.5,
+      "filter": "individual_npi"
+    }
+  },
+  {
+    "id": "H0530",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (home_health)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0531",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 50% share of code spending (home_health)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 50% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.5,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0532",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (behavioral)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0533",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 50% share of code spending (behavioral)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 50% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.5,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0534",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (dme)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "dme"
+    }
+  },
+  {
+    "id": "H0535",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 50% share of code spending (dme)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 50% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.5,
+      "filter": "dme"
+    }
+  },
+  {
+    "id": "H0536",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (pharmacy)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "pharmacy"
+    }
+  },
+  {
+    "id": "H0537",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (transport)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "transport"
+    }
+  },
+  {
+    "id": "H0538",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (therapy)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "therapy"
+    }
+  },
+  {
+    "id": "H0539",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 80% share of code spending (any_category)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 80% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.8,
+      "filter": "any_category"
+    }
+  },
+  {
+    "id": "H0540",
+    "category": "5",
+    "subcategory": "5A",
+    "description": "Provider with > 30% share of code spending (growing_share)",
+    "method": "provider_dominance",
+    "acceptance_criteria": "> 30% of national code spending",
+    "analysis_function": "concentration_analyzer._provider_share_per_code",
+    "financial_impact_method": "total spending by dominant provider",
+    "parameters": {
+      "share_threshold": 0.3,
+      "filter": "growing_share"
+    }
+  },
+  {
+    "id": "H0541",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $1,000,000 (all)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $1,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 1000000,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0542",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 95% revenue from one code, > $1,000,000 (all)",
+    "method": "single_code",
+    "acceptance_criteria": "> 95% revenue from single code, total > $1,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.95,
+      "min_revenue": 1000000,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0543",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 99% revenue from one code, > $1,000,000 (all)",
+    "method": "single_code",
+    "acceptance_criteria": "> 99% revenue from single code, total > $1,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.99,
+      "min_revenue": 1000000,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0544",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $5,000,000 (all)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $5,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 5000000,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0545",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 95% revenue from one code, > $5,000,000 (all)",
+    "method": "single_code",
+    "acceptance_criteria": "> 95% revenue from single code, total > $5,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.95,
+      "min_revenue": 5000000,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0546",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $1,000,000 (home_health)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $1,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 1000000,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0547",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $1,000,000 (behavioral)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $1,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 1000000,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0548",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $1,000,000 (personal_care)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $1,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 1000000,
+      "filter": "personal_care"
+    }
+  },
+  {
+    "id": "H0549",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $1,000,000 (dme)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $1,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 1000000,
+      "filter": "dme"
+    }
+  },
+  {
+    "id": "H0550",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $1,000,000 (transport)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $1,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 1000000,
+      "filter": "transport"
+    }
+  },
+  {
+    "id": "H0551",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $500,000 (individual_npi)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $500,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 500000,
+      "filter": "individual_npi"
+    }
+  },
+  {
+    "id": "H0552",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 95% revenue from one code, > $500,000 (individual_npi)",
+    "method": "single_code",
+    "acceptance_criteria": "> 95% revenue from single code, total > $500,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.95,
+      "min_revenue": 500000,
+      "filter": "individual_npi"
+    }
+  },
+  {
+    "id": "H0553",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $1,000,000 (pharmacy)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $1,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 1000000,
+      "filter": "pharmacy"
+    }
+  },
+  {
+    "id": "H0554",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $1,000,000 (therapy)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $1,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 1000000,
+      "filter": "therapy"
+    }
+  },
+  {
+    "id": "H0555",
+    "category": "5",
+    "subcategory": "5B",
+    "description": "> 90% revenue from one code, > $10,000,000 (any)",
+    "method": "single_code",
+    "acceptance_criteria": "> 90% revenue from single code, total > $10,000,000",
+    "analysis_function": "concentration_analyzer._code_concentration_per_provider",
+    "financial_impact_method": "total revenue from concentrated code",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "min_revenue": 10000000,
+      "filter": "any"
+    }
+  },
+  {
+    "id": "H0556",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (all)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0557",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 5000 for HCPCS code (all)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 5000",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 5000,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0558",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 7500 for HCPCS code (all)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 7500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 7500,
+      "filter": "all"
+    }
+  },
+  {
+    "id": "H0559",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (top5_gt_50pct)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "top5_gt_50pct"
+    }
+  },
+  {
+    "id": "H0560",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (top3_gt_50pct)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "top3_gt_50pct"
+    }
+  },
+  {
+    "id": "H0561",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (home_health)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "home_health"
+    }
+  },
+  {
+    "id": "H0562",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (behavioral)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "behavioral"
+    }
+  },
+  {
+    "id": "H0563",
+    "category": "5",
+    "subcategory": "5C",
+    "description": "HHI > 2500 for HCPCS code (dme)",
+    "method": "hhi_concentration",
+    "acceptance_criteria": "HHI > 2500",
+    "analysis_function": "concentration_analyzer._hhi_per_code",
+    "financial_impact_method": "excess spending above competitive market estimate",
+    "parameters": {
+      "hhi_threshold": 2500,
+      "filter": "dme"
+    }
+  }
+]

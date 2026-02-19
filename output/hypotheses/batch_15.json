@@ -1,0 +1,708 @@
+[
+  {
+    "id": "H0764",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #14 (home_health)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "home_health",
+      "rank": 14
+    }
+  },
+  {
+    "id": "H0765",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #15 (home_health)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "home_health",
+      "rank": 15
+    }
+  },
+  {
+    "id": "H0766",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #16 (home_health)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "home_health",
+      "rank": 16
+    }
+  },
+  {
+    "id": "H0767",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #17 (home_health)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "home_health",
+      "rank": 17
+    }
+  },
+  {
+    "id": "H0768",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #18 (home_health)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "home_health",
+      "rank": 18
+    }
+  },
+  {
+    "id": "H0769",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #19 (home_health)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "home_health",
+      "rank": 19
+    }
+  },
+  {
+    "id": "H0770",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #20 (home_health)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "home_health",
+      "rank": 20
+    }
+  },
+  {
+    "id": "H0771",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #21 (behavioral)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "behavioral",
+      "rank": 21
+    }
+  },
+  {
+    "id": "H0772",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #22 (behavioral)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "behavioral",
+      "rank": 22
+    }
+  },
+  {
+    "id": "H0773",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #23 (behavioral)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "behavioral",
+      "rank": 23
+    }
+  },
+  {
+    "id": "H0774",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #24 (behavioral)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "behavioral",
+      "rank": 24
+    }
+  },
+  {
+    "id": "H0775",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #25 (behavioral)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "behavioral",
+      "rank": 25
+    }
+  },
+  {
+    "id": "H0776",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #26 (behavioral)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "behavioral",
+      "rank": 26
+    }
+  },
+  {
+    "id": "H0777",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #27 (behavioral)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "behavioral",
+      "rank": 27
+    }
+  },
+  {
+    "id": "H0778",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #28 (behavioral)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "behavioral",
+      "rank": 28
+    }
+  },
+  {
+    "id": "H0779",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #29 (behavioral)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "behavioral",
+      "rank": 29
+    }
+  },
+  {
+    "id": "H0780",
+    "category": "7",
+    "subcategory": "7A",
+    "description": "Autoencoder reconstruction error anomaly #30 (behavioral)",
+    "method": "autoencoder",
+    "acceptance_criteria": "reconstruction error in top 1%, total paid > $100K",
+    "analysis_function": "dl_pipeline.autoencoder",
+    "financial_impact_method": "total_paid for high-error provider",
+    "parameters": {
+      "segment": "behavioral",
+      "rank": 30
+    }
+  },
+  {
+    "id": "H0781",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #1 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 1
+    }
+  },
+  {
+    "id": "H0782",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #2 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 2
+    }
+  },
+  {
+    "id": "H0783",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #3 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 3
+    }
+  },
+  {
+    "id": "H0784",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #4 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 4
+    }
+  },
+  {
+    "id": "H0785",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #5 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 5
+    }
+  },
+  {
+    "id": "H0786",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #6 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 6
+    }
+  },
+  {
+    "id": "H0787",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #7 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 7
+    }
+  },
+  {
+    "id": "H0788",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #8 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 8
+    }
+  },
+  {
+    "id": "H0789",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #9 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 9
+    }
+  },
+  {
+    "id": "H0790",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #10 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 10
+    }
+  },
+  {
+    "id": "H0791",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #11 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 11
+    }
+  },
+  {
+    "id": "H0792",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #12 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 12
+    }
+  },
+  {
+    "id": "H0793",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #13 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 13
+    }
+  },
+  {
+    "id": "H0794",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #14 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 14
+    }
+  },
+  {
+    "id": "H0795",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #15 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 15
+    }
+  },
+  {
+    "id": "H0796",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #16 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 16
+    }
+  },
+  {
+    "id": "H0797",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #17 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 17
+    }
+  },
+  {
+    "id": "H0798",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #18 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 18
+    }
+  },
+  {
+    "id": "H0799",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #19 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 19
+    }
+  },
+  {
+    "id": "H0800",
+    "category": "7",
+    "subcategory": "7B",
+    "description": "VAE anomaly #20 (not in autoencoder top)",
+    "method": "vae",
+    "acceptance_criteria": "VAE score in top 1%, not already flagged by AE",
+    "analysis_function": "dl_pipeline.vae",
+    "financial_impact_method": "total_paid for VAE-novel provider",
+    "parameters": {
+      "rank": 20
+    }
+  },
+  {
+    "id": "H0801",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #1",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 1
+    }
+  },
+  {
+    "id": "H0802",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #2",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 2
+    }
+  },
+  {
+    "id": "H0803",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #3",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 3
+    }
+  },
+  {
+    "id": "H0804",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #4",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 4
+    }
+  },
+  {
+    "id": "H0805",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #5",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 5
+    }
+  },
+  {
+    "id": "H0806",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #6",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 6
+    }
+  },
+  {
+    "id": "H0807",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #7",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 7
+    }
+  },
+  {
+    "id": "H0808",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #8",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 8
+    }
+  },
+  {
+    "id": "H0809",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #9",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 9
+    }
+  },
+  {
+    "id": "H0810",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #10",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 10
+    }
+  },
+  {
+    "id": "H0811",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #11",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 11
+    }
+  },
+  {
+    "id": "H0812",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #12",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 12
+    }
+  },
+  {
+    "id": "H0813",
+    "category": "7",
+    "subcategory": "7C",
+    "description": "LSTM temporal prediction error anomaly #13",
+    "method": "lstm",
+    "acceptance_criteria": "MAE > 3x population mean, >= 24 months, > $200K",
+    "analysis_function": "dl_pipeline.lstm",
+    "financial_impact_method": "total_paid for temporally anomalous provider",
+    "parameters": {
+      "mae_multiplier": 3.0,
+      "min_months": 24,
+      "min_paid": 200000,
+      "rank": 13
+    }
+  }
+]

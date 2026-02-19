@@ -1,0 +1,713 @@
+[
+  {
+    "id": "H1014",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider in Florida billing during moratorium period",
+    "method": "aba_florida_moratorium",
+    "acceptance_criteria": "Florida ABA billing during moratorium",
+    "analysis_function": "domain_rules.aba_florida_moratorium",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "state": "FL",
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1015",
+    "category": "8",
+    "subcategory": "8H",
+    "description": "ABA provider with >$10M total and only 1-2 HCPCS codes",
+    "method": "aba_code_concentration",
+    "acceptance_criteria": ">$10M ABA from <=2 codes",
+    "analysis_function": "domain_rules.aba_code_concentration",
+    "financial_impact_method": "total flagged ABA payments",
+    "parameters": {
+      "min_revenue": 10000000,
+      "max_codes": 2,
+      "aba_codes": [
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "H0031",
+        "H0032",
+        "0362T",
+        "0373T",
+        "0374T"
+      ]
+    }
+  },
+  {
+    "id": "H1016",
+    "category": "8",
+    "subcategory": "8I",
+    "description": "Provider billing >24 hours of timed services in a single day (all codes combined)",
+    "method": "impossible_provider_day_24h",
+    "acceptance_criteria": "total timed units across all benes exceed 24hr/day",
+    "analysis_function": "domain_rules.impossible_provider_day_24h",
+    "financial_impact_method": "100% of payments above physical capacity",
+    "parameters": {
+      "max_hours": 24,
+      "scope": "all_codes"
+    }
+  },
+  {
+    "id": "H1017",
+    "category": "8",
+    "subcategory": "8I",
+    "description": "Provider billing >16 hours of timed services per day, sustained >30 days/month",
+    "method": "impossible_sustained_16h",
+    "acceptance_criteria": ">16hr/day for >30 days/month",
+    "analysis_function": "domain_rules.impossible_sustained_16h",
+    "financial_impact_method": "100% of payments above physical capacity",
+    "parameters": {
+      "max_hours": 16,
+      "min_days": 30
+    }
+  },
+  {
+    "id": "H1018",
+    "category": "8",
+    "subcategory": "8I",
+    "description": "Individual NPI billing >480 total 15-min units across all beneficiaries per day",
+    "method": "impossible_units_per_day",
+    "acceptance_criteria": ">480 15-min units/day across all benes",
+    "analysis_function": "domain_rules.impossible_units_per_day",
+    "financial_impact_method": "100% of payments above physical capacity",
+    "parameters": {
+      "max_units": 480,
+      "unit_minutes": 15
+    }
+  },
+  {
+    "id": "H1019",
+    "category": "8",
+    "subcategory": "8I",
+    "description": "Provider billing >12 hours per day of psychotherapy (90834/90837)",
+    "method": "impossible_psychotherapy_day",
+    "acceptance_criteria": ">12hr/day psychotherapy",
+    "analysis_function": "domain_rules.impossible_psychotherapy_day",
+    "financial_impact_method": "100% of payments above physical capacity",
+    "parameters": {
+      "max_hours": 12,
+      "codes": [
+        "90834",
+        "90837"
+      ]
+    }
+  },
+  {
+    "id": "H1020",
+    "category": "8",
+    "subcategory": "8I",
+    "description": "Provider billing >20 E&M visits per day (99213-99215)",
+    "method": "impossible_em_visits_day",
+    "acceptance_criteria": ">20 E&M visits/day",
+    "analysis_function": "domain_rules.impossible_em_visits_day",
+    "financial_impact_method": "100% of payments above physical capacity",
+    "parameters": {
+      "max_visits": 20,
+      "codes": [
+        "99213",
+        "99214",
+        "99215"
+      ]
+    }
+  },
+  {
+    "id": "H1021",
+    "category": "8",
+    "subcategory": "8I",
+    "description": "Provider billing home health visits to >15 distinct beneficiaries per day",
+    "method": "impossible_home_health_day",
+    "acceptance_criteria": ">15 home health benes/day",
+    "analysis_function": "domain_rules.impossible_home_health_day",
+    "financial_impact_method": "100% of payments above physical capacity",
+    "parameters": {
+      "max_bene_per_day": 15,
+      "category": "home_health"
+    }
+  },
+  {
+    "id": "H1022",
+    "category": "8",
+    "subcategory": "8I",
+    "description": "Provider with claims implying >365 service days in a year",
+    "method": "impossible_service_days",
+    "acceptance_criteria": ">365 service days/year",
+    "analysis_function": "domain_rules.impossible_service_days",
+    "financial_impact_method": "100% of payments above physical capacity",
+    "parameters": {
+      "max_days": 365
+    }
+  },
+  {
+    "id": "H1023",
+    "category": "8",
+    "subcategory": "8I",
+    "description": "Provider billing concurrent services (two timed codes overlapping) same beneficiary",
+    "method": "concurrent_services",
+    "acceptance_criteria": "overlapping timed codes same bene",
+    "analysis_function": "domain_rules.concurrent_services",
+    "financial_impact_method": "100% of payments above physical capacity",
+    "parameters": {
+      "check": "concurrent"
+    }
+  },
+  {
+    "id": "H1024",
+    "category": "8",
+    "subcategory": "8I",
+    "description": "Servicing NPI appearing in >2 billing NPIs same day with combined >16 hours",
+    "method": "servicing_multi_biller_day",
+    "acceptance_criteria": ">2 billers same day, combined >16hr",
+    "analysis_function": "domain_rules.servicing_multi_biller_day",
+    "financial_impact_method": "100% of payments above physical capacity",
+    "parameters": {
+      "max_billers": 2,
+      "max_hours": 16
+    }
+  },
+  {
+    "id": "H1025",
+    "category": "8",
+    "subcategory": "8I",
+    "description": "Provider billing 7 days/week for >6 consecutive months",
+    "method": "no_days_off",
+    "acceptance_criteria": "7 days/week sustained >6 months",
+    "analysis_function": "domain_rules.no_days_off",
+    "financial_impact_method": "100% of payments above physical capacity",
+    "parameters": {
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H1026",
+    "category": "9",
+    "subcategory": "9G",
+    "description": "Billing NPI found on OIG LEIE exclusion list",
+    "method": "leie_billing_npi",
+    "acceptance_criteria": "billing NPI matches LEIE excluded provider",
+    "analysis_function": "crossref.leie_billing_npi",
+    "financial_impact_method": "total payments to excluded/suspect provider",
+    "parameters": {
+      "check": "billing_npi",
+      "source": "LEIE"
+    }
+  },
+  {
+    "id": "H1027",
+    "category": "9",
+    "subcategory": "9G",
+    "description": "Servicing NPI found on OIG LEIE exclusion list",
+    "method": "leie_servicing_npi",
+    "acceptance_criteria": "servicing NPI matches LEIE excluded provider",
+    "analysis_function": "crossref.leie_servicing_npi",
+    "financial_impact_method": "total payments to excluded/suspect provider",
+    "parameters": {
+      "check": "servicing_npi",
+      "source": "LEIE"
+    }
+  },
+  {
+    "id": "H1028",
+    "category": "9",
+    "subcategory": "9G",
+    "description": "Billing NPI with same name/address as excluded individual",
+    "method": "leie_name_address_match",
+    "acceptance_criteria": "name+address fuzzy match to LEIE entry",
+    "analysis_function": "crossref.leie_name_address_match",
+    "financial_impact_method": "total payments to excluded/suspect provider",
+    "parameters": {
+      "check": "name_address",
+      "source": "LEIE"
+    }
+  },
+  {
+    "id": "H1029",
+    "category": "9",
+    "subcategory": "9G",
+    "description": "Provider billing after NPPES deactivation date",
+    "method": "post_deactivation_billing",
+    "acceptance_criteria": "claims after NPPES deactivation",
+    "analysis_function": "crossref.post_deactivation_billing",
+    "financial_impact_method": "total payments to excluded/suspect provider",
+    "parameters": {
+      "check": "deactivation_date"
+    }
+  },
+  {
+    "id": "H1030",
+    "category": "9",
+    "subcategory": "9G",
+    "description": "New NPI at same address as recently excluded NPI",
+    "method": "new_npi_excluded_address",
+    "acceptance_criteria": "new NPI at excluded provider address",
+    "analysis_function": "crossref.new_npi_excluded_address",
+    "financial_impact_method": "total payments to excluded/suspect provider",
+    "parameters": {
+      "check": "address_reuse"
+    }
+  },
+  {
+    "id": "H1031",
+    "category": "9",
+    "subcategory": "9G",
+    "description": "Servicing NPI with no NPPES record and >$500K total",
+    "method": "no_nppes_high_billing",
+    "acceptance_criteria": "no NPPES record, >$500K billing",
+    "analysis_function": "crossref.no_nppes_high_billing",
+    "financial_impact_method": "total payments to excluded/suspect provider",
+    "parameters": {
+      "min_paid": 500000
+    }
+  },
+  {
+    "id": "H1032",
+    "category": "9",
+    "subcategory": "9G",
+    "description": "Billing NPI with NPPES enumeration date after first claim month",
+    "method": "enumeration_after_claims",
+    "acceptance_criteria": "NPPES enumeration postdates first claim",
+    "analysis_function": "crossref.enumeration_after_claims",
+    "financial_impact_method": "total payments to excluded/suspect provider",
+    "parameters": {
+      "check": "enumeration_date"
+    }
+  },
+  {
+    "id": "H1033",
+    "category": "9",
+    "subcategory": "9G",
+    "description": "Provider with NPPES entity type change during billing period",
+    "method": "entity_type_change",
+    "acceptance_criteria": "entity type changed during billing period",
+    "analysis_function": "crossref.entity_type_change",
+    "financial_impact_method": "total payments to excluded/suspect provider",
+    "parameters": {
+      "check": "entity_type_change"
+    }
+  },
+  {
+    "id": "H1034",
+    "category": "9",
+    "subcategory": "9G",
+    "description": "NPI associated with known OIG settlement (from enforcement data)",
+    "method": "oig_settlement",
+    "acceptance_criteria": "NPI linked to OIG settlement",
+    "analysis_function": "crossref.oig_settlement",
+    "financial_impact_method": "total payments to excluded/suspect provider",
+    "parameters": {
+      "check": "settlement",
+      "source": "OIG"
+    }
+  },
+  {
+    "id": "H1035",
+    "category": "9",
+    "subcategory": "9G",
+    "description": "Provider at address associated with >3 excluded NPIs",
+    "method": "address_multiple_exclusions",
+    "acceptance_criteria": "address linked to >3 excluded NPIs",
+    "analysis_function": "crossref.address_multiple_exclusions",
+    "financial_impact_method": "total payments to excluded/suspect provider",
+    "parameters": {
+      "min_excluded": 3
+    }
+  },
+  {
+    "id": "H1036",
+    "category": "4",
+    "subcategory": "4H",
+    "description": "Billing NPI sending >90% of claims through single servicing NPI (captive referral)",
+    "method": "captive_referral",
+    "acceptance_criteria": ">90% claims through single servicing NPI",
+    "analysis_function": "crossref.captive_referral",
+    "financial_impact_method": "total payments in concentrated referral pattern",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "direction": "billing_to_servicing"
+    }
+  },
+  {
+    "id": "H1037",
+    "category": "4",
+    "subcategory": "4H",
+    "description": "Servicing NPI receiving >80% of referrals from single billing NPI",
+    "method": "captive_servicing",
+    "acceptance_criteria": ">80% referrals from single billing NPI",
+    "analysis_function": "crossref.captive_servicing",
+    "financial_impact_method": "total payments in concentrated referral pattern",
+    "parameters": {
+      "pct_threshold": 0.8,
+      "direction": "servicing_from_billing"
+    }
+  },
+  {
+    "id": "H1038",
+    "category": "4",
+    "subcategory": "4H",
+    "description": "Billing-servicing pair where paid_per_claim is >2x the code median (potential kickback premium)",
+    "method": "kickback_premium",
+    "acceptance_criteria": "pair rate >2x code median",
+    "analysis_function": "crossref.kickback_premium",
+    "financial_impact_method": "total payments in concentrated referral pattern",
+    "parameters": {
+      "ratio_threshold": 2.0
+    }
+  },
+  {
+    "id": "H1039",
+    "category": "4",
+    "subcategory": "4H",
+    "description": "New billing-servicing relationship with immediate high volume (>$100K first month)",
+    "method": "new_relationship_high_volume",
+    "acceptance_criteria": "new pair >$100K first month",
+    "analysis_function": "crossref.new_relationship_high_volume",
+    "financial_impact_method": "total payments in concentrated referral pattern",
+    "parameters": {
+      "min_first_month": 100000
+    }
+  },
+  {
+    "id": "H1040",
+    "category": "4",
+    "subcategory": "4H",
+    "description": "Reciprocal referral pattern: A refers to B for code X, B refers to A for code Y",
+    "method": "reciprocal_referral",
+    "acceptance_criteria": "bilateral referral pattern",
+    "analysis_function": "crossref.reciprocal_referral",
+    "financial_impact_method": "total payments in concentrated referral pattern",
+    "parameters": {
+      "check": "reciprocal"
+    }
+  },
+  {
+    "id": "H1041",
+    "category": "4",
+    "subcategory": "4H",
+    "description": "Referring provider patient mix suddenly shifts to one downstream provider",
+    "method": "referral_shift",
+    "acceptance_criteria": "sudden shift to single downstream provider",
+    "analysis_function": "crossref.referral_shift",
+    "financial_impact_method": "total payments in concentrated referral pattern",
+    "parameters": {
+      "check": "referral_concentration_change"
+    }
+  },
+  {
+    "id": "H1042",
+    "category": "4",
+    "subcategory": "4H",
+    "description": "Lab (80XXX codes) receiving >50% of volume from single referring provider",
+    "method": "lab_single_referrer",
+    "acceptance_criteria": "lab >50% from single referrer",
+    "analysis_function": "crossref.lab_single_referrer",
+    "financial_impact_method": "total payments in concentrated referral pattern",
+    "parameters": {
+      "pct_threshold": 0.5,
+      "code_prefix": "80"
+    }
+  },
+  {
+    "id": "H1043",
+    "category": "4",
+    "subcategory": "4H",
+    "description": "DME supplier with >80% of orders from single prescribing NPI",
+    "method": "dme_single_prescriber",
+    "acceptance_criteria": "DME >80% from single prescriber",
+    "analysis_function": "crossref.dme_single_prescriber",
+    "financial_impact_method": "total payments in concentrated referral pattern",
+    "parameters": {
+      "pct_threshold": 0.8,
+      "category": "dme"
+    }
+  },
+  {
+    "id": "H1044",
+    "category": "4",
+    "subcategory": "4H",
+    "description": "Home health agency with >90% of referrals from <3 physicians",
+    "method": "hha_concentrated_referrals",
+    "acceptance_criteria": "HHA >90% from <3 physicians",
+    "analysis_function": "crossref.hha_concentrated_referrals",
+    "financial_impact_method": "total payments in concentrated referral pattern",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "max_referrers": 3
+    }
+  },
+  {
+    "id": "H1045",
+    "category": "4",
+    "subcategory": "4H",
+    "description": "Transport provider (A04XX/T200X) with >80% of trips for single billing entity",
+    "method": "transport_single_entity",
+    "acceptance_criteria": "transport >80% for single biller",
+    "analysis_function": "crossref.transport_single_entity",
+    "financial_impact_method": "total payments in concentrated referral pattern",
+    "parameters": {
+      "pct_threshold": 0.8,
+      "category": "transport"
+    }
+  },
+  {
+    "id": "H1046",
+    "category": "8",
+    "subcategory": "8J",
+    "description": "Pharmacy (J-code) provider with >$10M from single drug code",
+    "method": "pharmacy_single_drug",
+    "acceptance_criteria": ">$10M from single J-code",
+    "analysis_function": "domain_rules.pharmacy_single_drug",
+    "financial_impact_method": "total flagged pharmacy payments",
+    "parameters": {
+      "min_revenue": 10000000,
+      "code_prefix": "J"
+    }
+  },
+  {
+    "id": "H1047",
+    "category": "8",
+    "subcategory": "8J",
+    "description": "Same beneficiary receiving same J-code from >3 different pharmacies same month",
+    "method": "pharmacy_bene_shopping",
+    "acceptance_criteria": "same bene, same J-code, >3 pharmacies/month",
+    "analysis_function": "domain_rules.pharmacy_bene_shopping",
+    "financial_impact_method": "total flagged pharmacy payments",
+    "parameters": {
+      "min_pharmacies": 3
+    }
+  },
+  {
+    "id": "H1048",
+    "category": "8",
+    "subcategory": "8J",
+    "description": "Pharmacy with >90% of J-code claims for high-cost specialty drugs",
+    "method": "pharmacy_specialty_concentration",
+    "acceptance_criteria": ">90% specialty drug J-codes",
+    "analysis_function": "domain_rules.pharmacy_specialty_concentration",
+    "financial_impact_method": "total flagged pharmacy payments",
+    "parameters": {
+      "pct_threshold": 0.9
+    }
+  },
+  {
+    "id": "H1049",
+    "category": "8",
+    "subcategory": "8J",
+    "description": "Pharmacy with paid_per_claim >3x peer median for J-codes",
+    "method": "pharmacy_rate_outlier",
+    "acceptance_criteria": "J-code paid_per_claim >3x peer median",
+    "analysis_function": "domain_rules.pharmacy_rate_outlier",
+    "financial_impact_method": "total flagged pharmacy payments",
+    "parameters": {
+      "ratio_threshold": 3.0
+    }
+  },
+  {
+    "id": "H1050",
+    "category": "8",
+    "subcategory": "8J",
+    "description": "New pharmacy (<6 months) with >$1M in J-code claims",
+    "method": "pharmacy_rapid_entrant",
+    "acceptance_criteria": "new pharmacy <6mo, >$1M J-codes",
+    "analysis_function": "domain_rules.pharmacy_rapid_entrant",
+    "financial_impact_method": "total flagged pharmacy payments",
+    "parameters": {
+      "max_months": 6,
+      "min_revenue": 1000000
+    }
+  },
+  {
+    "id": "H1051",
+    "category": "8",
+    "subcategory": "8J",
+    "description": "Pharmacy billing J-codes with zero corresponding E&M visits for same beneficiaries",
+    "method": "pharmacy_no_em",
+    "acceptance_criteria": "J-code billing with zero E&M for same benes",
+    "analysis_function": "domain_rules.pharmacy_no_em",
+    "financial_impact_method": "total flagged pharmacy payments",
+    "parameters": {
+      "check": "missing_em"
+    }
+  },
+  {
+    "id": "H1052",
+    "category": "8",
+    "subcategory": "8J",
+    "description": "Pharmacy with >50% of claims for controlled substances (specific J-codes)",
+    "method": "pharmacy_controlled_substances",
+    "acceptance_criteria": ">50% controlled substance J-codes",
+    "analysis_function": "domain_rules.pharmacy_controlled_substances",
+    "financial_impact_method": "total flagged pharmacy payments",
+    "parameters": {
+      "pct_threshold": 0.5
+    }
+  },
+  {
+    "id": "H1053",
+    "category": "8",
+    "subcategory": "8J",
+    "description": "Pharmacy serving beneficiaries from >5 states (mail-order fraud indicator)",
+    "method": "pharmacy_multi_state",
+    "acceptance_criteria": "pharmacy benes from >5 states",
+    "analysis_function": "domain_rules.pharmacy_multi_state",
+    "financial_impact_method": "total flagged pharmacy payments",
+    "parameters": {
+      "min_states": 5
+    }
+  },
+  {
+    "id": "H1054",
+    "category": "8",
+    "subcategory": "8J",
+    "description": "Pharmacy with sudden 10x increase in single J-code billing",
+    "method": "pharmacy_spike",
+    "acceptance_criteria": "10x increase in single J-code",
+    "analysis_function": "domain_rules.pharmacy_spike",
+    "financial_impact_method": "total flagged pharmacy payments",
+    "parameters": {
+      "growth_threshold": 10.0
+    }
+  },
+  {
+    "id": "H1055",
+    "category": "8",
+    "subcategory": "8J",
+    "description": "Pharmacy with identical monthly billing amounts (suggesting fabrication)",
+    "method": "pharmacy_identical_amounts",
+    "acceptance_criteria": "identical monthly billing amounts",
+    "analysis_function": "domain_rules.pharmacy_identical_amounts",
+    "financial_impact_method": "total flagged pharmacy payments",
+    "parameters": {
+      "max_cv": 0.01,
+      "min_months": 6
+    }
+  },
+  {
+    "id": "H1056",
+    "category": "8",
+    "subcategory": "8K",
+    "description": "Substance abuse provider (H0001-H0020) with >$5M and >80% from urine drug tests",
+    "method": "addiction_udt_concentration",
+    "acceptance_criteria": ">$5M with >80% from urine drug tests",
+    "analysis_function": "domain_rules.addiction_udt_concentration",
+    "financial_impact_method": "total flagged addiction treatment payments",
+    "parameters": {
+      "min_revenue": 5000000,
+      "pct_threshold": 0.8
+    }
+  },
+  {
+    "id": "H1057",
+    "category": "8",
+    "subcategory": "8K",
+    "description": "Addiction treatment provider billing >$500K/month for <50 beneficiaries",
+    "method": "addiction_high_per_bene",
+    "acceptance_criteria": ">$500K/month for <50 benes",
+    "analysis_function": "domain_rules.addiction_high_per_bene",
+    "financial_impact_method": "total flagged addiction treatment payments",
+    "parameters": {
+      "min_monthly": 500000,
+      "max_bene": 50
+    }
+  },
+  {
+    "id": "H1058",
+    "category": "8",
+    "subcategory": "8K",
+    "description": "Sober home billing pattern: high volume H-codes with zero E&M follow-up",
+    "method": "sober_home_no_em",
+    "acceptance_criteria": "high H-code volume, zero E&M follow-up",
+    "analysis_function": "domain_rules.sober_home_no_em",
+    "financial_impact_method": "total flagged addiction treatment payments",
+    "parameters": {
+      "check": "missing_em_followup"
+    }
+  },
+  {
+    "id": "H1059",
+    "category": "8",
+    "subcategory": "8K",
+    "description": "Addiction provider with beneficiaries from >3 states (patient brokering indicator)",
+    "method": "addiction_patient_brokering",
+    "acceptance_criteria": "addiction benes from >3 states",
+    "analysis_function": "domain_rules.addiction_patient_brokering",
+    "financial_impact_method": "total flagged addiction treatment payments",
+    "parameters": {
+      "min_states": 3
+    }
+  },
+  {
+    "id": "H1060",
+    "category": "8",
+    "subcategory": "8K",
+    "description": "Substance abuse treatment claims clustered at single residential address",
+    "method": "addiction_residential_cluster",
+    "acceptance_criteria": "claims clustered at residential address",
+    "analysis_function": "domain_rules.addiction_residential_cluster",
+    "financial_impact_method": "total flagged addiction treatment payments",
+    "parameters": {
+      "check": "residential_cluster"
+    }
+  },
+  {
+    "id": "H1061",
+    "category": "8",
+    "subcategory": "8K",
+    "description": "Provider billing both housing support codes and treatment codes (dual-billing)",
+    "method": "addiction_dual_billing",
+    "acceptance_criteria": "housing + treatment codes same provider",
+    "analysis_function": "domain_rules.addiction_dual_billing",
+    "financial_impact_method": "total flagged addiction treatment payments",
+    "parameters": {
+      "check": "dual_billing"
+    }
+  },
+  {
+    "id": "H1062",
+    "category": "8",
+    "subcategory": "8K",
+    "description": "Addiction treatment with >90% of beneficiaries enrolled <3 months (churning)",
+    "method": "addiction_churning",
+    "acceptance_criteria": ">90% benes enrolled <3 months",
+    "analysis_function": "domain_rules.addiction_churning",
+    "financial_impact_method": "total flagged addiction treatment payments",
+    "parameters": {
+      "pct_threshold": 0.9,
+      "max_enrollment_months": 3
+    }
+  },
+  {
+    "id": "H1063",
+    "category": "8",
+    "subcategory": "8K",
+    "description": "Lab testing provider with >50% volume from sober home referrals",
+    "method": "lab_sober_home_referrals",
+    "acceptance_criteria": "lab >50% from sober home referrals",
+    "analysis_function": "domain_rules.lab_sober_home_referrals",
+    "financial_impact_method": "total flagged addiction treatment payments",
+    "parameters": {
+      "pct_threshold": 0.5
+    }
+  }
+]

@@ -1,0 +1,1088 @@
+hypothesis_id,category,subcategory,method,description,acceptance_criteria,num_findings,total_impact,avg_impact,validation_status
+H0520,4,4G,ghost_network,Ghost network indicator: ghost_network_cluster,ghost indicator: ghost_network_cluster,556521,543129270436.9823,975936.7039823876,supported
+H0510,4,4G,ghost_network,Ghost network indicator: batch_creation_10,ghost indicator: batch_creation_10,556521,543129270436.979,975936.7039823816,supported
+H0509,4,4G,ghost_network,Ghost network indicator: batch_creation_5,ghost indicator: batch_creation_5,556521,543129270436.9789,975936.7039823814,supported
+H0514,4,4G,ghost_network,Ghost network indicator: phantom_address,ghost indicator: phantom_address,556521,543129270436.97876,975936.7039823812,supported
+H0515,4,4G,ghost_network,Ghost network indicator: ghost_composite_3plus,ghost indicator: ghost_composite_3plus,556521,543129270436.97876,975936.7039823812,supported
+H0508,4,4G,ghost_network,Ghost network indicator: sequential_npi,ghost indicator: sequential_npi,556521,543129270436.9785,975936.7039823808,supported
+H0507,4,4G,ghost_network,Ghost network indicator: identical_pattern,ghost indicator: identical_pattern,556521,543129270436.97705,975936.7039823781,supported
+H0513,4,4G,ghost_network,Ghost network indicator: mirror_billing,ghost indicator: mirror_billing,556521,543129270436.975,975936.7039823744,supported
+H0117,1,1E,gev_extreme,GEV extreme value analysis for Other (total_paid),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",340182,194901999957.3524,572934.4878839926,supported
+H0116,1,1E,gev_extreme,GEV extreme value analysis for Other (paid_per_claim),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",340181,205885284779.89072,605222.7631169604,supported
+H0102,1,1E,gev_extreme,GEV extreme value analysis for E&M (paid_per_claim),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",262092,153279676390.8217,584831.5720846943,supported
+H0103,1,1E,gev_extreme,GEV extreme value analysis for E&M (total_paid),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",253659,143182361230.5899,564467.8928427136,supported
+H0100,1,1E,gev_extreme,GEV extreme value analysis for Behavioral Health (paid_per_claim),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",90111,175413302962.6674,1946635.8487051236,supported
+H0101,1,1E,gev_extreme,GEV extreme value analysis for Behavioral Health (total_paid),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",90110,174720689846.4356,1938971.1446724627,supported
+H0106,1,1E,gev_extreme,GEV extreme value analysis for Lab (paid_per_claim),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",69041,31757583414.10037,459981.5097420427,supported
+H0107,1,1E,gev_extreme,GEV extreme value analysis for Lab (total_paid),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",63080,28996167582.289837,459672.91665012424,supported
+H0099,1,1E,gev_extreme,GEV extreme value analysis for Home Health (total_paid),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",57134,320480649632.19116,5609280.807088444,supported
+H0098,1,1E,gev_extreme,GEV extreme value analysis for Home Health (paid_per_claim),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",57132,370974192351.34973,6493282.089745672,supported
+H0505,4,4G,ghost_network,Ghost network indicator: no_nppes,ghost indicator: no_nppes,48569,538189378366.19226,11080923.600778114,supported
+H0506,4,4G,ghost_network,Ghost network indicator: deactivated_npi,ghost indicator: deactivated_npi,48569,538189378366.19226,11080923.600778114,supported
+H0110,1,1E,gev_extreme,GEV extreme value analysis for Therapy (paid_per_claim),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",41482,24802681657.00981,597914.316016822,supported
+H0111,1,1E,gev_extreme,GEV extreme value analysis for Therapy (total_paid),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",41482,23329400863.4291,562398.1694091196,supported
+H0512,4,4G,ghost_network,Ghost network indicator: short_lived,ghost indicator: short_lived,37592,536515413281.5716,14272063.55824568,supported
+H0511,4,4G,ghost_network,Ghost network indicator: short_lived,ghost indicator: short_lived,33653,535126722174.7924,15901308.12036943,supported
+H0519,4,4G,ghost_network,Ghost network indicator: concentrated_codes,ghost indicator: concentrated_codes,33653,535126722174.79224,15901308.120369425,supported
+H0504,4,4G,ghost_network,Ghost network indicator: no_nppes,ghost indicator: no_nppes,33653,535126722174.79193,15901308.120369416,supported
+H0501,4,4G,ghost_network,Ghost network indicator: single_biller,ghost indicator: single_biller,33653,535126722174.79144,15901308.1203694,supported
+H0518,4,4G,ghost_network,Ghost network indicator: no_independent_billing,ghost indicator: no_independent_billing,33653,535126722174.7912,15901308.120369393,supported
+H0503,4,4G,ghost_network,Ghost network indicator: single_biller,ghost indicator: single_biller,33653,535126722174.7909,15901308.120369384,supported
+H0502,4,4G,ghost_network,Ghost network indicator: single_biller,ghost indicator: single_biller,30802,533061722939.6533,17306075.02563643,supported
+H0517,4,4G,ghost_network,Ghost network indicator: rapid_billing,ghost indicator: rapid_billing,30802,533061722939.6523,17306075.025636397,supported
+H0114,1,1E,gev_extreme,GEV extreme value analysis for Temp/Waiver (paid_per_claim),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",27507,97483336235.5605,3543946.4949125857,supported
+H0516,4,4G,ghost_network,Ghost network indicator: single_biller_high,ghost indicator: single_biller_high,27108,527652937291.5012,19464842.013114255,supported
+H0115,1,1E,gev_extreme,GEV extreme value analysis for Temp/Waiver (total_paid),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",26017,93235932684.99931,3583654.252411858,supported
+H0104,1,1E,gev_extreme,GEV extreme value analysis for DME (paid_per_claim),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",23944,23225475370.639893,969991.4538356119,supported
+H0105,1,1E,gev_extreme,GEV extreme value analysis for DME (total_paid),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",23943,22714760119.892246,948701.5044017979,supported
+H0112,1,1E,gev_extreme,GEV extreme value analysis for Transportation (paid_per_claim),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",9968,21849097466.500027,2191923.903140051,supported
+H0113,1,1E,gev_extreme,GEV extreme value analysis for Transportation (total_paid),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",9968,21526546804.709995,2159565.28939707,supported
+H0109,1,1E,gev_extreme,GEV extreme value analysis for Pharmacy (total_paid),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",9808,6517930602.110021,664552.4675887052,supported
+H0108,1,1E,gev_extreme,GEV extreme value analysis for Pharmacy (paid_per_claim),"exceeds GEV 99th pct return level, p < 0.01, total > $50K",9798,6517926087.560003,665230.2600081653,supported
+H0215,2,2D,yoy_growth,YoY growth > 300% (post_covid),annual growth > 3x,2000,25006825270.190018,12503412.63509501,supported
+H0214,2,2D,yoy_growth,YoY growth > 500% (code_expansion),annual growth > 5x,2000,25006825270.190018,12503412.63509501,supported
+H0213,2,2D,yoy_growth,YoY growth > 300% (code_expansion),annual growth > 3x,2000,25006825270.190018,12503412.63509501,supported
+H0212,2,2D,yoy_growth,YoY growth > 1000% (full_period),annual growth > 10x,2000,25006825270.190018,12503412.63509501,supported
+H0211,2,2D,yoy_growth,YoY growth > 500% (sustained_3yr),annual growth > 5x,2000,25006825270.190018,12503412.63509501,supported
+H0210,2,2D,yoy_growth,YoY growth > 300% (sustained_3yr),annual growth > 3x,2000,25006825270.190018,12503412.63509501,supported
+H0209,2,2D,yoy_growth,YoY growth > 500% (rate_driven),annual growth > 5x,2000,25006825270.190018,12503412.63509501,supported
+H0208,2,2D,yoy_growth,YoY growth > 300% (rate_driven),annual growth > 3x,2000,25006825270.190018,12503412.63509501,supported
+H0207,2,2D,yoy_growth,YoY growth > 500% (behavioral),annual growth > 5x,2000,25006825270.190018,12503412.63509501,supported
+H0206,2,2D,yoy_growth,YoY growth > 300% (behavioral),annual growth > 3x,2000,25006825270.190018,12503412.63509501,supported
+H0205,2,2D,yoy_growth,YoY growth > 500% (home_health),annual growth > 5x,2000,25006825270.190018,12503412.63509501,supported
+H0204,2,2D,yoy_growth,YoY growth > 300% (home_health),annual growth > 3x,2000,25006825270.190018,12503412.63509501,supported
+H0203,2,2D,yoy_growth,YoY growth > 1000% (all),annual growth > 10x,2000,25006825270.190018,12503412.63509501,supported
+H0202,2,2D,yoy_growth,YoY growth > 500% (all),annual growth > 5x,2000,25006825270.190018,12503412.63509501,supported
+H0201,2,2D,yoy_growth,YoY growth > 300% (all),annual growth > 3x,2000,25006825270.190018,12503412.63509501,supported
+H0168,2,2A,month_spike,Month-over-month billing spike: Post-2022 spike,"ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0167,2,2A,month_spike,Month-over-month billing spike: New code addition spike,"ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0153,2,2A,month_spike,"Month-over-month billing spike: All providers, 10x spike","ratio > 10x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0169,2,2A,month_spike,Month-over-month billing spike: High-value 10x spike (>$100K),"ratio > 10x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0170,2,2A,month_spike,Month-over-month billing spike: Consecutive month spikes,"ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0166,2,2A,month_spike,Month-over-month billing spike: COVID onset 5x,"ratio > 5x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0165,2,2A,month_spike,Month-over-month billing spike: COVID onset spikes (Mar-Jun 2020),"ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0164,2,2A,month_spike,Month-over-month billing spike: December spikes 5x,"ratio > 5x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0163,2,2A,month_spike,Month-over-month billing spike: December spikes 3x,"ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0162,2,2A,month_spike,Month-over-month billing spike: Rate-only spike 5x,"ratio > 5x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0161,2,2A,month_spike,Month-over-month billing spike: Rate-only spike,"ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0160,2,2A,month_spike,Month-over-month billing spike: Spike without bene increase 5x,"ratio > 5x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0159,2,2A,month_spike,Month-over-month billing spike: Spike without bene increase,"ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0158,2,2A,month_spike,"Month-over-month billing spike: DME, 3x spike","ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0157,2,2A,month_spike,"Month-over-month billing spike: Behavioral, 5x spike","ratio > 5x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0156,2,2A,month_spike,"Month-over-month billing spike: Behavioral, 3x spike","ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0155,2,2A,month_spike,"Month-over-month billing spike: Home health, 5x spike","ratio > 5x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0154,2,2A,month_spike,"Month-over-month billing spike: Home health, 3x spike","ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0152,2,2A,month_spike,"Month-over-month billing spike: All providers, 5x spike","ratio > 5x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0151,2,2A,month_spike,"Month-over-month billing spike: All providers, 3x spike","ratio > 3x, both months > $10K",2000,899853594.259999,449926.7971299995,supported
+H0033,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 99213,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",1396,225607476.31999987,161609.9400573065,supported
+H0256,2,2H,change_point,Change-point detection (cusum): post/pre > 1.0x (all),"p < 0.01, post-change mean > 1.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0257,2,2H,change_point,Change-point detection (cusum): post/pre > 2.0x (all),"p < 0.01, post-change mean > 2.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0258,2,2H,change_point,Change-point detection (cusum): post/pre > 5.0x (all),"p < 0.01, post-change mean > 5.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0259,2,2H,change_point,Change-point detection (pelt): post/pre > 1.0x (all),"p < 0.01, post-change mean > 1.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0260,2,2H,change_point,Change-point detection (pelt): post/pre > 2.0x (all),"p < 0.01, post-change mean > 2.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0261,2,2H,change_point,Change-point detection (pelt): post/pre > 5.0x (all),"p < 0.01, post-change mean > 5.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0262,2,2H,change_point,Change-point detection (cusum): post/pre > 1.0x (home_health),"p < 0.01, post-change mean > 1.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0263,2,2H,change_point,Change-point detection (cusum): post/pre > 2.0x (home_health),"p < 0.01, post-change mean > 2.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0264,2,2H,change_point,Change-point detection (pelt): post/pre > 1.0x (behavioral),"p < 0.01, post-change mean > 1.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0265,2,2H,change_point,Change-point detection (cusum): post/pre > 1.0x (high_value),"p < 0.01, post-change mean > 1.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0266,2,2H,change_point,Change-point detection (pelt): post/pre > 2.0x (high_value),"p < 0.01, post-change mean > 2.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0267,2,2H,change_point,Change-point detection (cusum): post/pre > 1.0x (last_12_months),"p < 0.01, post-change mean > 1.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0268,2,2H,change_point,Change-point detection (pelt): post/pre > 1.0x (last_12_months),"p < 0.01, post-change mean > 1.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0269,2,2H,change_point,Change-point detection (variance_change): post/pre > 2.0x (all),"p < 0.01, post-change mean > 2.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0270,2,2H,change_point,Change-point detection (variance_change): post/pre > 3.0x (all),"p < 0.01, post-change mean > 3.0x pre-change mean",1152,138049031701.27997,119834228.90736109,supported
+H0034,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 99214,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",1145,202431672.58000037,176796.2205938868,supported
+H0003,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 99213,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",1083,2180140498.7699976,2013056.7855678648,supported
+H0004,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 99214,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",1037,988060582.1600003,952806.7330376088,supported
+H0091,1,1D,iqr_outlier,Providers with total_paid exceeding Q3 + 3*IQR,"value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",1000,305806400381.1194,305806400.3811194,supported
+H0555,5,5B,single_code,"> 90% revenue from one code, > $10,000,000 (any)","> 90% revenue from single code, total > $10,000,000",1000,124809694805.86,124809694.80586,supported
+H0554,5,5B,single_code,"> 90% revenue from one code, > $1,000,000 (therapy)","> 90% revenue from single code, total > $1,000,000",1000,124809694805.86,124809694.80586,supported
+H0553,5,5B,single_code,"> 90% revenue from one code, > $1,000,000 (pharmacy)","> 90% revenue from single code, total > $1,000,000",1000,124809694805.86,124809694.80586,supported
+H0552,5,5B,single_code,"> 95% revenue from one code, > $500,000 (individual_npi)","> 95% revenue from single code, total > $500,000",1000,124809694805.86,124809694.80586,supported
+H0551,5,5B,single_code,"> 90% revenue from one code, > $500,000 (individual_npi)","> 90% revenue from single code, total > $500,000",1000,124809694805.86,124809694.80586,supported
+H0550,5,5B,single_code,"> 90% revenue from one code, > $1,000,000 (transport)","> 90% revenue from single code, total > $1,000,000",1000,124809694805.86,124809694.80586,supported
+H0549,5,5B,single_code,"> 90% revenue from one code, > $1,000,000 (dme)","> 90% revenue from single code, total > $1,000,000",1000,124809694805.86,124809694.80586,supported
+H0548,5,5B,single_code,"> 90% revenue from one code, > $1,000,000 (personal_care)","> 90% revenue from single code, total > $1,000,000",1000,124809694805.86,124809694.80586,supported
+H0547,5,5B,single_code,"> 90% revenue from one code, > $1,000,000 (behavioral)","> 90% revenue from single code, total > $1,000,000",1000,124809694805.86,124809694.80586,supported
+H0546,5,5B,single_code,"> 90% revenue from one code, > $1,000,000 (home_health)","> 90% revenue from single code, total > $1,000,000",1000,124809694805.86,124809694.80586,supported
+H0545,5,5B,single_code,"> 95% revenue from one code, > $5,000,000 (all)","> 95% revenue from single code, total > $5,000,000",1000,124809694805.86,124809694.80586,supported
+H0544,5,5B,single_code,"> 90% revenue from one code, > $5,000,000 (all)","> 90% revenue from single code, total > $5,000,000",1000,124809694805.86,124809694.80586,supported
+H0543,5,5B,single_code,"> 99% revenue from one code, > $1,000,000 (all)","> 99% revenue from single code, total > $1,000,000",1000,124809694805.86,124809694.80586,supported
+H0542,5,5B,single_code,"> 95% revenue from one code, > $1,000,000 (all)","> 95% revenue from single code, total > $1,000,000",1000,124809694805.86,124809694.80586,supported
+H0541,5,5B,single_code,"> 90% revenue from one code, > $1,000,000 (all)","> 90% revenue from single code, total > $1,000,000",1000,124809694805.86,124809694.80586,supported
+H0403,4,4A,hub_spoke,Hub with > 200 servicing NPIs (all),> 200 servicing NPIs,1000,77381243881.15005,77381243.88115005,supported
+H0417,4,4A,hub_spoke,Hub with > 100 servicing NPIs (post_2022),> 100 servicing NPIs,1000,77381243881.15005,77381243.88115005,supported
+H0419,4,4A,hub_spoke,Hub with > 50 servicing NPIs (high_rate_variance),> 50 servicing NPIs,1000,77381243881.15005,77381243.88115005,supported
+H0413,4,4A,hub_spoke,Hub with > 100 servicing NPIs (individual_npi),> 100 servicing NPIs,1000,77381243881.15005,77381243.88115005,supported
+H0414,4,4A,hub_spoke,Hub with > 50 servicing NPIs (single_code),> 50 servicing NPIs,1000,77381243881.15005,77381243.88115005,supported
+H0409,4,4A,hub_spoke,Hub with > 50 servicing NPIs (new_24mo),> 50 servicing NPIs,1000,77381243881.15005,77381243.88115005,supported
+H0407,4,4A,hub_spoke,Hub with > 20 servicing NPIs (high_value_50m),> 20 servicing NPIs,1000,77381243881.15005,77381243.88115005,supported
+H0416,4,4A,hub_spoke,Hub with > 50 servicing NPIs (cross_specialty),> 50 servicing NPIs,1000,77381243881.15005,77381243.88115005,supported
+H0401,4,4A,hub_spoke,Hub with > 50 servicing NPIs (all),> 50 servicing NPIs,1000,77381243881.15005,77381243.88115005,supported
+H0412,4,4A,hub_spoke,Hub with > 50 servicing NPIs (behavioral),> 50 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0405,4,4A,hub_spoke,Hub with > 100 servicing NPIs (captive_50pct),> 100 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0411,4,4A,hub_spoke,Hub with > 50 servicing NPIs (home_health),> 50 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0410,4,4A,hub_spoke,Hub with > 20 servicing NPIs (rapid_expansion),> 20 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0418,4,4A,hub_spoke,Hub with > 20 servicing NPIs (all_captive),> 20 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0404,4,4A,hub_spoke,Hub with > 50 servicing NPIs (captive_50pct),> 50 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0420,4,4A,hub_spoke,Hub with > 200 servicing NPIs (mega_hub),> 200 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0415,4,4A,hub_spoke,Hub with > 20 servicing NPIs (multi_state),> 20 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0408,4,4A,hub_spoke,Hub with > 20 servicing NPIs (high_value_100m),> 20 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0406,4,4A,hub_spoke,Hub with > 20 servicing NPIs (high_value_10m),> 20 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0402,4,4A,hub_spoke,Hub with > 100 servicing NPIs (all),> 100 servicing NPIs,1000,77381243881.15004,77381243.88115004,supported
+H0494,4,4F,pure_billing,"Pure billing entity: > $5,000,000, >= 5 servicing (cross_state)","never servicing, > $5,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0496,4,4F,pure_billing,"Pure billing entity: > $1,000,000, >= 5 servicing (new_entity)","never servicing, > $1,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0492,4,4F,pure_billing,"Pure billing entity: > $5,000,000, >= 5 servicing (individual_npi)","never servicing, > $5,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0488,4,4F,pure_billing,"Pure billing entity: > $10,000,000, >= 5 servicing (all)","never servicing, > $10,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0487,4,4F,pure_billing,"Pure billing entity: > $5,000,000, >= 5 servicing (all)","never servicing, > $5,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0498,4,4F,pure_billing,"Pure billing entity: > $2,500,000, >= 5 servicing (all)","never servicing, > $2,500,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0499,4,4F,pure_billing,"Pure billing entity: > $1,000,000, >= 5 servicing (growing)","never servicing, > $1,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0500,4,4F,pure_billing,"Pure billing entity: > $1,000,000, >= 5 servicing (high_rate)","never servicing, > $1,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0489,4,4F,pure_billing,"Pure billing entity: > $1,000,000, >= 10 servicing (all)","never servicing, > $1,000,000, >= 10 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0497,4,4F,pure_billing,"Pure billing entity: > $500,000, >= 3 servicing (all)","never servicing, > $500,000, >= 3 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0495,4,4F,pure_billing,"Pure billing entity: > $1,000,000, >= 5 servicing (single_code)","never servicing, > $1,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0490,4,4F,pure_billing,"Pure billing entity: > $5,000,000, >= 10 servicing (all)","never servicing, > $5,000,000, >= 10 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0493,4,4F,pure_billing,"Pure billing entity: > $1,000,000, >= 5 servicing (cross_state)","never servicing, > $1,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0491,4,4F,pure_billing,"Pure billing entity: > $1,000,000, >= 5 servicing (individual_npi)","never servicing, > $1,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0486,4,4F,pure_billing,"Pure billing entity: > $1,000,000, >= 5 servicing (all)","never servicing, > $1,000,000, >= 5 servicing NPIs",1000,33622210492.55,33622210.49255,supported
+H0193,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$250,000/mo avg (spike_then_vanish)","active 12+ months, avg > $250,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0200,2,2C,sudden_disappearance,"Sudden disappearance: >6mo, >$250,000/mo avg (rapid_exit)","active 6+ months, avg > $250,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0199,2,2C,sudden_disappearance,"Sudden disappearance: >6mo, >$100,000/mo avg (rapid_exit)","active 6+ months, avg > $100,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0198,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$100,000/mo avg (behavioral)","active 12+ months, avg > $100,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0197,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$100,000/mo avg (home_health)","active 12+ months, avg > $100,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0196,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$250,000/mo avg (coordinated)","active 12+ months, avg > $250,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0195,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$100,000/mo avg (coordinated)","active 12+ months, avg > $100,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0194,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$500,000/mo avg (spike_then_vanish)","active 12+ months, avg > $500,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0186,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$100,000/mo avg (all)","active 12+ months, avg > $100,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0187,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$250,000/mo avg (all)","active 12+ months, avg > $250,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0188,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$500,000/mo avg (all)","active 12+ months, avg > $500,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0189,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$1,000,000/mo avg (all)","active 12+ months, avg > $1,000,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0190,2,2C,sudden_disappearance,"Sudden disappearance: >24mo, >$100,000/mo avg (long_active)","active 24+ months, avg > $100,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0191,2,2C,sudden_disappearance,"Sudden disappearance: >24mo, >$250,000/mo avg (long_active)","active 24+ months, avg > $250,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0192,2,2C,sudden_disappearance,"Sudden disappearance: >12mo, >$100,000/mo avg (spike_then_vanish)","active 12+ months, avg > $100,000, then stopped",1000,27227056688.12004,27227056.68812004,supported
+H0072,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for H2015,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0087,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for H0031,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0079,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 97110,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0080,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 97530,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0081,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 92507,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0082,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 97140,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0083,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 97116,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0084,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 90834,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0061,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for T1019,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0062,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for T1015,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0063,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 99213,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0064,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 99214,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0065,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for H0015,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0066,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for T2003,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0067,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for T1005,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0068,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 99215,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0069,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for T2025,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0070,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 99212,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0071,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for T1020,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0075,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 99204,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0073,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for H2016,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0074,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 99203,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0078,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for T2024,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0077,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 99211,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0076,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 99202,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0089,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for H0004,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0090,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for T1017,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0085,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 90837,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0086,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for 90832,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0088,1,1C,z_score_paid_per_bene,Providers with paid-per-bene z-score > 3.0 for H0036,"z > 3.0, excess > $500/beneficiary",1000,18026301352.899998,18026301.3529,supported
+H0245,2,2F,covid_anomaly,COVID-period anomaly: >3x pre-COVID (post_covid_sustained),COVID billing > 3x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0242,2,2F,covid_anomaly,COVID-period anomaly: >2x pre-COVID (telehealth_surge),COVID billing > 2x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0243,2,2F,covid_anomaly,COVID-period anomaly: >3x pre-COVID (telehealth_surge),COVID billing > 3x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0244,2,2F,covid_anomaly,COVID-period anomaly: >2x pre-COVID (post_covid_sustained),COVID billing > 2x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0241,2,2F,covid_anomaly,COVID-period anomaly: >3x pre-COVID (dme),COVID billing > 3x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0240,2,2F,covid_anomaly,COVID-period anomaly: >2x pre-COVID (dme),COVID billing > 2x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0231,2,2F,covid_anomaly,COVID-period anomaly: >2x pre-COVID (all),COVID billing > 2x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0232,2,2F,covid_anomaly,COVID-period anomaly: >3x pre-COVID (all),COVID billing > 3x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0233,2,2F,covid_anomaly,COVID-period anomaly: >5x pre-COVID (all),COVID billing > 5x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0234,2,2F,covid_anomaly,COVID-period anomaly: >2x pre-COVID (home_health),COVID billing > 2x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0235,2,2F,covid_anomaly,COVID-period anomaly: >3x pre-COVID (home_health),COVID billing > 3x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0236,2,2F,covid_anomaly,COVID-period anomaly: >2x pre-COVID (behavioral),COVID billing > 2x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0237,2,2F,covid_anomaly,COVID-period anomaly: >3x pre-COVID (behavioral),COVID billing > 3x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0238,2,2F,covid_anomaly,COVID-period anomaly: >2x pre-COVID (non_covid_codes),COVID billing > 2x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0239,2,2F,covid_anomaly,COVID-period anomaly: >3x pre-COVID (non_covid_codes),COVID billing > 3x pre-COVID and > 2x peer COVID growth,1000,13681838485.200018,13681838.485200018,supported
+H0094,1,1D,iqr_outlier,Providers with avg_paid_per_claim exceeding Q3 + 3*IQR,"value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",1000,11854759600.499983,11854759.600499982,supported
+H0485,4,4E,new_network,"New network > $250,000 in first 6 months","> $250,000 in first 6 months",1000,904102506.9400002,904102.5069400002,supported
+H0255,2,2G,december_surge,December billing > 3x monthly avg (high_value),December paid > 3x average monthly paid,1000,750111837.4399999,750111.8374399999,supported
+H0246,2,2G,december_surge,December billing > 2x monthly avg (all),December paid > 2x average monthly paid,1000,750111837.4399999,750111.8374399999,supported
+H0251,2,2G,december_surge,December billing > 3x monthly avg (behavioral),December paid > 3x average monthly paid,1000,750111837.4399999,750111.8374399999,supported
+H0247,2,2G,december_surge,December billing > 3x monthly avg (all),December paid > 3x average monthly paid,1000,750111837.43,750111.83743,supported
+H0248,2,2G,december_surge,December billing > 2x monthly avg (home_health),December paid > 2x average monthly paid,1000,750111837.43,750111.83743,supported
+H0249,2,2G,december_surge,December billing > 3x monthly avg (home_health),December paid > 3x average monthly paid,1000,750111837.43,750111.83743,supported
+H0250,2,2G,december_surge,December billing > 2x monthly avg (behavioral),December paid > 2x average monthly paid,1000,750111837.43,750111.83743,supported
+H0252,2,2G,december_surge,December billing > 2x monthly avg (repeated_years),December paid > 2x average monthly paid,1000,750111837.43,750111.83743,supported
+H0253,2,2G,december_surge,December billing > 3x monthly avg (repeated_years),December paid > 3x average monthly paid,1000,750111837.43,750111.83743,supported
+H0254,2,2G,december_surge,December billing > 2x monthly avg (high_value),December paid > 2x average monthly paid,1000,750111837.43,750111.83743,supported
+H0093,1,1D,iqr_outlier,Providers with total_beneficiaries exceeding Q3 + 3*IQR,"value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",999,167472308951.65,167639948.90055054,supported
+H0096,1,1D,iqr_outlier,Providers with num_codes exceeding Q3 + 3*IQR,"value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",997,105776479096.79002,106094763.38695088,supported
+H0092,1,1D,iqr_outlier,Providers with total_claims exceeding Q3 + 3*IQR,"value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",996,239801961813.37057,240765021.90097448,supported
+H0095,1,1D,iqr_outlier,Providers with avg_claims_per_bene exceeding Q3 + 3*IQR,"value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",976,6362227969.059999,6518676.197807376,supported
+H0049,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 97110,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",612,167003423.35000008,272881.4107026145,supported
+H0010,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 99212,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",597,1051166042.0100006,1760747.139045227,supported
+H0055,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 90837,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",555,187537657.03000006,337905.68834234244,supported
+H0439,4,4B,shared_servicing,Servicing NPI under > 10 billers (transport),appears under > 10 billing NPIs,547,21232389605.269993,38816068.748208396,supported
+H0426,4,4B,shared_servicing,Servicing NPI under > 10 billers (duplicate_billing),appears under > 10 billing NPIs,547,21232389605.269993,38816068.748208396,supported
+H0429,4,4B,shared_servicing,Servicing NPI under > 20 billers (multi_state),appears under > 20 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0434,4,4B,shared_servicing,Servicing NPI under > 10 billers (high_volume),appears under > 10 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0435,4,4B,shared_servicing,Servicing NPI under > 20 billers (high_volume),appears under > 20 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0436,4,4B,shared_servicing,Servicing NPI under > 10 billers (recent_only),appears under > 10 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0440,4,4B,shared_servicing,Servicing NPI under > 5 billers (extreme_rate_spread),appears under > 5 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0433,4,4B,shared_servicing,Servicing NPI under > 10 billers (sequential_npis),appears under > 10 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0421,4,4B,shared_servicing,Servicing NPI under > 10 billers (all),appears under > 10 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0422,4,4B,shared_servicing,Servicing NPI under > 20 billers (all),appears under > 20 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0423,4,4B,shared_servicing,Servicing NPI under > 50 billers (all),appears under > 50 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0425,4,4B,shared_servicing,Servicing NPI under > 20 billers (rate_arbitrage),appears under > 20 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0430,4,4B,shared_servicing,Servicing NPI under > 50 billers (multi_state),appears under > 50 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0427,4,4B,shared_servicing,Servicing NPI under > 20 billers (duplicate_billing),appears under > 20 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0428,4,4B,shared_servicing,Servicing NPI under > 10 billers (multi_state),appears under > 10 billing NPIs,547,21232389605.26999,38816068.74820839,supported
+H0437,4,4B,shared_servicing,Servicing NPI under > 10 billers (home_health),appears under > 10 billing NPIs,547,21232389605.269985,38816068.74820838,supported
+H0438,4,4B,shared_servicing,Servicing NPI under > 10 billers (behavioral),appears under > 10 billing NPIs,547,21232389605.269985,38816068.74820838,supported
+H0431,4,4B,shared_servicing,Servicing NPI under > 10 billers (same_code),appears under > 10 billing NPIs,547,21232389605.269985,38816068.74820838,supported
+H0432,4,4B,shared_servicing,Servicing NPI under > 20 billers (same_code),appears under > 20 billing NPIs,547,21232389605.269985,38816068.74820838,supported
+H0424,4,4B,shared_servicing,Servicing NPI under > 10 billers (rate_arbitrage),appears under > 10 billing NPIs,547,21232389605.269985,38816068.74820838,supported
+H0050,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 97530,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",516,162959615.22999993,315813.2078100774,supported
+H0025,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 90837,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",506,910778140.47,1799956.799347826,supported
+H0301,3,3B,peer_volume,Total claims > 10x peer median for T1019,"> 10x peer median, >= 12 months, > $100K",500,88627970024.25,177255940.0485,supported
+H0302,3,3B,peer_volume,Total claims > 10x peer median for T1015,"> 10x peer median, >= 12 months, > $100K",500,23412313316.289963,46824626.63257992,supported
+H0564,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (transport),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0563,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (dme),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0562,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (behavioral),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0561,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (home_health),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0560,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (top3_gt_50pct),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0559,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (top5_gt_50pct),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0556,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (all),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0566,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (high_spending_codes),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0565,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (pharmacy),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0568,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (increasing_hhi),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0569,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (single_dominant),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0570,5,5C,hhi_concentration,HHI > 2500 for HCPCS code (new_monopoly),HHI > 2500,500,11423599059.939993,22847198.119879987,supported
+H0304,3,3B,peer_volume,Total claims > 10x peer median for 99214,"> 10x peer median, >= 12 months, > $100K",500,7122551385.800001,14245102.771600002,supported
+H0303,3,3B,peer_volume,Total claims > 10x peer median for 99213,"> 10x peer median, >= 12 months, > $100K",500,6857031922.989995,13714063.84597999,supported
+H0272,3,3A,peer_rate,Paid per claim > 2x peer median for T1015,"> 2x peer median, >= 50 claims, >= 30 peers",500,4637762362.369996,9275524.724739993,supported
+H0283,3,3A,peer_rate,Paid per claim > 2x peer median for H2016,"> 2x peer median, >= 50 claims, >= 30 peers",500,3897825325.9299994,7795650.651859999,supported
+H0332,3,3C,peer_concentration,Claims per bene > 3x peer median for H2015,"> 3x peer median, persists 6+ months",500,3566477828.9900002,7132955.657980001,supported
+H0282,3,3A,peer_rate,Paid per claim > 2x peer median for H2015,"> 2x peer median, >= 50 claims, >= 30 peers",500,3291246915.81,6582493.83162,supported
+H0320,3,3B,peer_volume,Total claims > 10x peer median for 97530,"> 10x peer median, >= 12 months, > $100K",500,2507799503.0800004,5015599.00616,supported
+H0310,3,3B,peer_volume,Total claims > 10x peer median for 99212,"> 10x peer median, >= 12 months, > $100K",500,2005539566.3499992,4011079.1326999986,supported
+H0319,3,3B,peer_volume,Total claims > 10x peer median for 97110,"> 10x peer median, >= 12 months, > $100K",500,1760096121.450001,3520192.242900002,supported
+H0271,3,3A,peer_rate,Paid per claim > 2x peer median for T1019,"> 2x peer median, >= 50 claims, >= 30 peers",500,1702362037.5300004,3404724.075060001,supported
+H0300,3,3A,peer_rate,Paid per claim > 2x peer median for T1017,"> 2x peer median, >= 50 claims, >= 30 peers",500,1655476046.3900006,3310952.092780001,supported
+H0306,3,3B,peer_volume,Total claims > 10x peer median for T2003,"> 10x peer median, >= 12 months, > $100K",500,1464561043.2099986,2929122.0864199973,supported
+H0317,3,3B,peer_volume,Total claims > 10x peer median for 99211,"> 10x peer median, >= 12 months, > $100K",500,1344719046.649998,2689438.093299996,supported
+H0314,3,3B,peer_volume,Total claims > 10x peer median for 99203,"> 10x peer median, >= 12 months, > $100K",500,1311159547.9999998,2622319.0959999994,supported
+H0308,3,3B,peer_volume,Total claims > 10x peer median for 99215,"> 10x peer median, >= 12 months, > $100K",500,1273298230.800001,2546596.461600002,supported
+H0273,3,3A,peer_rate,Paid per claim > 2x peer median for 99213,"> 2x peer median, >= 50 claims, >= 30 peers",500,1230500794.8399997,2461001.5896799993,supported
+H0449,4,4C,circular_billing,"Circular billing (same_month): > $100,000 both directions","bilateral edge > $100,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0446,4,4C,circular_billing,"Circular billing (same_codes): > $50,000 both directions","bilateral edge > $50,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0447,4,4C,circular_billing,"Circular billing (same_codes): > $100,000 both directions","bilateral edge > $100,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0441,4,4C,circular_billing,"Circular billing (bilateral): > $50,000 both directions","bilateral edge > $50,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0455,4,4C,circular_billing,"Circular billing (new_relationship): > $100,000 both directions","bilateral edge > $100,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0454,4,4C,circular_billing,"Circular billing (new_relationship): > $50,000 both directions","bilateral edge > $50,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0453,4,4C,circular_billing,"Circular billing (growing): > $100,000 both directions","bilateral edge > $100,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0452,4,4C,circular_billing,"Circular billing (growing): > $50,000 both directions","bilateral edge > $50,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0451,4,4C,circular_billing,"Circular billing (high_frequency): > $100,000 both directions","bilateral edge > $100,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0448,4,4C,circular_billing,"Circular billing (same_month): > $50,000 both directions","bilateral edge > $50,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0442,4,4C,circular_billing,"Circular billing (bilateral): > $100,000 both directions","bilateral edge > $100,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0443,4,4C,circular_billing,"Circular billing (bilateral): > $500,000 both directions","bilateral edge > $500,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0444,4,4C,circular_billing,"Circular billing (trilateral): > $50,000 both directions","bilateral edge > $50,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0450,4,4C,circular_billing,"Circular billing (high_frequency): > $50,000 both directions","bilateral edge > $50,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0445,4,4C,circular_billing,"Circular billing (trilateral): > $100,000 both directions","bilateral edge > $100,000 both directions",500,1136706849.0900016,2273413.698180003,supported
+H0315,3,3B,peer_volume,Total claims > 10x peer median for 99204,"> 10x peer median, >= 12 months, > $100K",500,1108784873.719999,2217569.747439998,supported
+H0280,3,3A,peer_rate,Paid per claim > 2x peer median for 99212,"> 2x peer median, >= 50 claims, >= 30 peers",500,1026549305.7600002,2053098.6115200005,supported
+H0398,3,3F,size_mismatch,Size tier mismatch: Unusually stable high-value billing,Size tier mismatch: stable_high_billing,500,1022545475.3799996,2045090.9507599992,supported
+H0388,3,3F,size_mismatch,Size tier mismatch: Extreme paid-per-claim variance across codes,Size tier mismatch: extreme_rate_variance,500,1022545475.3799996,2045090.9507599992,supported
+H0397,3,3F,size_mismatch,Size tier mismatch: Extreme monthly billing volatility,Size tier mismatch: monthly_volatility_extreme,500,1022545475.3799996,2045090.9507599992,supported
+H0396,3,3F,size_mismatch,Size tier mismatch: Unusually few codes with high paid,Size tier mismatch: code_homogeneity_outlier,500,1022545475.3799996,2045090.9507599992,supported
+H0395,3,3F,size_mismatch,Size tier mismatch: Unusually many codes for provider type,Size tier mismatch: code_diversity_outlier,500,1022545475.3799996,2045090.9507599992,supported
+H0394,3,3F,size_mismatch,Size tier mismatch: Extreme average paid per beneficiary,Size tier mismatch: extreme_avg_per_bene,500,1022545475.3799996,2045090.9507599992,supported
+H0399,3,3F,size_mismatch,Size tier mismatch: Top decile on 5+ metrics simultaneously,Size tier mismatch: top_decile_all_metrics,500,1022545475.3799996,2045090.9507599992,supported
+H0393,3,3F,size_mismatch,Size tier mismatch: Beneficiary count inconsistent with claims,Size tier mismatch: bene_count_mismatch,500,1022545475.3799996,2045090.9507599992,supported
+H0392,3,3F,size_mismatch,Size tier mismatch: High total paid concentrated in single month,Size tier mismatch: high_paid_single_month,500,1022545475.3799996,2045090.9507599992,supported
+H0391,3,3F,size_mismatch,Size tier mismatch: New provider with rapid growth to top tier,Size tier mismatch: rapid_growth_new,500,1022545475.3799996,2045090.9507599992,supported
+H0400,3,3F,size_mismatch,Size tier mismatch: Uses rarely-billed codes but has high total paid,Size tier mismatch: bottom_codes_top_paid,500,1022545475.3799996,2045090.9507599992,supported
+H0389,3,3F,size_mismatch,Size tier mismatch: Individual NPI with large servicing network,Size tier mismatch: individual_high_network,500,1022545475.3799996,2045090.9507599992,supported
+H0390,3,3F,size_mismatch,Size tier mismatch: Organization with only 1 servicing NPI,Size tier mismatch: org_single_servicing,500,1022545475.3799996,2045090.9507599992,supported
+H0381,3,3F,size_mismatch,Size tier mismatch: High paid but low claims (extreme rate),Size tier mismatch: high_paid_low_claims,500,1022545475.3799996,2045090.9507599992,supported
+H0382,3,3F,size_mismatch,Size tier mismatch: High claims but low beneficiaries (high intensity),Size tier mismatch: high_claims_low_bene,500,1022545475.3799996,2045090.9507599992,supported
+H0383,3,3F,size_mismatch,Size tier mismatch: Individual NPI billing at organization scale,Size tier mismatch: individual_org_scale,500,1022545475.3799996,2045090.9507599992,supported
+H0384,3,3F,size_mismatch,Size tier mismatch: Single HCPCS code with > $10M total,Size tier mismatch: single_code_10m,500,1022545475.3799996,2045090.9507599992,supported
+H0385,3,3F,size_mismatch,Size tier mismatch: Active all 84 months with increasing paid,Size tier mismatch: all_84_months_increasing,500,1022545475.3799996,2045090.9507599992,supported
+H0386,3,3F,size_mismatch,Size tier mismatch: High paid with very few unique codes,Size tier mismatch: high_paid_few_codes,500,1022545475.3799996,2045090.9507599992,supported
+H0387,3,3F,size_mismatch,Size tier mismatch: Many beneficiaries but low total paid,Size tier mismatch: high_bene_low_paid,500,1022545475.3799996,2045090.9507599992,supported
+H0298,3,3A,peer_rate,Paid per claim > 2x peer median for H0036,"> 2x peer median, >= 50 claims, >= 30 peers",500,1010741860.7900014,2021483.7215800027,supported
+H0299,3,3A,peer_rate,Paid per claim > 2x peer median for H0004,"> 2x peer median, >= 50 claims, >= 30 peers",500,924117869.0500003,1848235.7381000007,supported
+H0295,3,3A,peer_rate,Paid per claim > 2x peer median for 90837,"> 2x peer median, >= 50 claims, >= 30 peers",500,904920422.0800008,1809840.8441600015,supported
+H0287,3,3A,peer_rate,Paid per claim > 2x peer median for 99211,"> 2x peer median, >= 50 claims, >= 30 peers",500,807387045.2500002,1614774.0905000004,supported
+H0274,3,3A,peer_rate,Paid per claim > 2x peer median for 99214,"> 2x peer median, >= 50 claims, >= 30 peers",500,578676748.2700002,1157353.4965400004,supported
+H0294,3,3A,peer_rate,Paid per claim > 2x peer median for 90834,"> 2x peer median, >= 50 claims, >= 30 peers",500,425092191.82000047,850184.383640001,supported
+H0291,3,3A,peer_rate,Paid per claim > 2x peer median for 92507,"> 2x peer median, >= 50 claims, >= 30 peers",500,400058137.96999973,800116.2759399995,supported
+H0296,3,3A,peer_rate,Paid per claim > 2x peer median for 90832,"> 2x peer median, >= 50 claims, >= 30 peers",500,394915191.96999985,789830.3839399997,supported
+H0290,3,3A,peer_rate,Paid per claim > 2x peer median for 97530,"> 2x peer median, >= 50 claims, >= 30 peers",500,385701732.3800002,771403.4647600004,supported
+H0289,3,3A,peer_rate,Paid per claim > 2x peer median for 97110,"> 2x peer median, >= 50 claims, >= 30 peers",500,366142054.09000045,732284.1081800009,supported
+H0276,3,3A,peer_rate,Paid per claim > 2x peer median for T2003,"> 2x peer median, >= 50 claims, >= 30 peers",500,351710887.8599996,703421.7757199992,supported
+H0278,3,3A,peer_rate,Paid per claim > 2x peer median for 99215,"> 2x peer median, >= 50 claims, >= 30 peers",500,334791475.9599998,669582.9519199996,supported
+H0316,3,3B,peer_volume,Total claims > 10x peer median for 99202,"> 10x peer median, >= 12 months, > $100K",500,317017353.15000045,634034.7063000009,supported
+H0297,3,3A,peer_rate,Paid per claim > 2x peer median for H0031,"> 2x peer median, >= 50 claims, >= 30 peers",500,277658950.59999985,555317.9011999997,supported
+H0340,3,3C,peer_concentration,Claims per bene > 3x peer median for 97530,"> 3x peer median, persists 6+ months",500,188117743.97000003,376235.4879400001,supported
+H0339,3,3C,peer_concentration,Claims per bene > 3x peer median for 97110,"> 3x peer median, persists 6+ months",500,173518625.33999994,347037.2506799999,supported
+H0286,3,3A,peer_rate,Paid per claim > 2x peer median for 99202,"> 2x peer median, >= 50 claims, >= 30 peers",500,113119149.43000008,226238.29886000016,supported
+H0284,3,3A,peer_rate,Paid per claim > 2x peer median for 99203,"> 2x peer median, >= 50 claims, >= 30 peers",500,97118450.30999996,194236.9006199999,supported
+H0292,3,3A,peer_rate,Paid per claim > 2x peer median for 97140,"> 2x peer median, >= 50 claims, >= 30 peers",500,89348326.13000004,178696.6522600001,supported
+H0285,3,3A,peer_rate,Paid per claim > 2x peer median for 99204,"> 2x peer median, >= 50 claims, >= 30 peers",500,87267470.23999995,174534.9404799999,supported
+H0293,3,3A,peer_rate,Paid per claim > 2x peer median for 97116,"> 2x peer median, >= 50 claims, >= 30 peers",500,56978494.01000001,113956.98802000002,supported
+H0482,4,4E,new_network,"New network > $500,000 in first 12 months","> $500,000 in first 12 months",489,702924832.2300003,1437474.0945398777,supported
+H0478,4,4E,new_network,"New network > $500,000 in first 6 months","> $500,000 in first 6 months",489,702924832.2300003,1437474.0945398777,supported
+H0476,4,4E,new_network,"New network > $500,000 in first 12 months","> $500,000 in first 12 months",489,702924832.2300003,1437474.0945398777,supported
+H0014,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 99203,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",483,97207950.50000006,201258.6966873707,supported
+H0040,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 99212,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",481,18627936.36,38727.51841995842,supported
+H0333,3,3C,peer_concentration,Claims per bene > 3x peer median for H2016,"> 3x peer median, persists 6+ months",467,10893820086.589998,23327237.87278372,supported
+H0312,3,3B,peer_volume,Total claims > 10x peer median for H2015,"> 10x peer median, >= 12 months, > $100K",466,13060163607.670023,28026102.162382025,supported
+H0024,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 90834,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",373,325753181.88999975,873332.9273190341,supported
+H0038,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 99215,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",368,54455397.93999999,147976.6248369565,supported
+H0054,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 90834,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",362,217385871.9399999,600513.4583977899,supported
+H0313,3,3B,peer_volume,Total claims > 10x peer median for H2016,"> 10x peer median, >= 12 months, > $100K",360,13732526474.889996,38145906.87469443,supported
+H0305,3,3B,peer_volume,Total claims > 10x peer median for H0015,"> 10x peer median, >= 12 months, > $100K",334,2246230456.8599997,6725240.888802394,supported
+H0326,3,3C,peer_concentration,Claims per bene > 3x peer median for T2003,"> 3x peer median, persists 6+ months",324,492139681.7500005,1518949.6350308657,supported
+H0322,3,3C,peer_concentration,Claims per bene > 3x peer median for T1015,"> 3x peer median, persists 6+ months",305,2368490266.8900013,7765541.858655742,supported
+H0277,3,3A,peer_rate,Paid per claim > 2x peer median for T1005,"> 2x peer median, >= 50 claims, >= 30 peers",303,197957157.96999988,653323.9536963692,supported
+H0557,5,5C,hhi_concentration,HHI > 5000 for HCPCS code (all),HHI > 5000,293,3812493329.5499983,13011922.626450507,supported
+H0567,5,5C,hhi_concentration,HHI > 5000 for HCPCS code (high_spending_codes),HHI > 5000,293,3812493329.5499983,13011922.626450507,supported
+H0051,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 92507,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",286,95897885.09999998,335307.2905594405,supported
+H0044,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 99203,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",284,5502796.690000002,19376.0446830986,supported
+H0045,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 99204,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",277,11133672.549999999,40193.763718411545,supported
+H0008,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 99215,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",273,258725877.00999996,947713.8352014651,supported
+H0017,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 99211,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",272,563337759.3300002,2071094.7034191182,supported
+H0015,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 99204,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",261,48462468.27000001,185679.9550574713,supported
+H0056,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 90832,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",257,219188071.85,852871.8749027237,supported
+H0047,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 99211,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",246,44667357.52,181574.62406504067,supported
+H0026,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 90832,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",225,147631477.46,656139.8998222223,supported
+H0471,4,4E,new_network,"New network > $1,000,000 in first 12 months","> $1,000,000 in first 12 months",206,511565350.3999996,2483326.9436893184,supported
+H0480,4,4E,new_network,"New network > $1,000,000 in first 12 months","> $1,000,000 in first 12 months",206,511565350.3999996,2483326.9436893184,supported
+H0477,4,4E,new_network,"New network > $1,000,000 in first 24 months","> $1,000,000 in first 24 months",206,511565350.3999996,2483326.9436893184,supported
+H0474,4,4E,new_network,"New network > $1,000,000 in first 6 months","> $1,000,000 in first 6 months",206,511565350.3999996,2483326.9436893184,supported
+H0337,3,3C,peer_concentration,Claims per bene > 3x peer median for 99211,"> 3x peer median, persists 6+ months",204,92766737.11,454738.9074019608,supported
+H0275,3,3A,peer_rate,Paid per claim > 2x peer median for H0015,"> 2x peer median, >= 50 claims, >= 30 peers",202,464359646.2299998,2298810.129851484,supported
+H0016,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 99202,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",201,54146962.17,269387.8714925373,supported
+H0032,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for T1015,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",198,1937888270.5100005,9787314.497525254,supported
+H0281,3,3A,peer_rate,Paid per claim > 2x peer median for T1020,"> 2x peer median, >= 50 claims, >= 30 peers",191,768238282.3200004,4022189.959790578,supported
+H0002,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for T1015,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",186,1725513688.0600004,9276955.31215054,supported
+H0001,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for T1019,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",186,894920411.9599996,4811400.064301073,supported
+H0019,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 97110,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",181,156058119.91,862199.5575138121,supported
+H0052,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 97140,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",181,7487860.659999998,41369.3959116022,supported
+H0311,3,3B,peer_volume,Total claims > 10x peer median for T1020,"> 10x peer median, >= 12 months, > $100K",158,5670007867.360006,35886125.74278485,supported
+H0279,3,3A,peer_rate,Paid per claim > 2x peer median for T2025,"> 2x peer median, >= 50 claims, >= 30 peers",154,1325231881.4399998,8605401.827532467,supported
+H0059,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for H0004,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",152,223498865.16000006,1470387.270789474,supported
+H0323,3,3C,peer_concentration,Claims per bene > 3x peer median for 99213,"> 3x peer median, persists 6+ months",147,30023692.459999986,204242.80585034005,supported
+H0329,3,3C,peer_concentration,Claims per bene > 3x peer median for T2025,"> 3x peer median, persists 6+ months",145,2750446718.0300007,18968598.055379316,supported
+H0020,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 97530,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",144,208462981.32000005,1447659.5925000003,supported
+H0021,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 92507,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",136,226135122.47999993,1662758.2535294113,supported
+H0324,3,3C,peer_concentration,Claims per bene > 3x peer median for 99214,"> 3x peer median, persists 6+ months",130,38103295.45999999,293102.2727692307,supported
+H0046,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 99202,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",124,4614887.270000001,37216.832822580654,supported
+H0060,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for T1017,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",117,181917156.95000002,1554847.4952991453,supported
+H0006,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for T2003,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",117,100113158.76,855668.0235897437,supported
+H0558,5,5C,hhi_concentration,HHI > 7500 for HCPCS code (all),HHI > 7500,114,2310533805.2400002,20267840.396842107,supported
+H0309,3,3B,peer_volume,Total claims > 10x peer median for T2025,"> 10x peer median, >= 12 months, > $100K",110,3166253496.4100018,28784122.69463638,supported
+H0307,3,3B,peer_volume,Total claims > 10x peer median for T1005,"> 10x peer median, >= 12 months, > $100K",103,733346892.3000003,7119872.740776702,supported
+H0057,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for H0031,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",98,70429800.66,718671.4353061224,supported
+H0022,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 97140,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",93,27259423.32000001,293112.07870967756,supported
+H0036,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for T2003,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",92,160783813.18,1747650.1432608697,supported
+H0318,3,3B,peer_volume,Total claims > 10x peer median for T2024,"> 10x peer median, >= 12 months, > $100K",82,504225472.68999994,6149091.130365853,supported
+H0227,2,2E,seasonal_violation,Seasonal violation: cv_extremely_low (all),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0221,2,2E,seasonal_violation,Seasonal violation: inverse_seasonality (all),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0220,2,2E,seasonal_violation,Seasonal violation: flat_in_seasonal (DME),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0219,2,2E,seasonal_violation,Seasonal violation: flat_in_seasonal (Therapy),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0218,2,2E,seasonal_violation,Seasonal violation: flat_in_seasonal (E&M),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0217,2,2E,seasonal_violation,Seasonal violation: flat_in_seasonal (Behavioral Health),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0216,2,2E,seasonal_violation,Seasonal violation: flat_in_seasonal (Home Health),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0225,2,2E,seasonal_violation,Seasonal violation: single_month_dominance (all),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0228,2,2E,seasonal_violation,Seasonal violation: cv_extremely_low (high_paid),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0230,2,2E,seasonal_violation,Seasonal violation: quarterly_pattern (all),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0223,2,2E,seasonal_violation,Seasonal violation: uniform_monthly (all),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0224,2,2E,seasonal_violation,Seasonal violation: uniform_monthly (high_paid),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0226,2,2E,seasonal_violation,Seasonal violation: single_month_dominance (home_health),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0229,2,2E,seasonal_violation,Seasonal violation: weekend_holiday_billing (all),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0222,2,2E,seasonal_violation,Seasonal violation: inverse_seasonality (Home Health),billing pattern deviates from expected seasonal norm,80,1366747814.9600003,17084347.687000003,supported
+H0027,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for H0031,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",80,74387666.08999999,929845.8261249999,supported
+H0483,4,4E,new_network,"New network > $2,000,000 in first 6 months","> $2,000,000 in first 6 months",77,338600781.81999993,4397412.75090909,supported
+H0023,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for 97116,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",77,16111936.549999995,209245.92922077916,supported
+H0330,3,3C,peer_concentration,Claims per bene > 3x peer median for 99212,"> 3x peer median, persists 6+ months",72,5059911.43,70276.54763888888,supported
+H0540,5,5A,provider_dominance,Provider with > 30% share of code spending (growing_share),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0521,5,5A,provider_dominance,Provider with > 30% share of code spending (all),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0539,5,5A,provider_dominance,Provider with > 80% share of code spending (any_category),> 80% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0538,5,5A,provider_dominance,Provider with > 30% share of code spending (therapy),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0537,5,5A,provider_dominance,Provider with > 30% share of code spending (transport),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0536,5,5A,provider_dominance,Provider with > 30% share of code spending (pharmacy),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0535,5,5A,provider_dominance,Provider with > 50% share of code spending (dme),> 50% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0534,5,5A,provider_dominance,Provider with > 30% share of code spending (dme),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0533,5,5A,provider_dominance,Provider with > 50% share of code spending (behavioral),> 50% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0532,5,5A,provider_dominance,Provider with > 30% share of code spending (behavioral),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0531,5,5A,provider_dominance,Provider with > 50% share of code spending (home_health),> 50% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0530,5,5A,provider_dominance,Provider with > 30% share of code spending (home_health),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0529,5,5A,provider_dominance,Provider with > 50% share of code spending (individual_npi),> 50% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0528,5,5A,provider_dominance,Provider with > 30% share of code spending (individual_npi),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0527,5,5A,provider_dominance,Provider with > 50% share of code spending (new_entrant),> 50% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0526,5,5A,provider_dominance,Provider with > 30% share of code spending (new_entrant),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0525,5,5A,provider_dominance,Provider with > 50% share of code spending (dominant_and_expensive),> 50% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0524,5,5A,provider_dominance,Provider with > 30% share of code spending (dominant_and_expensive),> 30% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0523,5,5A,provider_dominance,Provider with > 80% share of code spending (all),> 80% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0522,5,5A,provider_dominance,Provider with > 50% share of code spending (all),> 50% of national code spending,70,14544831932.119999,207783313.31599998,supported
+H0288,3,3A,peer_rate,Paid per claim > 2x peer median for T2024,"> 2x peer median, >= 50 claims, >= 30 peers",67,18540137.779999994,276718.47432835813,supported
+H0181,2,2B,sudden_appearance,"Sudden provider appearance: first month > $500,000 (dme)","first month paid > $500,000",66,187909047.30000004,2847106.777272728,supported
+H0172,2,2B,sudden_appearance,"Sudden provider appearance: first month > $1,000,000 (all)","first month paid > $1,000,000",66,187909047.30000004,2847106.777272728,supported
+H0183,2,2B,sudden_appearance,"Sudden provider appearance: first month > $250,000 (pharmacy)","first month paid > $250,000",66,187909047.30000004,2847106.777272728,supported
+H0182,2,2B,sudden_appearance,"Sudden provider appearance: first month > $100,000 (transport)","first month paid > $100,000",66,187909047.30000004,2847106.777272728,supported
+H0179,2,2B,sudden_appearance,"Sudden provider appearance: first month > $100,000 (cluster_appearance)","first month paid > $100,000",66,187909047.30000004,2847106.777272728,supported
+H0184,2,2B,sudden_appearance,"Sudden provider appearance: first month > $1,000,000 (any_category)","first month paid > $1,000,000",66,187909047.30000004,2847106.777272728,supported
+H0176,2,2B,sudden_appearance,"Sudden provider appearance: first month > $100,000 (p95_threshold)","first month paid > $100,000",66,187909047.30000004,2847106.777272728,supported
+H0178,2,2B,sudden_appearance,"Sudden provider appearance: first month > $500,000 (covid_era)","first month paid > $500,000",66,187909047.30000004,2847106.777272728,supported
+H0177,2,2B,sudden_appearance,"Sudden provider appearance: first month > $250,000 (covid_era)","first month paid > $250,000",66,187909047.30000004,2847106.777272728,supported
+H0185,2,2B,sudden_appearance,"Sudden provider appearance: first month > $500,000 (post_2022)","first month paid > $500,000",66,187909047.30000004,2847106.777272728,supported
+H0173,2,2B,sudden_appearance,"Sudden provider appearance: first month > $250,000 (high_risk_codes)","first month paid > $250,000",66,187909047.30000004,2847106.777272728,supported
+H0175,2,2B,sudden_appearance,"Sudden provider appearance: first month > $500,000 (behavioral)","first month paid > $500,000",66,187909047.30000004,2847106.777272728,supported
+H0174,2,2B,sudden_appearance,"Sudden provider appearance: first month > $500,000 (home_health)","first month paid > $500,000",66,187909047.30000004,2847106.777272728,supported
+H0171,2,2B,sudden_appearance,"Sudden provider appearance: first month > $500,000 (all)","first month paid > $500,000",66,187909047.30000004,2847106.777272728,supported
+H0180,2,2B,sudden_appearance,"Sudden provider appearance: first month > $250,000 (cluster_appearance)","first month paid > $250,000",66,187909047.30000004,2847106.777272728,supported
+H0030,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for T1017,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",65,240873251.33000007,3705742.3281538473,supported
+H0042,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for H2015,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",62,395012341.31000006,6371166.795322581,supported
+H0479,4,4E,new_network,"New network > $2,500,000 in first 12 months","> $2,500,000 in first 12 months",61,303781596.39000005,4980026.170327869,supported
+H0328,3,3C,peer_concentration,Claims per bene > 3x peer median for 99215,"> 3x peer median, persists 6+ months",61,13973602.79,229075.45557377048,supported
+H0029,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for H0004,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",55,158923711.85000002,2889522.033636364,supported
+H0053,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for 97116,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",48,10289361.009999996,214361.68770833325,supported
+H0031,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for T1019,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",47,90771055.60000001,1931299.055319149,supported
+H0012,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for H2015,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",43,42913419.46,997986.4990697674,supported
+H0005,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for H0015,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",40,166628723.20000002,4165718.0800000005,supported
+H0058,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for H0036,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",39,412698082.40000004,10582002.112820514,supported
+H0013,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for H2016,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",38,587614660.1700001,15463543.688684212,supported
+H0007,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for T1005,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",36,41315591.339999996,1147655.315,supported
+H0035,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for H0015,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",31,137341446.18000004,4430369.231612904,supported
+H0011,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for T1020,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",24,163418711.07999998,6809112.961666666,supported
+H0481,4,4E,new_network,"New network > $5,000,000 in first 12 months","> $5,000,000 in first 12 months",22,173266357.54000002,7875743.524545455,supported
+H0475,4,4E,new_network,"New network > $5,000,000 in first 6 months","> $5,000,000 in first 6 months",22,173266357.54000002,7875743.524545455,supported
+H0472,4,4E,new_network,"New network > $5,000,000 in first 12 months","> $5,000,000 in first 12 months",22,173266357.54000002,7875743.524545455,supported
+H0338,3,3C,peer_concentration,Claims per bene > 3x peer median for T2024,"> 3x peer median, persists 6+ months",21,16420264.5,781917.3571428572,supported
+H0028,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for H0036,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",16,26149112.19,1634319.511875,supported
+H0018,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for T2024,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",12,3305053.8899999997,275421.1575,supported
+H0334,3,3C,peer_concentration,Claims per bene > 3x peer median for 99203,"> 3x peer median, persists 6+ months",11,313358.02,28487.092727272728,supported
+H0321,3,3C,peer_concentration,Claims per bene > 3x peer median for T1019,"> 3x peer median, persists 6+ months",10,31719893.59,3171989.359,supported
+H0043,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for H2016,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",8,50915715.89000001,6364464.486250001,supported
+H0048,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for T2024,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",8,6208686.6400000015,776085.8300000002,supported
+H0335,3,3C,peer_concentration,Claims per bene > 3x peer median for 99204,"> 3x peer median, persists 6+ months",8,1665729.55,208216.19375,supported
+H0325,3,3C,peer_concentration,Claims per bene > 3x peer median for H0015,"> 3x peer median, persists 6+ months",7,48432180.92,6918882.988571429,supported
+H0009,1,1A,z_score_paid_per_claim,Providers with paid-per-claim z-score > 3.0 for T2025,"z > 3.0, claims >= 10, peers >= 20, excess > $10K",7,41012525.12,5858932.159999999,supported
+H0336,3,3C,peer_concentration,Claims per bene > 3x peer median for 99202,"> 3x peer median, persists 6+ months",6,2176268.63,362711.4383333333,supported
+H0039,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for T2025,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",5,73285399.07,14657079.814,supported
+H0484,4,4E,new_network,"New network > $10,000,000 in first 24 months","> $10,000,000 in first 24 months",4,62356681.03,15589170.2575,supported
+H0473,4,4E,new_network,"New network > $10,000,000 in first 12 months","> $10,000,000 in first 12 months",4,62356681.03,15589170.2575,supported
+H0037,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for T1005,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",4,565685.8,141421.45,supported
+H0327,3,3C,peer_concentration,Claims per bene > 3x peer median for T1005,"> 3x peer median, persists 6+ months",2,508014.66,254007.33,supported
+H0331,3,3C,peer_concentration,Claims per bene > 3x peer median for T1020,"> 3x peer median, persists 6+ months",1,4451305.32,4451305.32,supported
+H0041,1,1B,z_score_claims_per_bene,Providers with claims-per-bene z-score > 3.0 for T1020,"z > 3.0, beneficiaries >= 12, ratio > 2x peer median",1,4451305.32,4451305.32,supported
+H0097,1,1D,iqr_outlier,Providers with num_months exceeding Q3 + 3*IQR,"value > Q3 + 3*IQR, months >= 6, flagged amount > $50K",0,0.0,0.0,not_supported
+H0118,1,1F,benfords_law,First-digit Benford test on all payments,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0119,1,1F,benfords_law,First-digit Benford test on Home Health payments,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0120,1,1F,benfords_law,First-digit Benford test on Behavioral Health payments,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0121,1,1F,benfords_law,First-digit Benford test on E&M payments,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0122,1,1F,benfords_law,First-digit Benford test on DME payments,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0123,1,1F,benfords_law,First-two-digit Benford test,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0124,1,1F,benfords_law,First-two-digit Benford (Home Health),"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0125,1,1F,benfords_law,Round number detection (>30% ending 00),"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0126,1,1F,benfords_law,Per-provider round number detection,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0127,1,1F,benfords_law,Duplicate exact payment amounts,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0128,1,1F,benfords_law,Per-provider duplicate amounts,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0129,1,1F,benfords_law,Payment amount clustering analysis,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0130,1,1F,benfords_law,First-digit Benford (Pharmacy),"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0131,1,1F,benfords_law,First-digit Benford (Therapy),"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0132,1,1F,benfords_law,First-digit Benford (Transportation),"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0133,1,1F,benfords_law,Round numbers in Home Health,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0134,1,1F,benfords_law,Round numbers in Behavioral Health,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0135,1,1F,benfords_law,Last-digit uniformity test,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0136,1,1F,benfords_law,Most frequent payment amount detection,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0137,1,1F,benfords_law,Suspicious repeating amount patterns,"chi-squared p < 0.001, >= 100 payment records",0,0.0,0.0,not_supported
+H0341,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for T1019,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0342,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for T1015,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0343,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for 99213,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0344,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for 99214,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0345,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for H0015,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0346,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for T2003,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0347,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for T1005,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0348,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for 99215,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0349,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for T2025,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0350,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for 99212,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0351,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for T1020,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0352,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for H2015,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0353,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for H2016,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0354,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for 99203,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0355,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for 99204,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0356,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for 99202,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0357,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for 99211,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0358,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for T2024,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0359,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for 97110,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0360,3,3D,geographic_peer,Provider exceeds state-level 95th percentile for 97530,"> state 95th pct, >= 20 state peers, excess > $50K",0,0.0,0.0,not_supported
+H0361,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Family Medicine),> Family Medicine 95th percentile,0,0.0,0.0,not_supported
+H0362,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Internal Medicine),> Internal Medicine 95th percentile,0,0.0,0.0,not_supported
+H0363,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Pediatrics),> Pediatrics 95th percentile,0,0.0,0.0,not_supported
+H0364,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Nurse Practitioner),> Nurse Practitioner 95th percentile,0,0.0,0.0,not_supported
+H0365,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Clinical Social Worker),> Clinical Social Worker 95th percentile,0,0.0,0.0,not_supported
+H0366,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Psychologist),> Psychologist 95th percentile,0,0.0,0.0,not_supported
+H0367,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Physical Therapist),> Physical Therapist 95th percentile,0,0.0,0.0,not_supported
+H0368,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Occupational Therapist),> Occupational Therapist 95th percentile,0,0.0,0.0,not_supported
+H0369,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Speech-Language Pathologist),> Speech-Language Pathologist 95th percentile,0,0.0,0.0,not_supported
+H0370,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Home Health Agency),> Home Health Agency 95th percentile,0,0.0,0.0,not_supported
+H0371,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Community/Behavioral Health),> Community/Behavioral Health 95th percentile,0,0.0,0.0,not_supported
+H0372,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Pharmacist),> Pharmacist 95th percentile,0,0.0,0.0,not_supported
+H0373,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Dentist),> Dentist 95th percentile,0,0.0,0.0,not_supported
+H0374,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Chiropractor),> Chiropractor 95th percentile,0,0.0,0.0,not_supported
+H0375,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (DME Supplier),> DME Supplier 95th percentile,0,0.0,0.0,not_supported
+H0376,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Ambulance),> Ambulance 95th percentile,0,0.0,0.0,not_supported
+H0377,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Skilled Nursing Facility),> Skilled Nursing Facility 95th percentile,0,0.0,0.0,not_supported
+H0378,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Clinic/Center),> Clinic/Center 95th percentile,0,0.0,0.0,not_supported
+H0379,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Counselor),> Counselor 95th percentile,0,0.0,0.0,not_supported
+H0380,3,3E,specialty_peer,Provider exceeds specialty 95th percentile (Mental Health Counselor),> Mental Health Counselor 95th percentile,0,0.0,0.0,not_supported
+H0456,4,4D,network_density,Network density > 0.5 (all),component density > 0.5,0,0.0,0.0,not_supported
+H0457,4,4D,network_density,Network density > 0.3 (high_value),component density > 0.3,0,0.0,0.0,not_supported
+H0458,4,4D,network_density,Network density > 0.5 (high_value),component density > 0.5,0,0.0,0.0,not_supported
+H0459,4,4D,network_density,Network density > 0.3 (near_clique),component density > 0.3,0,0.0,0.0,not_supported
+H0460,4,4D,network_density,Network density > 0.5 (near_clique),component density > 0.5,0,0.0,0.0,not_supported
+H0461,4,4D,network_density,Network density > 0.3 (star_topology),component density > 0.3,0,0.0,0.0,not_supported
+H0462,4,4D,network_density,Network density > 0.3 (chain_topology),component density > 0.3,0,0.0,0.0,not_supported
+H0463,4,4D,network_density,Network density > 0.3 (components_50m),component density > 0.3,0,0.0,0.0,not_supported
+H0464,4,4D,network_density,Network density > 0.5 (components_50m),component density > 0.5,0,0.0,0.0,not_supported
+H0465,4,4D,network_density,Network density > 0.3 (small_dense),component density > 0.3,0,0.0,0.0,not_supported
+H0466,4,4D,network_density,Network density > 0.5 (small_dense),component density > 0.5,0,0.0,0.0,not_supported
+H0467,4,4D,network_density,Network density > 0.3 (large_sparse),component density > 0.3,0,0.0,0.0,not_supported
+H0468,4,4D,network_density,Network density > 0.3 (recent_formation),component density > 0.3,0,0.0,0.0,not_supported
+H0469,4,4D,network_density,Network density > 0.5 (recent_formation),component density > 0.5,0,0.0,0.0,not_supported
+H0470,4,4D,network_density,Network density > 0.3 (multi_state),component density > 0.3,0,0.0,0.0,not_supported
+H0571,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (all),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0572,5,5D,geographic_monopoly,Geographic monopoly: > 60% state-level share (all),> 60% of state spending for a code,0,0.0,0.0,not_supported
+H0573,5,5D,geographic_monopoly,Geographic monopoly: > 80% state-level share (all),> 80% of state spending for a code,0,0.0,0.0,not_supported
+H0574,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (home_health),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0575,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (behavioral),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0576,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (dme),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0577,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (transport),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0578,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (small_states),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0579,5,5D,geographic_monopoly,Geographic monopoly: > 60% state-level share (small_states),> 60% of state spending for a code,0,0.0,0.0,not_supported
+H0580,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (large_states),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0581,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (growing_share),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0582,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (individual_npi),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0583,5,5D,geographic_monopoly,Geographic monopoly: > 60% state-level share (individual_npi),> 60% of state spending for a code,0,0.0,0.0,not_supported
+H0584,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (high_spending),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0585,5,5D,geographic_monopoly,Geographic monopoly: > 40% state-level share (new_monopoly),> 40% of state spending for a code,0,0.0,0.0,not_supported
+H0586,5,5E,temporal_concentration,> 40% annual revenue in 1 month(s) (all),> 40% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0587,5,5E,temporal_concentration,> 40% annual revenue in 2 month(s) (all),> 40% of annual revenue in 2 month(s),0,0.0,0.0,not_supported
+H0588,5,5E,temporal_concentration,> 50% annual revenue in 1 month(s) (all),> 50% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0589,5,5E,temporal_concentration,> 40% annual revenue in 1 month(s) (home_health),> 40% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0590,5,5E,temporal_concentration,> 40% annual revenue in 1 month(s) (behavioral),> 40% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0591,5,5E,temporal_concentration,> 40% annual revenue in 1 month(s) (dme),> 40% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0592,5,5E,temporal_concentration,> 40% annual revenue in 1 month(s) (repeated_years),> 40% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0593,5,5E,temporal_concentration,> 50% annual revenue in 1 month(s) (repeated_years),> 50% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0594,5,5E,temporal_concentration,> 40% annual revenue in 1 month(s) (december_concentrated),> 40% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0595,5,5E,temporal_concentration,> 40% annual revenue in 1 month(s) (quarter_concentrated),> 40% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0596,5,5E,temporal_concentration,> 60% annual revenue in 1 month(s) (all),> 60% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0597,5,5E,temporal_concentration,> 40% annual revenue in 1 month(s) (high_value),> 40% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0598,5,5E,temporal_concentration,> 50% annual revenue in 2 month(s) (high_value),> 50% of annual revenue in 2 month(s),0,0.0,0.0,not_supported
+H0599,5,5E,temporal_concentration,> 40% annual revenue in 1 month(s) (growing),> 40% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0600,5,5E,temporal_concentration,> 40% annual revenue in 1 month(s) (new_providers),> 40% of annual revenue in 1 month(s),0,0.0,0.0,not_supported
+H0601,6,6A,isolation_forest,"Isolation Forest anomaly #1 (overall)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0602,6,6A,isolation_forest,"Isolation Forest anomaly #2 (overall)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0603,6,6A,isolation_forest,"Isolation Forest anomaly #3 (overall)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0604,6,6A,isolation_forest,"Isolation Forest anomaly #4 (overall)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0605,6,6A,isolation_forest,"Isolation Forest anomaly #5 (overall)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0606,6,6A,isolation_forest,"Isolation Forest anomaly #6 (overall)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0607,6,6A,isolation_forest,"Isolation Forest anomaly #7 (overall)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0608,6,6A,isolation_forest,"Isolation Forest anomaly #8 (overall)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0609,6,6A,isolation_forest,"Isolation Forest anomaly #9 (overall)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0610,6,6A,isolation_forest,"Isolation Forest anomaly #10 (overall)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0611,6,6A,isolation_forest,"Isolation Forest anomaly #11 (home_health)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0612,6,6A,isolation_forest,"Isolation Forest anomaly #12 (home_health)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0613,6,6A,isolation_forest,"Isolation Forest anomaly #13 (home_health)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0614,6,6A,isolation_forest,"Isolation Forest anomaly #14 (home_health)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0615,6,6A,isolation_forest,"Isolation Forest anomaly #15 (home_health)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0616,6,6A,isolation_forest,"Isolation Forest anomaly #16 (home_health)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0617,6,6A,isolation_forest,"Isolation Forest anomaly #17 (home_health)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0618,6,6A,isolation_forest,"Isolation Forest anomaly #18 (home_health)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0619,6,6A,isolation_forest,"Isolation Forest anomaly #19 (home_health)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0620,6,6A,isolation_forest,"Isolation Forest anomaly #20 (home_health)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0621,6,6A,isolation_forest,"Isolation Forest anomaly #21 (behavioral)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0622,6,6A,isolation_forest,"Isolation Forest anomaly #22 (behavioral)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0623,6,6A,isolation_forest,"Isolation Forest anomaly #23 (behavioral)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0624,6,6A,isolation_forest,"Isolation Forest anomaly #24 (behavioral)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0625,6,6A,isolation_forest,"Isolation Forest anomaly #25 (behavioral)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0626,6,6A,isolation_forest,"Isolation Forest anomaly #26 (behavioral)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0627,6,6A,isolation_forest,"Isolation Forest anomaly #27 (behavioral)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0628,6,6A,isolation_forest,"Isolation Forest anomaly #28 (behavioral)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0629,6,6A,isolation_forest,"Isolation Forest anomaly #29 (behavioral)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0630,6,6A,isolation_forest,"Isolation Forest anomaly #30 (behavioral)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0631,6,6A,isolation_forest,"Isolation Forest anomaly #31 (high_volume)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0632,6,6A,isolation_forest,"Isolation Forest anomaly #32 (high_volume)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0633,6,6A,isolation_forest,"Isolation Forest anomaly #33 (high_volume)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0634,6,6A,isolation_forest,"Isolation Forest anomaly #34 (high_volume)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0635,6,6A,isolation_forest,"Isolation Forest anomaly #35 (high_volume)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0636,6,6A,isolation_forest,"Isolation Forest anomaly #36 (high_volume)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0637,6,6A,isolation_forest,"Isolation Forest anomaly #37 (high_volume)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0638,6,6A,isolation_forest,"Isolation Forest anomaly #38 (high_volume)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0639,6,6A,isolation_forest,"Isolation Forest anomaly #39 (high_volume)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0640,6,6A,isolation_forest,"Isolation Forest anomaly #40 (high_volume)","anomaly score in top 1%, total paid > $100K, anomalous on 2+ features",0,0.0,0.0,not_supported
+H0641,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #1",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0642,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #2",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0643,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #3",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0644,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #4",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0645,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #5",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0646,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #6",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0647,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #7",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0648,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #8",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0649,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #9",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0650,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #10",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0651,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #11",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0652,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #12",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0653,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #13",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0654,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #14",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0655,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #15",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0656,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #16",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0657,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #17",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0658,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #18",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0659,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #19",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0660,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #20",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0661,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #21",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0662,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #22",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0663,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #23",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0664,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #24",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0665,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #25",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0666,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #26",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0667,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #27",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0668,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #28",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0669,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #29",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0670,6,6B,dbscan,"DBSCAN noise/small cluster anomaly #30",cluster=-1 or cluster size <= 3,0,0.0,0.0,not_supported
+H0671,6,6C,random_forest,"Random Forest top feature importance anomaly #1",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0672,6,6C,random_forest,"Random Forest top feature importance anomaly #2",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0673,6,6C,random_forest,"Random Forest top feature importance anomaly #3",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0674,6,6C,random_forest,"Random Forest top feature importance anomaly #4",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0675,6,6C,random_forest,"Random Forest top feature importance anomaly #5",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0676,6,6C,random_forest,"Random Forest top feature importance anomaly #6",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0677,6,6C,random_forest,"Random Forest top feature importance anomaly #7",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0678,6,6C,random_forest,"Random Forest top feature importance anomaly #8",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0679,6,6C,random_forest,"Random Forest top feature importance anomaly #9",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0680,6,6C,random_forest,"Random Forest top feature importance anomaly #10",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0681,6,6C,random_forest,"Random Forest top feature importance anomaly #11",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0682,6,6C,random_forest,"Random Forest top feature importance anomaly #12",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0683,6,6C,random_forest,"Random Forest top feature importance anomaly #13",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0684,6,6C,random_forest,"Random Forest top feature importance anomaly #14",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0685,6,6C,random_forest,"Random Forest top feature importance anomaly #15",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0686,6,6C,random_forest,"Random Forest top feature importance anomaly #16",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0687,6,6C,random_forest,"Random Forest top feature importance anomaly #17",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0688,6,6C,random_forest,"Random Forest top feature importance anomaly #18",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0689,6,6C,random_forest,"Random Forest top feature importance anomaly #19",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0690,6,6C,random_forest,"Random Forest top feature importance anomaly #20",extreme tail of top importance feature,0,0.0,0.0,not_supported
+H0691,6,6D,xgboost,"XGBoost semi-supervised novel finding #1","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0692,6,6D,xgboost,"XGBoost semi-supervised novel finding #2","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0693,6,6D,xgboost,"XGBoost semi-supervised novel finding #3","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0694,6,6D,xgboost,"XGBoost semi-supervised novel finding #4","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0695,6,6D,xgboost,"XGBoost semi-supervised novel finding #5","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0696,6,6D,xgboost,"XGBoost semi-supervised novel finding #6","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0697,6,6D,xgboost,"XGBoost semi-supervised novel finding #7","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0698,6,6D,xgboost,"XGBoost semi-supervised novel finding #8","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0699,6,6D,xgboost,"XGBoost semi-supervised novel finding #9","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0700,6,6D,xgboost,"XGBoost semi-supervised novel finding #10","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0701,6,6D,xgboost,"XGBoost semi-supervised novel finding #11","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0702,6,6D,xgboost,"XGBoost semi-supervised novel finding #12","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0703,6,6D,xgboost,"XGBoost semi-supervised novel finding #13","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0704,6,6D,xgboost,"XGBoost semi-supervised novel finding #14","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0705,6,6D,xgboost,"XGBoost semi-supervised novel finding #15","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0706,6,6D,xgboost,"XGBoost semi-supervised novel finding #16","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0707,6,6D,xgboost,"XGBoost semi-supervised novel finding #17","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0708,6,6D,xgboost,"XGBoost semi-supervised novel finding #18","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0709,6,6D,xgboost,"XGBoost semi-supervised novel finding #19","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0710,6,6D,xgboost,"XGBoost semi-supervised novel finding #20","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0711,6,6D,xgboost,"XGBoost semi-supervised novel finding #21","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0712,6,6D,xgboost,"XGBoost semi-supervised novel finding #22","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0713,6,6D,xgboost,"XGBoost semi-supervised novel finding #23","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0714,6,6D,xgboost,"XGBoost semi-supervised novel finding #24","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0715,6,6D,xgboost,"XGBoost semi-supervised novel finding #25","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0716,6,6D,xgboost,"XGBoost semi-supervised novel finding #26","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0717,6,6D,xgboost,"XGBoost semi-supervised novel finding #27","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0718,6,6D,xgboost,"XGBoost semi-supervised novel finding #28","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0719,6,6D,xgboost,"XGBoost semi-supervised novel finding #29","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0720,6,6D,xgboost,"XGBoost semi-supervised novel finding #30","probability > 0.8, total paid > $100K, not in Categories 1-4",0,0.0,0.0,not_supported
+H0721,6,6E,kmeans,"K-means distance outlier #1",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0722,6,6E,kmeans,"K-means distance outlier #2",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0723,6,6E,kmeans,"K-means distance outlier #3",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0724,6,6E,kmeans,"K-means distance outlier #4",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0725,6,6E,kmeans,"K-means distance outlier #5",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0726,6,6E,kmeans,"K-means distance outlier #6",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0727,6,6E,kmeans,"K-means distance outlier #7",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0728,6,6E,kmeans,"K-means distance outlier #8",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0729,6,6E,kmeans,"K-means distance outlier #9",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0730,6,6E,kmeans,"K-means distance outlier #10",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0731,6,6E,kmeans,"K-means distance outlier #11",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0732,6,6E,kmeans,"K-means distance outlier #12",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0733,6,6E,kmeans,"K-means distance outlier #13",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0734,6,6E,kmeans,"K-means distance outlier #14",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0735,6,6E,kmeans,"K-means distance outlier #15",distance > 3x cluster mean distance,0,0.0,0.0,not_supported
+H0736,6,6F,lof,"Local Outlier Factor anomaly #1",LOF score > 2.0,0,0.0,0.0,not_supported
+H0737,6,6F,lof,"Local Outlier Factor anomaly #2",LOF score > 2.0,0,0.0,0.0,not_supported
+H0738,6,6F,lof,"Local Outlier Factor anomaly #3",LOF score > 2.0,0,0.0,0.0,not_supported
+H0739,6,6F,lof,"Local Outlier Factor anomaly #4",LOF score > 2.0,0,0.0,0.0,not_supported
+H0740,6,6F,lof,"Local Outlier Factor anomaly #5",LOF score > 2.0,0,0.0,0.0,not_supported
+H0741,6,6F,lof,"Local Outlier Factor anomaly #6",LOF score > 2.0,0,0.0,0.0,not_supported
+H0742,6,6F,lof,"Local Outlier Factor anomaly #7",LOF score > 2.0,0,0.0,0.0,not_supported
+H0743,6,6F,lof,"Local Outlier Factor anomaly #8",LOF score > 2.0,0,0.0,0.0,not_supported
+H0744,6,6F,lof,"Local Outlier Factor anomaly #9",LOF score > 2.0,0,0.0,0.0,not_supported
+H0745,6,6F,lof,"Local Outlier Factor anomaly #10",LOF score > 2.0,0,0.0,0.0,not_supported
+H0746,6,6F,lof,"Local Outlier Factor anomaly #11",LOF score > 2.0,0,0.0,0.0,not_supported
+H0747,6,6F,lof,"Local Outlier Factor anomaly #12",LOF score > 2.0,0,0.0,0.0,not_supported
+H0748,6,6F,lof,"Local Outlier Factor anomaly #13",LOF score > 2.0,0,0.0,0.0,not_supported
+H0749,6,6F,lof,"Local Outlier Factor anomaly #14",LOF score > 2.0,0,0.0,0.0,not_supported
+H0750,6,6F,lof,"Local Outlier Factor anomaly #15",LOF score > 2.0,0,0.0,0.0,not_supported
+H0751,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #1 (overall)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0752,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #2 (overall)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0753,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #3 (overall)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0754,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #4 (overall)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0755,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #5 (overall)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0756,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #6 (overall)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0757,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #7 (overall)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0758,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #8 (overall)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0759,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #9 (overall)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0760,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #10 (overall)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0761,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #11 (home_health)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0762,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #12 (home_health)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0763,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #13 (home_health)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0764,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #14 (home_health)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0765,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #15 (home_health)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0766,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #16 (home_health)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0767,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #17 (home_health)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0768,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #18 (home_health)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0769,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #19 (home_health)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0770,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #20 (home_health)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0771,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #21 (behavioral)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0772,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #22 (behavioral)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0773,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #23 (behavioral)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0774,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #24 (behavioral)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0775,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #25 (behavioral)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0776,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #26 (behavioral)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0777,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #27 (behavioral)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0778,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #28 (behavioral)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0779,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #29 (behavioral)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0780,7,7A,autoencoder,"Autoencoder reconstruction error anomaly #30 (behavioral)","reconstruction error in top 1%, total paid > $100K",0,0.0,0.0,not_supported
+H0781,7,7B,vae,"VAE anomaly #1 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0782,7,7B,vae,"VAE anomaly #2 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0783,7,7B,vae,"VAE anomaly #3 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0784,7,7B,vae,"VAE anomaly #4 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0785,7,7B,vae,"VAE anomaly #5 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0786,7,7B,vae,"VAE anomaly #6 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0787,7,7B,vae,"VAE anomaly #7 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0788,7,7B,vae,"VAE anomaly #8 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0789,7,7B,vae,"VAE anomaly #9 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0790,7,7B,vae,"VAE anomaly #10 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0791,7,7B,vae,"VAE anomaly #11 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0792,7,7B,vae,"VAE anomaly #12 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0793,7,7B,vae,"VAE anomaly #13 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0794,7,7B,vae,"VAE anomaly #14 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0795,7,7B,vae,"VAE anomaly #15 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0796,7,7B,vae,"VAE anomaly #16 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0797,7,7B,vae,"VAE anomaly #17 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0798,7,7B,vae,"VAE anomaly #18 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0799,7,7B,vae,"VAE anomaly #19 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0800,7,7B,vae,"VAE anomaly #20 (not in autoencoder top)","VAE score in top 1%, not already flagged by AE",0,0.0,0.0,not_supported
+H0801,7,7C,lstm,"LSTM temporal prediction error anomaly #1","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0802,7,7C,lstm,"LSTM temporal prediction error anomaly #2","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0803,7,7C,lstm,"LSTM temporal prediction error anomaly #3","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0804,7,7C,lstm,"LSTM temporal prediction error anomaly #4","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0805,7,7C,lstm,"LSTM temporal prediction error anomaly #5","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0806,7,7C,lstm,"LSTM temporal prediction error anomaly #6","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0807,7,7C,lstm,"LSTM temporal prediction error anomaly #7","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0808,7,7C,lstm,"LSTM temporal prediction error anomaly #8","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0809,7,7C,lstm,"LSTM temporal prediction error anomaly #9","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0810,7,7C,lstm,"LSTM temporal prediction error anomaly #10","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0811,7,7C,lstm,"LSTM temporal prediction error anomaly #11","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0812,7,7C,lstm,"LSTM temporal prediction error anomaly #12","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0813,7,7C,lstm,"LSTM temporal prediction error anomaly #13","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0814,7,7C,lstm,"LSTM temporal prediction error anomaly #14","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0815,7,7C,lstm,"LSTM temporal prediction error anomaly #15","MAE > 3x population mean, >= 24 months, > $200K",0,0.0,0.0,not_supported
+H0816,7,7D,transformer,"Transformer attention concentration anomaly #1",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0817,7,7D,transformer,"Transformer attention concentration anomaly #2",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0818,7,7D,transformer,"Transformer attention concentration anomaly #3",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0819,7,7D,transformer,"Transformer attention concentration anomaly #4",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0820,7,7D,transformer,"Transformer attention concentration anomaly #5",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0821,7,7D,transformer,"Transformer attention concentration anomaly #6",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0822,7,7D,transformer,"Transformer attention concentration anomaly #7",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0823,7,7D,transformer,"Transformer attention concentration anomaly #8",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0824,7,7D,transformer,"Transformer attention concentration anomaly #9",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0825,7,7D,transformer,"Transformer attention concentration anomaly #10",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0826,7,7D,transformer,"Transformer attention concentration anomaly #11",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0827,7,7D,transformer,"Transformer attention concentration anomaly #12",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0828,7,7D,transformer,"Transformer attention concentration anomaly #13",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0829,7,7D,transformer,"Transformer attention concentration anomaly #14",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0830,7,7D,transformer,"Transformer attention concentration anomaly #15",attention concentration > 3x uniform,0,0.0,0.0,not_supported
+H0831,8,8A,impossible_volume,Impossible volume: T1019 > 480 units/bene/month,claims/bene exceeds physical max of 480,0,0.0,0.0,not_supported
+H0832,8,8A,impossible_volume,Impossible volume: T1020 > 31 units/bene/month,claims/bene exceeds physical max of 31,0,0.0,0.0,not_supported
+H0833,8,8A,impossible_volume,Impossible volume: T1005 > 480 units/bene/month,claims/bene exceeds physical max of 480,0,0.0,0.0,not_supported
+H0834,8,8A,impossible_volume,Impossible volume: S5125 > 480 units/bene/month,claims/bene exceeds physical max of 480,0,0.0,0.0,not_supported
+H0835,8,8A,impossible_volume,Impossible volume: S5130 > 480 units/bene/month,claims/bene exceeds physical max of 480,0,0.0,0.0,not_supported
+H0836,8,8A,impossible_volume,Impossible volume: S5150 > 480 units/bene/month,claims/bene exceeds physical max of 480,0,0.0,0.0,not_supported
+H0837,8,8A,impossible_volume,Impossible volume: H0015 > 192 units/bene/month,claims/bene exceeds physical max of 192,0,0.0,0.0,not_supported
+H0838,8,8A,impossible_volume,Impossible volume: H2015 > 480 units/bene/month,claims/bene exceeds physical max of 480,0,0.0,0.0,not_supported
+H0839,8,8A,impossible_volume,Impossible volume: H2016 > 120 units/bene/month,claims/bene exceeds physical max of 120,0,0.0,0.0,not_supported
+H0840,8,8A,impossible_volume,Impossible volume: H0036 > 480 units/bene/month,claims/bene exceeds physical max of 480,0,0.0,0.0,not_supported
+H0841,8,8A,impossible_volume,Impossible volume: T1016 > 192 units/bene/month,claims/bene exceeds physical max of 192,0,0.0,0.0,not_supported
+H0842,8,8A,impossible_volume,Impossible volume: T1017 > 192 units/bene/month,claims/bene exceeds physical max of 192,0,0.0,0.0,not_supported
+H0843,8,8A,impossible_volume,Impossible volume: H2017 > 480 units/bene/month,claims/bene exceeds physical max of 480,0,0.0,0.0,not_supported
+H0844,8,8A,impossible_volume,Impossible volume: T2020 > 480 units/bene/month,claims/bene exceeds physical max of 480,0,0.0,0.0,not_supported
+H0845,8,8A,impossible_volume,Impossible volume: H2019 > 480 units/bene/month,claims/bene exceeds physical max of 480,0,0.0,0.0,not_supported
+H0846,8,8B,upcoding,Upcoding: office_established 99215 > 2.0x peer ratio,highest-level code ratio > 2.0x peer median,0,0.0,0.0,not_supported
+H0847,8,8B,upcoding,Upcoding: office_established 99215 > 3.0x peer ratio,highest-level code ratio > 3.0x peer median,0,0.0,0.0,not_supported
+H0848,8,8B,upcoding,Upcoding: office_established 99214 > 2.0x peer ratio,highest-level code ratio > 2.0x peer median,0,0.0,0.0,not_supported
+H0849,8,8B,upcoding,Upcoding: office_new 99205 > 2.0x peer ratio,highest-level code ratio > 2.0x peer median,0,0.0,0.0,not_supported
+H0850,8,8B,upcoding,Upcoding: office_new 99205 > 3.0x peer ratio,highest-level code ratio > 3.0x peer median,0,0.0,0.0,not_supported
+H0851,8,8B,upcoding,Upcoding: office_new 99204 > 2.0x peer ratio,highest-level code ratio > 2.0x peer median,0,0.0,0.0,not_supported
+H0852,8,8B,upcoding,Upcoding: ed_visit 99285 > 2.0x peer ratio,highest-level code ratio > 2.0x peer median,0,0.0,0.0,not_supported
+H0853,8,8B,upcoding,Upcoding: ed_visit 99285 > 3.0x peer ratio,highest-level code ratio > 3.0x peer median,0,0.0,0.0,not_supported
+H0854,8,8B,upcoding,Upcoding: ed_visit 99284 > 2.0x peer ratio,highest-level code ratio > 2.0x peer median,0,0.0,0.0,not_supported
+H0855,8,8B,upcoding,Upcoding: level_distribution_skew highest > 2.0x peer ratio,highest-level code ratio > 2.0x peer median,0,0.0,0.0,not_supported
+H0856,8,8B,upcoding,Upcoding: level_distribution_skew highest > 3.0x peer ratio,highest-level code ratio > 3.0x peer median,0,0.0,0.0,not_supported
+H0857,8,8B,upcoding,Upcoding: progressive_upcoding increasing_level > 0x peer ratio,highest-level code ratio > 0x peer median,0,0.0,0.0,not_supported
+H0858,8,8B,upcoding,Upcoding: state_comparison_upcode 99215 > 2.0x peer ratio,highest-level code ratio > 2.0x peer median,0,0.0,0.0,not_supported
+H0859,8,8B,upcoding,Upcoding: specialty_comparison_upcode 99215 > 2.0x peer ratio,highest-level code ratio > 2.0x peer median,0,0.0,0.0,not_supported
+H0860,8,8B,upcoding,Upcoding: new_provider_upcoding 99215 > 2.0x peer ratio,highest-level code ratio > 2.0x peer median,0,0.0,0.0,not_supported
+H0861,8,8C,unbundling,Unbundling: codes_per_bene_3x (all),unbundling pattern: codes_per_bene_3x,0,0.0,0.0,not_supported
+H0862,8,8C,unbundling,Unbundling: codes_per_bene_3x (home_health),unbundling pattern: codes_per_bene_3x,0,0.0,0.0,not_supported
+H0863,8,8C,unbundling,Unbundling: codes_per_bene_3x (behavioral),unbundling pattern: codes_per_bene_3x,0,0.0,0.0,not_supported
+H0864,8,8C,unbundling,Unbundling: codes_per_bene_5x (all),unbundling pattern: codes_per_bene_5x,0,0.0,0.0,not_supported
+H0865,8,8C,unbundling,Unbundling: codes_per_bene_3x (high_value),unbundling pattern: codes_per_bene_3x,0,0.0,0.0,not_supported
+H0866,8,8C,unbundling,Unbundling: component_vs_bundle (lab_panels),unbundling pattern: component_vs_bundle,0,0.0,0.0,not_supported
+H0867,8,8C,unbundling,Unbundling: component_vs_bundle (therapy_evals),unbundling pattern: component_vs_bundle,0,0.0,0.0,not_supported
+H0868,8,8C,unbundling,Unbundling: component_vs_bundle (em_addons),unbundling pattern: component_vs_bundle,0,0.0,0.0,not_supported
+H0869,8,8C,unbundling,Unbundling: sequential_codes_same_day (all),unbundling pattern: sequential_codes_same_day,0,0.0,0.0,not_supported
+H0870,8,8C,unbundling,Unbundling: sequential_codes_same_day (therapy),unbundling pattern: sequential_codes_same_day,0,0.0,0.0,not_supported
+H0871,8,8C,unbundling,Unbundling: modifier_abuse (all),unbundling pattern: modifier_abuse,0,0.0,0.0,not_supported
+H0872,8,8C,unbundling,Unbundling: fragmented_billing (all),unbundling pattern: fragmented_billing,0,0.0,0.0,not_supported
+H0873,8,8C,unbundling,Unbundling: fragmented_billing (home_health),unbundling pattern: fragmented_billing,0,0.0,0.0,not_supported
+H0874,8,8C,unbundling,Unbundling: excessive_distinct_codes (all),unbundling pattern: excessive_distinct_codes,0,0.0,0.0,not_supported
+H0875,8,8C,unbundling,Unbundling: excessive_distinct_codes (individual),unbundling pattern: excessive_distinct_codes,0,0.0,0.0,not_supported
+H0876,8,8D,high_risk_category,High-risk Home Health with rate_outlier,top 1% in Home Health + rate_outlier,0,0.0,0.0,not_supported
+H0877,8,8D,high_risk_category,High-risk Home Health with volume_outlier,top 1% in Home Health + volume_outlier,0,0.0,0.0,not_supported
+H0878,8,8D,high_risk_category,High-risk Home Health with network_anomaly,top 1% in Home Health + network_anomaly,0,0.0,0.0,not_supported
+H0879,8,8D,high_risk_category,High-risk Behavioral Health with rate_outlier,top 1% in Behavioral Health + rate_outlier,0,0.0,0.0,not_supported
+H0880,8,8D,high_risk_category,High-risk Behavioral Health with volume_outlier,top 1% in Behavioral Health + volume_outlier,0,0.0,0.0,not_supported
+H0881,8,8D,high_risk_category,High-risk Behavioral Health with network_anomaly,top 1% in Behavioral Health + network_anomaly,0,0.0,0.0,not_supported
+H0882,8,8D,high_risk_category,High-risk Personal Care with rate_outlier,top 1% in Personal Care + rate_outlier,0,0.0,0.0,not_supported
+H0883,8,8D,high_risk_category,High-risk Personal Care with volume_outlier,top 1% in Personal Care + volume_outlier,0,0.0,0.0,not_supported
+H0884,8,8D,high_risk_category,High-risk DME with rate_outlier,top 1% in DME + rate_outlier,0,0.0,0.0,not_supported
+H0885,8,8D,high_risk_category,High-risk DME with volume_outlier,top 1% in DME + volume_outlier,0,0.0,0.0,not_supported
+H0886,8,8D,high_risk_category,High-risk ABA Therapy with rate_outlier,top 1% in ABA Therapy + rate_outlier,0,0.0,0.0,not_supported
+H0887,8,8D,high_risk_category,High-risk Transportation with rate_outlier,top 1% in Transportation + rate_outlier,0,0.0,0.0,not_supported
+H0888,8,8D,high_risk_category,High-risk Transportation with volume_outlier,top 1% in Transportation + volume_outlier,0,0.0,0.0,not_supported
+H0889,8,8D,high_risk_category,High-risk Pharmacy with rate_outlier,top 1% in Pharmacy + rate_outlier,0,0.0,0.0,not_supported
+H0890,8,8D,high_risk_category,High-risk Pharmacy with volume_outlier,top 1% in Pharmacy + volume_outlier,0,0.0,0.0,not_supported
+H0891,8,8E,phantom,Constant beneficiary count with growing claims,Constant beneficiary count with growing claims,0,0.0,0.0,not_supported
+H0892,8,8E,phantom,Flat beneficiaries but claims increase > 50%,Flat beneficiaries but claims increase > 50%,0,0.0,0.0,not_supported
+H0893,8,8E,phantom,Identical billing amounts every month,Identical billing amounts every month,0,0.0,0.0,not_supported
+H0894,8,8E,phantom,Round number beneficiary counts,Round number beneficiary counts,0,0.0,0.0,not_supported
+H0895,8,8E,phantom,Zero variance in monthly claims,Zero variance in monthly claims,0,0.0,0.0,not_supported
+H0896,8,8E,phantom,Sequential claim patterns,Sequential claim patterns,0,0.0,0.0,not_supported
+H0897,8,8E,phantom,Excessive weekend/holiday billing,Excessive weekend/holiday billing,0,0.0,0.0,not_supported
+H0898,8,8E,phantom,Impossible telehealth volumes,Impossible telehealth volumes,0,0.0,0.0,not_supported
+H0899,8,8E,phantom,Claims for potentially deceased beneficiaries,Claims for potentially deceased beneficiaries,0,0.0,0.0,not_supported
+H0900,8,8E,phantom,Generic phantom billing pattern,Generic phantom billing pattern,0,0.0,0.0,not_supported
+H0901,8,8F,adjustment,Negative payments > 20% of positive,Negative payments > 20% of positive,0,0.0,0.0,not_supported
+H0902,8,8F,adjustment,Negative payments > 30% of positive,Negative payments > 30% of positive,0,0.0,0.0,not_supported
+H0903,8,8F,adjustment,Increasing negative payment share over time,Increasing negative payment share over time,0,0.0,0.0,not_supported
+H0904,8,8F,adjustment,Single large negative adjustment > $500K,Single large negative adjustment > $500K,0,0.0,0.0,not_supported
+H0905,8,8F,adjustment,Pattern of bill-then-reverse,Pattern of bill-then-reverse,0,0.0,0.0,not_supported
+H0906,8,8F,adjustment,Year-end adjustment concentration,Year-end adjustment concentration,0,0.0,0.0,not_supported
+H0907,8,8F,adjustment,Net negative total paid,Net negative total paid,0,0.0,0.0,not_supported
+H0908,8,8F,adjustment,Adjustments concentrated in specific codes,Adjustments concentrated in specific codes,0,0.0,0.0,not_supported
+H0909,8,8F,adjustment,Adjustment patterns suggesting audit response,Adjustment patterns suggesting audit response,0,0.0,0.0,not_supported
+H0910,8,8F,adjustment,Growing reversal rate over time,Growing reversal rate over time,0,0.0,0.0,not_supported
+H0911,8,8G,duplicate,Same biller+code+month multiple servicing,Same biller+code+month multiple servicing,0,0.0,0.0,not_supported
+H0912,8,8G,duplicate,Overlapping billers for same servicing NPI,Overlapping billers for same servicing NPI,0,0.0,0.0,not_supported
+H0913,8,8G,duplicate,Identical payment amounts multiple times,Identical payment amounts multiple times,0,0.0,0.0,not_supported
+H0914,8,8G,duplicate,Same beneficiary billed by multiple providers,Same beneficiary billed by multiple providers,0,0.0,0.0,not_supported
+H0915,8,8G,duplicate,Sequential duplicate claim patterns,Sequential duplicate claim patterns,0,0.0,0.0,not_supported
+H0916,8,8G,duplicate,Same NPI billed in multiple states same month,Same NPI billed in multiple states same month,0,0.0,0.0,not_supported
+H0917,8,8G,duplicate,Same service split across code variants,Same service split across code variants,0,0.0,0.0,not_supported
+H0918,8,8G,duplicate,Duplicate where billing=servicing,Duplicate where billing=servicing,0,0.0,0.0,not_supported
+H0919,8,8G,duplicate,High-frequency duplicate patterns,High-frequency duplicate patterns,0,0.0,0.0,not_supported
+H0920,8,8G,duplicate,Growing duplicate rate over time,Growing duplicate rate over time,0,0.0,0.0,not_supported
+H0921,8,8E,phantom,Composite phantom billing score > 3,Composite phantom billing score > 3,0,0.0,0.0,not_supported
+H0922,8,8F,adjustment,Composite adjustment anomaly score > 3,Composite adjustment anomaly score > 3,0,0.0,0.0,not_supported
+H0923,8,8G,duplicate,Composite duplicate billing score > 3,Composite duplicate billing score > 3,0,0.0,0.0,not_supported
+H0924,8,8G,fraud,Pressure+opportunity+rationalization indicators,Pressure+opportunity+rationalization indicators,0,0.0,0.0,not_supported
+H0925,8,8G,organized,Coordinated phantom+adjustment+duplicate,Coordinated phantom+adjustment+duplicate,0,0.0,0.0,not_supported
+H0926,8,8G,escalating,Escalating pattern across all indicators,Escalating pattern across all indicators,0,0.0,0.0,not_supported
+H0927,8,8G,new,New provider with multiple domain red flags,New provider with multiple domain red flags,0,0.0,0.0,not_supported
+H0928,8,8G,high,High-risk category + domain red flag composite,High-risk category + domain red flag composite,0,0.0,0.0,not_supported
+H0929,8,8G,exit,Bill-spike-vanish pattern,Bill-spike-vanish pattern,0,0.0,0.0,not_supported
+H0930,8,8G,regulatory,Potential regulatory arbitrage across states,Potential regulatory arbitrage across states,0,0.0,0.0,not_supported
+H0931,9,9A,specialty_mismatch,Specialty mismatch: Podiatrist billing behavioral_codes,> 50% claims outside expected codes for Podiatrist,0,0.0,0.0,not_supported
+H0932,9,9A,specialty_mismatch,Specialty mismatch: Dentist billing home_health_codes,> 50% claims outside expected codes for Dentist,0,0.0,0.0,not_supported
+H0933,9,9A,specialty_mismatch,Specialty mismatch: Optometrist billing behavioral_codes,> 50% claims outside expected codes for Optometrist,0,0.0,0.0,not_supported
+H0934,9,9A,specialty_mismatch,Specialty mismatch: Chiropractor billing behavioral_codes,> 50% claims outside expected codes for Chiropractor,0,0.0,0.0,not_supported
+H0935,9,9A,specialty_mismatch,Specialty mismatch: Physical Therapist billing pharmacy_codes,> 50% claims outside expected codes for Physical Therapist,0,0.0,0.0,not_supported
+H0936,9,9A,specialty_mismatch,Specialty mismatch: Dermatology billing behavioral_codes,> 50% claims outside expected codes for Dermatology,0,0.0,0.0,not_supported
+H0937,9,9A,specialty_mismatch,Specialty mismatch: Pediatrics billing geriatric_codes,> 50% claims outside expected codes for Pediatrics,0,0.0,0.0,not_supported
+H0938,9,9A,specialty_mismatch,Specialty mismatch: Psychiatrist billing surgical_codes,> 50% claims outside expected codes for Psychiatrist,0,0.0,0.0,not_supported
+H0939,9,9A,specialty_mismatch,Specialty mismatch: any_specialty billing mismatch_50pct,> 50% claims outside expected codes for any_specialty,0,0.0,0.0,not_supported
+H0940,9,9A,specialty_mismatch,Specialty mismatch: any_specialty billing mismatch_75pct,> 50% claims outside expected codes for any_specialty,0,0.0,0.0,not_supported
+H0941,9,9A,specialty_mismatch,Specialty mismatch: any_specialty billing mismatch_90pct,> 50% claims outside expected codes for any_specialty,0,0.0,0.0,not_supported
+H0942,9,9A,specialty_mismatch,Specialty mismatch: individual billing org_specialty_mismatch,> 50% claims outside expected codes for individual,0,0.0,0.0,not_supported
+H0943,9,9A,specialty_mismatch,Specialty mismatch: organization billing individual_specialty_codes,> 50% claims outside expected codes for organization,0,0.0,0.0,not_supported
+H0944,9,9A,specialty_mismatch,Specialty mismatch: primary_care billing specialty_codes,> 50% claims outside expected codes for primary_care,0,0.0,0.0,not_supported
+H0945,9,9A,specialty_mismatch,Specialty mismatch: surgical billing behavioral_codes,> 50% claims outside expected codes for surgical,0,0.0,0.0,not_supported
+H0946,9,9A,specialty_mismatch,Specialty mismatch: anesthesiology billing home_health_codes,> 50% claims outside expected codes for anesthesiology,0,0.0,0.0,not_supported
+H0947,9,9A,specialty_mismatch,Specialty mismatch: radiology billing therapy_codes,> 50% claims outside expected codes for radiology,0,0.0,0.0,not_supported
+H0948,9,9A,specialty_mismatch,Specialty mismatch: emergency billing chronic_care_codes,> 50% claims outside expected codes for emergency,0,0.0,0.0,not_supported
+H0949,9,9A,specialty_mismatch,Specialty mismatch: nursing billing surgical_codes,> 50% claims outside expected codes for nursing,0,0.0,0.0,not_supported
+H0950,9,9A,specialty_mismatch,Specialty mismatch: pharmacy billing em_codes,> 50% claims outside expected codes for pharmacy,0,0.0,0.0,not_supported
+H0951,9,9B,crossref,Individual NPI > $5M total paid,Individual NPI > $5M total paid,0,0.0,0.0,not_supported
+H0952,9,9B,crossref,Individual NPI > $10M total paid,Individual NPI > $10M total paid,0,0.0,0.0,not_supported
+H0953,9,9B,crossref,Individual NPI > $50M total paid,Individual NPI > $50M total paid,0,0.0,0.0,not_supported
+H0954,9,9B,crossref,Individual NPI with > 20 servicing NPIs,Individual NPI with > 20 servicing NPIs,0,0.0,0.0,not_supported
+H0955,9,9B,crossref,Individual billing > 50 distinct codes,Individual billing > 50 distinct codes,0,0.0,0.0,not_supported
+H0956,9,9B,crossref,Organization with single servicing NPI,Organization with single servicing NPI,0,0.0,0.0,not_supported
+H0957,9,9B,crossref,Organization NPI not in NPPES,Organization NPI not in NPPES,0,0.0,0.0,not_supported
+H0958,9,9C,crossref,Servicing NPI in > 3 states same month,Servicing NPI in > 3 states same month,0,0.0,0.0,not_supported
+H0959,9,9C,crossref,Servicing NPI in > 5 states same month,Servicing NPI in > 5 states same month,0,0.0,0.0,not_supported
+H0960,9,9C,crossref,Servicing NPI in > 10 states same month,Servicing NPI in > 10 states same month,0,0.0,0.0,not_supported
+H0961,9,9C,crossref,Billing and servicing NPIs in distant states,Billing and servicing NPIs in distant states,0,0.0,0.0,not_supported
+H0962,9,9C,crossref,Multiple flagged NPIs at same zip code,Multiple flagged NPIs at same zip code,0,0.0,0.0,not_supported
+H0963,9,9D,crossref,Deactivated NPI still billing,Deactivated NPI still billing,0,0.0,0.0,not_supported
+H0964,9,9D,crossref,Provider on OIG exclusion list still billing,Provider on OIG exclusion list still billing,0,0.0,0.0,not_supported
+H0965,9,9D,crossref,NPI not found in NPPES registry,NPI not found in NPPES registry,0,0.0,0.0,not_supported
+H0966,9,9D,crossref,No NPPES record with > $1M billing,No NPPES record with > $1M billing,0,0.0,0.0,not_supported
+H0967,9,9E,crossref,State per-code spending > 2x national median,State per-code spending > 2x national median,0,0.0,0.0,not_supported
+H0968,9,9E,crossref,State per-code spending > 3x national median,State per-code spending > 3x national median,0,0.0,0.0,not_supported
+H0969,9,9E,crossref,State per-code spending > 5x national median,State per-code spending > 5x national median,0,0.0,0.0,not_supported
+H0970,9,9E,crossref,State spending growth > 3x national growth,State spending growth > 3x national growth,0,0.0,0.0,not_supported
+H0971,9,9E,crossref,State per-beneficiary cost > 2x national,State per-beneficiary cost > 2x national,0,0.0,0.0,not_supported
+H0972,9,9F,crossref,5+ NPIs at same NPPES address,5+ NPIs at same NPPES address,0,0.0,0.0,not_supported
+H0973,9,9F,crossref,10+ NPIs at same NPPES address,10+ NPIs at same NPPES address,0,0.0,0.0,not_supported
+H0974,9,9F,crossref,Address cluster with combined anomalous billing,Address cluster with combined anomalous billing,0,0.0,0.0,not_supported
+H0975,9,9F,crossref,High-billing NPI at residential address,High-billing NPI at residential address,0,0.0,0.0,not_supported
+H0976,9,9F,crossref,High-billing NPI at PO Box,High-billing NPI at PO Box,0,0.0,0.0,not_supported
+H0977,9,9F,crossref,High-billing NPI at virtual office address,High-billing NPI at virtual office address,0,0.0,0.0,not_supported
+H0978,9,9F,crossref,Provider changed taxonomy code during period,Provider changed taxonomy code during period,0,0.0,0.0,not_supported
+H0979,9,9F,crossref,Provider with multiple active taxonomies,Provider with multiple active taxonomies,0,0.0,0.0,not_supported
+H0980,9,9F,crossref,Multiple NPIs with similar names same address,Multiple NPIs with similar names same address,0,0.0,0.0,not_supported
+H0981,9,9F,crossref,Multiple NPIs sharing phone number,Multiple NPIs sharing phone number,0,0.0,0.0,not_supported
+H0982,9,9F,crossref,Recently enrolled provider with high immediate billing,Recently enrolled provider with high immediate billing,0,0.0,0.0,not_supported
+H0983,9,9F,crossref,Urban-specialty provider billing rural codes,Urban-specialty provider billing rural codes,0,0.0,0.0,not_supported
+H0984,9,9F,crossref,Facility type inconsistent with billing codes,Facility type inconsistent with billing codes,0,0.0,0.0,not_supported
+H0985,9,9F,crossref,Same NPI billing both Medicare and Medicaid anomalously,Same NPI billing both Medicare and Medicaid anomalously,0,0.0,0.0,not_supported
+H0986,9,9F,crossref,Provider ownership change followed by billing spike,Provider ownership change followed by billing spike,0,0.0,0.0,not_supported
+H0987,9,9F,crossref,Billing during licensure gap period,Billing during licensure gap period,0,0.0,0.0,not_supported
+H0988,9,9F,crossref,Provider with prior sanctions or penalties,Provider with prior sanctions or penalties,0,0.0,0.0,not_supported
+H0989,9,9B,crossref,Related entities with combined anomalous billing,Related entities with combined anomalous billing,0,0.0,0.0,not_supported
+H0990,9,9F,crossref,Beneficial ownership links to excluded providers,Beneficial ownership links to excluded providers,0,0.0,0.0,not_supported
+H0991,9,9E,crossref,Billing in state different from NPPES registration,Billing in state different from NPPES registration,0,0.0,0.0,not_supported
+H0992,9,9F,crossref,Billing from address no longer active,Billing from address no longer active,0,0.0,0.0,not_supported
+H0993,9,9F,crossref,Billing from known mail drop location,Billing from known mail drop location,0,0.0,0.0,not_supported
+H0994,9,9F,crossref,Provider with foreign NPPES address,Provider with foreign NPPES address,0,0.0,0.0,not_supported
+H0995,9,9F,crossref,Multiple NPIs resolving to same provider,Multiple NPIs resolving to same provider,0,0.0,0.0,not_supported
+H0996,9,9F,crossref,"Shell company indicators (recent formation, minimal info)","Shell company indicators (recent formation, minimal info)",0,0.0,0.0,not_supported
+H0997,9,9F,crossref,Nominee provider indicators,Nominee provider indicators,0,0.0,0.0,not_supported
+H0998,9,9F,crossref,Multiple billing layers between patient and payer,Multiple billing layers between patient and payer,0,0.0,0.0,not_supported
+H0999,9,9F,crossref,Frequent billing address changes,Frequent billing address changes,0,0.0,0.0,not_supported
+H1000,9,9F,crossref,Credentials not verifiable through external sources,Credentials not verifiable through external sources,0,0.0,0.0,not_supported
+H1001,8,8H,impossible_aba_volume,Provider billing >32 units (8hr) of ABA per beneficiary per day,claims_per_bene > 32 in single month for ABA codes,0,0.0,0.0,not_supported
+H1002,8,8H,aba_holiday_billing,Provider billing ABA on federal holidays,ABA claims on known federal holidays,0,0.0,0.0,not_supported
+H1003,8,8H,aba_concentration,Provider with >90% revenue from ABA codes and total >$1M,">90% revenue from ABA codes, total >$1M",0,0.0,0.0,not_supported
+H1004,8,8H,aba_peer_cpb,ABA provider with claims_per_bene >3x state peer median,claims_per_bene >3x state peer median for ABA,0,0.0,0.0,not_supported
+H1005,8,8H,aba_peer_rate,ABA provider rate (paid_per_claim) >2x state peer median,paid_per_claim >2x state peer median for ABA,0,0.0,0.0,not_supported
+H1006,8,8H,aba_rapid_entrant,ABA provider active <12 months with total >$500K (rapid entrant),"active <12 months, total >$500K in ABA",0,0.0,0.0,not_supported
+H1007,8,8H,aba_impossible_caseload,ABA provider billing more than 6 distinct beneficiaries per day (impossible caseload),>6 distinct beneficiaries per day for ABA,0,0.0,0.0,not_supported
+H1008,8,8H,aba_no_supervision,ABA provider with zero supervision codes alongside high treatment volume,High ABA treatment volume with zero 97155/97156 supervision codes,0,0.0,0.0,not_supported
+H1009,8,8H,aba_multi_state,ABA provider billing in multiple states same month,ABA provider in >1 state same month,0,0.0,0.0,not_supported
+H1010,8,8H,aba_spike,ABA provider with month-over-month growth >5x,ABA billing month-over-month >5x,0,0.0,0.0,not_supported
+H1011,8,8H,aba_individual_org_volume,ABA provider where billing NPI is individual but bills at organization volume,Individual NPI ABA billing >$500K,0,0.0,0.0,not_supported
+H1012,8,8H,aba_batch_creation,"ABA billing network with >10 servicing NPIs, all started same month (batch creation)",>10 ABA servicing NPIs starting same month,0,0.0,0.0,not_supported
+H1013,8,8H,aba_phantom_pattern,ABA provider with identical beneficiary count every month (phantom pattern),ABA bene count CV < 0.05 across 12+ months,0,0.0,0.0,not_supported
+H1014,8,8H,aba_florida_moratorium,ABA provider in Florida billing during moratorium period,Florida ABA billing during moratorium,0,0.0,0.0,not_supported
+H1015,8,8H,aba_code_concentration,ABA provider with >$10M total and only 1-2 HCPCS codes,>$10M ABA from <=2 codes,0,0.0,0.0,not_supported
+H1016,8,8I,impossible_provider_day_24h,Provider billing >24 hours of timed services in a single day (all codes combined),total timed units across all benes exceed 24hr/day,0,0.0,0.0,not_supported
+H1017,8,8I,impossible_sustained_16h,"Provider billing >16 hours of timed services per day, sustained >30 days/month",>16hr/day for >30 days/month,0,0.0,0.0,not_supported
+H1018,8,8I,impossible_units_per_day,Individual NPI billing >480 total 15-min units across all beneficiaries per day,>480 15-min units/day across all benes,0,0.0,0.0,not_supported
+H1019,8,8I,impossible_psychotherapy_day,Provider billing >12 hours per day of psychotherapy (90834/90837),>12hr/day psychotherapy,0,0.0,0.0,not_supported
+H1020,8,8I,impossible_em_visits_day,Provider billing >20 E&M visits per day (99213-99215),>20 E&M visits/day,0,0.0,0.0,not_supported
+H1021,8,8I,impossible_home_health_day,Provider billing home health visits to >15 distinct beneficiaries per day,>15 home health benes/day,0,0.0,0.0,not_supported
+H1022,8,8I,impossible_service_days,Provider with claims implying >365 service days in a year,>365 service days/year,0,0.0,0.0,not_supported
+H1023,8,8I,concurrent_services,Provider billing concurrent services (two timed codes overlapping) same beneficiary,overlapping timed codes same bene,0,0.0,0.0,not_supported
+H1024,8,8I,servicing_multi_biller_day,Servicing NPI appearing in >2 billing NPIs same day with combined >16 hours,">2 billers same day, combined >16hr",0,0.0,0.0,not_supported
+H1025,8,8I,no_days_off,Provider billing 7 days/week for >6 consecutive months,7 days/week sustained >6 months,0,0.0,0.0,not_supported
+H1026,9,9G,leie_billing_npi,Billing NPI found on OIG LEIE exclusion list,billing NPI matches LEIE excluded provider,0,0.0,0.0,not_supported
+H1027,9,9G,leie_servicing_npi,Servicing NPI found on OIG LEIE exclusion list,servicing NPI matches LEIE excluded provider,0,0.0,0.0,not_supported
+H1028,9,9G,leie_name_address_match,Billing NPI with same name/address as excluded individual,name+address fuzzy match to LEIE entry,0,0.0,0.0,not_supported
+H1029,9,9G,post_deactivation_billing,Provider billing after NPPES deactivation date,claims after NPPES deactivation,0,0.0,0.0,not_supported
+H1030,9,9G,new_npi_excluded_address,New NPI at same address as recently excluded NPI,new NPI at excluded provider address,0,0.0,0.0,not_supported
+H1031,9,9G,no_nppes_high_billing,Servicing NPI with no NPPES record and >$500K total,"no NPPES record, >$500K billing",0,0.0,0.0,not_supported
+H1032,9,9G,enumeration_after_claims,Billing NPI with NPPES enumeration date after first claim month,NPPES enumeration postdates first claim,0,0.0,0.0,not_supported
+H1033,9,9G,entity_type_change,Provider with NPPES entity type change during billing period,entity type changed during billing period,0,0.0,0.0,not_supported
+H1034,9,9G,oig_settlement,NPI associated with known OIG settlement (from enforcement data),NPI linked to OIG settlement,0,0.0,0.0,not_supported
+H1035,9,9G,address_multiple_exclusions,Provider at address associated with >3 excluded NPIs,address linked to >3 excluded NPIs,0,0.0,0.0,not_supported
+H1036,4,4H,captive_referral,Billing NPI sending >90% of claims through single servicing NPI (captive referral),>90% claims through single servicing NPI,0,0.0,0.0,not_supported
+H1037,4,4H,captive_servicing,Servicing NPI receiving >80% of referrals from single billing NPI,>80% referrals from single billing NPI,0,0.0,0.0,not_supported
+H1038,4,4H,kickback_premium,Billing-servicing pair where paid_per_claim is >2x the code median (potential kickback premium),pair rate >2x code median,0,0.0,0.0,not_supported
+H1039,4,4H,new_relationship_high_volume,New billing-servicing relationship with immediate high volume (>$100K first month),new pair >$100K first month,0,0.0,0.0,not_supported
+H1040,4,4H,reciprocal_referral,"Reciprocal referral pattern: A refers to B for code X, B refers to A for code Y",bilateral referral pattern,0,0.0,0.0,not_supported
+H1041,4,4H,referral_shift,Referring provider patient mix suddenly shifts to one downstream provider,sudden shift to single downstream provider,0,0.0,0.0,not_supported
+H1042,4,4H,lab_single_referrer,Lab (80XXX codes) receiving >50% of volume from single referring provider,lab >50% from single referrer,0,0.0,0.0,not_supported
+H1043,4,4H,dme_single_prescriber,DME supplier with >80% of orders from single prescribing NPI,DME >80% from single prescriber,0,0.0,0.0,not_supported
+H1044,4,4H,hha_concentrated_referrals,Home health agency with >90% of referrals from <3 physicians,HHA >90% from <3 physicians,0,0.0,0.0,not_supported
+H1045,4,4H,transport_single_entity,Transport provider (A04XX/T200X) with >80% of trips for single billing entity,transport >80% for single biller,0,0.0,0.0,not_supported
+H1046,8,8J,pharmacy_single_drug,Pharmacy (J-code) provider with >$10M from single drug code,>$10M from single J-code,0,0.0,0.0,not_supported
+H1047,8,8J,pharmacy_bene_shopping,Same beneficiary receiving same J-code from >3 different pharmacies same month,"same bene, same J-code, >3 pharmacies/month",0,0.0,0.0,not_supported
+H1048,8,8J,pharmacy_specialty_concentration,Pharmacy with >90% of J-code claims for high-cost specialty drugs,>90% specialty drug J-codes,0,0.0,0.0,not_supported
+H1049,8,8J,pharmacy_rate_outlier,Pharmacy with paid_per_claim >3x peer median for J-codes,J-code paid_per_claim >3x peer median,0,0.0,0.0,not_supported
+H1050,8,8J,pharmacy_rapid_entrant,New pharmacy (<6 months) with >$1M in J-code claims,"new pharmacy <6mo, >$1M J-codes",0,0.0,0.0,not_supported
+H1051,8,8J,pharmacy_no_em,Pharmacy billing J-codes with zero corresponding E&M visits for same beneficiaries,J-code billing with zero E&M for same benes,0,0.0,0.0,not_supported
+H1052,8,8J,pharmacy_controlled_substances,Pharmacy with >50% of claims for controlled substances (specific J-codes),>50% controlled substance J-codes,0,0.0,0.0,not_supported
+H1053,8,8J,pharmacy_multi_state,Pharmacy serving beneficiaries from >5 states (mail-order fraud indicator),pharmacy benes from >5 states,0,0.0,0.0,not_supported
+H1054,8,8J,pharmacy_spike,Pharmacy with sudden 10x increase in single J-code billing,10x increase in single J-code,0,0.0,0.0,not_supported
+H1055,8,8J,pharmacy_identical_amounts,Pharmacy with identical monthly billing amounts (suggesting fabrication),identical monthly billing amounts,0,0.0,0.0,not_supported
+H1056,8,8K,addiction_udt_concentration,Substance abuse provider (H0001-H0020) with >$5M and >80% from urine drug tests,>$5M with >80% from urine drug tests,0,0.0,0.0,not_supported
+H1057,8,8K,addiction_high_per_bene,Addiction treatment provider billing >$500K/month for <50 beneficiaries,>$500K/month for <50 benes,0,0.0,0.0,not_supported
+H1058,8,8K,sober_home_no_em,Sober home billing pattern: high volume H-codes with zero E&M follow-up,"high H-code volume, zero E&M follow-up",0,0.0,0.0,not_supported
+H1059,8,8K,addiction_patient_brokering,Addiction provider with beneficiaries from >3 states (patient brokering indicator),addiction benes from >3 states,0,0.0,0.0,not_supported
+H1060,8,8K,addiction_residential_cluster,Substance abuse treatment claims clustered at single residential address,claims clustered at residential address,0,0.0,0.0,not_supported
+H1061,8,8K,addiction_dual_billing,Provider billing both housing support codes and treatment codes (dual-billing),housing + treatment codes same provider,0,0.0,0.0,not_supported
+H1062,8,8K,addiction_churning,Addiction treatment with >90% of beneficiaries enrolled <3 months (churning),>90% benes enrolled <3 months,0,0.0,0.0,not_supported
+H1063,8,8K,lab_sober_home_referrals,Lab testing provider with >50% volume from sober home referrals,lab >50% from sober home referrals,0,0.0,0.0,not_supported
+H1064,8,8K,addiction_december_dump,Addiction treatment provider with December billing >5x average (year-end dump),December billing >5x monthly average,0,0.0,0.0,not_supported
+H1065,8,8K,addiction_rapid_exit,Substance abuse provider appearing then disappearing within 18 months with >$1M,"active <18 months, >$1M, then vanished",0,0.0,0.0,not_supported
+H1066,8,8L,genetic_high_per_bene,Genetic testing provider (81XXX codes) with >$5M total and <100 beneficiaries,">$5M genetic testing, <100 benes",0,0.0,0.0,not_supported
+H1067,8,8L,genetic_telehealth_referral,Genetic testing claims with >$1000 per test from telehealth-only referring providers,>$1K/test from telehealth referrers,0,0.0,0.0,not_supported
+H1068,8,8L,genetic_multi_state,Genetic testing provider serving beneficiaries from >10 states,genetic testing benes from >10 states,0,0.0,0.0,not_supported
+H1069,8,8L,genetic_rapid_entrant,New genetic testing provider (<12 months) billing >$1M,"genetic testing <12mo, >$1M",0,0.0,0.0,not_supported
+H1070,8,8L,genetic_market_concentration,Genetic testing code with >50% of national volume from <5 providers,>50% national volume from <5 providers,0,0.0,0.0,not_supported
+H1071,9,9H,bene_network_spread,Beneficiary appearing in >10 unrelated billing networks same month,bene in >10 billing networks/month,0,0.0,0.0,not_supported
+H1072,9,9H,bene_high_multi_provider,Beneficiary with >$100K in claims same month from >5 providers,bene >$100K/month from >5 providers,0,0.0,0.0,not_supported
+H1073,9,9H,shared_bene_count,Beneficiary count identical across multiple providers (shared patient list),identical bene count at multiple providers,0,0.0,0.0,not_supported
+H1074,9,9H,bene_overlap_ring,Provider pairs with >80% beneficiary overlap (potential billing ring),provider pair >80% bene overlap,0,0.0,0.0,not_supported
+H1075,9,9H,bene_multi_state,Beneficiary receiving services from providers in >3 states same month,bene in >3 provider states/month,0,0.0,0.0,not_supported
+H1076,9,9H,shared_flagged_benes,Provider with >50% of beneficiaries also appearing at another flagged provider,>50% benes shared with flagged provider,0,0.0,0.0,not_supported
+H1077,9,9H,bene_pool_cluster,Cluster of providers sharing >20% of the same beneficiary pool,provider cluster >20% shared bene pool,0,0.0,0.0,not_supported
+H1078,9,9H,bene_excessive_personal_care,Beneficiary receiving >$50K in personal care services per month,bene >$50K personal care/month,0,0.0,0.0,not_supported
+H1079,9,9H,bene_phantom_growth,Provider with beneficiary count growing >3x while paid grows >10x (phantom additions),bene count 3x growth but paid 10x growth,0,0.0,0.0,not_supported
+H1080,9,9H,bene_synchronized_churn,Seasonal beneficiary pattern: same beneficiaries added/dropped synchronously across providers,synchronized bene add/drop across providers,0,0.0,0.0,not_supported
+H1081,9,9I,address_cluster_flagged,Multiple NPIs at identical NPPES address with combined >$10M and any flagged NPI,address cluster >$10M with flagged NPI,0,0.0,0.0,not_supported
+H1082,9,9I,address_npi_replacement,New NPI at address of recently deactivated NPI with similar billing pattern,new NPI replacing deactivated NPI at same address,0,0.0,0.0,not_supported
+H1083,9,9I,address_change_spike,Provider with NPPES address change followed by >3x billing increase,address change then >3x billing increase,0,0.0,0.0,not_supported
+H1084,9,9I,sequential_npi_address,>5 NPIs with sequential NPI numbers at same address (batch enrollment),>5 sequential NPIs at same address,0,0.0,0.0,not_supported
+H1085,9,9I,coordinated_address_start,Address cluster where >50% of NPIs started billing within 3 months of each other,>50% of address NPIs started within 3 months,0,0.0,0.0,not_supported
+H1086,6,6G,zipf_billing,Zipf's Law deviation: billing amounts don't follow expected power-law distribution,Billing distribution deviates from Zipf's Law,0,0.0,0.0,not_supported
+H1087,6,6G,zipf_referral,Zipf's Law on referral concentration: single provider receives disproportionate referrals,Referral concentration violates Zipf's Law,0,0.0,0.0,not_supported
+H1088,6,6G,association_rules,Association rule mining: unusual HCPCS code combinations (clinically impossible pairings),unusual code combinations via apriori/FP-growth,0,0.0,0.0,not_supported
+H1089,6,6G,cosine_similarity_fraud,Billing pattern cosine similarity: provider whose monthly pattern matches known fraud profiles,monthly billing cosine similarity to fraud profiles,0,0.0,0.0,not_supported
+H1090,6,6G,low_entropy_billing,Entropy analysis: provider with unusually low entropy in billing distribution (too uniform),billing distribution entropy below 1st percentile,0,0.0,0.0,not_supported
+H1091,6,6G,scope_of_practice,Provider billing codes from >3 unrelated clinical families (scope-of-practice violation proxy),>3 unrelated clinical code families,0,0.0,0.0,not_supported
+H1092,6,6G,geospatial_bene_mismatch,Geospatial outlier: provider's beneficiaries' state distribution inconsistent with provider location,beneficiary states inconsistent with provider location,0,0.0,0.0,not_supported
+H1093,6,6G,zero_autocorrelation,Temporal autocorrelation: provider with zero autocorrelation in monthly series (random/fabricated),monthly billing series autocorrelation near zero,0,0.0,0.0,not_supported
+H1094,6,6G,cpb_direction_change,Claim-to-beneficiary ratio changes direction abruptly (suggests record manipulation),abrupt reversal in claims-per-bene trend,0,0.0,0.0,not_supported
+H1095,6,6G,capacity_based_limit,Claims-per-day exceeds physical capacity based on provider type (individual vs org),claims/day exceeds individual provider capacity,0,0.0,0.0,not_supported
+H1096,6,6G,selective_reversal,Provider with negative payments >10% but only in specific months (selective reversal),negative payments concentrated in specific months,0,0.0,0.0,not_supported
+H1097,6,6G,code_pair_deviation,Code pair frequency deviation: two codes that typically co-occur nationally appear at anomalous ratio,code pair ratio deviates from national norm,0,0.0,0.0,not_supported
+H1098,6,6G,network_triangles,Network motif detection: triangles in billing graph where A->B->C->A all have high-value edges,billing graph triangles with high-value edges,0,0.0,0.0,not_supported
+H1099,6,6G,triple_signal,Provider with Benford violation PLUS temporal spike PLUS peer outlier (triple signal),Benford's + temporal spike + peer outlier combined,0,0.0,0.0,not_supported
+H1100,6,6G,neighborhood_risk,GNN-inspired feature: provider's neighborhood risk score based on connected providers' anomaly scores,provider risk score from network neighbor anomalies,0,0.0,0.0,not_supported

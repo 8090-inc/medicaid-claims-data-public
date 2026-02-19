@@ -1,0 +1,33 @@
+# Large data files (too large for GitHub)
+medicaid.duckdb
+medicaid-provider-spending.csv
+claims.parquet
+
+# Large reference data (NPPES is 10GB+)
+reference_data/nppes/
+
+# Large findings output (8GB+, regenerable from scripts)
+output/findings/
+
+# Python
+__pycache__/
+*.pyc
+
+# Playwright MCP
+.playwright-mcp/
+
+# Working image copies at root
+fraud_heatmap_v1.png
+fraud_heatmap_final.png
+fraud_heatmap_merged.png
+fraud_heatmap_aligned.png
+hhs-examples-full-page.png
+chart1-monthly-spending-trend.png
+chart2-top-procedures.png
+chart3-top-providers.png
+card1-full-monthly-spending.png
+card2-full-top-procedures.png
+card3-full-top-providers.png
+
+# OS
+.DS_Store

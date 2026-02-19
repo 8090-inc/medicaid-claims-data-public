@@ -1,0 +1,456 @@
+{
+  "meta": {
+    "description": "Design specification for HHS // OPENDATA Medicaid claims data visualizations",
+    "source": "HHS Open Data - Medicaid Spending Dashboard, FY2019–FY2023",
+    "purpose": "Reproduce charts matching the exact visual style of the HHS OPENDATA Medicaid dashboard",
+    "charts_analyzed": [
+      "card1-full-monthly-spending.png",
+      "card2-full-top-procedures.png",
+      "card3-full-top-providers.png",
+      "chart1-monthly-spending-trend.png",
+      "chart2-top-procedures.png",
+      "chart3-top-providers.png"
+    ]
+  },
+
+  "global_design": {
+    "aesthetic": "US Federal government open-data style — minimal, clean, authoritative, data-forward with no decorative flourishes",
+    "tone": "Institutional, neutral, informational — designed for transparency and public accountability rather than persuasion",
+    "background_color": "#FFFFFF",
+    "canvas": {
+      "border": "1px solid #E0E0E0",
+      "border_radius": "0px",
+      "box_shadow": "none",
+      "padding": {
+        "top": "24px",
+        "right": "32px",
+        "bottom": "20px",
+        "left": "16px"
+      }
+    },
+    "branding": {
+      "text": "HHS // OPENDATA",
+      "position": "bottom-right",
+      "font_weight": "bold",
+      "font_size": "11px",
+      "color": "#333333",
+      "separator_style": "double-slash with spaces"
+    },
+    "action_links": {
+      "items": ["Image", "Data"],
+      "position": "top-right of card header",
+      "icon": "download arrow (↓)",
+      "font_size": "12px",
+      "color": "#666666",
+      "separator": " · "
+    }
+  },
+
+  "color_palette": {
+    "primary_chart_color": "#E8A317",
+    "primary_chart_color_description": "Warm amber/marigold orange — the single dominant color used for ALL chart elements (lines, bars, area fills)",
+    "primary_hex_range": "#D4941A to #EDAB1A",
+    "line_stroke": "#E8A317",
+    "bar_fill": "#E8A317",
+    "bar_stroke": "none",
+    "tooltip_background": "#333333",
+    "tooltip_text": "#FFFFFF",
+    "tooltip_border": "none",
+    "gridline_color": "#E8E8E8",
+    "axis_line_color": "#CCCCCC",
+    "axis_tick_color": "#999999",
+    "axis_label_color": "#666666",
+    "title_color": "#1A1A1A",
+    "subtitle_color": "#555555",
+    "footer_color": "#888888",
+    "note": "The entire dashboard is monochromatic — only one color (amber/orange) is used for data, with gray tones for structural elements. There is NO use of secondary colors, gradients, or multi-color schemes."
+  },
+
+  "typography": {
+    "font_family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "font_family_description": "Clean sans-serif system font stack — appears to be a neutral grotesque typeface",
+    "title": {
+      "font_size": "18px",
+      "font_weight": "700",
+      "color": "#1A1A1A",
+      "line_height": "1.3",
+      "margin_bottom": "4px"
+    },
+    "subtitle": {
+      "font_size": "13px",
+      "font_weight": "400",
+      "color": "#555555",
+      "line_height": "1.4",
+      "margin_bottom": "20px"
+    },
+    "axis_labels": {
+      "font_size": "12px",
+      "font_weight": "400",
+      "color": "#666666"
+    },
+    "axis_tick_labels": {
+      "font_size": "11px",
+      "font_weight": "400",
+      "color": "#888888"
+    },
+    "tooltip_value": {
+      "font_size": "13px",
+      "font_weight": "700",
+      "color": "#FFFFFF"
+    },
+    "tooltip_label": {
+      "font_size": "12px",
+      "font_weight": "400",
+      "color": "#CCCCCC"
+    },
+    "footer_note": {
+      "font_size": "11px",
+      "font_weight": "400",
+      "color": "#888888",
+      "font_style": "normal"
+    },
+    "bar_category_labels": {
+      "font_size": "11px",
+      "font_weight": "400",
+      "color": "#444444",
+      "text_align": "right",
+      "max_width": "120px",
+      "word_wrap": true,
+      "line_height": "1.2"
+    }
+  },
+
+  "chart_types": {
+
+    "line_chart": {
+      "applies_to": ["card1-full-monthly-spending.png", "chart1-monthly-spending-trend.png"],
+      "chart_title": "Monthly Spending Trend",
+      "chart_subtitle": "Total Medicaid payments by month, FY2019–FY2023 (Oct 2018 – Sep 2023)",
+
+      "line": {
+        "color": "#E8A317",
+        "stroke_width": "2px",
+        "stroke_linecap": "round",
+        "stroke_linejoin": "round",
+        "fill": "none",
+        "curve_type": "monotone or catmull-rom (smooth interpolation between points)",
+        "point_markers": "none — no visible dots on data points"
+      },
+
+      "area_fill": {
+        "enabled": false,
+        "description": "No area fill under the line — the chart uses a bare line only"
+      },
+
+      "x_axis": {
+        "type": "time/categorical",
+        "label_format": "FY{YY} (e.g., FY19, FY20, FY21, FY22, FY23)",
+        "tick_placement": "at fiscal year boundaries (October of each year)",
+        "tick_count": 5,
+        "axis_line": true,
+        "axis_line_color": "#CCCCCC",
+        "gridlines": false,
+        "label_rotation": "0deg — horizontal",
+        "note": "Federal fiscal years run October – September"
+      },
+
+      "y_axis": {
+        "type": "linear/currency",
+        "label_format": "$X.XB (e.g., $4.5B, $9.0B, $13.5B, $18.0B)",
+        "prefix": "$",
+        "suffix": "B",
+        "tick_count": "4-5 (evenly spaced from $0)",
+        "starts_at_zero": true,
+        "max_value_auto": true,
+        "max_value_examples": ["$13.5B (card view)", "$18.0B (full view)"],
+        "axis_line": false,
+        "gridlines": {
+          "enabled": true,
+          "color": "#E8E8E8",
+          "stroke_width": "1px",
+          "stroke_dasharray": "none — solid lines"
+        }
+      },
+
+      "annotation_line": {
+        "description": "A thin vertical reference line appears around the FY20/FY21 boundary, likely marking the COVID-19 pandemic onset or a policy change",
+        "color": "#999999",
+        "stroke_width": "1px",
+        "stroke_dasharray": "none — solid",
+        "label": "none visible"
+      },
+
+      "tooltip": {
+        "trigger": "hover on data point",
+        "style": "floating box near the hovered point, left-aligned to the data point",
+        "background_color": "#333333",
+        "text_color": "#FFFFFF",
+        "border_radius": "4px",
+        "padding": "8px 12px",
+        "shadow": "subtle drop shadow",
+        "content_format": {
+          "line1": "Month abbreviation + 'YY (e.g., Apr '20)",
+          "line2": "Full dollar amount with commas (e.g., $8,541,553,016)"
+        },
+        "pointer": "none visible",
+        "crosshair": "vertical line at hover position"
+      },
+
+      "footer": {
+        "text": "Federal fiscal years run October – September.",
+        "position": "bottom-left, below x-axis",
+        "font_size": "11px",
+        "color": "#888888"
+      },
+
+      "data_characteristics": {
+        "time_range": "Oct 2018 – Sep 2023 (60 monthly data points)",
+        "value_range": "~$8B to ~$18B",
+        "trend": "Upward trend from ~$9B (FY19) to ~$17B (FY23) with a dip around early FY20 (COVID onset) followed by steep recovery and continued growth",
+        "seasonality": "Mild monthly fluctuations with occasional dips, general pattern of year-end spikes",
+        "notable_dip": "Around Apr 2020 ($8.5B) — lowest point, coinciding with early COVID-19 pandemic"
+      }
+    },
+
+    "horizontal_bar_chart_procedures": {
+      "applies_to": ["card2-full-top-procedures.png", "chart2-top-procedures.png"],
+      "chart_title_card": "none — title appears outside the chart area in the card header",
+      "chart_subtitle": "Highest-cost HCPCS procedure codes across all providers, FY2019–FY2023",
+
+      "bars": {
+        "orientation": "horizontal",
+        "fill_color": "#E8A317",
+        "stroke": "none",
+        "border_radius": "0px — square edges, no rounding",
+        "bar_height": "approximately 20-24px",
+        "bar_gap": "8-12px between bars",
+        "animation": "none observed in static images"
+      },
+
+      "category_labels": {
+        "position": "left of bars",
+        "alignment": "right-aligned",
+        "max_width": "120px",
+        "word_wrap": true,
+        "font_size": "11px",
+        "color": "#444444",
+        "truncation": "multi-line wrapping for long names (e.g., 'Community Support, per Diem' wraps to 2-3 lines)"
+      },
+
+      "x_axis": {
+        "type": "linear/currency",
+        "position": "bottom",
+        "label_format": "$X.XB (e.g., $25.0B, $50.0B, $75.0B, $100.0B)",
+        "starts_at_zero": true,
+        "gridlines": {
+          "enabled": true,
+          "color": "#E8E8E8",
+          "stroke_width": "1px"
+        },
+        "axis_line": true,
+        "axis_line_color": "#CCCCCC"
+      },
+
+      "y_axis": {
+        "type": "categorical",
+        "position": "left",
+        "sort_order": "descending by value — highest value at top",
+        "axis_line": false,
+        "gridlines": false
+      },
+
+      "item_count": 20,
+      "items_visible_in_card": 20,
+
+      "data_characteristics": {
+        "top_item": "Personal Care Services (~$82B)",
+        "second_item": "Clinic Visit/Encounter (~$38B)",
+        "distribution": "Extremely top-heavy — #1 is roughly 2x #2, and the top 2 dwarf all others",
+        "long_tail": "Items #10-#20 are relatively similar in magnitude ($3-7B each)",
+        "notable_gap": "Massive gap between #1 (Personal Care ~$82B) and #2 (Clinic Visit ~$38B)",
+        "categories_include": [
+          "Personal Care Services",
+          "Clinic Visit/Encounter",
+          "Residential Habilitation",
+          "Office Visit, Level 3",
+          "Attendant Care Services",
+          "Office Visit, Level 4",
+          "ED Visit, Level 4",
+          "Community Support, per Diem",
+          "Community Support, 15 min",
+          "ED Visit, Level 3",
+          "ED Visit, Level 5",
+          "Psychotherapy, 60 min",
+          "Adult Day Care, per Diem",
+          "Psychotherapy, 45 min",
+          "Psychosocial Rehab, 15 min",
+          "Personal Care, per Diem",
+          "Day Habilitation, 15 min",
+          "Targeted Case Management",
+          "Unlisted Dialysis Procedure",
+          "ALS Ambulance, Emergency"
+        ]
+      },
+
+      "variant_note": "chart2-top-procedures.png appears to exclude 'Personal Care Services' (#1 item), starting from 'Clinic Visit/Encounter'. This may be an alternate view or scroll state."
+    },
+
+    "horizontal_bar_chart_providers": {
+      "applies_to": ["card3-full-top-providers.png", "chart3-top-providers.png"],
+      "chart_title": "Top 20 Providers by Spending",
+
+      "bars": {
+        "orientation": "horizontal",
+        "fill_color": "#E8A317",
+        "stroke": "none",
+        "border_radius": "0px",
+        "bar_height": "approximately 20-24px",
+        "bar_gap": "8-12px between bars"
+      },
+
+      "category_labels": {
+        "position": "left of bars",
+        "alignment": "right-aligned",
+        "max_width": "120px",
+        "word_wrap": true,
+        "truncation": "Ellipsis (...) for very long names (e.g., 'Los Angeles County Departme...', 'Alabama Department Of Menta...')",
+        "font_size": "11px",
+        "color": "#444444"
+      },
+
+      "x_axis": {
+        "type": "linear/currency",
+        "position": "bottom",
+        "label_format": "$X.XB (e.g., $1.5B, $3.0B, $4.5B, $6.0B)",
+        "starts_at_zero": true,
+        "gridlines": {
+          "enabled": true,
+          "color": "#E8E8E8",
+          "stroke_width": "1px"
+        },
+        "axis_line": true
+      },
+
+      "y_axis": {
+        "type": "categorical",
+        "sort_order": "descending by value",
+        "axis_line": false
+      },
+
+      "item_count": 20,
+
+      "data_characteristics": {
+        "top_item": "Public Partnerships LLC (~$5.0B)",
+        "second_item": "Los Angeles County Department... (~$4.8B)",
+        "third_item": "Tempus Unlimited, Inc. (~$3.5B)",
+        "distribution": "Top 2 are close together, then a drop to #3, followed by a relatively gradual decline",
+        "categories_include": [
+          "Public Partnerships LLC",
+          "Los Angeles County Department...",
+          "Tempus Unlimited, Inc.",
+          "Modivcare Solutions, LLC",
+          "Department Of Intellectual ...",
+          "Freedom Care LLC",
+          "Guardiantrac. LLC",
+          "Alabama Department Of Menta...",
+          "Consumer Direct Care Networ...",
+          "County Of Santa Clara",
+          "American Business Institute...",
+          "Premier Home Health Care Se...",
+          "Department Of Intellectual ...",
+          "Laboratory Corporation Of A...",
+          "Assistcarehome Healthcare S...",
+          "Department Of Developmental...",
+          "City & County Of San Franci...",
+          "City Of Chicago",
+          "County Of Riverside",
+          "Alameda County Behavioral H..."
+        ]
+      },
+
+      "variant_note": "chart3-top-providers.png appears to exclude 'Public Partnerships LLC' (#1 item), starting from 'Los Angeles County Department...'. May be an alternate scroll or filtered view."
+    }
+  },
+
+  "layout_patterns": {
+    "card_view": {
+      "description": "Charts are displayed inside card containers with headers, action links, and footers",
+      "header": {
+        "title": "bold, 18px, dark",
+        "subtitle": "regular, 13px, medium gray",
+        "action_links": "download icons for Image and Data, top-right"
+      },
+      "body": {
+        "chart_area": "full width of card, with left margin for labels",
+        "padding": "16-32px"
+      },
+      "footer": {
+        "note_text": "small italic-style note (e.g., fiscal year definition)",
+        "branding": "HHS // OPENDATA bottom-right"
+      }
+    },
+    "standalone_chart_view": {
+      "description": "Charts displayed without card wrapper — just the chart with axis labels and branding",
+      "branding_position": "bottom-right, same style"
+    }
+  },
+
+  "number_formatting": {
+    "currency": {
+      "prefix": "$",
+      "thousands_separator": ",",
+      "decimal_places_axis": "1 (e.g., $4.5B, $13.5B)",
+      "decimal_places_tooltip": "0 (full integer with commas, e.g., $8,541,553,016)",
+      "abbreviation_axis": "B for billions (e.g., $4.5B)",
+      "abbreviation_tooltip": "none — full number displayed"
+    },
+    "dates": {
+      "axis_format": "FY{YY} (e.g., FY19)",
+      "tooltip_format": "Mon 'YY (e.g., Apr '20)",
+      "fiscal_year_definition": "October – September"
+    }
+  },
+
+  "responsive_behavior": {
+    "card_width": "approximately 800-840px based on image dimensions",
+    "chart_height_line": "approximately 300-350px",
+    "chart_height_bar_20_items": "approximately 800-900px (tall to fit all 20 bars)",
+    "label_wrapping": "long category names wrap to multiple lines rather than truncating",
+    "bar_spacing_adjusts": "bar height and gap appear consistent regardless of count"
+  },
+
+  "design_principles": {
+    "monochromatic": "Single amber/orange color for ALL data elements — no secondary colors",
+    "minimal_chrome": "No borders on bars, no decorative elements, no shadows on chart elements",
+    "whitespace": "Generous whitespace between elements — charts breathe",
+    "data_ink_ratio": "Very high — almost all ink is data, minimal non-data ink",
+    "gridlines": "Light gray, horizontal only for bar charts, horizontal only for line charts — never vertical gridlines on line charts",
+    "no_legends": "No color legends needed since only one color is used",
+    "no_3d_effects": "Completely flat 2D design",
+    "no_gradients": "Solid flat colors throughout",
+    "no_rounded_bars": "Square-cornered bars",
+    "sort_order": "Always descending by value for bar charts — largest at top",
+    "zero_baseline": "All charts start at $0 — no misleading truncated axes",
+    "government_data_viz_standards": "Follows US government open data visualization conventions — clean, accessible, high contrast text on white"
+  },
+
+  "accessibility_notes": {
+    "contrast_ratio": "High — dark text on white background, amber bars have sufficient contrast",
+    "text_size": "Minimum 11px for smallest labels",
+    "color_dependency": "Low — single color means no reliance on color differentiation between categories",
+    "screen_reader": "Data download links available (CSV/data export implied by 'Data' action link)"
+  },
+
+  "implementation_recommendations": {
+    "charting_library": "D3.js, Vega-Lite, Observable Plot, or Recharts — any library that supports clean minimal styling",
+    "css_reset": "Use white background, remove all default chart library chrome/decorations",
+    "font_stack": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "primary_color_hex": "#E8A317",
+    "grid_color_hex": "#E8E8E8",
+    "text_color_dark": "#1A1A1A",
+    "text_color_medium": "#666666",
+    "text_color_light": "#888888",
+    "export_formats": ["PNG (Image)", "CSV (Data)"],
+    "tooltip_library": "Native SVG tooltip or lightweight library — dark background, white text"
+  }
+}
