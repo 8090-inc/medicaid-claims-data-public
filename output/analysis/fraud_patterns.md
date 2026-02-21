@@ -14,6 +14,10 @@ Provider-level standardized exposure totals $354,986,926,844. Systemic rate/code
 
 December 2024 data may be incomplete in some states; late submissions can depress recent-month totals and may produce false positives for sudden-stop detection.
 
+![Monthly Medicaid Provider Spending](../charts/monthly_spending_trend.png)
+
+![Fraud Pattern Heat Map](../charts/fraud_heatmap_aligned.png)
+
 ## Provider-Level Patterns (Standardized Impact)
 
 | #  | Pattern                                | Providers | Estimated Impact |
@@ -44,6 +48,8 @@ December 2024 data may be incomplete in some states; late submissions can depres
 
 ### Pattern 1: Home Health and Personal Care ($55.0B across 19,922 providers)
 
+![Top 20 Flagged Procedures by Total Spending](../charts/top20_flagged_procedures.png)
+
 The single largest HCPCS code in the dataset is T1019 (personal care services, per 15 minutes) at $122.7B total paid — 11.2% of all Medicaid spending. Providers whose primary revenue comes from personal care and home health codes (T1019, T1020, S5125, S5130) are disproportionately represented in the risk queue.
 
 **Top examples (provider-level, standardized impact):**
@@ -65,6 +71,8 @@ Some entities function as billing intermediaries — they submit claims on behal
 **What this pattern represents:** Not all middleman billing is improper — fiscal intermediaries and managed care entities routinely bill on behalf of individual providers. The signal becomes concerning when paired with kickback premiums (rates far exceeding peer medians) or when the billing entity dominates a code's market share.
 
 ### Pattern 3: Government Agencies as Outliers ($53.5B across 20,205 providers)
+
+![Top 20 Flagged Providers by Estimated Recoverable Amount](../charts/top20_flagged_providers.png)
 
 Government agencies dominate the risk queue: 11 of the top 20 provider-level findings are departments, counties, or state agencies. This is the most important structural finding in the analysis.
 
@@ -100,6 +108,8 @@ Twenty providers billed Medicaid for every calendar day (or nearly every day) ac
 
 ### Pattern 6: Sudden Starts and Stops ($91.8B across 2,433 providers)
 
+![Top 5 Flagged Providers: Monthly Billing Anomaly Patterns](../charts/temporal_anomalies_top5.png)
+
 The largest pattern by dollar exposure. Captures providers with abrupt billing changes: sudden appearance with high initial volume, abrupt cessation of billing, structural change-points in monthly time series (CUSUM), and year-over-year growth exceeding 2x.
 
 **Top examples:**
@@ -113,6 +123,8 @@ The largest pattern by dollar exposure. Captures providers with abrupt billing c
 
 ### Pattern 7: Billing Networks and Circular Billing ($16.1B across 852 providers)
 
+![Top 3 Suspicious Billing Networks](../charts/network_graph_top3.png)
+
 Flags suspicious network structures: circular billing (A bills through B and B bills through A), captive referral arrangements (>90% of billing through a single servicing provider), dense network components, and new high-value billing relationships.
 
 **Top example:**
@@ -121,6 +133,8 @@ Flags suspicious network structures: circular billing (A bills through B and B b
 **What this pattern represents:** Network patterns can indicate kickback schemes, shell companies, or billing arrangements designed to inflate reimbursement. The 81.3x rate premium for MAINS'L FLORIDA is among the most extreme outliers in the dataset and warrants priority investigation.
 
 ### Pattern 8: State-Level Spending Differences ($77.5B, systemic only)
+
+![Flagged Spending by State](../charts/state_heatmap.png)
 
 Twenty state-code combinations where per-beneficiary spending exceeds the national median by 2x or more. These are reported separately because they reflect programmatic rate differences, not individual provider behavior.
 
@@ -158,6 +172,12 @@ Provider pairs with identical or near-identical beneficiary counts, suggesting s
 
 ## Cross-Cutting Observations
 
+![Provider Risk Assessment: Total Paid vs Composite Anomaly Score](../charts/provider_risk_scatter.png)
+
+![Findings by Analytical Category](../charts/findings_by_category.png)
+
+![Provider Spending Concentration (Lorenz Curve)](../charts/lorenz_curve.png)
+
 1. **Government entities dominate the risk queue.** Eleven of the top 20 provider-level findings are public agencies. This is the most consequential finding: it indicates systemic program integrity issues in how states structure and reimburse public-sector providers, not a wave of government fraud.
 
 2. **Massachusetts DDS is the clearest example of NPI fragmentation.** The Commonwealth of Massachusetts Department of Developmental Services appears under 8+ distinct NPIs in the top 100, each representing a regional office or program. The aggregate exposure across all DDS NPIs exceeds $2.5B. This suggests a billing architecture where a single agency's spending is split across many NPIs, each of which then appears as an outlier when compared to single-entity peers.
@@ -171,6 +191,8 @@ Provider pairs with identical or near-identical beneficiary counts, suggesting s
 6. **COVID-era billing changes are a persistent confound.** Many temporal anomaly signals (yoy_growth, change_point_cusum, month_over_month_spike) capture legitimate pandemic-driven utilization shifts. Findings from the covid_comparison method should be interpreted in the context of the March 2020 PHE declaration and subsequent Medicaid continuous enrollment provisions.
 
 ---
+
+![Benford's Law: First-Digit Distribution of Payment Amounts](../charts/benfords_law.png)
 
 ## Methodology (Reproducible Mapping)
 

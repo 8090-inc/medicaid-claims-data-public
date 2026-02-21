@@ -1,5 +1,7 @@
 # CEO Action Plan — Medicaid Fraud, Waste, and Abuse
 
+![Fraud Pattern Heat Map](../charts/fraud_heatmap_aligned.png)
+
 ## Executive Summary
 
 - Provider‑level exposure totals about $354,986,926,844.
@@ -22,6 +24,10 @@
 - Use the systemic queue to review rate design and authorization rules.
 - Prioritize personal care and community support services for stronger controls.
 - Require extra oversight for billing‑only or middleman structures.
+
+![Top 20 Flagged Providers](../charts/top20_flagged_providers.png)
+
+![Flagged Spending by State](../charts/state_heatmap.png)
 
 ## Where the Risk Concentrates
 

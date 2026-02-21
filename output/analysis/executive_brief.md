@@ -1,5 +1,7 @@
 # Executive Brief — Medicaid Fraud & Abuse Risk
 
+![Monthly Medicaid Provider Spending](../charts/monthly_spending_trend.png)
+
 ## What matters most (plain language)
 
 - We reviewed 591,181 providers and prioritized 500 high-risk leads.
@@ -7,6 +9,10 @@
 - Separate systemic exposure (state/code aggregates) totals $116,147,010,551 and is not comparable to provider-level impact.
 - The top 10 leads account for $16,152,827,814 (17.2% of the top-500 risk pool).
 - The top 100 leads account for $46,740,448,041 (49.8% of the top-500 risk pool).
+
+![Top 20 Flagged Providers](../charts/top20_flagged_providers.png)
+
+![Flagged Spending by State](../charts/state_heatmap.png)
 
 ## Contrarian takeaways (high-entropy, decision-grade)
 
@@ -16,6 +22,12 @@
 - We removed four unstable methods and eliminated ~4.9M low-quality flags, yet total estimated recoverable stayed almost flat. That means **most dollar risk is concentrated in a smaller, more defensible set**.
 - 90% of the top-500 list triggers **3+ independent signals**. Those are the most defensible investigation targets.
 - Some signals reflect **billing concentration and network patterns**, not unusual clinical behavior. These are best handled with **contracting and program integrity controls**, not medical review alone.
+
+![Provider Risk Assessment](../charts/provider_risk_scatter.png)
+
+![Findings by Analytical Category](../charts/findings_by_category.png)
+
+![Provider Spending Concentration](../charts/lorenz_curve.png)
 
 ## Dominant signal families (provider count, top-500)
 

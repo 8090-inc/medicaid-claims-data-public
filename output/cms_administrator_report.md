@@ -14,6 +14,8 @@
 
 ## 1. Executive Summary
 
+![Monthly Medicaid Provider Spending, Jan 2018 – Dec 2024](charts/monthly_spending_trend.png)
+
 This analysis examined $1093.6B in Medicaid provider spending across 227,083,361 billing records spanning January 2018 through December 2024. The dataset covers 617,503 billing providers, 10,881 procedure codes, and 11,317,957,847 beneficiary-months of service.
 
 Using 1,087 testable hypotheses across 10 analytical categories — statistical outlier detection, temporal anomaly analysis, peer comparison, network analysis, market concentration, classical machine learning, deep learning, domain-specific rules, cross-reference enrichment, and composite multi-signal scoring — this analysis identified:
@@ -73,6 +75,10 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **High:** Flagged by 3 or more analytical categories, or exhibits a known fraud pattern (impossible service volumes, circular billing), or has a z-score above 5.
 - **Medium:** Flagged by 2 categories, or has a z-score between 3 and 5.
 - **Low:** Flagged by 1 category with a z-score between 2 and 3.
+
+![Fraud Pattern Heat Map — All 10 patterns scored by spending, providers, and risk](charts/fraud_heatmap_aligned.png)
+
+![Top 5 Flagged Providers: Monthly Billing Anomaly Patterns](charts/temporal_anomalies_top5.png)
 
 ## 3. High-Confidence Findings
 

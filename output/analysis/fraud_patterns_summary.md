@@ -12,11 +12,17 @@ We found **$355 billion** in suspicious spending at the provider level, and anot
 
 One important note: December 2024 data appears incomplete in many states. Providers that look like they suddenly stopped billing in late 2024 may just have late paperwork.
 
+![Monthly Medicaid Provider Spending, Jan 2018 – Dec 2024](../charts/monthly_spending_trend.png)
+
+![Fraud Pattern Heat Map — All 10 patterns scored by spending, providers, and risk](../charts/fraud_heatmap_aligned.png)
+
 ---
 
 ## The Ten Patterns We Found
 
 ### 1. Home Health and Personal Care — $55 billion, 19,922 providers
+
+![Top 20 Procedures by Total Spending](../charts/top20_flagged_procedures.png)
 
 One billing code — T1019, for personal care in 15-minute blocks — accounts for $122.7 billion, or 11.2% of all Medicaid spending. These are services like bathing, dressing, and meal prep delivered in people's homes. They are hard to verify because nobody is watching to confirm the aide actually showed up.
 
@@ -33,6 +39,8 @@ The biggest outlier is GuardianTrac LLC in Michigan ($1.24 billion in suspicious
 **What it means:** Middleman billing is not automatically wrong, but middlemen who charge way more than their peers or dominate a service market need a closer look.
 
 ### 3. Government Agencies as Outliers — $53.5 billion, 20,205 providers
+
+![Top 20 Providers by Estimated Recoverable Amount](../charts/top20_flagged_providers.png)
 
 **This is the single most important finding in the entire analysis.**
 
@@ -60,6 +68,8 @@ Twenty providers billed Medicaid every calendar day — or nearly every day — 
 
 ### 6. Sudden Starts and Stops — $91.8 billion, 2,433 providers
 
+![Top 5 Flagged Providers: Monthly Billing Anomaly Patterns](../charts/temporal_anomalies_top5.png)
+
 This is the biggest pattern by dollar amount. It catches providers that appeared out of nowhere with high billing, disappeared abruptly, or had sudden spikes or drops in their monthly totals. Examples: AOC TX LLC in Texas ($495 million), Arion Care Solutions in Arizona ($404 million), Coordinated Behavioral Care in New York ($284 million).
 
 **Data warning:** December 2024 spending dropped 67% from November ($4.2 billion vs $12.9 billion). This almost certainly reflects late data, not real drops. Many late-2024 flags are probably false alarms. Also, the COVID comparison method can flag providers that legitimately changed their billing during the pandemic.
@@ -68,6 +78,8 @@ This is the biggest pattern by dollar amount. It catches providers that appeared
 
 ### 7. Billing Networks and Circular Billing — $16.1 billion, 852 providers
 
+![Top 3 Suspicious Billing Networks](../charts/network_graph_top3.png)
+
 This pattern flags suspicious billing relationships: Provider A bills through Provider B, and Provider B bills through Provider A (circular billing). Or a provider sends more than 90% of its billing through a single partner. Or new, high-dollar relationships appear suddenly.
 
 The most extreme case: Mains'l Florida Inc (registered in Minnesota, $900 million in suspicious spending). The rate it charges through its servicing partner is **$3,256 per claim** versus a peer median of **$40** — an 81 times markup.
@@ -75,6 +87,8 @@ The most extreme case: Mains'l Florida Inc (registered in Minnesota, $900 millio
 **What it means:** These network patterns can indicate kickback schemes, shell companies, or billing setups designed to inflate payments. The 81x markup at Mains'l Florida is among the most extreme outliers in the entire dataset and should be investigated first.
 
 ### 8. State-Level Spending Differences — $77.5 billion (system-wide only)
+
+![Flagged Spending by State](../charts/state_heatmap.png)
 
 Twenty combinations of state and procedure code where spending per patient is more than double the national average. The biggest: New York's personal care code T1019, where spending is $3,159 per patient versus the national median of $1,526 (2.1 times higher, $74.6 billion total). New Jersey's comprehensive community support code: $6.9 billion. New York's personal care per-day code: $3.5 billion.
 
@@ -97,6 +111,10 @@ Top example: Community Assistance Resources & Extended Services Inc in New York 
 **What it means:** Identical patient counts can be innocent (two billing IDs for the same agency) or suspicious (coordinated billing). Ownership records and network analysis are needed to tell the difference.
 
 ---
+
+![Provider Risk Assessment: Total Paid vs Composite Anomaly Score](../charts/provider_risk_scatter.png)
+
+![Provider Spending Concentration (Lorenz Curve)](../charts/lorenz_curve.png)
 
 ## Six Things That Matter Most
 
