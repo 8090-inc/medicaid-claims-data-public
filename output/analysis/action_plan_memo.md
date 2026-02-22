@@ -34,10 +34,10 @@
 
 ## Deliverables
 
-- Priority queue (validated + sorted): `/Users/rohitkelapure/projects/medicaid-claims-data/output/analysis/priority_queue_with_notes.csv`
-- Top 50 priority list: `/Users/rohitkelapure/projects/medicaid-claims-data/output/analysis/top50_priority_list.md`
-- Top 100 priority list: `/Users/rohitkelapure/projects/medicaid-claims-data/output/analysis/top100_priority_list.md`
-- Top 200 priority list: `/Users/rohitkelapure/projects/medicaid-claims-data/output/analysis/top200_priority_list.md`
+- Priority queue (validated + sorted): `output/analysis/priority_queue_with_notes.csv`
+- Top 50 priority list: `output/analysis/top50_priority_list.md`
+- Top 100 priority list: `output/analysis/top100_priority_list.md`
+- Top 200 priority list: `output/analysis/top200_priority_list.md`
 - Provider/systemic risk queues in `output/analysis/` (top100/top500 each).
 - Fraud pattern summary: `output/analysis/fraud_patterns.md`
 

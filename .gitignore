@@ -41,5 +41,29 @@ pipeline_checkpoints.json
 # MCP config (contains API keys)
 .mcp.json
 
+# Provider-level findings (named providers, NPIs, dollar amounts)
+output/analysis/top*_priority_list.md
+output/analysis/top10_findings_plain.md
+output/analysis/priority_queue_*.csv
+output/analysis/risk_queue_providers_*.csv
+output/analysis/risk_queue_top*.csv
+output/analysis/provider_validation_scores.csv
+output/analysis/growth_anomalies_top500.csv
+output/analysis/multivariate_risk_top500.csv
+output/analysis/ppc_residuals_top500.csv
+output/analysis/current_analysis_pack.md
+output/analysis/audit_review_fraud_patterns.md
+
+# CMS Administrator Report (contains named recipients and analyst)
+output/cms_administrator_report.md
+
+# Charts with provider names
+output/charts/finding_F*_timeseries.png
+output/charts/top20_flagged_providers.png
+output/charts/top20_providers.png
+output/charts/card3_top_providers.png
+output/charts/chart3_top_providers.png
+output/charts/temporal_anomalies_top5.png
+
 # OS
 .DS_Store
