@@ -73,9 +73,13 @@ scripts/
 ├── run_all.py                  # Master orchestrator
 ├── 00-23_*.py                  # Pipeline milestones
 ├── analyzers/                  # Statistical, temporal, network, peer, concentration analyzers
+├── hypothesis_generation/      # Hypothesis generation helpers
 └── utils/                      # DB, chart, and LEIE utilities
 
-models/                         # Trained ML models (Isolation Forest, Random Forest, XGBoost)
+data/
+└── leie/                       # LEIE working data
+
+models/                         # Trained ML models (Isolation Forest, Random Forest, XGBoost, scaler)
 
 output/
 ├── analysis/
