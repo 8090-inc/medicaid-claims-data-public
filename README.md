@@ -4,7 +4,7 @@ A 24-step Python analysis pipeline for detecting fraud, waste, and abuse pattern
 
 ## Key Findings
 
-- **$355 billion** in suspicious provider-level spending identified across 10 distinct fraud patterns
+- **$355 billion** in suspicious provider-level spending identified across 10 overlapping risk patterns
 - **$116 billion** in system-wide rate and policy anomalies
 - **500 high-risk providers** prioritized for investigation, 90% flagged by 3+ independent detection methods
 - 11 of the top 20 flagged entities are government agencies — pointing to rate design issues, not just bad actors
@@ -13,13 +13,13 @@ A 24-step Python analysis pipeline for detecting fraud, waste, and abuse pattern
 
 | # | Pattern | Exposure | Providers |
 |---|---------|----------|-----------|
-| 1 | Home Health & Personal Care | $55B | 19,922 |
+| 1 | Home Health & Personal Care | $55.1B | 20,041 |
 | 2 | Middleman Billing Organizations | $36.5B | 1,915 |
-| 3 | Government Agencies as Outliers | $53.5B | 20,205 |
+| 3 | Government Agencies as Outliers | $53.5B | 20,583 |
 | 4 | Providers That Cannot Exist | $0.9B + $116.1B systemic | 407 |
 | 5 | Billing Every Single Day | $9.6B | 20 |
 | 6 | Sudden Starts and Stops | $91.8B | 2,433 |
-| 7 | Billing Networks & Circular Billing | $16.1B | 852 |
+| 7 | Billing Networks & Circular Billing | $11.3B | 846 |
 | 8 | State-Level Spending Differences | $77.5B systemic | — |
 | 9 | Upcoding & Impossible Volumes | $3.4B | 36 |
 | 10 | Shared Beneficiary Counts | $2.4B | 19 |
