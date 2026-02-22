@@ -9,6 +9,9 @@
 We analyzed $1,093,562,833,512 in Medicaid provider spending across 227,083,361 billing records from January 2018 through December 2024.
 Provider-level pattern totals use a standardized impact formula: excess above peer median paid-per-claim, capped at total paid per provider. These are exposure ceilings, not guaranteed recoveries.
 Provider-level standardized exposure totals $355,781,963,848. Systemic rate/code exposure totals $116,147,010,551 and is reported separately.
+Patterns are not mutually exclusive. A provider flagged in one pattern may also appear in others. The $355.8B total is deduplicated at the provider level (max finding per provider), not at the pattern level.
+Exposure estimates are statistical ceilings reflecting the sum of per-code excess amounts. For individual providers, actual recoverable amounts cannot exceed total payments received. These figures should be interpreted as risk-ranking scores, not dollar-for-dollar recovery targets.
+Confidence tiers: High = flagged by 3+ independent detection methods; Medium = 2 methods; Low = 1 method.
 December 2024 data may be incomplete in some states; late submissions can depress recent-month totals.
 
 ## Provider-Level Patterns (Standardized Impact)
