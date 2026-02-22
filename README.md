@@ -88,23 +88,18 @@ output/
 │   ├── action_plan_memo.md     # CEO action plan: 30-day priorities, deliverables
 │   ├── fraud_patterns.md       # 10-pattern technical analysis with provider examples
 │   ├── fraud_patterns_summary.md # Plain-language pattern summary
-│   ├── audit_review_fraud_patterns.md # Independent audit: 3 critical, 4 significant, 3 moderate findings
 │   ├── ltc_nursing_home_trends.md     # Sector deep dive: LTC spending, facility-to-home shift
-│   ├── top{50,100,200}_priority_list.md # Investigation target lists
-│   ├── risk_queue_*.csv        # Provider and systemic risk queues (top 100/500)
 │   ├── calibration_report.md   # Holdout + placebo calibration results
 │   └── ...                     # Validation summaries, data tables, CSVs
-├── charts/                     # 43 PNG visualizations
+├── charts/                     # 14 PNG visualizations
 │   ├── monthly_spending_trend.png      # Spending trend, Jan 2018 – Dec 2024
 │   ├── fraud_heatmap_*.png     # Fraud pattern intensity matrices (4 versions)
-│   ├── finding_F001-F020_timeseries.png # Individual finding time series
-│   ├── card{1,2,3}_*.png       # Executive dashboard card views
+│   ├── card{1,2}_*.png         # Executive dashboard card views
 │   └── ...                     # Benford's, Lorenz, scatter, network, state heatmap
 ├── hypotheses/                 # Generated and testable hypothesis batches (22 batches + feasibility)
 ├── findings/                   # Scored findings by category (gitignored, 8 GB+, regenerable)
 ├── cards/                      # Executive dashboard card index
 ├── qa/                         # Data quality and ingest reports
-├── cms_administrator_report.md # Full CMS Administrator report
 └── data_profile.json           # Dataset profile
 
 images/                         # Presentation-ready chart copies and design specs
