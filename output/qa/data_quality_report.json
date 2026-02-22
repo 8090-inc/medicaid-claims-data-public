@@ -1,5 +1,5 @@
 {
-  "csv_path": "/Users/rohitkelapure/projects/medicaid-claims-data/medicaid-provider-spending.csv",
+  "csv_path": "medicaid-provider-spending.csv",
   "total_rows_scanned": 227083361,
   "valid_rows": 225042949,
   "invalid_rows": 2040412,
