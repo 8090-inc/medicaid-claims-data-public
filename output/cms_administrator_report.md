@@ -14,30 +14,28 @@
 
 ## 1. Executive Summary
 
-![Monthly Medicaid Provider Spending, Jan 2018 – Dec 2024](charts/monthly_spending_trend.png)
-
 This analysis examined $1093.6B in Medicaid provider spending across 227,083,361 billing records spanning January 2018 through December 2024. The dataset covers 617,503 billing providers, 10,881 procedure codes, and 11,317,957,847 beneficiary-months of service.
 
 Using 1,087 testable hypotheses across 10 analytical categories — statistical outlier detection, temporal anomaly analysis, peer comparison, network analysis, market concentration, classical machine learning, deep learning, domain-specific rules, cross-reference enrichment, and composite multi-signal scoring — this analysis identified:
 
-- **10,913 high-confidence findings** representing an estimated $177.7B in potentially recoverable payments
-- **19,379 medium-confidence findings** representing an estimated $59.1B
-- **560,889 low-confidence findings** representing an estimated $118.1B
+- **15,583 high-confidence findings** representing an estimated $207.3B in potentially recoverable payments
+- **27,354 medium-confidence findings** representing an estimated $55.3B
+- **564,585 low-confidence findings** representing an estimated $93.1B
 
-**Total estimated recoverable amount: $355.0B**
+**Total estimated recoverable amount: $355.8B**
 **Separate systemic exposure (state/code aggregates): $116.1B**
 
 ### Top 5 Findings
 
-1. **LOS ANGELES COUNTY DEPARTMENT OF MENTAL HEALTH** (NPI 1699703827, CA): Estimated $5.5B in potentially improper payments. Flagged by 19 detection methods. Flagged by 7 categories: concentration, crossref, domain, ml, network, peer, statistical, 17 methods, 165 findings
+1. **LOS ANGELES COUNTY DEPARTMENT OF MENTAL HEALTH** (NPI 1699703827, CA): Estimated $5.5B in potentially improper payments. Flagged by 21 detection methods. Flagged by 7 categories: concentration, crossref, domain, ml, network, peer, statistical, 18 methods, 172 findings
 
-2. **DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN** (NPI 1629436241, TN): Estimated $2.3B in potentially improper payments. Flagged by 12 detection methods. Flagged by 6 categories: crossref, domain, ml, network, peer, statistical, 11 methods, 43 findings
+2. **DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN** (NPI 1629436241, TN): Estimated $2.3B in potentially improper payments. Flagged by 15 detection methods. Flagged by 6 categories: crossref, domain, ml, network, peer, statistical, 13 methods, 66 findings
 
-3. **ALABAMA DEPARTMENT OF MENTAL HEALTH AND MENTAL RETARDATION** (NPI 1982757688, AL): Estimated $2.1B in potentially improper payments. Flagged by 11 detection methods. Flagged by 5 categories: crossref, ml, network, peer, statistical, 9 methods, 38 findings
+3. **ALABAMA DEPARTMENT OF MENTAL HEALTH AND MENTAL RETARDATION** (NPI 1982757688, AL): Estimated $2.1B in potentially improper payments. Flagged by 13 detection methods. Flagged by 5 categories: crossref, ml, network, peer, statistical, 10 methods, 39 findings
 
-4. **GUARDIANTRAC. LLC** (NPI 1710176151, MI): Estimated $1.3B in potentially improper payments. Flagged by 15 detection methods. Flagged by 8 categories: concentration, crossref, domain, ml, network, peer, statistical, temporal, 12 methods, 100 findings
+4. **GUARDIANTRAC. LLC** (NPI 1710176151, MI): Estimated $1.3B in potentially improper payments. Flagged by 15 detection methods. Flagged by 7 categories: concentration, crossref, domain, ml, peer, statistical, temporal, 12 methods, 100 findings
 
-5. **DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN** (NPI 1356709976, TN): Estimated $1.4B in potentially improper payments. Flagged by 10 detection methods. Flagged by 6 categories: crossref, domain, ml, network, peer, statistical, 9 methods, 29 findings
+5. **DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN** (NPI 1356709976, TN): Estimated $1.4B in potentially improper payments. Flagged by 11 detection methods. Flagged by 6 categories: crossref, domain, ml, network, peer, statistical, 10 methods, 53 findings
 
 ![Top 20 Flagged Providers](charts/top20_flagged_providers.png)
 
@@ -76,10 +74,6 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Medium:** Flagged by 2 categories, or has a z-score between 3 and 5.
 - **Low:** Flagged by 1 category with a z-score between 2 and 3.
 
-![Fraud Pattern Heat Map — All 10 patterns scored by spending, providers, and risk](charts/fraud_heatmap_aligned.png)
-
-![Top 5 Flagged Providers: Monthly Billing Anomaly Patterns](charts/temporal_anomalies_top5.png)
-
 ## 3. High-Confidence Findings
 
 ### Finding 1: LOS ANGELES COUNTY DEPARTMENT OF MENTAL HEALTH
@@ -93,9 +87,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 30,870,976
 - **Total Beneficiaries:** 10,549,232
 
-**Anomaly Description:** Flagged by 7 categories: concentration, crossref, domain, ml, network, peer, statistical, 17 methods, 165 findings
+**Anomaly Description:** Flagged by 7 categories: concentration, crossref, domain, ml, network, peer, statistical, 18 methods, 172 findings
 
-**Detection Methods:** Flagged by 19 of 10 analytical categories: provider_share_per_code, billing_fan_out, zscore_paid_per_claim, iqr_outlier, volume_vs_median, isolation_forest, lof, composite_multi_signal, impossible_em_visits_day, paid_per_claim_vs_median, new_network_high_paid, composite_network_plus_volume, duplicate_billing, low_entropy_billing, ensemble_agreement, no_days_off, gev_extreme_value, random_forest, dbscan
+**Detection Methods:** Flagged by 21 of 10 analytical categories: duplicate_billing, impossible_em_visits_day, provider_share_per_code, random_forest, composite_network_plus_volume, billing_fan_out, dbscan, specialty_peer_comparison, no_days_off, lof, zscore_paid_per_claim, state_peer_comparison, composite_multi_signal, iqr_outlier, new_network_high_paid, ensemble_agreement, isolation_forest, volume_vs_median, gev_extreme_value, low_entropy_billing, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $5.5B
 
@@ -114,9 +108,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 16,349,155
 - **Total Beneficiaries:** 1,174,610
 
-**Anomaly Description:** Flagged by 6 categories: crossref, domain, ml, network, peer, statistical, 11 methods, 43 findings
+**Anomaly Description:** Flagged by 6 categories: crossref, domain, ml, network, peer, statistical, 13 methods, 66 findings
 
-**Detection Methods:** Flagged by 12 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, volume_vs_median, paid_per_claim_vs_median, new_network_high_paid, high_risk_category, low_entropy_billing, dbscan, billing_only_provider, lof, iqr_outlier, composite_multi_signal
+**Detection Methods:** Flagged by 15 of 10 analytical categories: specialty_peer_comparison, isolation_forest, ensemble_agreement, billing_only_provider, volume_vs_median, composite_multi_signal, claims_per_bene_vs_median, iqr_outlier, new_network_high_paid, gev_extreme_value, dbscan, low_entropy_billing, paid_per_claim_vs_median, lof, high_risk_category
 
 **Estimated Recoverable Amount:** $2.3B
 
@@ -135,9 +129,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 1,950,098
 - **Total Beneficiaries:** 594,985
 
-**Anomaly Description:** Flagged by 5 categories: crossref, ml, network, peer, statistical, 9 methods, 38 findings
+**Anomaly Description:** Flagged by 5 categories: crossref, ml, network, peer, statistical, 10 methods, 39 findings
 
-**Detection Methods:** Flagged by 11 of 10 analytical categories: gev_extreme_value, paid_per_claim_vs_median, volume_vs_median, new_network_high_paid, new_relationship_high_volume, low_entropy_billing, dbscan, lof, iqr_outlier, address_cluster_flagged, composite_multi_signal
+**Detection Methods:** Flagged by 13 of 10 analytical categories: specialty_peer_comparison, volume_vs_median, state_peer_comparison, composite_multi_signal, iqr_outlier, new_relationship_high_volume, new_network_high_paid, gev_extreme_value, address_cluster_flagged, dbscan, low_entropy_billing, paid_per_claim_vs_median, lof
 
 **Estimated Recoverable Amount:** $2.1B
 
@@ -156,9 +150,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 35,557,539
 - **Total Beneficiaries:** 2,441,087
 
-**Anomaly Description:** Flagged by 8 categories: concentration, crossref, domain, ml, network, peer, statistical, temporal, 12 methods, 100 findings
+**Anomaly Description:** Flagged by 7 categories: concentration, crossref, domain, ml, peer, statistical, temporal, 12 methods, 100 findings
 
-**Detection Methods:** Flagged by 15 of 10 analytical categories: gev_extreme_value, provider_share_per_code, claims_per_bene_vs_median, composite_temporal_plus_statistical, volume_vs_median, paid_per_claim_vs_median, composite_growth_plus_concentration, composite_network_plus_volume, high_risk_category, dbscan, lof, iqr_outlier, change_point_cusum, composite_multi_signal, no_days_off
+**Detection Methods:** Flagged by 15 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, no_days_off, volume_vs_median, composite_multi_signal, provider_share_per_code, claims_per_bene_vs_median, iqr_outlier, composite_temporal_plus_statistical, composite_growth_plus_concentration, gev_extreme_value, dbscan, paid_per_claim_vs_median, lof, high_risk_category
 
 **Estimated Recoverable Amount:** $1.3B
 
@@ -177,9 +171,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 5,287,026
 - **Total Beneficiaries:** 389,567
 
-**Anomaly Description:** Flagged by 6 categories: crossref, domain, ml, network, peer, statistical, 9 methods, 29 findings
+**Anomaly Description:** Flagged by 6 categories: crossref, domain, ml, network, peer, statistical, 10 methods, 53 findings
 
-**Detection Methods:** Flagged by 10 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, volume_vs_median, paid_per_claim_vs_median, high_risk_category, low_entropy_billing, dbscan, billing_only_provider, iqr_outlier, composite_multi_signal
+**Detection Methods:** Flagged by 11 of 10 analytical categories: specialty_peer_comparison, billing_only_provider, volume_vs_median, composite_multi_signal, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, dbscan, low_entropy_billing, paid_per_claim_vs_median, high_risk_category
 
 **Estimated Recoverable Amount:** $1.4B
 
@@ -200,7 +194,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** temporal_plus_statistical: temporal+statistical signals, total categories=5
 
-**Detection Methods:** Flagged by 9 of 10 analytical categories: gev_extreme_value, covid_comparison, kickback_premium, yoy_growth, low_entropy_billing, dbscan, iqr_outlier, change_point_cusum, composite_temporal_plus_statistical
+**Detection Methods:** Flagged by 10 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, kickback_premium, iqr_outlier, composite_temporal_plus_statistical, yoy_growth, gev_extreme_value, dbscan, low_entropy_billing, covid_comparison
 
 **Estimated Recoverable Amount:** $1.2B
 
@@ -219,9 +213,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 1,662,383
 - **Total Beneficiaries:** 224,187
 
-**Anomaly Description:** Flagged by 7 categories: concentration, crossref, domain, ml, network, peer, statistical, 11 methods, 52 findings
+**Anomaly Description:** Transportation: rate_z=-0.3, cpb_ratio=23.4x, total=$32.6M
 
-**Detection Methods:** Flagged by 13 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, composite_multi_signal, volume_vs_median, paid_per_claim_vs_median, kickback_premium, composite_network_plus_volume, code_concentration_per_provider, high_risk_category, low_entropy_billing, dbscan, iqr_outlier, zscore_claims_per_bene
+**Detection Methods:** Flagged by 12 of 10 analytical categories: specialty_peer_comparison, zscore_claims_per_bene, code_concentration_per_provider, volume_vs_median, kickback_premium, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, dbscan, low_entropy_billing, paid_per_claim_vs_median, high_risk_category
 
 **Estimated Recoverable Amount:** $1.1B
 
@@ -242,7 +236,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Kickback premium: pair rate=$3,256.13 vs median=$40.06 (81.3x), servicing=1932341898
 
-**Detection Methods:** Flagged by 7 of 10 analytical categories: gev_extreme_value, provider_share_per_code, month_over_month_spike, kickback_premium, code_concentration_per_provider, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 8 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, code_concentration_per_provider, kickback_premium, provider_share_per_code, iqr_outlier, gev_extreme_value, month_over_month_spike
 
 **Estimated Recoverable Amount:** $973.2M
 
@@ -261,9 +255,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 3,312,341
 - **Total Beneficiaries:** 621,736
 
-**Anomaly Description:** network_plus_volume: network+concentration signals, total categories=5
+**Anomaly Description:** DBSCAN noise/small_cluster: cluster=-1, total_paid=$1.1B
 
-**Detection Methods:** Flagged by 7 of 10 analytical categories: gev_extreme_value, provider_share_per_code, kickback_premium, composite_network_plus_volume, low_entropy_billing, dbscan, iqr_outlier
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, kickback_premium, provider_share_per_code, iqr_outlier, gev_extreme_value, dbscan, low_entropy_billing
 
 **Estimated Recoverable Amount:** $973.8M
 
@@ -282,9 +276,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 5,875,713
 - **Total Beneficiaries:** 264,344
 
-**Anomaly Description:** Flagged by 7 categories: crossref, domain, ml, network, peer, statistical, temporal, 9 methods, 47 findings
+**Anomaly Description:** Flagged by 6 categories: crossref, domain, ml, peer, statistical, temporal, 9 methods, 47 findings
 
-**Detection Methods:** Flagged by 11 of 10 analytical categories: gev_extreme_value, volume_vs_median, kickback_premium, yoy_growth, high_risk_category, low_entropy_billing, dbscan, iqr_outlier, composite_temporal_plus_statistical, composite_multi_signal, no_days_off
+**Detection Methods:** Flagged by 12 of 10 analytical categories: specialty_peer_comparison, no_days_off, volume_vs_median, kickback_premium, composite_multi_signal, iqr_outlier, composite_temporal_plus_statistical, yoy_growth, gev_extreme_value, dbscan, low_entropy_billing, high_risk_category
 
 **Estimated Recoverable Amount:** $911.6M
 
@@ -305,7 +299,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Transportation: rate_z=-0.3, cpb_ratio=23.6x, total=$31.4M
 
-**Detection Methods:** Flagged by 12 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, volume_vs_median, paid_per_claim_vs_median, kickback_premium, composite_network_plus_volume, code_concentration_per_provider, high_risk_category, low_entropy_billing, dbscan, iqr_outlier, zscore_claims_per_bene
+**Detection Methods:** Flagged by 13 of 10 analytical categories: specialty_peer_comparison, zscore_claims_per_bene, code_concentration_per_provider, volume_vs_median, state_peer_comparison, kickback_premium, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, dbscan, low_entropy_billing, paid_per_claim_vs_median, high_risk_category
 
 **Estimated Recoverable Amount:** $887.9M
 
@@ -326,7 +320,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Transportation: rate_z=-0.3, cpb_ratio=24.9x, total=$22.6M
 
-**Detection Methods:** Flagged by 10 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, volume_vs_median, paid_per_claim_vs_median, kickback_premium, high_risk_category, low_entropy_billing, dbscan, iqr_outlier, zscore_claims_per_bene
+**Detection Methods:** Flagged by 12 of 10 analytical categories: specialty_peer_comparison, zscore_claims_per_bene, volume_vs_median, state_peer_comparison, kickback_premium, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, dbscan, low_entropy_billing, paid_per_claim_vs_median, high_risk_category
 
 **Estimated Recoverable Amount:** $862.4M
 
@@ -347,7 +341,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Matched bene count (240183): 1396049987 ($1.0B) and 1750705364 ($12.4M)
 
-**Detection Methods:** Flagged by 12 of 10 analytical categories: gev_extreme_value, volume_vs_median, paid_per_claim_vs_median, covid_comparison, kickback_premium, yoy_growth, shared_bene_count, random_forest, lof, iqr_outlier, change_point_cusum, zscore_claims_per_bene
+**Detection Methods:** Flagged by 13 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, zscore_claims_per_bene, volume_vs_median, kickback_premium, shared_bene_count, random_forest, iqr_outlier, yoy_growth, gev_extreme_value, paid_per_claim_vs_median, lof, covid_comparison
 
 **Estimated Recoverable Amount:** $803.0M
 
@@ -368,7 +362,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 6 of 10 analytical categories: gev_extreme_value, month_over_month_spike, covid_comparison, yoy_growth, code_concentration_per_provider, iqr_outlier
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, code_concentration_per_provider, iqr_outlier, yoy_growth, gev_extreme_value, month_over_month_spike, covid_comparison
 
 **Estimated Recoverable Amount:** $765.1M
 
@@ -389,7 +383,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Transportation: rate_z=-0.3, cpb_ratio=20.4x, total=$13.2M
 
-**Detection Methods:** Flagged by 7 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, volume_vs_median, paid_per_claim_vs_median, code_concentration_per_provider, high_risk_category, iqr_outlier
+**Detection Methods:** Flagged by 9 of 10 analytical categories: specialty_peer_comparison, volume_vs_median, code_concentration_per_provider, state_peer_comparison, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, paid_per_claim_vs_median, high_risk_category
 
 **Estimated Recoverable Amount:** $753.7M
 
@@ -408,9 +402,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 22,162,533
 - **Total Beneficiaries:** 1,069,174
 
-**Anomaly Description:** Flagged by 5 categories: concentration, ml, network, statistical, temporal, 9 methods, 98 findings
+**Anomaly Description:** Flagged by 5 categories: concentration, ml, peer, statistical, temporal, 9 methods, 98 findings
 
-**Detection Methods:** Flagged by 14 of 10 analytical categories: gev_extreme_value, provider_share_per_code, month_over_month_spike, kickback_premium, address_cluster_flagged, yoy_growth, composite_network_plus_volume, composite_growth_plus_concentration, dbscan, lof, iqr_outlier, change_point_cusum, composite_multi_signal, composite_temporal_plus_statistical
+**Detection Methods:** Flagged by 14 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, kickback_premium, composite_multi_signal, provider_share_per_code, iqr_outlier, composite_temporal_plus_statistical, composite_growth_plus_concentration, yoy_growth, gev_extreme_value, address_cluster_flagged, dbscan, month_over_month_spike, lof
 
 **Estimated Recoverable Amount:** $674.8M
 
@@ -431,7 +425,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** ed_visit: 99285 ratio=100.0% vs peer median=16.7%, 101 high-level claims of 101 total
 
-**Detection Methods:** Flagged by 6 of 10 analytical categories: gev_extreme_value, paid_per_claim_vs_median, volume_vs_median, upcoding, zscore_paid_per_claim, iqr_outlier
+**Detection Methods:** Flagged by 7 of 10 analytical categories: zscore_paid_per_claim, volume_vs_median, state_peer_comparison, upcoding, iqr_outlier, gev_extreme_value, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $667.2M
 
@@ -452,7 +446,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 6 of 10 analytical categories: gev_extreme_value, volume_vs_median, paid_per_claim_vs_median, zscore_paid_per_claim, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 8 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, zscore_paid_per_claim, volume_vs_median, state_peer_comparison, iqr_outlier, gev_extreme_value, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $641.9M
 
@@ -473,7 +467,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Home Health: rate_z=-0.3, cpb_ratio=3.0x, total=$887.5M
 
-**Detection Methods:** Flagged by 6 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, volume_vs_median, code_concentration_per_provider, high_risk_category, iqr_outlier
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, code_concentration_per_provider, volume_vs_median, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, high_risk_category
 
 **Estimated Recoverable Amount:** $625.6M
 
@@ -494,7 +488,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 6 of 10 analytical categories: gev_extreme_value, paid_per_claim_vs_median, covid_comparison, yoy_growth, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, iqr_outlier, yoy_growth, gev_extreme_value, paid_per_claim_vs_median, covid_comparison
 
 **Estimated Recoverable Amount:** $595.8M
 
@@ -515,7 +509,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 5 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, volume_vs_median, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, volume_vs_median, state_peer_comparison, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value
 
 **Estimated Recoverable Amount:** $567.2M
 
@@ -534,7 +528,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 8 of 10 analytical categories: gev_extreme_value, volume_vs_median, covid_comparison, paid_per_claim_vs_median, month_over_month_spike, yoy_growth, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 10 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, volume_vs_median, state_peer_comparison, iqr_outlier, yoy_growth, gev_extreme_value, month_over_month_spike, paid_per_claim_vs_median, covid_comparison
 
 **Estimated Recoverable Amount:** $546.0M
 
@@ -553,7 +547,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Address cluster: 6 NPIs at 1391 S JONES BLVD, LAS VEGAS, NV, combined=$703.1M
 
-**Detection Methods:** Flagged by 7 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, paid_per_claim_vs_median, volume_vs_median, billing_only_provider, iqr_outlier, address_cluster_flagged
+**Detection Methods:** Flagged by 8 of 10 analytical categories: specialty_peer_comparison, billing_only_provider, volume_vs_median, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, address_cluster_flagged, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $512.6M
 
@@ -570,9 +564,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 2,755,271
 - **Total Beneficiaries:** 357,738
 
-**Anomaly Description:** 
+**Anomaly Description:** ABA cpb=7.4 vs state median=1.3 (5.8x), total=$438.2M
 
-**Detection Methods:** Flagged by 4 of 10 analytical categories: gev_extreme_value, iqr_outlier, paid_per_claim_vs_median, new_network_high_paid
+**Detection Methods:** Flagged by 5 of 10 analytical categories: aba_peer_cpb, iqr_outlier, new_network_high_paid, gev_extreme_value, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $500.4M
 
@@ -591,7 +585,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Behavioral Health: rate_z=0.0, cpb_ratio=4.1x, total=$417.9M
 
-**Detection Methods:** Flagged by 7 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, volume_vs_median, paid_per_claim_vs_median, high_risk_category, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 8 of 10 analytical categories: change_point_cusum, volume_vs_median, state_peer_comparison, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, paid_per_claim_vs_median, high_risk_category
 
 **Estimated Recoverable Amount:** $515.0M
 
@@ -610,7 +604,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** New relationship: $4.8M first month (2018-01), servicing=1508933862
 
-**Detection Methods:** Flagged by 8 of 10 analytical categories: gev_extreme_value, paid_per_claim_vs_median, volume_vs_median, new_relationship_high_volume, zscore_paid_per_claim, dbscan, iqr_outlier, zscore_claims_per_bene
+**Detection Methods:** Flagged by 10 of 10 analytical categories: specialty_peer_comparison, zscore_paid_per_claim, zscore_claims_per_bene, volume_vs_median, state_peer_comparison, iqr_outlier, new_relationship_high_volume, gev_extreme_value, dbscan, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $502.4M
 
@@ -627,9 +621,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 477,988
 - **Total Beneficiaries:** 391,060
 
-**Anomaly Description:** 
+**Anomaly Description:** K-means cluster 6: distance=25.94, mean_cluster_distance=5.34, ratio=4.9x
 
-**Detection Methods:** Flagged by 5 of 10 analytical categories: gev_extreme_value, provider_share_per_code, code_concentration_per_provider, hhi_per_code, iqr_outlier
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, code_concentration_per_provider, kmeans, provider_share_per_code, iqr_outlier, gev_extreme_value, hhi_per_code
 
 **Estimated Recoverable Amount:** $486.3M
 
@@ -648,7 +642,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Matched bene count (106190): 1073730347 ($490.7M) and 1326007915 ($5.8M)
 
-**Detection Methods:** Flagged by 4 of 10 analytical categories: gev_extreme_value, iqr_outlier, code_concentration_per_provider, shared_bene_count
+**Detection Methods:** Flagged by 5 of 10 analytical categories: specialty_peer_comparison, code_concentration_per_provider, shared_bene_count, iqr_outlier, gev_extreme_value
 
 **Estimated Recoverable Amount:** $487.1M
 
@@ -667,7 +661,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 6 of 10 analytical categories: gev_extreme_value, provider_share_per_code, reciprocal_billing, hhi_per_code, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, provider_share_per_code, iqr_outlier, gev_extreme_value, reciprocal_billing, hhi_per_code
 
 **Estimated Recoverable Amount:** $477.0M
 
@@ -686,7 +680,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 3 of 10 analytical categories: gev_extreme_value, iqr_outlier, reciprocal_billing
+**Detection Methods:** Flagged by 4 of 10 analytical categories: iqr_outlier, specialty_peer_comparison, reciprocal_billing, gev_extreme_value
 
 **Estimated Recoverable Amount:** $473.1M
 
@@ -703,9 +697,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 11,019,261
 - **Total Beneficiaries:** 8,541,239
 
-**Anomaly Description:** IsolationForest high_volume: anomaly_score=0.752, top_features=[num_servicing_npis, max_single_month_paid, total_paid]
+**Anomaly Description:** IsolationForest high_volume: anomaly_score=0.750, top_features=[num_servicing_npis, max_single_month_paid, total_paid]
 
-**Detection Methods:** Flagged by 9 of 10 analytical categories: gev_extreme_value, billing_fan_out, volume_vs_median, paid_per_claim_vs_median, isolation_forest, address_cluster_flagged, iqr_outlier, change_point_cusum, kmeans
+**Detection Methods:** Flagged by 10 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, isolation_forest, volume_vs_median, state_peer_comparison, iqr_outlier, gev_extreme_value, address_cluster_flagged, billing_fan_out, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $447.0M
 
@@ -724,7 +718,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 5 of 10 analytical categories: gev_extreme_value, volume_vs_median, reciprocal_billing, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 6 of 10 analytical categories: change_point_cusum, specialty_peer_comparison, volume_vs_median, iqr_outlier, gev_extreme_value, reciprocal_billing
 
 **Estimated Recoverable Amount:** $445.4M
 
@@ -743,7 +737,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 7 of 10 analytical categories: gev_extreme_value, volume_vs_median, paid_per_claim_vs_median, hhi_per_code, zscore_paid_per_claim, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 9 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, zscore_paid_per_claim, volume_vs_median, state_peer_comparison, iqr_outlier, gev_extreme_value, paid_per_claim_vs_median, hhi_per_code
 
 **Estimated Recoverable Amount:** $439.7M
 
@@ -762,7 +756,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 4 of 10 analytical categories: gev_extreme_value, iqr_outlier, change_point_cusum, yoy_growth
+**Detection Methods:** Flagged by 4 of 10 analytical categories: iqr_outlier, yoy_growth, gev_extreme_value, change_point_cusum
 
 **Estimated Recoverable Amount:** $440.7M
 
@@ -781,7 +775,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Address cluster: 54 NPIs at 1919 E THOMAS RD, PHOENIX, AZ, combined=$721.3M
 
-**Detection Methods:** Flagged by 5 of 10 analytical categories: gev_extreme_value, volume_vs_median, hhi_per_code, iqr_outlier, address_cluster_flagged
+**Detection Methods:** Flagged by 5 of 10 analytical categories: volume_vs_median, iqr_outlier, address_cluster_flagged, gev_extreme_value, hhi_per_code
 
 **Estimated Recoverable Amount:** $435.3M
 
@@ -800,7 +794,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Address cluster: 19 NPIs at 800 ROSE ST, LEXINGTON, KY, combined=$720.2M
 
-**Detection Methods:** Flagged by 5 of 10 analytical categories: gev_extreme_value, volume_vs_median, pharmacy_rate_outlier, iqr_outlier, address_cluster_flagged
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, volume_vs_median, state_peer_comparison, pharmacy_rate_outlier, iqr_outlier, gev_extreme_value, address_cluster_flagged
 
 **Estimated Recoverable Amount:** $427.3M
 
@@ -819,7 +813,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 7 of 10 analytical categories: gev_extreme_value, provider_share_per_code, volume_vs_median, yoy_growth, hhi_per_code, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 9 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, volume_vs_median, state_peer_comparison, provider_share_per_code, iqr_outlier, yoy_growth, gev_extreme_value, hhi_per_code
 
 **Estimated Recoverable Amount:** $415.5M
 
@@ -836,9 +830,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 3,556,445
 - **Total Beneficiaries:** 3,026,103
 
-**Anomaly Description:** New relationship: $4.5M first month (2018-01), servicing=1922178789
+**Anomaly Description:** Captive referral: 96.6% of $493.2M through servicing NPI 1922178789
 
-**Detection Methods:** Flagged by 8 of 10 analytical categories: gev_extreme_value, paid_per_claim_vs_median, volume_vs_median, captive_referral, new_relationship_high_volume, hhi_per_code, upcoding, iqr_outlier
+**Detection Methods:** Flagged by 9 of 10 analytical categories: volume_vs_median, state_peer_comparison, upcoding, iqr_outlier, new_relationship_high_volume, captive_referral, gev_extreme_value, paid_per_claim_vs_median, hhi_per_code
 
 **Estimated Recoverable Amount:** $387.9M
 
@@ -855,9 +849,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 4,656,205
 - **Total Beneficiaries:** 1,617,142
 
-**Anomaly Description:** Flagged by 6 categories: crossref, ml, network, peer, statistical, temporal, 12 methods, 61 findings
+**Anomaly Description:** Flagged by 6 categories: crossref, ml, network, peer, statistical, temporal, 13 methods, 78 findings
 
-**Detection Methods:** Flagged by 14 of 10 analytical categories: gev_extreme_value, composite_temporal_plus_statistical, composite_multi_signal, paid_per_claim_vs_median, volume_vs_median, new_network_high_paid, new_relationship_high_volume, low_entropy_billing, zscore_paid_per_claim, dbscan, iqr_outlier, change_point_cusum, zscore_claims_per_bene, no_days_off
+**Detection Methods:** Flagged by 16 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, zscore_paid_per_claim, zscore_claims_per_bene, volume_vs_median, state_peer_comparison, no_days_off, composite_multi_signal, iqr_outlier, new_relationship_high_volume, composite_temporal_plus_statistical, new_network_high_paid, gev_extreme_value, dbscan, low_entropy_billing, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $387.8M
 
@@ -874,9 +868,9 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 - **Total Claims:** 6,634,271
 - **Total Beneficiaries:** 5,639,593
 
-**Anomaly Description:** Address cluster: 24 NPIs at 1 PERKINS SQ, AKRON, OH, combined=$649.0M
+**Anomaly Description:** IsolationForest home_health_high: anomaly_score=0.770, top_features=[max_single_month_paid, num_codes, num_servicing_npis]
 
-**Detection Methods:** Flagged by 9 of 10 analytical categories: gev_extreme_value, billing_fan_out, volume_vs_median, paid_per_claim_vs_median, address_cluster_flagged, yoy_growth, zscore_paid_per_claim, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 11 of 10 analytical categories: change_point_cusum, isolation_forest, zscore_paid_per_claim, volume_vs_median, state_peer_comparison, iqr_outlier, yoy_growth, gev_extreme_value, address_cluster_flagged, billing_fan_out, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $378.7M
 
@@ -895,7 +889,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Behavioral Health: rate_z=7.4, cpb_ratio=0.2x, total=$184.5M
 
-**Detection Methods:** Flagged by 7 of 10 analytical categories: gev_extreme_value, paid_per_claim_vs_median, shared_bene_count, random_forest, high_risk_category, zscore_paid_per_claim, iqr_outlier
+**Detection Methods:** Flagged by 9 of 10 analytical categories: specialty_peer_comparison, zscore_paid_per_claim, state_peer_comparison, shared_bene_count, random_forest, iqr_outlier, gev_extreme_value, paid_per_claim_vs_median, high_risk_category
 
 **Estimated Recoverable Amount:** $375.7M
 
@@ -914,7 +908,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 10 of 10 analytical categories: gev_extreme_value, provider_share_per_code, month_over_month_spike, covid_comparison, yoy_growth, code_concentration_per_provider, hhi_per_code, december_spike, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 11 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, december_spike, code_concentration_per_provider, provider_share_per_code, iqr_outlier, yoy_growth, gev_extreme_value, month_over_month_spike, hhi_per_code, covid_comparison
 
 **Estimated Recoverable Amount:** $369.8M
 
@@ -933,7 +927,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Address cluster: 5 NPIs at 1706 E ELM ST, JEFFERSON CITY, MO, combined=$857.0M
 
-**Detection Methods:** Flagged by 7 of 10 analytical categories: gev_extreme_value, paid_per_claim_vs_median, address_cluster_flagged, zscore_paid_per_claim, billing_only_provider, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 7 of 10 analytical categories: change_point_cusum, zscore_paid_per_claim, billing_only_provider, iqr_outlier, gev_extreme_value, address_cluster_flagged, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $363.2M
 
@@ -952,7 +946,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 5 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, paid_per_claim_vs_median, volume_vs_median, iqr_outlier
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, volume_vs_median, state_peer_comparison, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $352.6M
 
@@ -971,7 +965,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 4 of 10 analytical categories: gev_extreme_value, iqr_outlier, claims_per_bene_vs_median, volume_vs_median
+**Detection Methods:** Flagged by 5 of 10 analytical categories: specialty_peer_comparison, volume_vs_median, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value
 
 **Estimated Recoverable Amount:** $348.1M
 
@@ -990,7 +984,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Matched bene count (157791): 1528281532 ($465.4M) and 1609143452 ($3.3M)
 
-**Detection Methods:** Flagged by 6 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, paid_per_claim_vs_median, volume_vs_median, shared_bene_count, iqr_outlier
+**Detection Methods:** Flagged by 9 of 10 analytical categories: specialty_peer_comparison, volume_vs_median, state_peer_comparison, kmeans, shared_bene_count, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $342.2M
 
@@ -1009,7 +1003,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** Behavioral Health: rate_z=0.1, cpb_ratio=4.3x, total=$321.8M
 
-**Detection Methods:** Flagged by 6 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, volume_vs_median, high_risk_category, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, volume_vs_median, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, high_risk_category
 
 **Estimated Recoverable Amount:** $330.4M
 
@@ -1028,7 +1022,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 5 of 10 analytical categories: gev_extreme_value, claims_per_bene_vs_median, paid_per_claim_vs_median, volume_vs_median, iqr_outlier
+**Detection Methods:** Flagged by 7 of 10 analytical categories: specialty_peer_comparison, volume_vs_median, state_peer_comparison, claims_per_bene_vs_median, iqr_outlier, gev_extreme_value, paid_per_claim_vs_median
 
 **Estimated Recoverable Amount:** $327.7M
 
@@ -1047,7 +1041,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 3 of 10 analytical categories: gev_extreme_value, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 3 of 10 analytical categories: iqr_outlier, gev_extreme_value, change_point_cusum
 
 **Estimated Recoverable Amount:** $306.9M
 
@@ -1066,7 +1060,7 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 **Anomaly Description:** 
 
-**Detection Methods:** Flagged by 5 of 10 analytical categories: gev_extreme_value, covid_comparison, yoy_growth, iqr_outlier, change_point_cusum
+**Detection Methods:** Flagged by 6 of 10 analytical categories: specialty_peer_comparison, change_point_cusum, iqr_outlier, yoy_growth, gev_extreme_value, covid_comparison
 
 **Estimated Recoverable Amount:** $308.8M
 
@@ -1076,143 +1070,143 @@ Provider identities (names, specialties, locations) were obtained from the NPPES
 
 | # | Provider | NPI | State | Estimated Impact | Methods | Primary Method |
 |---|----------|-----|-------|-----------------|---------|----------------|
-| 10914 | NEW YORK CITY HEALTH AND HOSPI | 1083715460 | NY | $293.6M | 2 | gev_extreme_value |
-| 10915 | ROCKY MOUNTAIN HOLDINGS, LLC | 1407855240 | AL | $279.7M | 2 | gev_extreme_value |
-| 10916 | NATIONAL MENTOR HEALTHCARE | 1114070752 | AZ | $274.6M | 2 | iqr_outlier |
-| 10917 | HHSC WIC PROGRAM | 1245765163 | TX | $238.4M | 2 | iqr_outlier |
-| 10918 | CAREGIVERS HOME HEALTH TX INC | 1689712481 | TX | $228.1M | 2 | iqr_outlier |
-| 10919 | HOME CARE DELIVERED, INC. | 1245239540 | VA | $210.5M | 2 | iqr_outlier |
-| 10920 | BAYADA HOME HEALTH CARE, INC. | 1003847807 | NJ | $208.3M | 2 | iqr_outlier |
-| 10921 | INDIANA UNIVERSITY HEALTH, INC | 1518032622 | IN | $177.9M | 2 | iqr_outlier |
-| 10922 | NORTHEAST KINGDOM HUMAN SERVIC | 1538292768 | VT | $164.9M | 2 | iqr_outlier |
-| 10923 | STARLIGHT HOME CARE AGENCY, IN | 1033370317 | NJ | $159.9M | 2 | iqr_outlier |
-| 10924 | LUTHERAN FAMILY SERVICES OF VI | 1104986017 | VA | $156.0M | 2 | iqr_outlier |
-| 10925 | CREATIVE WORKS | 1205962883 | ME | $138.8M | 2 | iqr_outlier |
-| 10926 | NEW MEXICO CONSUMER DIRECT PER | 1740376292 | NM | $125.2M | 2 | iqr_outlier |
-| 10927 | BYRAM HEALTHCARE CENTERS, INC. | 1215982913 | OR | $120.1M | 2 | iqr_outlier |
-| 10928 | BRANDI'S HOPE COMMUNITY SERVIC | 1528387859 | MS | $119.5M | 2 | iqr_outlier |
-| 10929 | OPTION 1 NUTRITION SOLUTIONS L | 1548347156 | CO | $116.6M | 2 | iqr_outlier |
-| 10930 | WASHINGTON COUNTY MENTAL HEALT | 1710901939 | VT | $120.3M | 2 | iqr_outlier |
-| 10931 | CITY OF PHOENIX ARIZONA | 1982781571 | AZ | $116.1M | 2 | iqr_outlier |
-| 10932 | ABLELIGHT INC. | 1417010604 | WI | $116.0M | 2 | iqr_outlier |
-| 10933 | REHABILITATION CENTERS, LLC | 1033201157 | MS | $105.2M | 2 | gev_extreme_value |
-| 10934 | HEALTH CARE & REHABILITATION S | 1376760835 | VT | $108.5M | 2 | iqr_outlier |
-| 10935 | NEW ENGLAND HOME CARE INC. | 1255333597 | CT | $107.9M | 2 | gev_extreme_value |
-| 10936 | NFI NORTH, INC | 1619148277 | NH | $101.4M | 2 | gev_extreme_value |
-| 10937 | PALOMAR HEALTH | 1457321317 | CA | $101.3M | 2 | iqr_outlier |
-| 10938 | SHARP CHULA VISTA MEDICAL CENT | 1396728630 | CA | $96.8M | 2 | iqr_outlier |
-| 10939 | SPURWINK SERVICES | 1295994804 | ME | $97.4M | 2 | zscore_paid_per_bene |
-| 10940 | LOUISIANA UNITED METHODIST CHI | 1588744015 | LA | $92.6M | 2 | code_concentration_per_provider |
-| 10941 | JUSTICE RESOURCE INSTITUTE, IN | 1093787095 | MA | $94.1M | 2 | iqr_outlier |
-| 10942 | D & D SERVICES INC | 1629080254 | OK | $94.4M | 2 | gev_extreme_value |
-| 10943 | DEVELOPMENTAL DISABILITIES CEN | 1831236009 | CO | $91.7M | 2 | gev_extreme_value |
-| 10944 | BANNER - UNIVERSITY MEDICAL CE | 1265820179 | AZ | $92.2M | 2 | iqr_outlier |
-| 10945 | NORTHWESTERN COUNSELING & SUPP | 1780708263 | VT | $95.0M | 2 | iqr_outlier |
-| 10946 | COVENANT CARE SERVICES, LLC | 1245370808 | MO | $92.2M | 2 | gev_extreme_value |
-| 10947 | FOUR COUNTY COMPREHENSIVE MENT | 1972545945 | IN | $88.6M | 2 | iqr_outlier |
-| 10948 | NORTH METRO COMMUNITY SERVICES | 1720125115 | CO | $88.1M | 2 | gev_extreme_value |
-| 10949 | REM EAST LLC | 1235569112 | MS | $86.2M | 2 | gev_extreme_value |
-| 10950 | PRECISION TOXICOLOGY, LLC | 1730466590 | CA | $85.8M | 2 | iqr_outlier |
-| 10951 | PEABODY RESIDENT SERVICES INC | 1124236724 | MA | $84.7M | 2 | gev_extreme_value |
-| 10952 | COUNTY OF CHESTERFIELD VIRGINI | 1336293000 | VA | $82.5M | 2 | gev_extreme_value |
-| 10953 | BYRAM HEALTHCARE CENTERS, INC. | 1609024397 | WA | $81.6M | 2 | gev_extreme_value |
-| 10954 | STATE OF ALABAMA DEPT OF FINAN | 1447335930 | AL | $83.6M | 2 | gev_extreme_value |
-| 10955 | 180 MEDICAL INC | 1639160708 | OK | $81.9M | 2 | iqr_outlier |
-| 10956 | HEGIRA HEALTH, INC | 1184684979 | MI | $78.0M | 2 | gev_extreme_value |
-| 10957 | CUMMINS BEHAVIORAL HEALTH SYST | 1740232115 | IN | $77.4M | 2 | gev_extreme_value |
-| 10958 | BOSWELL REGIONAL CENTER | 1861414781 | MS | $75.6M | 2 | iqr_outlier |
-| 10959 | GOOD NEIGHBOR ASSISTED LIVING  | 1609947845 | AZ | $75.2M | 2 | code_concentration_per_provider |
-| 10960 | MONMOUTH MEDICAL CENTER INC | 1609983790 | NJ | $75.1M | 2 | iqr_outlier |
-| 10961 | NORTHEAST BEHAVIORAL HEALTH CO | 1154302586 | MA | $74.7M | 2 | iqr_outlier |
-| 10962 | EDWARDS HEALTH CARE SERVICES,  | 1962731570 | KY | $73.5M | 2 | gev_extreme_value |
-| 10963 | LINCOLN BEHAVIORAL SERVICES | 1669451944 | MI | $71.7M | 2 | gev_extreme_value |
-| 10964 | EL MIRADOR INCORPORATED | 1942617600 | NM | $71.1M | 2 | gev_extreme_value |
-| 10965 | CREATIVE OPTIONS, LLC | 1245699461 | ME | $74.4M | 2 | gev_extreme_value |
-| 10966 | MOTIVATIONAL SERVICES INC | 1609983907 | ME | $74.3M | 2 | gev_extreme_value |
-| 10967 | VITRA HEALTH, INC. | 1073887246 | MA | $71.8M | 2 | gev_extreme_value |
-| 10968 | HURON AREA CENTER FOR INDEPEND | 1538203211 | SD | $72.5M | 2 | gev_extreme_value |
-| 10969 | LIFEMED ALASKA, LLC | 1871754473 | AK | $71.4M | 2 | gev_extreme_value |
-| 10970 | ORTHOFIX US LLC | 1235136060 | TX | $71.6M | 2 | hhi_per_code |
-| 10971 | MA DEPARTMENT OF YOUTH SERVICE | 1003038365 | MA | $70.2M | 2 | gev_extreme_value |
-| 10972 | GOODWILL INDUSTRIES OF NORTHER | 1588785463 | ME | $71.4M | 2 | gev_extreme_value |
-| 10973 | COUNTY OF LOS ANGELES | 1407878150 | CA | $69.3M | 2 | hhi_per_code |
-| 10974 | CAMDEN COUNTY PARTNERSHIP FOR  | 1396887543 | NJ | $68.9M | 2 | gev_extreme_value |
-| 10975 | CENTRAL STATE COMMUNITY SERVIC | 1245459460 | MI | $65.5M | 2 | gev_extreme_value |
-| 10976 | HOMETOWN OXYGEN CHARLOTTE LLC | 1871738153 | NC | $66.9M | 2 | change_point_cusum |
-| 10977 | HELP AT HOME, LLC | 1790813095 | MO | $67.4M | 2 | gev_extreme_value |
-| 10978 | LANCASTER HOSPITAL CORPORATION | 1508856535 | CA | $65.0M | 2 | iqr_outlier |
-| 10979 | POSITIVE BEHAVIOR SUPPORTS | 1700024296 | FL | $65.6M | 2 | iqr_outlier |
-| 10980 | SENIORCARE EMERGENCY MEDICAL S | 1265542765 | NY | $64.1M | 2 | gev_extreme_value |
-| 10981 | WATTS HEALTHCARE CORPORATION | 1477649119 | CA | $63.7M | 2 | gev_extreme_value |
-| 10982 | DAP HEALTH, INC. | 1619036514 | CA | $63.4M | 2 | gev_extreme_value |
-| 10983 | ALTERNATIVE SERVICES-NE, INC. | 1114152089 | ME | $64.8M | 2 | gev_extreme_value |
-| 10984 | MASSACHUSETTS REHABILITATION C | 1326250150 | MA | $62.7M | 2 | iqr_outlier |
-| 10985 | HEALTHY LIVING MEDICAL SUPPLY, | 1033142948 | MI | $61.0M | 2 | gev_extreme_value |
-| 10986 | CAPITAL HEALTH SYSTEM, INC. | 1073516183 | NJ | $62.8M | 2 | iqr_outlier |
-| 10987 | BERGEN'S PROMISE, INC. | 1083738868 | NJ | $62.7M | 2 | gev_extreme_value |
-| 10988 | SHALOM HOUSE, INC. | 1992702955 | ME | $64.3M | 2 | gev_extreme_value |
-| 10989 | LINX COMMUNITY SERVICE, LLC | 1891293056 | WV | $61.1M | 2 | code_concentration_per_provider |
-| 10990 | WILLOWS WAY, INC. | 1275654923 | MO | $62.7M | 2 | gev_extreme_value |
-| 10991 | RESPIRATORY TECHNOLOGIES, INC. | 1962459537 | MN | $61.3M | 2 | code_concentration_per_provider |
-| 10992 | DUNGARVIN NEW MEXICO LLC | 1033288626 | NM | $60.4M | 2 | gev_extreme_value |
-| 10993 | NISHNA PRODUCTIONS, INC. | 1265526248 | IA | $60.3M | 2 | gev_extreme_value |
+| 15584 | NEW YORK CITY HEALTH AND HOSPI | 1083715460 | NY | $293.6M | 2 | gev_extreme_value |
+| 15585 | ROCKY MOUNTAIN HOLDINGS, LLC | 1407855240 | AL | $279.7M | 2 | gev_extreme_value |
+| 15586 | NEW MEXICO CONSUMER DIRECT PER | 1740376292 | NM | $125.2M | 2 | iqr_outlier |
+| 15587 | CITY OF PHOENIX ARIZONA | 1982781571 | AZ | $116.1M | 2 | gev_extreme_value |
+| 15588 | WAYPOINT MAINE, INC. | 1649495110 | ME | $100.8M | 2 | specialty_peer_comparison |
+| 15589 | D & D SERVICES INC | 1629080254 | OK | $94.4M | 2 | gev_extreme_value |
+| 15590 | RUTGERS HEALTH - UNIVERSITY BE | 1942217054 | NJ | $94.1M | 2 | specialty_peer_comparison |
+| 15591 | AMERICAN MEDICAL RESPONSE OF C | 1043243538 | CT | $93.1M | 2 | iqr_outlier |
+| 15592 | NATIONAL CHILDREN'S CENTER, IN | 1700099959 | DC | $88.0M | 2 | specialty_peer_comparison |
+| 15593 | ST. JOHN'S COMMUNITY SERVICES- | 1780806828 | DC | $85.7M | 2 | gev_extreme_value |
+| 15594 | COMMUNITY LIVING SERVICES, INC | 1326657602 | ND | $84.4M | 2 | specialty_peer_comparison |
+| 15595 | CAPITAL CARE, INC | 1366527111 | MD | $84.3M | 2 | specialty_peer_comparison |
+| 15596 | PEABODY RESIDENT SERVICES INC | 1124236724 | MA | $84.7M | 2 | gev_extreme_value |
+| 15597 | 180 MEDICAL INC | 1639160708 | OK | $81.9M | 2 | iqr_outlier |
+| 15598 | BREWSTER AMBULANCE SERVICE INC | 1760707582 | MA | $77.6M | 2 | gev_extreme_value |
+| 15599 | GOOD NEIGHBOR ASSISTED LIVING  | 1609947845 | AZ | $75.2M | 2 | code_concentration_per_provider |
+| 15600 | PORT RESOURCES | 1053467779 | ME | $76.7M | 2 | gev_extreme_value |
+| 15601 | GREEN RIVER REGIONAL MENTAL HE | 1629134663 | KY | $73.7M | 2 | specialty_peer_comparison |
+| 15602 | COMMUNITY OPTIONS FOR RESIDENT | 1356951503 | ND | $71.8M | 2 | specialty_peer_comparison |
+| 15603 | EL MIRADOR INCORPORATED | 1942617600 | NM | $71.1M | 2 | gev_extreme_value |
+| 15604 | VITRA HEALTH, INC. | 1073887246 | MA | $71.8M | 2 | gev_extreme_value |
+| 15605 | LIFEMED ALASKA, LLC | 1871754473 | AK | $71.4M | 2 | gev_extreme_value |
+| 15606 | SUPPORT SERVICES OF VIRGINIA,  | 1487747135 | VA | $69.5M | 2 | specialty_peer_comparison |
+| 15607 | CENTRAL STATE COMMUNITY SERVIC | 1245459460 | MI | $65.5M | 2 | gev_extreme_value |
+| 15608 | HOMETOWN OXYGEN CHARLOTTE LLC | 1871738153 | NC | $66.9M | 2 | gev_extreme_value |
+| 15609 | HELP AT HOME, LLC | 1790813095 | MO | $67.4M | 2 | gev_extreme_value |
+| 15610 | FOREVER CARE DBA INDEPENDENT O | 1033275755 | KY | $65.2M | 2 | gev_extreme_value |
+| 15611 | SUPPORT SOLUTIONS INC | 1235299496 | ME | $67.6M | 2 | gev_extreme_value |
+| 15612 | LANCASTER HOSPITAL CORPORATION | 1508856535 | CA | $65.0M | 2 | iqr_outlier |
+| 15613 | SENIORCARE EMERGENCY MEDICAL S | 1265542765 | NY | $64.1M | 2 | gev_extreme_value |
+| 15614 | WHOLISTIC SERVICES, INC. | 1083883243 | DC | $63.3M | 2 | specialty_peer_comparison |
+| 15615 | WATTS HEALTHCARE CORPORATION | 1477649119 | CA | $63.7M | 2 | gev_extreme_value |
+| 15616 | ALTERNATIVE SERVICES-NE, INC. | 1114152089 | ME | $64.8M | 2 | gev_extreme_value |
+| 15617 | MASSACHUSETTS REHABILITATION C | 1326250150 | MA | $62.7M | 2 | iqr_outlier |
+| 15618 | HEALTHY LIVING MEDICAL SUPPLY, | 1033142948 | MI | $61.0M | 2 | gev_extreme_value |
+| 15619 | RESPIRATORY TECHNOLOGIES, INC. | 1962459537 | MN | $61.3M | 2 | gev_extreme_value |
+| 15620 | ELM WASECA COUNTY SLS INC | 1770625477 | MN | $61.0M | 2 | specialty_peer_comparison |
+| 15621 | CAPITOL COUNTY CHILDREN'S COLL | 1942350020 | NJ | $61.1M | 2 | specialty_peer_comparison |
+| 15622 | PRIDE INC. | 1356453484 | ND | $59.3M | 2 | specialty_peer_comparison |
+| 15623 | CG OF TENNESSEE, LLC | 1306364054 | TN | $60.4M | 2 | gev_extreme_value |
+| 15624 | LIFESKILLS, INC. | 1669401816 | KY | $58.7M | 2 | specialty_peer_comparison |
+| 15625 | JHC OPERATIONS, LLC | 1518004233 | TX | $59.9M | 2 | gev_extreme_value |
+| 15626 | COMPLETE HEALTH CARE SOLUTIONS | 1134271885 | MO | $58.4M | 2 | gev_extreme_value |
+| 15627 | HUMAN SERVICES BOARD SERVING N | 1952423808 | WI | $57.6M | 2 | gev_extreme_value |
+| 15628 | BRIDGEWAY BEHAVIORAL HEALTH SE | 1184748535 | NJ | $56.7M | 2 | gev_extreme_value |
+| 15629 | OPTUM PHARMACY 702, LLC | 1083045140 | IN | $55.1M | 2 | specialty_peer_comparison |
+| 15630 | SAGUARO FOUNDATION | 1992998348 | AZ | $56.1M | 2 | gev_extreme_value |
+| 15631 | CITY OF LAS VEGAS | 1336290964 | NV | $55.2M | 2 | gev_extreme_value |
+| 15632 | MAYO CLINIC AMBULANCE | 1659397164 | MN | $55.5M | 2 | gev_extreme_value |
+| 15633 | ASAP HOME HEALTH, INC | 1003969114 | CA | $56.3M | 2 | gev_extreme_value |
+| 15634 | DIABETES MANAGEMENT AND SUPPLI | 1164537452 | LA | $54.9M | 2 | gev_extreme_value |
+| 15635 | STC OPCO LLC | 1194368167 | PA | $55.3M | 2 | gev_extreme_value |
+| 15636 | FAIRFAX COUNTY, VIRGINIA | 1154356244 | VA | $55.3M | 2 | gev_extreme_value |
+| 15637 | PERRYLEE HOME HEALTH CARE SERV | 1568591725 | TX | $55.9M | 2 | gev_extreme_value |
+| 15638 | ONE SOURCE MEDICAL GROUP LLC | 1366653545 | FL | $55.4M | 2 | specialty_peer_comparison |
+| 15639 | RAMSEY COUNTY COMMUNITY HUMAN  | 1811055957 | MN | $53.7M | 2 | gev_extreme_value |
+| 15640 | EASTER SEALS BLAKE FOUNDATION | 1548356207 | AZ | $54.0M | 2 | gev_extreme_value |
+| 15641 | NEW MEXICO DEPARTMENT OF HEALT | 1194886499 | NM | $52.0M | 2 | gev_extreme_value |
+| 15642 | MAXIM HEALTHCARE SERVICES, INC | 1306800172 | OH | $52.4M | 2 | gev_extreme_value |
+| 15643 | ELITE MEDICAL TRANSPORTATION L | 1710294368 | IL | $52.6M | 2 | gev_extreme_value |
+| 15644 | HOME DELIVERY INCONTINENT SUPP | 1649383084 | MO | $52.4M | 2 | gev_extreme_value |
+| 15645 | MAXIM HEALTHCARE SERVICES, INC | 1104920487 | VA | $50.4M | 2 | specialty_peer_comparison |
+| 15646 | FAIRFAX COUNTY, VIRGINIA | 1174558266 | VA | $50.3M | 2 | gev_extreme_value |
+| 15647 | MISSION MEDSTAFF, LLC | 1205163185 | NC | $50.4M | 2 | gev_extreme_value |
+| 15648 | THE CAPPER FOUNDATION EASTER S | 1629146329 | KS | $49.7M | 2 | gev_extreme_value |
+| 15649 | COUNSELING SERVICE OF ADDISON  | 1730218868 | VT | $51.3M | 2 | specialty_peer_comparison |
+| 15650 | BAYADA HOME HEALTH CARE, INC. | 1598042475 | PA | $48.8M | 2 | gev_extreme_value |
+| 15651 | UNITED COUNSELING SERVICE OF B | 1366579112 | VT | $51.0M | 2 | specialty_peer_comparison |
+| 15652 | PARSONS CHILD AND FAMILY CENTE | 1922171305 | NY | $49.0M | 2 | hhi_per_code |
+| 15653 | SOUNDVIEW MEDICAL SUPPLY, LLC | 1821013590 | WA | $48.7M | 2 | gev_extreme_value |
+| 15654 | STATE OF OKLAHOMA DEPT. OF HUM | 1669566576 | OK | $49.0M | 2 | gev_extreme_value |
+| 15655 | UNITED SEATING AND MOBILITY LL | 1487624193 | CO | $48.4M | 2 | gev_extreme_value |
+| 15656 | STATEWIDE HEALTHCARE SERVICES, | 1245368521 | MS | $48.2M | 2 | gev_extreme_value |
+| 15657 | DIGNITY COMMUNITY CARE | 1467560599 | CA | $48.7M | 2 | specialty_peer_comparison |
+| 15658 | NEW DAY RECOVERY LLC | 1881065712 | OH | $47.8M | 2 | gev_extreme_value |
+| 15659 | ALTERNATIVE MEDICAL HEALTHCARE | 1124249446 | FL | $48.5M | 2 | gev_extreme_value |
+| 15660 | COORDINATED FAMILY CARE | 1205988813 | NJ | $47.3M | 2 | gev_extreme_value |
+| 15661 | FORA HEALTH INC. | 1245378546 | OR | $46.0M | 2 | gev_extreme_value |
+| 15662 | YOUTH VILLAGES, INC. | 1356538383 | MS | $46.4M | 2 | gev_extreme_value |
+| 15663 | AMERICAN HEALTHCARE AFC LLC | 1255791349 | MA | $46.1M | 2 | gev_extreme_value |
 
 ## 5. Low-Confidence Findings
 
-An additional 560,889 providers were flagged at low confidence, representing $118.1B in potential recoverable payments. These findings warrant further investigation but do not meet the threshold for immediate referral.
+An additional 564,585 providers were flagged at low confidence, representing $93.1B in potential recoverable payments. These findings warrant further investigation but do not meet the threshold for immediate referral.
 
 | # | Provider | NPI | State | Impact | Method |
 |---|----------|-----|-------|--------|--------|
-| 1 | WAYPOINT MAINE, INC. | 1649495110 | ME | $100.8M | gev_extreme_value |
-| 2 | RUTGERS HEALTH - UNIVERSI | 1942217054 | NJ | $94.1M | gev_extreme_value |
-| 3 | KYPPEC,INC | 1114052057 | KY | $92.6M | gev_extreme_value |
-| 4 | NATIONAL CHILDREN'S CENTE | 1700099959 | DC | $88.0M | gev_extreme_value |
-| 5 | ST. JOHN'S COMMUNITY SERV | 1780806828 | DC | $85.7M | gev_extreme_value |
-| 6 | COMMUNITY LIVING SERVICES | 1326657602 | ND | $84.4M | gev_extreme_value |
-| 7 | CAPITAL CARE, INC | 1366527111 | MD | $84.3M | gev_extreme_value |
-| 8 | UAHSF NEONATOLOGY | 1619987302 | AL | $86.3M | gev_extreme_value |
-| 9 | CRAIG RESOURCES LLC | 1689699837 | KS | $81.0M | gev_extreme_value |
-| 10 | MGA HOME HEALTHCARE LLC | 1174546063 | AZ | $78.0M | gev_extreme_value |
-| 11 | BREWSTER AMBULANCE SERVIC | 1760707582 | MA | $77.6M | gev_extreme_value |
-| 12 | LIFE FLIGHT NETWORK LLC | 1386837367 | OR | $75.8M | gev_extreme_value |
-| 13 | REACH AIR MEDICAL SERVICE | 1134169535 | CA | $76.9M | gev_extreme_value |
-| 14 | PORT RESOURCES | 1053467779 | ME | $76.7M | gev_extreme_value |
-| 15 | MPS HEALTHCARE INC | 1689638488 | VA | $74.2M | gev_extreme_value |
-| 16 | GREEN RIVER REGIONAL MENT | 1629134663 | KY | $73.7M | gev_extreme_value |
-| 17 | RESCARE MINNESOTA, INC. | 1881946564 | MN | $72.9M | gev_extreme_value |
-| 18 | CCRI, INC | 1295870699 | MN | $72.2M | gev_extreme_value |
-| 19 | COMMUNITY OPTIONS FOR RES | 1356951503 | ND | $71.8M | gev_extreme_value |
-| 20 | NORTHEAST ARC INC | 1679570113 | MA | $70.1M | gev_extreme_value |
-| 21 | SUPPORT SERVICES OF VIRGI | 1487747135 | VA | $69.5M | gev_extreme_value |
-| 22 | FOREVER CARE DBA INDEPEND | 1033275755 | KY | $65.2M | gev_extreme_value |
-| 23 | SUPPORT SOLUTIONS INC | 1235299496 | ME | $67.6M | gev_extreme_value |
-| 24 | DEVELOPMENTAL SERVICES OF | 1275531295 | KS | $64.2M | gev_extreme_value |
-| 25 | WHOLISTIC SERVICES, INC. | 1083883243 | DC | $63.3M | gev_extreme_value |
-| 26 | ELM WASECA COUNTY SLS INC | 1770625477 | MN | $61.0M | gev_extreme_value |
-| 27 | CAPITOL COUNTY CHILDREN'S | 1942350020 | NJ | $61.1M | gev_extreme_value |
-| 28 | SUPERIOR AIR-GROUND AMBUL | 1336107838 | IL | $61.1M | gev_extreme_value |
-| 29 | DOCTORS MEDICAL CENTER OF | 1184654923 | CA | $60.9M | gev_extreme_value |
-| 30 | PRIDE INC. | 1356453484 | ND | $59.3M | gev_extreme_value |
-| 31 | STATEWIDE HEALTHCARE SERV | 1629199351 | MS | $59.5M | gev_extreme_value |
-| 32 | CG OF TENNESSEE, LLC | 1306364054 | TN | $60.4M | gev_extreme_value |
-| 33 | LIFESKILLS, INC. | 1669401816 | KY | $58.7M | gev_extreme_value |
-| 34 | Individual | 1184653388 |  | $52.3M | gev_extreme_value |
-| 35 | OPTUM PHARMACY 702, LLC | 1083045140 | IN | $55.1M | gev_extreme_value |
-| 36 | SAGUARO FOUNDATION | 1992998348 | AZ | $56.1M | gev_extreme_value |
-| 37 | CITY OF LAS VEGAS | 1336290964 | NV | $55.2M | gev_extreme_value |
-| 38 | DIABETES MANAGEMENT AND S | 1164537452 | LA | $54.9M | gev_extreme_value |
-| 39 | PREFERRED TOUCH HOME CARE | 1447522685 | FL | $56.7M | gev_extreme_value |
-| 40 | PERRYLEE HOME HEALTH CARE | 1568591725 | TX | $55.9M | gev_extreme_value |
-| 41 | SPECIALIZED COMMUNITY CAR | 1275651267 | VT | $57.1M | gev_extreme_value |
-| 42 | JED ADAM ENTERPRISES, LLC | 1598901100 | NV | $54.3M | gev_extreme_value |
-| 43 | ONE SOURCE MEDICAL GROUP  | 1366653545 | FL | $55.4M | gev_extreme_value |
-| 44 | RAMSEY COUNTY COMMUNITY H | 1811055957 | MN | $53.7M | gev_extreme_value |
-| 45 | EASTER SEALS BLAKE FOUNDA | 1548356207 | AZ | $54.0M | gev_extreme_value |
-| 46 | PHOENIX HOUSES OF LONG IS | 1174691281 | NY | $52.4M | gev_extreme_value |
-| 47 | SOUTHERN MS PLANNING AND  | 1568558161 | MS | $51.7M | gev_extreme_value |
-| 48 | COMMUNITY ALTERNATIVES VI | 1306252804 | VA | $51.8M | gev_extreme_value |
-| 49 | HOME DELIVERY INCONTINENT | 1649383084 | MO | $52.4M | gev_extreme_value |
-| 50 | ALL POINTE HOMECARE LLC | 1497078315 | CT | $52.7M | gev_extreme_value |
+| 1 | KYPPEC,INC | 1114052057 | KY | $92.6M | gev_extreme_value |
+| 2 | UAHSF NEONATOLOGY | 1619987302 | AL | $86.3M | gev_extreme_value |
+| 3 | CRAIG RESOURCES LLC | 1689699837 | KS | $81.0M | gev_extreme_value |
+| 4 | MGA HOME HEALTHCARE LLC | 1174546063 | AZ | $78.0M | gev_extreme_value |
+| 5 | LIFE FLIGHT NETWORK LLC | 1386837367 | OR | $75.8M | gev_extreme_value |
+| 6 | REACH AIR MEDICAL SERVICE | 1134169535 | CA | $76.9M | gev_extreme_value |
+| 7 | MPS HEALTHCARE INC | 1689638488 | VA | $74.2M | gev_extreme_value |
+| 8 | RESCARE MINNESOTA, INC. | 1881946564 | MN | $72.9M | gev_extreme_value |
+| 9 | CCRI, INC | 1295870699 | MN | $72.2M | gev_extreme_value |
+| 10 | NORTHEAST ARC INC | 1679570113 | MA | $70.1M | gev_extreme_value |
+| 11 | DEVELOPMENTAL SERVICES OF | 1275531295 | KS | $64.2M | gev_extreme_value |
+| 12 | SUPERIOR AIR-GROUND AMBUL | 1336107838 | IL | $61.1M | gev_extreme_value |
+| 13 | DOCTORS MEDICAL CENTER OF | 1184654923 | CA | $60.9M | gev_extreme_value |
+| 14 | STATEWIDE HEALTHCARE SERV | 1629199351 | MS | $59.5M | gev_extreme_value |
+| 15 | Individual | 1184653388 |  | $52.3M | gev_extreme_value |
+| 16 | PREFERRED TOUCH HOME CARE | 1447522685 | FL | $56.7M | gev_extreme_value |
+| 17 | SPECIALIZED COMMUNITY CAR | 1275651267 | VT | $57.1M | gev_extreme_value |
+| 18 | JED ADAM ENTERPRISES, LLC | 1598901100 | NV | $54.3M | gev_extreme_value |
+| 19 | PHOENIX HOUSES OF LONG IS | 1174691281 | NY | $52.4M | gev_extreme_value |
+| 20 | SOUTHERN MS PLANNING AND  | 1568558161 | MS | $51.7M | gev_extreme_value |
+| 21 | COMMUNITY ALTERNATIVES VI | 1306252804 | VA | $51.8M | gev_extreme_value |
+| 22 | ALL POINTE HOMECARE LLC | 1497078315 | CT | $52.7M | gev_extreme_value |
+| 23 | KWPH ENTERPRISES INC | 1598767501 | CA | $51.0M | gev_extreme_value |
+| 24 | ALABAMA DEPT. OF REHABILI | 1053489534 | AL | $51.3M | gev_extreme_value |
+| 25 | THRIVE BEHAVIORAL HEALTH, | 1386671535 | RI | $51.0M | gev_extreme_value |
+| 26 | OFFICE OF JUVENILE AFFAIR | 1477643104 | OK | $49.5M | gev_extreme_value |
+| 27 | LIFEQUEST | 1932254760 | SD | $49.9M | gev_extreme_value |
+| 28 | LIFE CENTERS OF KANSAS LL | 1851520464 | KS | $48.4M | gev_extreme_value |
+| 29 | MERCY AIR SERVICE, INC | 1700885548 | NV | $47.9M | gev_extreme_value |
+| 30 | CLASS LTD | 1902922891 | KS | $47.8M | gev_extreme_value |
+| 31 | AMERICAN MEDICAL RESPONSE | 1447200167 | OR | $47.1M | gev_extreme_value |
+| 32 | ROSEWOOD SERVICES, INC. | 1710032909 | KS | $47.6M | gev_extreme_value |
+| 33 | BENZER CO 1 LLC | 1043317969 | CO | $47.7M | gev_extreme_value |
+| 34 | NORTH COAST MEDICAL SUPPL | 1245259282 | CA | $47.2M | gev_extreme_value |
+| 35 | TOTAL CARE SERVICES, INC. | 1902028442 | DC | $45.9M | gev_extreme_value |
+| 36 | THE BRIDGE, INC. | 1831269315 | NY | $45.7M | gev_extreme_value |
+| 37 | LOVING CARE AGENCY, INC | 1225394588 | NJ | $45.8M | gev_extreme_value |
+| 38 | LONG ISLAND CENTER FOR IN | 1972628717 | NY | $45.5M | gev_extreme_value |
+| 39 | NURSECORE MANAGEMENT SERV | 1548204886 | NV | $45.0M | gev_extreme_value |
+| 40 | CAPE ATLANTIC INTEGRATED  | 1043350135 | NJ | $45.3M | gev_extreme_value |
+| 41 | COMPLETE HOME HEALTH, INC | 1114003985 | LA | $44.4M | gev_extreme_value |
+| 42 | HOSPICE OF CINCINNATI INC | 1598740011 | OH | $44.2M | gev_extreme_value |
+| 43 | LEGACY EMANUEL HOSPITAL & | 1831112358 | OR | $43.6M | gev_extreme_value |
+| 44 | AMBRY GENETICS CORPORATIO | 1861568784 | CA | $44.0M | gev_extreme_value |
+| 45 | NOVA CENTER OF THE OZARKS | 1811029440 | MO | $44.1M | gev_extreme_value |
+| 46 | BIG LAKES DEVELOPMENTAL C | 1275656035 | KS | $43.1M | gev_extreme_value |
+| 47 | COMMUNITY ENTRY SERVICES | 1386868867 | WY | $44.4M | gev_extreme_value |
+| 48 | FLAGSTAFF MEDICAL CENTER | 1518143205 | AZ | $43.2M | gev_extreme_value |
+| 49 | COMMUNITY HOPE WELLNESS C | 1922733641 | AZ | $42.3M | gev_extreme_value |
+| 50 | JOHNSON COUNTY DEVELOPMEN | 1568681518 | KS | $41.6M | gev_extreme_value |
 
 ## 6. Systemic Patterns
 
@@ -1228,11 +1222,11 @@ Several states show disproportionately high per-beneficiary spending for specifi
 
 The highest-risk procedure categories are:
 
-- **T1019** (Personal Care Services (15 min)): $122.7B total, 9,780 providers
-- **T1015** (Clinic Visit/Encounter): $49.2B total, 13,829 providers
-- **T2016** (Code T2016): $34.9B total, 1,761 providers
-- **99213** (Office Visit, Est Patient (Low)): $33.0B total, 164,075 providers
-- **S5125** (Attendant Care (15 min)): $31.3B total, 4,555 providers
+- **T1019** (Personal care services, per 15 minutes, not for an inpatient): $122.7B total, 9,780 providers
+- **T1015** (Clinic visit/encounter, all-inclusive): $49.2B total, 13,829 providers
+- **T2016** (Habilitation, residential, waiver; per diem): $34.9B total, 1,761 providers
+- **99213** (Code 99213): $33.0B total, 164,075 providers
+- **S5125** (Attendant care services; per 15 minutes): $31.3B total, 4,555 providers
 
 ### Temporal Trends
 
@@ -1251,14 +1245,14 @@ The network analysis identified several large billing networks with characterist
 | Metric | Value |
 |--------|-------|
 | Total Medicaid Spending Analyzed | $1093.6B |
-| Total Findings | 591,181 |
-| High-Confidence Findings | 10,913 |
-| Medium-Confidence Findings | 19,379 |
-| Low-Confidence Findings | 560,889 |
-| **Total Estimated Recoverable** | **$355.0B** |
-| High-Confidence Impact | $177.7B |
-| Medium-Confidence Impact | $59.1B |
-| Low-Confidence Impact | $118.1B |
+| Total Findings | 607,522 |
+| High-Confidence Findings | 15,583 |
+| Medium-Confidence Findings | 27,354 |
+| Low-Confidence Findings | 564,585 |
+| **Total Estimated Recoverable** | **$355.8B** |
+| High-Confidence Impact | $207.3B |
+| Medium-Confidence Impact | $55.3B |
+| Low-Confidence Impact | $93.1B |
 
 ![Findings by Category](charts/findings_by_category.png)
 
@@ -1274,16 +1268,16 @@ The network analysis identified several large billing networks with characterist
 
 The following providers should be referred to the HHS Office of Inspector General for investigation:
 
-1. **LOS ANGELES COUNTY DEPARTMENT OF MENTAL HEALTH** (NPI 1699703827, CA): $5.5B estimated improper payments. Flagged by 19 detection methods.
-2. **DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN** (NPI 1629436241, TN): $2.3B estimated improper payments. Flagged by 12 detection methods.
-3. **ALABAMA DEPARTMENT OF MENTAL HEALTH AND MENTAL RETARDATION** (NPI 1982757688, AL): $2.1B estimated improper payments. Flagged by 11 detection methods.
+1. **LOS ANGELES COUNTY DEPARTMENT OF MENTAL HEALTH** (NPI 1699703827, CA): $5.5B estimated improper payments. Flagged by 21 detection methods.
+2. **DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN** (NPI 1629436241, TN): $2.3B estimated improper payments. Flagged by 15 detection methods.
+3. **ALABAMA DEPARTMENT OF MENTAL HEALTH AND MENTAL RETARDATION** (NPI 1982757688, AL): $2.1B estimated improper payments. Flagged by 13 detection methods.
 4. **GUARDIANTRAC. LLC** (NPI 1710176151, MI): $1.3B estimated improper payments. Flagged by 15 detection methods.
-5. **DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN** (NPI 1356709976, TN): $1.4B estimated improper payments. Flagged by 10 detection methods.
-6. **CITY OF CHICAGO** (NPI 1376554592, IL): $1.2B estimated improper payments. Flagged by 9 detection methods.
-7. **DEPARTMENT OF DEVELOPMENTAL SERVICES** (NPI 1750504064, MA): $1.1B estimated improper payments. Flagged by 13 detection methods.
-8. **MAINS'L FLORIDA, INC.** (NPI 1932341898, MN): $973.2M estimated improper payments. Flagged by 7 detection methods.
+5. **DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN** (NPI 1356709976, TN): $1.4B estimated improper payments. Flagged by 11 detection methods.
+6. **CITY OF CHICAGO** (NPI 1376554592, IL): $1.2B estimated improper payments. Flagged by 10 detection methods.
+7. **DEPARTMENT OF DEVELOPMENTAL SERVICES** (NPI 1750504064, MA): $1.1B estimated improper payments. Flagged by 12 detection methods.
+8. **MAINS'L FLORIDA, INC.** (NPI 1932341898, MN): $973.2M estimated improper payments. Flagged by 8 detection methods.
 9. **DEPARTMENT OF HEALTH AND SENIOR SERVICES** (NPI 1326168840, NJ): $973.8M estimated improper payments. Flagged by 7 detection methods.
-10. **NEW PARTNERS, INC** (NPI 1083783013, NY): $911.6M estimated improper payments. Flagged by 11 detection methods.
+10. **NEW PARTNERS, INC** (NPI 1083783013, NY): $911.6M estimated improper payments. Flagged by 12 detection methods.
 
 ### Policy Changes
 
@@ -1317,6 +1311,12 @@ The following providers should be referred to the HHS Office of Inspector Genera
 ### Charts
 
 - `benfords_law.png`
+- `card1_monthly_spending.png`
+- `card2_top_procedures.png`
+- `card3_top_providers.png`
+- `chart1_monthly_spending_trend.png`
+- `chart2_top_procedures.png`
+- `chart3_top_providers.png`
 - `finding_F001_timeseries.png`
 - `finding_F002_timeseries.png`
 - `finding_F003_timeseries.png`
@@ -1338,6 +1338,11 @@ The following providers should be referred to the HHS Office of Inspector Genera
 - `finding_F019_timeseries.png`
 - `finding_F020_timeseries.png`
 - `findings_by_category.png`
+- `fraud_heatmap_aligned.png`
+- `fraud_heatmap_final.png`
+- `fraud_heatmap_merged.png`
+- `fraud_heatmap_v1.png`
+- `hhs_examples_full_page.png`
 - `lorenz_curve.png`
 - `monthly_spending_trend.png`
 - `network_graph_top3.png`

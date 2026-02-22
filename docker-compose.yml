@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: medicaid-fwa-pipeline
+    volumes:
+      - ./medicaid-provider-spending.csv:/app/medicaid-provider-spending.csv:ro
+      - ./medicaid.duckdb:/app/medicaid.duckdb
+      - ./reference_data:/app/reference_data
+      - ./output:/app/output
+      - ./logs:/app/logs
+    environment:
+      - MEDICAID_ENV=production
+      - DB_THREADS=16
+      - DB_MEMORY_LIMIT=96GB
+    deploy:
+      resources:
+        limits:
+          memory: 128G
+        reservations:
+          memory: 16G

@@ -1,501 +1,501 @@
 rank,npi,name,state,total_impact,confidence,num_methods,primary_method,actionable_notes
-1,1699703827,LOS ANGELES COUNTY DEPARTMENT OF MENTAL HEALTH,CA,5470622023.55,high,19,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Billed every day; Public entity; policy review likely
-2,1629436241,"DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN",TN,2310755441.91,high,12,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
-3,1982757688,ALABAMA DEPARTMENT OF MENTAL HEALTH AND MENTAL RETARDATION,AL,2143903298.03,high,11,composite_multi_signal,High confidence; 3+ independent signals; Public entity; policy review likely
-4,1356709976,"DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN",TN,1360272633.69,high,10,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
-5,1710176151,GUARDIANTRAC. LLC,MI,1316290874.63,high,15,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Billed every day; Sudden growth or stop pattern
-6,1376554592,CITY OF CHICAGO,IL,1159564616.53,high,9,composite_temporal_plus_statistical,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-7,1750504064,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,1077098762.38,high,13,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
-8,1326168840,DEPARTMENT OF HEALTH AND SENIOR SERVICES,NJ,973772850.97,high,7,composite_network_plus_volume,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
-9,1932341898,"MAINS'L FLORIDA, INC.",MN,973247194.73,high,7,kickback_premium,High confidence; 3+ independent signals; Sudden growth or stop pattern
-10,1083783013,"NEW PARTNERS, INC",NY,911568858.38,high,11,composite_multi_signal,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
-11,1518096411,COMMONWEALTH OF MASSACHUSETS,MA,887860902.90,high,12,high_risk_category,High confidence; 3+ independent signals; Network or middleman billing pattern
-12,1134250475,COMMONWEALTH OF MASS-DDS,MA,862379277.84,high,10,high_risk_category,High confidence; 3+ independent signals
-13,1396049987,COMMUNITY ASSISTANCE RESOURCES & EXTENDED SERVICES INC,NY,802978391.72,high,12,shared_bene_count,High confidence; 3+ independent signals; Sudden growth or stop pattern
-14,1124494059,TENNESSEE DEPARTMENT OF CHILDREN'S SERVICES,TN,765081317.55,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-15,1245354000,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,753672172.01,high,7,high_risk_category,High confidence; 3+ independent signals
-16,1538649983,CONSUMER DIRECT CARE NETWORK VIRGINIA,MT,674831383.69,high,14,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-17,1104963347,COUNTY OF ORANGE,CA,667219214.94,high,6,upcoding,High confidence; 3+ independent signals; Implausible volume or upcoding signal; Public entity; policy review likely
-18,1043386659,COUNTY OF SACRAMENTO,CA,641858065.67,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-19,1124304621,"PUBLIC PARTNERSHIPS-COLORADO, INC.",MA,625576846.93,high,6,high_risk_category,High confidence; 3+ independent signals; Public entity; policy review likely
-20,1306875695,"YOUTH VILLAGES, INC.",TN,595778624.47,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-21,1720145378,ACUMEN FISCAL AGENT LLC,AZ,567186839.52,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-22,1952346876,"AOC TX, LLC",TX,545994209.31,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-23,1720121106,"BANCROFT, A NEW JERSEY NONPROFIT CORPORATION",NJ,515043587.36,high,7,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
-24,1780045542,NV ST DV MH DS DESERT DEV CENTER,NV,512611425.03,high,7,address_cluster_flagged,High confidence; 3+ independent signals; Network or middleman billing pattern
-25,1417099789,CITY & COUNTY OF SAN FRANCISCO,CA,502376163.68,high,8,new_relationship_high_volume,High confidence; 3+ independent signals; Public entity; policy review likely
-26,1053641498,CENTRIA HEALTHCARE LLC,MI,500409741.44,high,4,iqr_outlier,High confidence; 3+ independent signals
-27,1073730347,MA-DEPARTMENT OF SOCIAL SERVICES-REHAB,MA,487108145.61,high,4,shared_bene_count,High confidence; 3+ independent signals; Public entity; policy review likely
-28,1164535274,ZOLL SERVICES LLC,PA,486279019.99,high,5,hhi_per_code,High confidence; 3+ independent signals
-29,1558672279,"NATERA, INC.",CA,476952884.34,high,6,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-30,1881708899,SHIELD CALIFORNIA HEALTH CARE CENTER INC,CA,473066885.12,high,3,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
-31,1134152986,NATIONWIDE CHILDREN'S HOSPITAL,OH,447001335.66,high,9,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-32,1275849283,"DAP HEALTH, INC.",CA,445418727.33,high,5,change_point_cusum,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+1,1699703827,LOS ANGELES COUNTY DEPARTMENT OF MENTAL HEALTH,CA,5470622023.55,high,21,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Billed every day; Public entity; policy review likely
+2,1629436241,"DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN",TN,2310755441.91,high,15,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
+3,1982757688,ALABAMA DEPARTMENT OF MENTAL HEALTH AND MENTAL RETARDATION,AL,2143903298.03,high,13,composite_multi_signal,High confidence; 3+ independent signals; Public entity; policy review likely
+4,1356709976,"DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN",TN,1360272633.69,high,11,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
+5,1710176151,GUARDIANTRAC. LLC,MI,1316290874.63,high,15,composite_multi_signal,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
+6,1376554592,CITY OF CHICAGO,IL,1159564616.53,high,10,composite_temporal_plus_statistical,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+7,1750504064,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,1077098762.38,high,12,high_risk_category,High confidence; 3+ independent signals; Public entity; policy review likely
+8,1326168840,DEPARTMENT OF HEALTH AND SENIOR SERVICES,NJ,973772850.97,high,7,dbscan,High confidence; 3+ independent signals; Public entity; policy review likely
+9,1932341898,"MAINS'L FLORIDA, INC.",MN,973247194.73,high,8,kickback_premium,High confidence; 3+ independent signals; Sudden growth or stop pattern
+10,1083783013,"NEW PARTNERS, INC",NY,911568858.38,high,12,composite_multi_signal,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
+11,1518096411,COMMONWEALTH OF MASSACHUSETS,MA,887860902.90,high,13,high_risk_category,High confidence; 3+ independent signals
+12,1134250475,COMMONWEALTH OF MASS-DDS,MA,862379277.84,high,12,high_risk_category,High confidence; 3+ independent signals
+13,1396049987,COMMUNITY ASSISTANCE RESOURCES & EXTENDED SERVICES INC,NY,802978391.72,high,13,shared_bene_count,High confidence; 3+ independent signals; Sudden growth or stop pattern
+14,1124494059,TENNESSEE DEPARTMENT OF CHILDREN'S SERVICES,TN,765081317.55,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+15,1245354000,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,753672172.01,high,9,high_risk_category,High confidence; 3+ independent signals
+16,1538649983,CONSUMER DIRECT CARE NETWORK VIRGINIA,MT,674831383.69,high,14,composite_multi_signal,High confidence; 3+ independent signals; Sudden growth or stop pattern
+17,1104963347,COUNTY OF ORANGE,CA,667219214.94,high,7,upcoding,High confidence; 3+ independent signals; Implausible volume or upcoding signal; Public entity; policy review likely
+18,1043386659,COUNTY OF SACRAMENTO,CA,641858065.67,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+19,1124304621,"PUBLIC PARTNERSHIPS-COLORADO, INC.",MA,625576846.93,high,7,high_risk_category,High confidence; 3+ independent signals; Public entity; policy review likely
+20,1306875695,"YOUTH VILLAGES, INC.",TN,595778624.47,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+21,1720145378,ACUMEN FISCAL AGENT LLC,AZ,567186839.52,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+22,1952346876,"AOC TX, LLC",TX,545994209.31,high,10,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+23,1720121106,"BANCROFT, A NEW JERSEY NONPROFIT CORPORATION",NJ,515043587.36,high,8,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
+24,1780045542,NV ST DV MH DS DESERT DEV CENTER,NV,512611425.03,high,8,address_cluster_flagged,High confidence; 3+ independent signals; Network or middleman billing pattern
+25,1417099789,CITY & COUNTY OF SAN FRANCISCO,CA,502376163.68,high,10,new_relationship_high_volume,High confidence; 3+ independent signals; Public entity; policy review likely
+26,1053641498,CENTRIA HEALTHCARE LLC,MI,500409741.44,high,5,aba_peer_cpb,High confidence; 3+ independent signals
+27,1073730347,MA-DEPARTMENT OF SOCIAL SERVICES-REHAB,MA,487108145.61,high,5,shared_bene_count,High confidence; 3+ independent signals; Public entity; policy review likely
+28,1164535274,ZOLL SERVICES LLC,PA,486279019.99,high,7,kmeans,High confidence; 3+ independent signals
+29,1558672279,"NATERA, INC.",CA,476952884.34,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+30,1881708899,SHIELD CALIFORNIA HEALTH CARE CENTER INC,CA,473066885.12,high,4,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern
+31,1134152986,NATIONWIDE CHILDREN'S HOSPITAL,OH,447001335.66,high,10,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+32,1275849283,"DAP HEALTH, INC.",CA,445418727.33,high,6,change_point_cusum,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
 33,1932721834,"ARION CARE SOLUTIONS, LLC",AZ,440712652.57,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-34,1780630608,RECTOR & VISITORS OF THE UNIVERSITY OF VIRGINIA,VA,439701083.46,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+34,1780630608,RECTOR & VISITORS OF THE UNIVERSITY OF VIRGINIA,VA,439701083.46,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
 35,1760480503,PHOENIX CHILDREN'S HOSPITAL,AZ,435255346.19,high,5,address_cluster_flagged,High confidence; 3+ independent signals
-36,1518911338,UNIVERSITY OF KENTUCKY,KY,427258108.71,high,5,address_cluster_flagged,High confidence; 3+ independent signals; Public entity; policy review likely
-37,1801027404,"CONSUMER DIRECTED SERVICES IN TEXAS, INC.",TX,415505020.13,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-38,1184779332,SCOTTISH RITE CHILDREN'S MEDICAL CENTER,GA,387941198.32,high,8,new_relationship_high_volume,High confidence; 3+ independent signals; Implausible volume or upcoding signal
-39,1528263910,COUNTY OF SANTA CLARA,CA,387812060.05,high,14,composite_multi_signal,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern; Public entity; policy review likely
-40,1861506560,CHILDREN'S HOSPITAL MEDICAL CENTER OF AKRON,OH,378739452.32,high,9,address_cluster_flagged,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-41,1063436723,"WALL RESIDENCES, LLC",VA,375708244.34,high,7,high_risk_category,High confidence; 3+ independent signals
-42,1114931391,TEXAS DEPARTMENT OF STATE HEALTH,TX,369781560.58,high,10,hhi_per_code,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+36,1518911338,UNIVERSITY OF KENTUCKY,KY,427258108.71,high,7,address_cluster_flagged,High confidence; 3+ independent signals; Public entity; policy review likely
+37,1801027404,"CONSUMER DIRECTED SERVICES IN TEXAS, INC.",TX,415505020.13,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+38,1184779332,SCOTTISH RITE CHILDREN'S MEDICAL CENTER,GA,387941198.32,high,9,captive_referral,High confidence; 3+ independent signals; Implausible volume or upcoding signal
+39,1528263910,COUNTY OF SANTA CLARA,CA,387812060.05,high,16,composite_multi_signal,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern; Public entity; policy review likely
+40,1861506560,CHILDREN'S HOSPITAL MEDICAL CENTER OF AKRON,OH,378739452.33,high,11,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+41,1063436723,"WALL RESIDENCES, LLC",VA,375708244.34,high,9,high_risk_category,High confidence; 3+ independent signals
+42,1114931391,TEXAS DEPARTMENT OF STATE HEALTH,TX,369781560.58,high,11,hhi_per_code,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
 43,1447886288,STATE OF MISSOURI,MO,363233053.45,high,7,address_cluster_flagged,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
-44,1023140498,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,352577622.02,high,5,iqr_outlier,High confidence; 3+ independent signals
-45,1942339825,COMMONWEALTH OF MASSACHUSETTS,MA,348052666.07,high,4,iqr_outlier,High confidence; 3+ independent signals
-46,1528281532,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,342161747.93,high,6,shared_bene_count,High confidence; 3+ independent signals; Public entity; policy review likely
-47,1821456526,COMMUNITY ACCESS UNLIMITED,NJ,330405002.04,high,6,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
-48,1982735643,COMMONWEALTH OF MASS-DDS,MA,327730824.72,high,5,iqr_outlier,High confidence; 3+ independent signals
-49,1982747192,STATE OF ALABAMA DEPARTMENT OF PUBLIC HEALTH,AL,313546146.22,high,7,captive_referral,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-50,1730451071,"COORDINATED BEHAVIORAL CARE, INC",NY,308822248.25,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-51,1184703415,"CONCEPTS OF INDEPENDENCE, INC.",NY,307105980.34,high,7,high_risk_category,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
-52,1316943566,"ACADIAN AMBULANCE SERVICE, INC.",LA,306913430.23,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-53,1801276738,"PALCO, INC.",AR,304254032.30,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-54,1417349622,THE COLLABORATIVE FOR CHILDREN AND FAMILIES,NY,301611959.87,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-55,1326111337,ALABAMA DEPARTMENT OF SENIOR SERVICES,AL,300283040.30,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+44,1023140498,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,352577622.02,high,7,iqr_outlier,High confidence; 3+ independent signals
+45,1942339825,COMMONWEALTH OF MASSACHUSETTS,MA,348052666.07,high,5,iqr_outlier,High confidence; 3+ independent signals
+46,1528281532,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,342161747.93,high,9,shared_bene_count,High confidence; 3+ independent signals; Public entity; policy review likely
+47,1821456526,COMMUNITY ACCESS UNLIMITED,NJ,330405002.04,high,7,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
+48,1982735643,COMMONWEALTH OF MASS-DDS,MA,327730824.72,high,7,iqr_outlier,High confidence; 3+ independent signals
+49,1982747192,STATE OF ALABAMA DEPARTMENT OF PUBLIC HEALTH,AL,313546146.22,high,8,captive_referral,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+50,1730451071,"COORDINATED BEHAVIORAL CARE, INC",NY,308822248.25,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+51,1184703415,"CONCEPTS OF INDEPENDENCE, INC.",NY,307105980.34,high,8,high_risk_category,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
+52,1316943566,"ACADIAN AMBULANCE SERVICE, INC.",LA,306913430.23,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+53,1801276738,"PALCO, INC.",AR,304254032.30,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+54,1417349622,THE COLLABORATIVE FOR CHILDREN AND FAMILIES,NY,301611959.87,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+55,1326111337,ALABAMA DEPARTMENT OF SENIOR SERVICES,AL,300283040.30,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
 56,1245414721,"CAREGIVER HOMES OF MASSACHUSETTS, INC",MA,298042183.05,high,3,gev_extreme_value,High confidence; 3+ independent signals
-57,1053688572,NORTH SHORE-LIJ MEDICAL PC,NY,298006865.81,high,6,upcoding,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal; Sudden growth or stop pattern
-58,1770795536,MISSISSIPPI DEPARTMENT OF REHABILITAION SVS,MS,294081421.23,high,3,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-59,1114058872,COMMONWEALTH OF MASS-DDS,MA,294040206.83,high,5,iqr_outlier,High confidence; 3+ independent signals
+57,1053688572,NORTH SHORE-LIJ MEDICAL PC,NY,298006865.81,high,7,upcoding,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal; Sudden growth or stop pattern
+58,1770795536,MISSISSIPPI DEPARTMENT OF REHABILITAION SVS,MS,294081421.23,high,4,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+59,1114058872,COMMONWEALTH OF MASS-DDS,MA,294040206.83,high,7,iqr_outlier,High confidence; 3+ independent signals
 60,1083715460,NEW YORK CITY HEALTH AND HOSPITALS CORPORATION,NY,293612753.98,medium,2,gev_extreme_value,Public entity; policy review likely
-61,1386773273,COMMONWEALTH OF MASSACHUSETTS,MA,289501276.30,high,4,iqr_outlier,High confidence; 3+ independent signals
+61,1386773273,COMMONWEALTH OF MASSACHUSETTS,MA,289501276.30,high,5,iqr_outlier,High confidence; 3+ independent signals
 62,1659769446,"BRIGHTVIEW, LLC",OH,288640667.17,high,8,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-63,1609099910,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,288146415.05,high,3,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-64,1679524961,"LEGACY COMMUNITY HEALTH SERVICES, INC",TX,285336910.40,high,8,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-65,1437175734,VIRGINIA COMMONWEALTH UNIVERSITY HEALTH SYSTEM AUTHORITY,VA,284182744.88,high,7,address_cluster_flagged,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-66,1720151046,PREMIER HOME HEALTH CARE SERVICES INC,NY,283099375.99,high,9,composite_multi_signal,High confidence; 3+ independent signals; Billed every day
+63,1609099910,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,288146415.05,high,4,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+64,1679524961,"LEGACY COMMUNITY HEALTH SERVICES, INC",TX,285336910.40,high,9,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+65,1437175734,VIRGINIA COMMONWEALTH UNIVERSITY HEALTH SYSTEM AUTHORITY,VA,284182744.88,high,9,address_cluster_flagged,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+66,1720151046,PREMIER HOME HEALTH CARE SERVICES INC,NY,283099375.99,high,10,composite_multi_signal,High confidence; 3+ independent signals; Billed every day
 67,1588157424,"BHPN, LLC",CA,282136147.58,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-68,1295869428,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,281166435.77,high,5,iqr_outlier,High confidence; 3+ independent signals
-69,1447641493,"CHHUNY, LLC",NY,280032276.09,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+68,1295869428,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,281166435.77,high,7,iqr_outlier,High confidence; 3+ independent signals
+69,1447641493,"CHHUNY, LLC",NY,280032276.09,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 70,1407855240,"ROCKY MOUNTAIN HOLDINGS, LLC",AL,279706343.54,medium,2,gev_extreme_value,Statistical outlier vs peers
-71,1770700221,HOWARD CENTER INC,VT,279029128.73,high,3,new_relationship_high_volume,High confidence; 3+ independent signals
-72,1124231782,"MOORE CENTER SERVICES, INC.",NH,277967582.02,high,4,gev_extreme_value,High confidence; 3+ independent signals
-73,1114070752,NATIONAL MENTOR HEALTHCARE,AZ,274644575.92,medium,2,iqr_outlier,Statistical outlier vs peers
-74,1518022763,"GRANITE BAY CARE, INC",ME,270306343.13,high,7,random_forest,High confidence; 3+ independent signals; Sudden growth or stop pattern
-75,1437156635,"EASTER SEALS DELAWARE & MARYLANDS EASTERN SHORE, INC",DE,270083295.81,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-76,1619334323,CONSUMER DIRECT DISTRICT OF COLUMBIA,MT,268879996.86,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+71,1770700221,HOWARD CENTER INC,VT,279029128.73,high,4,new_relationship_high_volume,High confidence; 3+ independent signals
+72,1124231782,"MOORE CENTER SERVICES, INC.",NH,277967582.02,high,5,gev_extreme_value,High confidence; 3+ independent signals
+73,1114070752,NATIONAL MENTOR HEALTHCARE,AZ,274644575.92,high,3,iqr_outlier,High confidence; 3+ independent signals
+74,1518022763,"GRANITE BAY CARE, INC",ME,270306343.13,high,8,random_forest,High confidence; 3+ independent signals; Sudden growth or stop pattern
+75,1437156635,"EASTER SEALS DELAWARE & MARYLANDS EASTERN SHORE, INC",DE,270083295.81,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+76,1619334323,CONSUMER DIRECT DISTRICT OF COLUMBIA,MT,268879996.86,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 77,1700120888,"HAMASPIK OF KINGS COUNTY, INC.",NY,264619312.85,high,8,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-78,1588659528,RHODE ISLAND HOSPITAL,RI,263940877.56,high,7,pharmacy_rate_outlier,High confidence; 3+ independent signals
-79,1700090834,LOS ANGELES COUNTY DEPARTMENT OF PUBLIC HEALTH,CA,263596939.35,high,8,dbscan,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
-80,1447382817,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,263343204.04,high,5,iqr_outlier,High confidence; 3+ independent signals
-81,1902023526,"CUMBERLAND RIVER BEHAVIORAL HEALTH, INC",KY,263174629.42,high,3,iqr_outlier,High confidence; 3+ independent signals
-82,1295827780,"DEGC ENTERPRISES (U.S.), INC.",FL,262374201.52,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-83,1629407069,"EXACT SCIENCES LABORATORIES, LLC",WI,259542859.59,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-84,1376609297,"TEMPUS UNLIMITED, INC.",MA,257083149.60,high,18,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Billed every day; Sudden growth or stop pattern
-85,1154480069,"DAP HEALTH, INC.",CA,255325129.73,high,5,change_point_cusum,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-86,1356334577,MINIMED DISTRIBUTION CORP.,CA,252867891.19,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-87,1205965258,COMMONWEALTH OF MASSACHUSETTS,MA,252686600.82,high,4,iqr_outlier,High confidence; 3+ independent signals
-88,1700947298,GATEWAYS COMMUNITY SERVICES,NH,251572221.30,high,6,specialty_mismatch,High confidence; 3+ independent signals; Sudden growth or stop pattern
-89,1790826600,STILLAGUAMISH TRIBE OF INDIANS,WA,250765229.35,high,7,gev_extreme_value,High confidence; 3+ independent signals
+78,1588659528,RHODE ISLAND HOSPITAL,RI,263940877.56,high,9,pharmacy_rate_outlier,High confidence; 3+ independent signals
+79,1700090834,LOS ANGELES COUNTY DEPARTMENT OF PUBLIC HEALTH,CA,263596939.35,high,9,dbscan,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
+80,1447382817,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,263343204.04,high,7,iqr_outlier,High confidence; 3+ independent signals
+81,1902023526,"CUMBERLAND RIVER BEHAVIORAL HEALTH, INC",KY,263174629.42,high,4,iqr_outlier,High confidence; 3+ independent signals
+82,1295827780,"DEGC ENTERPRISES (U.S.), INC.",FL,262374201.52,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+83,1629407069,"EXACT SCIENCES LABORATORIES, LLC",WI,259542859.59,high,8,hhi_per_code,High confidence; 3+ independent signals; Sudden growth or stop pattern
+84,1376609297,"TEMPUS UNLIMITED, INC.",MA,257083149.60,high,19,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Billed every day; Sudden growth or stop pattern
+85,1154480069,"DAP HEALTH, INC.",CA,255325129.73,high,6,change_point_cusum,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+86,1356334577,MINIMED DISTRIBUTION CORP.,CA,252867891.19,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+87,1205965258,COMMONWEALTH OF MASSACHUSETTS,MA,252686600.82,high,5,iqr_outlier,High confidence; 3+ independent signals
+88,1700947298,GATEWAYS COMMUNITY SERVICES,NH,251572221.30,high,7,specialty_mismatch,High confidence; 3+ independent signals; Sudden growth or stop pattern
+89,1790826600,STILLAGUAMISH TRIBE OF INDIANS,WA,250765229.35,high,8,gev_extreme_value,High confidence; 3+ independent signals
 90,1679525919,THE CLEVELAND CLINIC FOUNDATION,OH,247154650.89,high,16,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal; Sudden growth or stop pattern
-91,1245364595,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,243861096.13,high,5,iqr_outlier,High confidence; 3+ independent signals
-92,1851422661,COMMONWEALTH OF MASS-DDS,MA,243561755.10,high,7,iqr_outlier,High confidence; 3+ independent signals
-93,1245765163,HHSC WIC PROGRAM,TX,238382447.88,medium,2,iqr_outlier,Statistical outlier vs peers
-94,1396767430,"CENTERSTONE OF TENNESSEE, INC.",TN,236476479.30,high,4,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
-95,1679602502,COMMONWEALTH OF MASSACHUSETTS,MA,236456331.29,high,3,iqr_outlier,High confidence; 3+ independent signals
-96,1548212988,CHILDREN'S HOSPITAL MEDICAL CENTER,OH,234032344.93,high,7,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-97,1891765178,COOK CHILDREN'S MEDICAL CENTER,TX,232973242.57,high,9,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-98,1043348808,NORTON HOSPITALS INC,KY,232904237.40,high,4,iqr_outlier,High confidence; 3+ independent signals
-99,1730421553,ADDICTION RECOVERY CARE LLC,KY,232730824.15,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-100,1003039322,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,232195501.82,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+91,1245364595,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,243861096.13,high,7,iqr_outlier,High confidence; 3+ independent signals
+92,1851422661,COMMONWEALTH OF MASS-DDS,MA,243561755.10,high,9,iqr_outlier,High confidence; 3+ independent signals
+93,1245765163,HHSC WIC PROGRAM,TX,238382447.88,high,3,gev_extreme_value,High confidence; 3+ independent signals
+94,1396767430,"CENTERSTONE OF TENNESSEE, INC.",TN,236476479.30,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
+95,1679602502,COMMONWEALTH OF MASSACHUSETTS,MA,236456331.29,high,5,iqr_outlier,High confidence; 3+ independent signals
+96,1548212988,CHILDREN'S HOSPITAL MEDICAL CENTER,OH,234032344.93,high,8,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+97,1891765178,COOK CHILDREN'S MEDICAL CENTER,TX,232973242.57,high,11,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+98,1043348808,NORTON HOSPITALS INC,KY,232904237.40,high,5,iqr_outlier,High confidence; 3+ independent signals
+99,1730421553,ADDICTION RECOVERY CARE LLC,KY,232730824.15,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+100,1003039322,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,232195501.82,high,6,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
 101,1316158983,"A.W. HOLDINGS, LLC",IN,231968318.51,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-102,1194743013,CHILDREN'S HEALTH SYSTEM OF TEXAS,TX,231667970.98,high,9,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-103,1477643690,TEXAS CHILDREN'S HOSPITAL,TX,228788612.51,high,12,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal; Sudden growth or stop pattern
-104,1063431070,"JOHN F MURPHY HOMES, INC.",ME,228341135.12,high,3,iqr_outlier,High confidence; 3+ independent signals
-105,1689712481,CAREGIVERS HOME HEALTH TX INC,TX,228070792.67,medium,2,iqr_outlier,Statistical outlier vs peers
-106,1265802847,CARINGHOUSE PROJECTS,NJ,227711795.90,high,8,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
+102,1194743013,CHILDREN'S HEALTH SYSTEM OF TEXAS,TX,231667970.98,high,10,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+103,1477643690,TEXAS CHILDREN'S HOSPITAL,TX,228788612.51,high,14,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal; Sudden growth or stop pattern
+104,1063431070,"JOHN F MURPHY HOMES, INC.",ME,228341135.12,high,4,iqr_outlier,High confidence; 3+ independent signals
+105,1689712481,CAREGIVERS HOME HEALTH TX INC,TX,228070792.67,high,5,kmeans,High confidence; 3+ independent signals
+106,1265802847,CARINGHOUSE PROJECTS,NJ,227711795.90,high,9,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
 107,1043382302,"PROCARE PHARMACY DIRECT, LLC.",PA,224781053.17,high,6,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-108,1962432682,"ADVANCE HI-TECH NURSING, INC.",TX,224248642.64,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-109,1639172810,BOWEN HEALTH INC,IN,223199410.91,high,4,new_relationship_high_volume,High confidence; 3+ independent signals
-110,1457456279,HMH HOSPITALS CORPORATION,NJ,223094736.03,high,4,pharmacy_rate_outlier,High confidence; 3+ independent signals
-111,1043279011,"PREFERRED HOME HEALTH CARE & NURSING SERVICES, INC.",NJ,221948079.24,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-112,1508089699,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,219017082.19,high,4,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+108,1962432682,"ADVANCE HI-TECH NURSING, INC.",TX,224248642.64,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+109,1639172810,BOWEN HEALTH INC,IN,223199410.91,high,5,new_relationship_high_volume,High confidence; 3+ independent signals
+110,1457456279,HMH HOSPITALS CORPORATION,NJ,223094736.03,high,6,pharmacy_rate_outlier,High confidence; 3+ independent signals
+111,1043279011,"PREFERRED HOME HEALTH CARE & NURSING SERVICES, INC.",NJ,221948079.24,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+112,1508089699,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,219017082.19,high,6,kmeans,High confidence; 3+ independent signals; Public entity; policy review likely
 113,1063525152,MONTEFIORE MEDICAL CENTER,NY,218472794.45,high,6,upcoding,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal
 114,1962083493,"REM MISSOURI, LLC",MO,218013245.38,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-115,1245239540,"HOME CARE DELIVERED, INC.",VA,210461504.01,medium,2,iqr_outlier,Statistical outlier vs peers
-116,1396756938,COUNTY OF LOS ANGELES,CA,210253372.40,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-117,1932541729,PUBLIC PARTNERSHIPS LLC,GA,209926760.28,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-118,1457379448,DAYTON CHILDREN'S HOSPITAL,OH,209622153.89,high,6,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-119,1003847807,"BAYADA HOME HEALTH CARE, INC.",NJ,208313287.48,medium,2,iqr_outlier,Statistical outlier vs peers
-120,1932106010,"PERSONAL TOUCH HOME CARE OF NEW YORK, INC",NY,208291884.82,high,3,gev_extreme_value,High confidence; 3+ independent signals
-121,1912939703,CHILDREN'S HOSPITAL,DC,207196704.26,high,5,iqr_outlier,High confidence; 3+ independent signals
-122,1083632897,"MENTAL HEALTH COOPERATIVE, INC",TN,206761781.82,high,4,iqr_outlier,High confidence; 3+ independent signals
-123,1992980387,"ABOUND HEALTH, LLC",NC,203100569.84,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-124,1255385399,MACOMB COUNTY COMMUNITY MENTAL HEALTH,MI,202618091.43,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-125,1053772905,SIERRA REGIONAL CENTER,NV,202487135.83,high,8,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern
-126,1558781559,"X-TREME HOME CARE, INC.",NY,202096398.37,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+115,1245239540,"HOME CARE DELIVERED, INC.",VA,210461504.01,high,3,iqr_outlier,High confidence; 3+ independent signals
+116,1396756938,COUNTY OF LOS ANGELES,CA,210253372.40,high,7,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+117,1932541729,PUBLIC PARTNERSHIPS LLC,GA,209926760.28,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+118,1457379448,DAYTON CHILDREN'S HOSPITAL,OH,209622153.89,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+119,1003847807,"BAYADA HOME HEALTH CARE, INC.",NJ,208313287.48,high,3,iqr_outlier,High confidence; 3+ independent signals
+120,1932106010,"PERSONAL TOUCH HOME CARE OF NEW YORK, INC",NY,208291884.82,high,4,gev_extreme_value,High confidence; 3+ independent signals
+121,1912939703,CHILDREN'S HOSPITAL,DC,207196704.26,high,7,iqr_outlier,High confidence; 3+ independent signals
+122,1083632897,"MENTAL HEALTH COOPERATIVE, INC",TN,206761781.82,high,5,iqr_outlier,High confidence; 3+ independent signals
+123,1992980387,"ABOUND HEALTH, LLC",NC,203100569.84,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+124,1255385399,MACOMB COUNTY COMMUNITY MENTAL HEALTH,MI,202618091.43,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+125,1053772905,SIERRA REGIONAL CENTER,NV,202487135.83,high,9,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern
+126,1558781559,"X-TREME HOME CARE, INC.",NY,202096398.37,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 127,1033162987,"CONSUMER DIRECTED CHOICES, INC.",NY,200392084.34,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-128,1699896316,"REM COMMUNITY OPTIONS, INC.",WV,200041828.56,high,6,high_risk_category,High confidence; 3+ independent signals
-129,1962564328,COMMUNITY BRIDGES,NH,199602786.23,high,4,gev_extreme_value,High confidence; 3+ independent signals
-130,1215921457,CHILDRENS HOSPITAL OF PHILADELPHIA,PA,199367771.67,high,8,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-131,1578665048,OPTUM MEDICAL CARE OF NEW JERSEY PC,NJ,198972846.47,high,4,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
-132,1437368891,ALASKA NATIVE TRIBAL HEALTH CONSORTIUM,AK,198397301.59,high,5,iqr_outlier,High confidence; 3+ independent signals
-133,1053357905,"ADVANCED RESPIRATORY, INC.",MN,195958077.60,high,5,hhi_per_code,High confidence; 3+ independent signals; Sudden growth or stop pattern
-134,1295752384,NORTHERN VALLEY INDIAN HEALTH INC,CA,193902399.00,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-135,1386022101,"SUPPORTED LIVING AND EMPLOYMENT SERVICES, INC.",MO,193382062.75,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-136,1750368700,LABORATORY CORPORATION OF AMERICA HOLDINGS,NC,192661254.11,high,8,geographic_impossibility,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-137,1265529168,STATE OF OKLAHOMA DEPT OF HUMAN SERVICES,OK,192488066.32,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-138,1265483457,COMMUNITY MENTAL HEALTH AUTHORITY OF CLINTON EATON INGHAM COUNTIES,MI,192158188.38,high,6,iqr_outlier,High confidence; 3+ independent signals
-139,1174661078,"ABILITY360, INC,",AZ,190492501.65,high,3,gev_extreme_value,High confidence; 3+ independent signals
-140,1285641514,LONG ISLAND JEWISH MEDICAL CENTER,NY,189385087.04,high,8,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+128,1699896316,"REM COMMUNITY OPTIONS, INC.",WV,200041828.56,high,8,high_risk_category,High confidence; 3+ independent signals
+129,1962564328,COMMUNITY BRIDGES,NH,199602786.23,high,5,gev_extreme_value,High confidence; 3+ independent signals
+130,1215921457,CHILDRENS HOSPITAL OF PHILADELPHIA,PA,199367771.67,high,9,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+131,1578665048,OPTUM MEDICAL CARE OF NEW JERSEY PC,NJ,198972846.47,high,6,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
+132,1437368891,ALASKA NATIVE TRIBAL HEALTH CONSORTIUM,AK,198397301.59,high,7,iqr_outlier,High confidence; 3+ independent signals
+133,1053357905,"ADVANCED RESPIRATORY, INC.",MN,195958077.60,high,6,hhi_per_code,High confidence; 3+ independent signals; Sudden growth or stop pattern
+134,1295752384,NORTHERN VALLEY INDIAN HEALTH INC,CA,193902399.00,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+135,1386022101,"SUPPORTED LIVING AND EMPLOYMENT SERVICES, INC.",MO,193382062.75,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+136,1750368700,LABORATORY CORPORATION OF AMERICA HOLDINGS,NC,192661254.11,high,9,geographic_impossibility,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+137,1265529168,STATE OF OKLAHOMA DEPT OF HUMAN SERVICES,OK,192488066.32,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+138,1265483457,COMMUNITY MENTAL HEALTH AUTHORITY OF CLINTON EATON INGHAM COUNTIES,MI,192158188.38,high,8,iqr_outlier,High confidence; 3+ independent signals
+139,1174661078,"ABILITY360, INC,",AZ,190492501.65,high,6,kmeans,High confidence; 3+ independent signals
+140,1285641514,LONG ISLAND JEWISH MEDICAL CENTER,NY,189385087.04,high,10,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
 141,1992805022,GOVERNMENT OF THE DISTRICT OF COLUMBIA OFFICE OF TAX AND REVENUE,DC,188811659.99,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-142,1740339381,"SYSTEMS UNLIMITED, INC.",IA,187924072.78,high,5,high_risk_category,High confidence; 3+ independent signals
+142,1740339381,"SYSTEMS UNLIMITED, INC.",IA,187924072.78,high,7,high_risk_category,High confidence; 3+ independent signals
 143,1306182548,"ALIVIA SPECIALTY, LLC",PR,186680645.62,high,9,post_deactivation_billing,High confidence; 3+ independent signals; Sudden growth or stop pattern; Billing after deactivation
-144,1487632998,GENEDX LLC,MD,186458114.37,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-145,1073608998,"ORSINI PHARMACEUTICAL SERVICES, LLC",IL,186251012.35,high,8,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-146,1952476988,MONTEFIORE MEDICAL CENTER,NY,185852714.07,high,11,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-147,1184602518,PRENTKE ROMICH COMPANY,OH,184640328.62,high,6,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
-148,1942576905,VAV OPERATIONS LLC,IN,184537897.91,high,9,aba_concentration,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-149,1326502865,WE CARE DAILY CLINICS LLC,WA,184414830.80,high,11,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-150,1881622892,COMMUNITY MENTAL HEALTH FOR CENTRAL MICHIGAN,MI,183820036.43,high,5,post_deactivation_billing,High confidence; 3+ independent signals; Billing after deactivation
-151,1003930256,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,182740403.78,high,3,iqr_outlier,High confidence; 3+ independent signals
-152,1790908002,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,182726394.20,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-153,1659402303,ALAMEDA COUNTY BEHAVIORAL HEALTH CARE,CA,182461282.97,high,10,upcoding,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal; Public entity; policy review likely
-154,1366780850,COMMUNITY CARE MANAGEMENT PARTNERS LLC (CCMP),NY,180460636.15,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-155,1366515488,THE CHILDREN'S MERCY HOSPITAL,MO,180256378.91,high,9,change_point_cusum,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+144,1487632998,GENEDX LLC,MD,186458114.37,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+145,1073608998,"ORSINI PHARMACEUTICAL SERVICES, LLC",IL,186251012.35,high,9,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+146,1952476988,MONTEFIORE MEDICAL CENTER,NY,185852714.07,high,13,composite_multi_signal,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+147,1184602518,PRENTKE ROMICH COMPANY,OH,184640328.62,high,7,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
+148,1942576905,VAV OPERATIONS LLC,IN,184537897.91,high,10,aba_concentration,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+149,1326502865,WE CARE DAILY CLINICS LLC,WA,184414830.80,high,13,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+150,1881622892,COMMUNITY MENTAL HEALTH FOR CENTRAL MICHIGAN,MI,183820036.43,high,7,post_deactivation_billing,High confidence; 3+ independent signals; Billing after deactivation
+151,1003930256,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,182740403.78,high,5,iqr_outlier,High confidence; 3+ independent signals
+152,1790908002,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,182726394.20,high,6,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+153,1659402303,ALAMEDA COUNTY BEHAVIORAL HEALTH CARE,CA,182461282.97,high,12,upcoding,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal; Public entity; policy review likely
+154,1366780850,COMMUNITY CARE MANAGEMENT PARTNERS LLC (CCMP),NY,180460636.15,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+155,1366515488,THE CHILDREN'S MERCY HOSPITAL,MO,180256378.91,high,10,change_point_cusum,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
 156,1831263110,TOBII DYNAVOX LLC,PA,180149653.48,high,5,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
-157,1134632599,SWINOMISH HEALTH SERVICES,WA,178572127.16,high,10,specialty_mismatch,High confidence; 3+ independent signals; Sudden growth or stop pattern
-158,1518032622,"INDIANA UNIVERSITY HEALTH, INC",IN,177945032.65,medium,2,iqr_outlier,Public entity; policy review likely
-159,1750053948,SRH CHN LEAD HEALTH HOME LLC,NY,177720037.98,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-160,1477807667,"BYRAM HEALTHCARE CENTERS, INC.",CA,177417586.76,high,6,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-161,1780639971,"DHHS, PHS, NAIHS, SHIPROCK HOSPITAL",NM,176799823.76,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-162,1932166980,VALLEY BEHAVIORAL HEALTH INCORPORATED,UT,173149090.37,high,4,iqr_outlier,High confidence; 3+ independent signals
-163,1184780629,"VOCA CORPORATION OF WEST VIRGINIA, INC.",WV,172067848.12,high,6,high_risk_category,High confidence; 3+ independent signals
-164,1194020370,"COMMUNITY ALTERNATIVES VIRGINIA, INC.",VA,171073639.28,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-165,1790835296,"BEACON SPECIALIZED LIVING SERVICES, INC.",MI,170108923.45,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-166,1346218294,BOSTON MEDICAL CENTER CORPORATION,MA,169873387.95,high,4,iqr_outlier,High confidence; 3+ independent signals
-167,1679279046,FISHING POINT HEALTH CARE LLC,VA,169654285.16,high,8,hhi_per_code,High confidence; 3+ independent signals; Sudden growth or stop pattern
-168,1659315430,COUNTY OF SANTA CRUZ,CA,169346085.84,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-169,1043295934,HOPE NETWORK BEHAVIORAL HEALTH SERVICES,MI,169114179.26,high,5,iqr_outlier,High confidence; 3+ independent signals
-170,1568512770,"REGION VIII, ONE SKY COMMUNITY SERVICES INC.",NH,168135984.43,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-171,1053821728,"ABS UTAH, P.C.",UT,167936997.57,high,5,aba_concentration,High confidence; 3+ independent signals; Sudden growth or stop pattern
-172,1134271661,CONNECTICUT CHILDREN'S MEDICAL CENTER,CT,167639802.24,high,4,iqr_outlier,High confidence; 3+ independent signals
-173,1396886297,CHILDREN'S SPECIALIZED HOSPITAL,NJ,166752180.38,high,5,iqr_outlier,High confidence; 3+ independent signals
-174,1205927928,"UNIVERSAL REHABILITATION AND FITNESS, INC.",NJ,166635000.04,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+157,1134632599,SWINOMISH HEALTH SERVICES,WA,178572127.16,high,12,specialty_mismatch,High confidence; 3+ independent signals; Sudden growth or stop pattern
+158,1518032622,"INDIANA UNIVERSITY HEALTH, INC",IN,177945032.65,high,3,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+159,1750053948,SRH CHN LEAD HEALTH HOME LLC,NY,177720037.98,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+160,1477807667,"BYRAM HEALTHCARE CENTERS, INC.",CA,177417586.76,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+161,1780639971,"DHHS, PHS, NAIHS, SHIPROCK HOSPITAL",NM,176799823.76,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+162,1932166980,VALLEY BEHAVIORAL HEALTH INCORPORATED,UT,173149090.37,high,6,iqr_outlier,High confidence; 3+ independent signals
+163,1184780629,"VOCA CORPORATION OF WEST VIRGINIA, INC.",WV,172067848.12,high,8,high_risk_category,High confidence; 3+ independent signals
+164,1194020370,"COMMUNITY ALTERNATIVES VIRGINIA, INC.",VA,171073639.28,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+165,1790835296,"BEACON SPECIALIZED LIVING SERVICES, INC.",MI,170108923.45,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+166,1346218294,BOSTON MEDICAL CENTER CORPORATION,MA,169873387.95,high,6,iqr_outlier,High confidence; 3+ independent signals
+167,1679279046,FISHING POINT HEALTH CARE LLC,VA,169654285.16,high,10,hhi_per_code,High confidence; 3+ independent signals; Sudden growth or stop pattern
+168,1659315430,COUNTY OF SANTA CRUZ,CA,169346085.84,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+169,1043295934,HOPE NETWORK BEHAVIORAL HEALTH SERVICES,MI,169114179.26,high,6,iqr_outlier,High confidence; 3+ independent signals
+170,1568512770,"REGION VIII, ONE SKY COMMUNITY SERVICES INC.",NH,168135984.43,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+171,1053821728,"ABS UTAH, P.C.",UT,167936997.57,high,6,aba_concentration,High confidence; 3+ independent signals; Sudden growth or stop pattern
+172,1134271661,CONNECTICUT CHILDREN'S MEDICAL CENTER,CT,167639802.24,high,5,iqr_outlier,High confidence; 3+ independent signals
+173,1396886297,CHILDREN'S SPECIALIZED HOSPITAL,NJ,166752180.38,high,7,iqr_outlier,High confidence; 3+ independent signals
+174,1205927928,"UNIVERSAL REHABILITATION AND FITNESS, INC.",NJ,166635000.04,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
 175,1902921380,CORNELL SCOTT HILL HEALTH CORPORATION,CT,166489903.62,high,5,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern
-176,1518049485,HEALTH ACQUISITION CORP.,NY,165246383.01,high,9,high_risk_category,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
-177,1346208949,ACCREDO HEALTH GROUP INC,TN,165028765.11,high,6,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-178,1538292768,NORTHEAST KINGDOM HUMAN SERVICES INC DS WAIVER,VT,164932934.86,medium,2,iqr_outlier,Statistical outlier vs peers
-179,1154317527,STATE OF MISSISSIPPI - UNIVERSITY OF MISSISSIPPI MEDICAL CENTER,MS,164677611.56,high,6,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal; Public entity; policy review likely
-180,1285758300,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,164204462.60,high,5,iqr_outlier,High confidence; 3+ independent signals
-181,1962502229,INTEGRA PARTNERS LLC,MI,164170208.80,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-182,1194711226,CENTRUS PREMIER HOME CARE INC,MA,162772595.94,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-183,1760897755,"PHYSICIANS GROUP LABORATORIES, LLC",LA,162692857.12,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-184,1689744856,JERSEY CITY MEDICAL CENTER,NJ,162075186.57,high,3,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-185,1891799227,"NORTON HOSPITALS, INC",KY,161532370.90,high,9,isolation_forest,High confidence; 3+ independent signals; Sudden growth or stop pattern
-186,1588712020,"GENETIC DISEASE SCREENING PROGRAM, STATE OF CA",CA,161469843.00,high,4,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-187,1033370317,"STARLIGHT HOME CARE AGENCY, INC",NJ,159924225.18,medium,2,iqr_outlier,Statistical outlier vs peers
-188,1750482022,"CHILDREN'S HOSPITAL OF WISCONSIN, INC.",WI,159734056.51,high,5,iqr_outlier,High confidence; 3+ independent signals
-189,1275672057,MONADNOCK DEVELOPMENTAL SERVICES,NH,158297010.23,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-190,1245305416,"DAC, INC",IA,157600598.45,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-191,1790721538,QUEST DIAGNOSTICS CLINICAL LABORATORIES INC,TX,156913303.65,high,6,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-192,1689639544,"HEALTHTRACKRX INDIANA, INC",TX,156320536.07,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-193,1104986017,"LUTHERAN FAMILY SERVICES OF VIRGINIA, INC.",VA,155971624.89,medium,2,iqr_outlier,Statistical outlier vs peers
-194,1528041811,GROSSMONT HOSPITAL CORPORATION,CA,154947141.03,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-195,1033591003,EDEN AUTISM SERVICES.,NJ,153901638.85,high,4,iqr_outlier,High confidence; 3+ independent signals
-196,1710006051,COMMONWEALTH OF MASSACHUSETTS-DMH,MA,153438599.28,high,3,gev_extreme_value,High confidence; 3+ independent signals
+176,1518049485,HEALTH ACQUISITION CORP.,NY,165246383.01,high,10,high_risk_category,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
+177,1346208949,ACCREDO HEALTH GROUP INC,TN,165028765.11,high,7,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+178,1538292768,NORTHEAST KINGDOM HUMAN SERVICES INC DS WAIVER,VT,164932934.86,high,3,iqr_outlier,High confidence; 3+ independent signals
+179,1154317527,STATE OF MISSISSIPPI - UNIVERSITY OF MISSISSIPPI MEDICAL CENTER,MS,164677611.56,high,8,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal; Public entity; policy review likely
+180,1285758300,COMMONWEALTH OF MASSACHUSETTS-DDS,MA,164204462.60,high,7,iqr_outlier,High confidence; 3+ independent signals
+181,1962502229,INTEGRA PARTNERS LLC,MI,164170208.80,high,6,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+182,1194711226,CENTRUS PREMIER HOME CARE INC,MA,162772595.94,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+183,1760897755,"PHYSICIANS GROUP LABORATORIES, LLC",LA,162692857.12,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+184,1689744856,JERSEY CITY MEDICAL CENTER,NJ,162075186.57,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+185,1891799227,"NORTON HOSPITALS, INC",KY,161532370.90,high,11,isolation_forest,High confidence; 3+ independent signals; Sudden growth or stop pattern
+186,1588712020,"GENETIC DISEASE SCREENING PROGRAM, STATE OF CA",CA,161469843.00,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+187,1033370317,"STARLIGHT HOME CARE AGENCY, INC",NJ,159924225.18,high,3,iqr_outlier,High confidence; 3+ independent signals
+188,1750482022,"CHILDREN'S HOSPITAL OF WISCONSIN, INC.",WI,159734056.51,high,6,iqr_outlier,High confidence; 3+ independent signals
+189,1275672057,MONADNOCK DEVELOPMENTAL SERVICES,NH,158297010.23,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+190,1245305416,"DAC, INC",IA,157600598.45,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+191,1790721538,QUEST DIAGNOSTICS CLINICAL LABORATORIES INC,TX,156913303.65,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+192,1689639544,"HEALTHTRACKRX INDIANA, INC",TX,156320536.07,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+193,1104986017,"LUTHERAN FAMILY SERVICES OF VIRGINIA, INC.",VA,155971624.89,high,3,iqr_outlier,High confidence; 3+ independent signals
+194,1528041811,GROSSMONT HOSPITAL CORPORATION,CA,154947141.03,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+195,1033591003,EDEN AUTISM SERVICES.,NJ,153901638.85,high,5,iqr_outlier,High confidence; 3+ independent signals
+196,1710006051,COMMONWEALTH OF MASSACHUSETTS-DMH,MA,153438599.28,high,4,gev_extreme_value,High confidence; 3+ independent signals
 197,1588855100,TEAM MENTAL HEALTH SERVICES INC.,MI,153304576.01,high,3,iqr_outlier,High confidence; 3+ independent signals
 198,1972601193,"GALAX TREATMENT CENTER, LLC",VA,152485947.95,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-199,1700828852,THE METROHEALTH SYSTEM,OH,152288718.76,high,9,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-200,1730302829,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,152058554.72,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-201,1184841926,"CHINESE-AMERICAN PLANNING COUNCIL HOME ATTENDANT PROGRAM, INC.",NY,151901558.06,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-202,1366419517,ANTELOPE VALLEY HEALTH CARE DISTRICT,CA,151663777.21,high,3,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
-203,1134297328,UNITED CEREBRAL PALSY OF GEORGIA INC.,GA,151512364.36,high,4,gev_extreme_value,High confidence; 3+ independent signals
-204,1437458437,"PHOENIX HOME CARE, LLC",MO,151026898.54,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-205,1871821710,PLATINUM HOME HEALTH CARE INC.,NY,149533751.57,high,6,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
-206,1669462420,ST JOSEPHS UNIVERSITY MEDICAL CENTER INC.,NJ,149262061.21,high,3,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-207,1871543215,STANFORD HEALTH CARE,CA,149181000.26,high,7,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-208,1508199258,COUNTY OF VENTURA,CA,148654152.94,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-209,1376675785,SOUTH DAKOTA ACHIEVE,SD,148578068.68,high,4,iqr_outlier,High confidence; 3+ independent signals
-210,1255496220,"RSCR WEST VIRGINIA, INC.",WV,148567122.72,high,6,high_risk_category,High confidence; 3+ independent signals
-211,1720049190,"RISE, INC",ID,148328868.35,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-212,1629283197,ALTAMED HEALTH SERVICES CORP.,CA,148093109.28,high,7,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern
-213,1437781499,STATE OF MISSOURI,MO,148057499.75,high,4,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-214,1366580706,"CHARTWELL COMMUNITY SERVICES, INC.",TX,147778277.06,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-215,1346285657,UNIVERSITY OF ROCHESTER,NY,147555085.08,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-216,1184722779,REGENTS OF THE UNIVERSITY OF CALIFORNIA,CA,147012861.65,high,4,pharmacy_rate_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
-217,1255364923,CHICKASAW NATION DIVISION OF HEALTH,OK,146900283.80,high,9,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-218,1073055208,"COMPASS HEALTH, INC.",MO,146506667.80,high,10,address_cluster_flagged,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-219,1407998842,"SPECTRUM FOR LIVING DEVELOPMENT, INC.",NJ,145770337.18,high,4,iqr_outlier,High confidence; 3+ independent signals
-220,1619969458,SUN RIVER HEALTH INC.,NY,145398006.19,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-221,1497870943,COMMONWEALTH OF MASSACHUSETTS,MA,145048733.14,high,3,gev_extreme_value,High confidence; 3+ independent signals
-222,1003147588,"CAREPEOPLE HOME HEALTH, INC",VA,144765146.46,high,3,gev_extreme_value,High confidence; 3+ independent signals
+199,1700828852,THE METROHEALTH SYSTEM,OH,152288718.76,high,10,address_cluster_flagged,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+200,1730302829,DEPARTMENT OF DEVELOPMENTAL SERVICES,MA,152058554.72,high,6,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+201,1184841926,"CHINESE-AMERICAN PLANNING COUNCIL HOME ATTENDANT PROGRAM, INC.",NY,151901558.06,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+202,1366419517,ANTELOPE VALLEY HEALTH CARE DISTRICT,CA,151663777.21,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
+203,1134297328,UNITED CEREBRAL PALSY OF GEORGIA INC.,GA,151512364.36,high,6,gev_extreme_value,High confidence; 3+ independent signals
+204,1437458437,"PHOENIX HOME CARE, LLC",MO,151026898.54,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+205,1871821710,PLATINUM HOME HEALTH CARE INC.,NY,149533751.57,high,7,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
+206,1669462420,ST JOSEPHS UNIVERSITY MEDICAL CENTER INC.,NJ,149262061.21,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+207,1871543215,STANFORD HEALTH CARE,CA,149181000.26,high,9,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+208,1508199258,COUNTY OF VENTURA,CA,148654152.94,high,7,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+209,1376675785,SOUTH DAKOTA ACHIEVE,SD,148578068.68,high,5,gev_extreme_value,High confidence; 3+ independent signals
+210,1255496220,"RSCR WEST VIRGINIA, INC.",WV,148567122.72,high,8,high_risk_category,High confidence; 3+ independent signals
+211,1720049190,"RISE, INC",ID,148328868.35,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+212,1629283197,ALTAMED HEALTH SERVICES CORP.,CA,148093109.28,high,8,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern
+213,1437781499,STATE OF MISSOURI,MO,148057499.75,high,5,gev_extreme_value,High confidence; 3+ independent signals; Public entity; policy review likely
+214,1366580706,"CHARTWELL COMMUNITY SERVICES, INC.",TX,147778277.06,high,8,kmeans,High confidence; 3+ independent signals; Sudden growth or stop pattern
+215,1346285657,UNIVERSITY OF ROCHESTER,NY,147555085.08,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+216,1184722779,REGENTS OF THE UNIVERSITY OF CALIFORNIA,CA,147012861.65,high,5,pharmacy_rate_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
+217,1255364923,CHICKASAW NATION DIVISION OF HEALTH,OK,146900283.80,high,10,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+218,1073055208,"COMPASS HEALTH, INC.",MO,146506667.80,high,13,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+219,1407998842,"SPECTRUM FOR LIVING DEVELOPMENT, INC.",NJ,145770337.18,high,5,iqr_outlier,High confidence; 3+ independent signals
+220,1619969458,SUN RIVER HEALTH INC.,NY,145398006.19,high,8,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+221,1497870943,COMMONWEALTH OF MASSACHUSETTS,MA,145048733.14,high,4,gev_extreme_value,High confidence; 3+ independent signals
+222,1003147588,"CAREPEOPLE HOME HEALTH, INC",VA,144765146.46,high,4,gev_extreme_value,High confidence; 3+ independent signals
 223,1588611842,"INTERBOROUGH DEVELOPMENTAL AND CONSULTATION CENTER, INC.",NY,144763142.51,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-224,1386703304,"BEHAVIORAL HEALTH AND DEVELOPMENTAL SERVICES OF STRAFFORD COUNTY, INC",NH,144268086.37,high,5,captive_referral,High confidence; 3+ independent signals; Public entity; policy review likely
-225,1851781314,"AMERICAN MEDICAL RESPONSE OF MARICOPA, LLC",AZ,144000503.51,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+224,1386703304,"BEHAVIORAL HEALTH AND DEVELOPMENTAL SERVICES OF STRAFFORD COUNTY, INC",NH,144268086.37,high,6,captive_referral,High confidence; 3+ independent signals; Public entity; policy review likely
+225,1851781314,"AMERICAN MEDICAL RESPONSE OF MARICOPA, LLC",AZ,144000503.51,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 226,1134200942,"ACR HOMES, INC.",MN,143428958.99,high,4,captive_referral,High confidence; 3+ independent signals
 227,1457788275,"IDEAL OPTION, PLLC",WA,143418582.64,high,3,iqr_outlier,High confidence; 3+ independent signals
-228,1528126133,"ADELANTE HEALTHCARE, INC.",AZ,143132383.02,high,5,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern
-229,1285826438,NEW YORK UNIVERSITY,FL,142920832.84,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
-230,1639711294,UOFL HEALTH-LOUISVILLE INC,KY,142892748.94,high,5,iqr_outlier,High confidence; 3+ independent signals
-231,1972662328,"COMMUNITY CROSSROADS, INC.",NH,142136028.45,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-232,1851333686,"DANA-FARBER CANCER INSTITUTE, INC.",MA,141982120.08,high,9,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-233,1326288556,"HELPERS, LLC",KS,141755111.64,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+228,1528126133,"ADELANTE HEALTHCARE, INC.",AZ,143132383.02,high,6,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern
+229,1285826438,NEW YORK UNIVERSITY,FL,142920832.84,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
+230,1639711294,UOFL HEALTH-LOUISVILLE INC,KY,142892748.94,high,6,iqr_outlier,High confidence; 3+ independent signals
+231,1972662328,"COMMUNITY CROSSROADS, INC.",NH,142136028.45,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+232,1851333686,"DANA-FARBER CANCER INSTITUTE, INC.",MA,141982120.08,high,11,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+233,1326288556,"HELPERS, LLC",KS,141755111.64,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 234,1104931625,"CHIMES METRO, INC.",DE,141572987.60,high,5,gev_extreme_value,High confidence; 3+ independent signals
-235,1447261540,COUNTY OF RIVERSIDE,CA,141516953.50,high,7,dbscan,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-236,1427182286,NORTHERN HUMAN SERVICES,NH,141420568.15,high,4,gev_extreme_value,High confidence; 3+ independent signals
-237,1730369760,HUMAN CARE SERVICES FOR FAMILIES AND CHILDREN INC,NY,140433779.04,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+235,1447261540,COUNTY OF RIVERSIDE,CA,141516953.50,high,9,dbscan,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+236,1427182286,NORTHERN HUMAN SERVICES,NH,141420568.15,high,5,gev_extreme_value,High confidence; 3+ independent signals
+237,1730369760,HUMAN CARE SERVICES FOR FAMILIES AND CHILDREN INC,NY,140433779.04,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
 238,1255360517,ROCHESTER GENERAL HOSPITAL,NY,139936058.44,high,8,upcoding,High confidence; 3+ independent signals; Network or middleman billing pattern; Implausible volume or upcoding signal; Sudden growth or stop pattern
-239,1649301789,EASTER SEALS MIDWEST,MO,139363569.40,high,4,post_deactivation_billing,High confidence; 3+ independent signals; Billing after deactivation
-240,1205962883,CREATIVE WORKS,ME,138832010.55,medium,2,iqr_outlier,Statistical outlier vs peers
-241,1750358297,CITY OF HOPE NATIONAL MEDICAL CENTER,CA,138328767.67,high,7,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-242,1871540237,VARIETY CHILDREN'S HOSPITAL,FL,136016412.01,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-243,1902863202,SUPER CARE INC,CA,135522312.74,high,3,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
-244,1003953803,HOME HEALTH CARE SERVICES OF NY,NY,134825029.43,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-245,1649363342,"AMERICARE, INC.",NY,134595371.82,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-246,1174610075,STATE OF OKLAHOMA DEPT. OF HUMAN SERVICES,OK,134543755.51,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-247,1831449370,CLARK COUNTY DEPARTMENT OF FAMILY SERVICES,NV,134226814.89,high,5,gev_extreme_value,High confidence; 3+ independent signals; Public entity; policy review likely
-248,1073633376,"LIVING INNOVATIONS SUPPORT SERVICES, LLC",NH,133767567.38,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+239,1649301789,EASTER SEALS MIDWEST,MO,139363569.40,high,5,post_deactivation_billing,High confidence; 3+ independent signals; Billing after deactivation
+240,1205962883,CREATIVE WORKS,ME,138832010.55,high,3,iqr_outlier,High confidence; 3+ independent signals
+241,1750358297,CITY OF HOPE NATIONAL MEDICAL CENTER,CA,138328767.67,high,8,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+242,1871540237,VARIETY CHILDREN'S HOSPITAL,FL,136016412.01,high,11,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+243,1902863202,SUPER CARE INC,CA,135522312.74,high,4,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
+244,1003953803,HOME HEALTH CARE SERVICES OF NY,NY,134825029.43,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+245,1649363342,"AMERICARE, INC.",NY,134595371.82,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+246,1174610075,STATE OF OKLAHOMA DEPT. OF HUMAN SERVICES,OK,134543755.51,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+247,1831449370,CLARK COUNTY DEPARTMENT OF FAMILY SERVICES,NV,134226814.89,high,6,gev_extreme_value,High confidence; 3+ independent signals; Public entity; policy review likely
+248,1073633376,"LIVING INNOVATIONS SUPPORT SERVICES, LLC",NH,133767567.38,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
 249,1083810055,"PAS-PERSONAL ACCOUNTING SERVICES, INC.",MI,133532901.08,high,5,high_risk_category,High confidence; 3+ independent signals
-250,1558416701,"EGLESTON CHILDREN'S HOSPITAL AT EMORY UNIVERSITY, INC.",GA,132583309.59,high,6,new_relationship_high_volume,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
-251,1336149426,COCHLEAR AMERICAS,CO,132408435.80,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-252,1598898603,"BROADSTEP ACADEMY-NEW JERSEY, INC.",NJ,132033690.26,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-253,1598043747,"OMNI VISIONS, INC.",TN,131746271.61,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-254,1710087127,CHILDREN'S HOSPITAL CORPORATION,MA,131624140.89,high,5,iqr_outlier,High confidence; 3+ independent signals
-255,1023199965,MACOMB OAKLAND REGIONAL CENTER INC.,MI,131087586.79,high,6,change_point_cusum,High confidence; 3+ independent signals; Sudden growth or stop pattern
+250,1558416701,"EGLESTON CHILDREN'S HOSPITAL AT EMORY UNIVERSITY, INC.",GA,132583309.59,high,8,new_relationship_high_volume,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
+251,1336149426,COCHLEAR AMERICAS,CO,132408435.80,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+252,1598898603,"BROADSTEP ACADEMY-NEW JERSEY, INC.",NJ,132033690.26,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+253,1598043747,"OMNI VISIONS, INC.",TN,131746271.61,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+254,1710087127,CHILDREN'S HOSPITAL CORPORATION,MA,131624140.89,high,7,iqr_outlier,High confidence; 3+ independent signals
+255,1023199965,MACOMB OAKLAND REGIONAL CENTER INC.,MI,131087586.79,high,7,change_point_cusum,High confidence; 3+ independent signals; Sudden growth or stop pattern
 256,1073561825,"OPTUM WOMEN'S AND CHILDREN'S HEALTH, LLC",GA,130902295.31,high,5,pharmacy_single_drug,High confidence; 3+ independent signals
-257,1093873382,"TRILLIUM FAMILY SERVICES, INC.",OR,130647422.72,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-258,1992850952,BLACK HILLS WORKS INC,SD,130211826.80,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-259,1154788412,"EAGLE EYE FV, INC",NY,129815726.00,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+257,1093873382,"TRILLIUM FAMILY SERVICES, INC.",OR,130647422.72,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+258,1992850952,BLACK HILLS WORKS INC,SD,130211826.80,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+259,1154788412,"EAGLE EYE FV, INC",NY,129815726.00,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 260,1578989703,CENTRAL VALLEY SPECIALTY HOSPITAL INC,CA,129625213.80,high,5,hhi_per_code,High confidence; 3+ independent signals; Sudden growth or stop pattern
 261,1659601979,NORTHEAST PENNSYLVANIA CENTER FOR INDEPENDENT LIVING,PA,128613242.45,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-262,1326031022,"WHITE DEER RUN, LLC",PA,128405773.66,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-263,1760618961,"STUART T.WILSON C.P.A.,P.C.",MI,127789118.49,high,6,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
-264,1518068071,NORTHERN LAKES COMMUNITY MENTAL HEALTH AUTHORITY,MI,127363089.31,high,7,specialty_mismatch,High confidence; 3+ independent signals
-265,1730491945,"CITY MEDICAL OF UPPER EAST SIDE, PLLC",NY,127143343.59,high,7,impossible_em_visits_day,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
-266,1275665457,NEW YORK NETWORK IPA INC,NY,127021009.92,high,9,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+262,1326031022,"WHITE DEER RUN, LLC",PA,128405773.66,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+263,1760618961,"STUART T.WILSON C.P.A.,P.C.",MI,127789118.49,high,7,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
+264,1518068071,NORTHERN LAKES COMMUNITY MENTAL HEALTH AUTHORITY,MI,127363089.31,high,9,specialty_mismatch,High confidence; 3+ independent signals
+265,1730491945,"CITY MEDICAL OF UPPER EAST SIDE, PLLC",NY,127143343.59,high,9,impossible_em_visits_day,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
+266,1275665457,NEW YORK NETWORK IPA INC,NY,127021009.92,high,10,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
 267,1417915653,ACCREDO HEALTH GROUP INC,PA,126315275.85,high,6,pharmacy_rate_outlier,High confidence; 3+ independent signals
-268,1578967386,"OAKS INTEGRATED CARE, INC",NJ,125751884.65,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-269,1932472107,NORTH SHORE UNIVERSITY HOSPITAL,NY,125558119.17,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-270,1992886881,"MAINSTREAM LIVING, INC.",IA,125183799.61,high,5,iqr_outlier,High confidence; 3+ independent signals
+268,1578967386,"OAKS INTEGRATED CARE, INC",NJ,125751884.65,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+269,1932472107,NORTH SHORE UNIVERSITY HOSPITAL,NY,125558119.17,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+270,1992886881,"MAINSTREAM LIVING, INC.",IA,125183799.61,high,7,iqr_outlier,High confidence; 3+ independent signals
 271,1740376292,"NEW MEXICO CONSUMER DIRECT PERSONAL CARE, LLC",NM,125176140.09,medium,2,iqr_outlier,Statistical outlier vs peers
-272,1255868915,BARI HOME CARE LLC,NY,124797999.38,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-273,1659330686,HELEN ROSS MCNABB CENTER,TN,124507659.30,high,5,iqr_outlier,High confidence; 3+ independent signals
-274,1376097303,MARKS HOMECARE AGENCY INC,NY,124373198.20,high,14,high_risk_category,High confidence; 3+ independent signals; Network or middleman billing pattern; Billed every day; Sudden growth or stop pattern
-275,1730244294,"BESTCARE, INC",NY,124114825.49,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-276,1508072588,COUNTY OF SOLANO,CA,123932684.88,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-277,1841327673,TRIVIUM LIFE SERVICES,IA,123687376.10,high,4,iqr_outlier,High confidence; 3+ independent signals
-278,1750304044,"KEYSTONE CONTINUUM, LLC",TN,123351611.64,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-279,1255330825,"EDWARDS HEALTH CARE SERVICES, INC.",OH,122902679.57,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-280,1548317852,LAKES REGION COMMUNITY SERVICES COUNCIL,NH,122651915.18,high,4,gev_extreme_value,High confidence; 3+ independent signals
-281,1447618061,"DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN",TN,122267483.98,high,4,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
-282,1841302445,PEOPLE CARE INCORPORATED,NY,121414414.77,high,5,shared_bene_count,High confidence; 3+ independent signals; Sudden growth or stop pattern
-283,1932749512,"LIVING INNOVATIONS SUPPORT SERVICES, LLC",NH,120997916.10,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-284,1295957561,"DEVELOPMENTAL SERVICES OF SULLIVAN COUNTY, INC.",NH,120342684.18,high,4,gev_extreme_value,High confidence; 3+ independent signals; Public entity; policy review likely
-285,1710901939,"WASHINGTON COUNTY MENTAL HEALTH SERVICES, INC.",VT,120254024.30,medium,2,iqr_outlier,Public entity; policy review likely
-286,1215982913,"BYRAM HEALTHCARE CENTERS, INC.",OR,120144037.24,medium,2,iqr_outlier,Statistical outlier vs peers
-287,1609858729,"RGH ENTERPRISES, LLC",OH,120065775.40,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-288,1124215785,MISSISSIPPI DEPARTMENT OF REHABILITAION SERVICES,MS,119904964.85,high,4,kmeans,High confidence; 3+ independent signals; Public entity; policy review likely
-289,1528387859,BRANDI'S HOPE COMMUNITY SERVICES,MS,119538124.19,medium,2,iqr_outlier,Statistical outlier vs peers
-290,1679587679,NEW YORK CITY HEALTH AND HOSPITALS CORPORATION,NY,119498924.72,high,10,bene_phantom_growth,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
-291,1275566424,"WAIANAE DISTRICT COMPREHENSIVE HEALTH AND HOSPITAL BOARD, INC",HI,119081690.20,high,5,iqr_outlier,High confidence; 3+ independent signals
-292,1427114099,"JOHNS HOPKINS ALL CHILDREN'S HOSPITAL, INC",FL,118203374.07,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-293,1447393319,"SPECIAL TOUCH HOME CARE SERVICES, INC.",NY,118124053.16,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+272,1255868915,BARI HOME CARE LLC,NY,124797999.38,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+273,1659330686,HELEN ROSS MCNABB CENTER,TN,124507659.30,high,6,iqr_outlier,High confidence; 3+ independent signals
+274,1376097303,MARKS HOMECARE AGENCY INC,NY,124373198.20,high,14,high_risk_category,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
+275,1730244294,"BESTCARE, INC",NY,124114825.49,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+276,1508072588,COUNTY OF SOLANO,CA,123932684.88,high,7,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+277,1841327673,TRIVIUM LIFE SERVICES,IA,123687376.10,high,5,iqr_outlier,High confidence; 3+ independent signals
+278,1750304044,"KEYSTONE CONTINUUM, LLC",TN,123351611.64,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+279,1255330825,"EDWARDS HEALTH CARE SERVICES, INC.",OH,122902679.57,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+280,1548317852,LAKES REGION COMMUNITY SERVICES COUNCIL,NH,122651915.18,high,5,gev_extreme_value,High confidence; 3+ independent signals
+281,1447618061,"DEPARTMENT OF INTELLECTUAL AND DEVELOPMENTAL DISABILITIES, STATE OF TN",TN,122267483.98,high,5,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
+282,1841302445,PEOPLE CARE INCORPORATED,NY,121414414.77,high,6,shared_bene_count,High confidence; 3+ independent signals; Sudden growth or stop pattern
+283,1932749512,"LIVING INNOVATIONS SUPPORT SERVICES, LLC",NH,120997916.10,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+284,1295957561,"DEVELOPMENTAL SERVICES OF SULLIVAN COUNTY, INC.",NH,120342684.18,high,5,gev_extreme_value,High confidence; 3+ independent signals; Public entity; policy review likely
+285,1710901939,"WASHINGTON COUNTY MENTAL HEALTH SERVICES, INC.",VT,120254024.30,high,3,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+286,1215982913,"BYRAM HEALTHCARE CENTERS, INC.",OR,120144037.24,high,3,iqr_outlier,High confidence; 3+ independent signals
+287,1609858729,"RGH ENTERPRISES, LLC",OH,120065775.40,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+288,1124215785,MISSISSIPPI DEPARTMENT OF REHABILITAION SERVICES,MS,119904964.85,high,4,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+289,1528387859,BRANDI'S HOPE COMMUNITY SERVICES,MS,119538124.19,high,3,iqr_outlier,High confidence; 3+ independent signals
+290,1679587679,NEW YORK CITY HEALTH AND HOSPITALS CORPORATION,NY,119498924.72,high,11,bene_phantom_growth,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
+291,1275566424,"WAIANAE DISTRICT COMPREHENSIVE HEALTH AND HOSPITAL BOARD, INC",HI,119081690.20,high,7,iqr_outlier,High confidence; 3+ independent signals
+292,1427114099,"JOHNS HOPKINS ALL CHILDREN'S HOSPITAL, INC",FL,118203374.07,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+293,1447393319,"SPECIAL TOUCH HOME CARE SERVICES, INC.",NY,118124053.16,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 294,1427003862,AWARE INC,MT,118081896.93,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-295,1346479169,"MYRIAD WOMEN'S HEALTH, INC.",CA,117859416.94,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-296,1447488721,"BNV HOME CARE AGENCY, INC.",NY,117828434.60,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-297,1205083672,ICL ACT TEAM CENTRAL BROOKLYN,NY,117828263.45,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-298,1295842508,ALLIANCE FOR HEALTH,NY,117283328.64,high,5,shared_bene_count,High confidence; 3+ independent signals; Sudden growth or stop pattern
-299,1881697381,LAKE COUNTY TRIBAL HEALTH CONSORTIUM INC.,CA,117038589.29,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+295,1346479169,"MYRIAD WOMEN'S HEALTH, INC.",CA,117859416.94,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+296,1447488721,"BNV HOME CARE AGENCY, INC.",NY,117828434.60,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+297,1205083672,ICL ACT TEAM CENTRAL BROOKLYN,NY,117828263.45,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+298,1295842508,ALLIANCE FOR HEALTH,NY,117283328.64,high,6,shared_bene_count,High confidence; 3+ independent signals; Sudden growth or stop pattern
+299,1881697381,LAKE COUNTY TRIBAL HEALTH CONSORTIUM INC.,CA,117038589.29,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
 300,1023678240,WASHINGTON INSTITUTE FOR COAGULATION,WA,116745705.97,high,7,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-301,1548347156,OPTION 1 NUTRITION SOLUTIONS LLC,CO,116641039.70,medium,2,iqr_outlier,Statistical outlier vs peers
-302,1770538068,CNS HEALTHCARE,MI,116445567.83,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-303,1245212380,"GENERATIONS HEALTH ASSOCIATION, INC.",TN,116435176.02,high,3,iqr_outlier,High confidence; 3+ independent signals
-304,1154549921,DEPARTMENT OF MENTAL HEALTH,MA,116285554.49,high,3,gev_extreme_value,High confidence; 3+ independent signals; Public entity; policy review likely
-305,1982781571,CITY OF PHOENIX ARIZONA,AZ,116125506.72,medium,2,iqr_outlier,Public entity; policy review likely
-306,1417010604,ABLELIGHT INC.,WI,116019235.12,medium,2,iqr_outlier,Statistical outlier vs peers
-307,1184706566,HOPE HAVEN INC,IA,115707964.83,high,5,iqr_outlier,High confidence; 3+ independent signals
+301,1548347156,OPTION 1 NUTRITION SOLUTIONS LLC,CO,116641039.70,high,3,iqr_outlier,High confidence; 3+ independent signals
+302,1770538068,CNS HEALTHCARE,MI,116445567.83,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+303,1245212380,"GENERATIONS HEALTH ASSOCIATION, INC.",TN,116435176.02,high,4,iqr_outlier,High confidence; 3+ independent signals
+304,1154549921,DEPARTMENT OF MENTAL HEALTH,MA,116285554.49,high,4,gev_extreme_value,High confidence; 3+ independent signals; Public entity; policy review likely
+305,1982781571,CITY OF PHOENIX ARIZONA,AZ,116125506.72,medium,2,gev_extreme_value,Public entity; policy review likely
+306,1417010604,ABLELIGHT INC.,WI,116019235.12,high,3,iqr_outlier,High confidence; 3+ independent signals
+307,1184706566,HOPE HAVEN INC,IA,115707964.83,high,7,iqr_outlier,High confidence; 3+ independent signals
 308,1265954630,"ALLSTAR HOMECARE FI, INC.",NY,115293140.58,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-309,1306001623,"VIVICARE HEALTH PARTNERS, LLC",TX,115234039.09,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-310,1124127683,ARTHUR G JAMES CANCER HOSPITAL AND RESEARCH INSTITUTE,OH,114986843.57,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+309,1306001623,"VIVICARE HEALTH PARTNERS, LLC",TX,115234039.09,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+310,1124127683,ARTHUR G JAMES CANCER HOSPITAL AND RESEARCH INSTITUTE,OH,114986843.57,high,11,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
 311,1891820668,"HOPEBRIDGE, LLC",IN,114506573.00,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-312,1184729493,"WINSLOW INDIAN HEALTH CARE CENTER, INC",AZ,114396063.78,high,6,gev_extreme_value,High confidence; 3+ independent signals
-313,1316206220,INVITAE CORPORATION,CA,114139206.26,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-314,1326170796,"ALL METRO HOME CARE SERVICES OF NEW YORK, INC.",NY,113962029.68,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-315,1689742439,MOSAIC,DE,113928362.10,high,6,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern
-316,1467661330,ABLENET INC,MN,113681062.78,high,7,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
-317,1952528408,HOWARD CENTER INC,VT,113483937.18,high,4,gev_extreme_value,High confidence; 3+ independent signals
-318,1437526597,"DEPARTMENT OF DISABILITY AND AGING, TENNESSEE EARLY INTERVENTION SYSTE",TN,112897831.08,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-319,1255617569,NOVOCURE INC.,NH,112604824.25,high,7,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
-320,1669484473,"MYRIAD GENETIC LABORATORIES, INC.",UT,112591224.10,high,4,iqr_outlier,High confidence; 3+ independent signals
+312,1184729493,"WINSLOW INDIAN HEALTH CARE CENTER, INC",AZ,114396063.78,high,7,gev_extreme_value,High confidence; 3+ independent signals
+313,1316206220,INVITAE CORPORATION,CA,114139206.26,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+314,1326170796,"ALL METRO HOME CARE SERVICES OF NEW YORK, INC.",NY,113962029.68,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+315,1689742439,MOSAIC,DE,113928362.10,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+316,1467661330,ABLENET INC,MN,113681062.78,high,8,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
+317,1952528408,HOWARD CENTER INC,VT,113483937.18,high,5,gev_extreme_value,High confidence; 3+ independent signals
+318,1437526597,"DEPARTMENT OF DISABILITY AND AGING, TENNESSEE EARLY INTERVENTION SYSTE",TN,112897831.08,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+319,1255617569,NOVOCURE INC.,NH,112604824.25,high,8,high_risk_category,High confidence; 3+ independent signals; Sudden growth or stop pattern
+320,1669484473,"MYRIAD GENETIC LABORATORIES, INC.",UT,112591224.10,high,5,iqr_outlier,High confidence; 3+ independent signals
 321,1801992631,NYU LANGONE HOSPITALS,NY,112449009.31,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-322,1457410904,"CARING PROFESSIONALS, INC",NY,112237727.29,high,8,high_risk_category,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
+322,1457410904,"CARING PROFESSIONALS, INC",NY,112237727.29,high,9,high_risk_category,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
 323,1629418835,"MARQUIS HOME CARE, LLC",NY,112045237.46,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-324,1255365599,MOUNT ROGERS COMMUNITY SERVICES,VA,111766663.78,high,4,iqr_outlier,High confidence; 3+ independent signals
-325,1124561691,FRIENDS OF CYRUS II,NJ,111550133.51,high,6,zscore_paid_per_bene,High confidence; 3+ independent signals; Sudden growth or stop pattern
+324,1255365599,MOUNT ROGERS COMMUNITY SERVICES,VA,111766663.78,high,5,iqr_outlier,High confidence; 3+ independent signals
+325,1124561691,FRIENDS OF CYRUS II,NJ,111550133.51,high,7,specialty_peer_comparison,High confidence; 3+ independent signals; Sudden growth or stop pattern
 326,1811289150,"CALIFORNIA PSYCHCARE, INC.",CA,111474565.87,high,3,iqr_outlier,High confidence; 3+ independent signals
-327,1215027966,NEWARK BETH ISRAEL MEDICAL CENTER INC,NJ,111080300.27,high,3,iqr_outlier,High confidence; 3+ independent signals
-328,1821275801,THE ROYAL CARE INC,NY,110707428.22,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+327,1215027966,NEWARK BETH ISRAEL MEDICAL CENTER INC,NJ,111080300.27,high,5,iqr_outlier,High confidence; 3+ independent signals
+328,1821275801,THE ROYAL CARE INC,NY,110707428.22,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 329,1558518753,CARDIOVASCULAR INSTITUTE OF SAN DIEGO INC,CA,110614491.51,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-330,1235261009,RUTLAND MENTAL HEALTH SERVICES,VT,110613277.23,high,3,kmeans,High confidence; 3+ independent signals
-331,1073576740,MARICOPA COUNTY SPECIAL HEALTH CARE DISTRICT,AZ,110516363.68,high,4,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-332,1023788031,"A BETTER YOU WELLNESS CENTER, LLC",AZ,110387408.81,high,7,addiction_rapid_exit,High confidence; 3+ independent signals; Sudden growth or stop pattern
-333,1275197055,"INTELLIRIDE, LLC",IL,110313452.16,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-334,1417065111,"MAXIM HEALTHCARE SERVICES, INC.",FL,110241360.80,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-335,1629141213,PEDIATRIC HOME RESPIRATORY SERVICES LLC,MN,109416144.79,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-336,1235255597,COMMONWEALTH OF MASSACHUSETTS,MA,108846992.11,high,3,iqr_outlier,High confidence; 3+ independent signals
+330,1235261009,RUTLAND MENTAL HEALTH SERVICES,VT,110613277.23,high,3,iqr_outlier,High confidence; 3+ independent signals
+331,1073576740,MARICOPA COUNTY SPECIAL HEALTH CARE DISTRICT,AZ,110516363.68,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+332,1023788031,"A BETTER YOU WELLNESS CENTER, LLC",AZ,110387408.81,high,8,addiction_rapid_exit,High confidence; 3+ independent signals; Sudden growth or stop pattern
+333,1275197055,"INTELLIRIDE, LLC",IL,110313452.16,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+334,1417065111,"MAXIM HEALTHCARE SERVICES, INC.",FL,110241360.80,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+335,1629141213,PEDIATRIC HOME RESPIRATORY SERVICES LLC,MN,109416144.79,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+336,1235255597,COMMONWEALTH OF MASSACHUSETTS,MA,108846992.11,high,4,gev_extreme_value,High confidence; 3+ independent signals
 337,1225205354,GREATER NEW YORK HOME CARE LLC,NY,108726789.30,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-338,1376760835,HEALTH CARE & REHABILITATION SERVICES,VT,108473091.87,medium,2,iqr_outlier,Statistical outlier vs peers
-339,1689778953,SAGINAW COUNTY COMMUNITY MENTAL HEALTH AUTHORITY,MI,108216083.66,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-340,1255333597,NEW ENGLAND HOME CARE INC.,CT,107929695.34,medium,2,gev_extreme_value,Statistical outlier vs peers
+338,1376760835,HEALTH CARE & REHABILITATION SERVICES,VT,108473091.87,high,3,iqr_outlier,High confidence; 3+ independent signals
+339,1689778953,SAGINAW COUNTY COMMUNITY MENTAL HEALTH AUTHORITY,MI,108216083.66,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+340,1255333597,NEW ENGLAND HOME CARE INC.,CT,107929695.34,high,3,gev_extreme_value,High confidence; 3+ independent signals
 341,1013093616,NATIONAL MENTOR HEALTHCARE NETWORK,FL,107870751.46,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-342,1053342816,SOUTHERN OHIO MEDICAL CENTER,OH,107771736.83,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-343,1093777492,MAIMONIDES MEDICAL CENTER,NY,107264017.17,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-344,1184612764,THE QUEENS MEDICAL CENTER,HI,106612914.55,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-345,1942304126,NEW RIVER VALLEY COMMUNITY SERVICES,VA,106414407.41,high,3,iqr_outlier,High confidence; 3+ independent signals
-346,1063630838,DEPARTMENT OF MENTAL HEALTH,MA,106335442.79,high,3,gev_extreme_value,High confidence; 3+ independent signals; Public entity; policy review likely
-347,1497136592,"THE ARC OF ESSEX COUNTY, INC",NJ,105953394.84,high,4,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-348,1033201157,"REHABILITATION CENTERS, LLC",MS,105176525.67,medium,2,gev_extreme_value,Statistical outlier vs peers
-349,1194994848,"PERSONAL TOUCH HOME CARE OF KY, INC.",KY,105091783.15,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-350,1073535027,NEW YORK CITY HEALTH AND HOSPITALS CORPORATION,NY,105068274.10,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
+342,1053342816,SOUTHERN OHIO MEDICAL CENTER,OH,107771736.83,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+343,1093777492,MAIMONIDES MEDICAL CENTER,NY,107264017.17,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+344,1184612764,THE QUEENS MEDICAL CENTER,HI,106612914.55,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+345,1942304126,NEW RIVER VALLEY COMMUNITY SERVICES,VA,106414407.41,high,4,iqr_outlier,High confidence; 3+ independent signals
+346,1063630838,DEPARTMENT OF MENTAL HEALTH,MA,106335442.79,high,4,gev_extreme_value,High confidence; 3+ independent signals; Public entity; policy review likely
+347,1497136592,"THE ARC OF ESSEX COUNTY, INC",NJ,105953394.84,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+348,1033201157,"REHABILITATION CENTERS, LLC",MS,105176525.67,high,4,specialty_peer_comparison,High confidence; 3+ independent signals
+349,1194994848,"PERSONAL TOUCH HOME CARE OF KY, INC.",KY,105091783.15,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+350,1073535027,NEW YORK CITY HEALTH AND HOSPITALS CORPORATION,NY,105068274.10,high,8,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
 351,1821341298,COUNTY OF SANTA CLARA,CA,104984442.00,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
 352,1548431570,"HEART TO HEART HEALTH CARE SERVICES, LLC",NJ,104770866.97,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-353,1215998323,UNIVERSITY HOSPITAL,NJ,104384165.75,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-354,1609848811,THE MENTAL HEALTH CENTER OF GREATER MANCHESTER,NH,103785861.08,high,3,iqr_outlier,High confidence; 3+ independent signals
-355,1992092274,PERSPECTIVES CORPORATION,RI,103300435.62,high,5,gev_extreme_value,High confidence; 3+ independent signals
-356,1407244304,"INTEGRATED COMMUNITY SERVICES, INC.",DC,102719809.11,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-357,1093789901,"MEDCO RESPIRATORY INSTRUMENTS, INC.",TX,102696300.63,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-358,1700960580,"DISABILITY SERVICES OF THE SOUTHWEST, INC",TX,102678987.65,high,3,iqr_outlier,High confidence; 3+ independent signals
+353,1215998323,UNIVERSITY HOSPITAL,NJ,104384165.75,high,7,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+354,1609848811,THE MENTAL HEALTH CENTER OF GREATER MANCHESTER,NH,103785861.08,high,4,iqr_outlier,High confidence; 3+ independent signals
+355,1992092274,PERSPECTIVES CORPORATION,RI,103300435.62,high,7,gev_extreme_value,High confidence; 3+ independent signals
+356,1407244304,"INTEGRATED COMMUNITY SERVICES, INC.",DC,102719809.11,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+357,1093789901,"MEDCO RESPIRATORY INSTRUMENTS, INC.",TX,102696300.63,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+358,1700960580,"DISABILITY SERVICES OF THE SOUTHWEST, INC",TX,102678987.65,high,5,iqr_outlier,High confidence; 3+ independent signals
 359,1609953066,PEDS TO GO INC,FL,102602699.45,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-360,1467538520,BAKERSFIELD MEMORIAL HOSPITAL,CA,102451107.63,high,3,upcoding,High confidence; 3+ independent signals; Implausible volume or upcoding signal
-361,1114057163,"CHAPA-DE INDIAN HEALTH PROGRAM, INC.",CA,102417265.67,high,5,iqr_outlier,High confidence; 3+ independent signals
-362,1932652815,"MARICOPA AMBULANCE, LLC",AZ,102094933.25,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-363,1184878274,"AHAVA MEDICAL AND REHABILITATION CENTER, LLC",NY,101852287.31,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-364,1154786846,NEIGHBORHOOD HEALTHCARE,CA,101782810.54,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+360,1467538520,BAKERSFIELD MEMORIAL HOSPITAL,CA,102451107.63,high,4,upcoding,High confidence; 3+ independent signals; Implausible volume or upcoding signal
+361,1114057163,"CHAPA-DE INDIAN HEALTH PROGRAM, INC.",CA,102417265.67,high,7,iqr_outlier,High confidence; 3+ independent signals
+362,1932652815,"MARICOPA AMBULANCE, LLC",AZ,102094933.25,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+363,1184878274,"AHAVA MEDICAL AND REHABILITATION CENTER, LLC",NY,101852287.31,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+364,1154786846,NEIGHBORHOOD HEALTHCARE,CA,101782810.54,high,8,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 365,1104819366,CHILDREN'S HOSPITAL,LA,101540102.88,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-366,1548378235,MEDSTAR WASHINGTON HOSPITAL CENTER,DC,101500590.84,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-367,1619148277,"NFI NORTH, INC",NH,101360766.99,medium,2,gev_extreme_value,Statistical outlier vs peers
-368,1457321317,PALOMAR HEALTH,CA,101279412.62,medium,2,iqr_outlier,Statistical outlier vs peers
-369,1972655991,MOSAIC,IA,101139076.30,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-370,1568442309,THE COOPER HEALTH SYSTEM,NJ,101004597.00,high,4,iqr_outlier,High confidence; 3+ independent signals
-371,1538195912,NORTH MEMORIAL HEALTH CARE,MN,100876292.53,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-372,1649495110,"WAYPOINT MAINE, INC.",ME,100810737.72,low,1,gev_extreme_value,Statistical outlier vs peers
-373,1942256888,HOLZER HOSPITAL FOUNDATION,OH,100625523.28,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-374,1043622780,GATEWAY PEDIATRIC THERAPY LLC,MI,100475151.59,high,3,iqr_outlier,High confidence; 3+ independent signals
+366,1548378235,MEDSTAR WASHINGTON HOSPITAL CENTER,DC,101500590.84,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+367,1619148277,"NFI NORTH, INC",NH,101360766.99,high,3,specialty_peer_comparison,High confidence; 3+ independent signals
+368,1457321317,PALOMAR HEALTH,CA,101279412.62,high,3,iqr_outlier,High confidence; 3+ independent signals
+369,1972655991,MOSAIC,IA,101139076.30,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+370,1568442309,THE COOPER HEALTH SYSTEM,NJ,101004597.00,high,6,iqr_outlier,High confidence; 3+ independent signals
+371,1538195912,NORTH MEMORIAL HEALTH CARE,MN,100876292.53,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+372,1649495110,"WAYPOINT MAINE, INC.",ME,100810737.72,medium,2,specialty_peer_comparison,Statistical outlier vs peers
+373,1942256888,HOLZER HOSPITAL FOUNDATION,OH,100625523.28,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+374,1043622780,GATEWAY PEDIATRIC THERAPY LLC,MI,100475151.59,high,4,aba_peer_cpb,High confidence; 3+ independent signals
 375,1124155825,PIONEER HOMECARE INC.,NY,100368060.47,high,3,iqr_outlier,High confidence; 3+ independent signals
-376,1043224355,NEW YORK CITY HEALTH AND HOSPITALS CORPORATION,NY,100363318.66,high,9,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
-377,1700887411,MEMORIAL HOSPITAL FOR CANCER AND ALLIED DISEASES,NY,100322526.38,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-378,1801270137,SAC HEALTH SYSTEM,CA,100175648.06,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-379,1891989794,RESOURCE CENTER FOR INDEPENDENT LIVING,NY,99524803.05,high,4,gev_extreme_value,High confidence; 3+ independent signals
-380,1366519431,M A C T HEALTH BOARD INCORPORATED,CA,99332437.92,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-381,1265782395,DIVERSIFIED ASSESSMENT & THERAPY SERVICES,WV,99296304.93,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-382,1346330610,"UNITED MEDICAL IMAGING HEALTHCARE, INC.",CA,99190979.61,high,6,change_point_cusum,High confidence; 3+ independent signals; Sudden growth or stop pattern
-383,1336435031,WEST BAY RESIDENTIAL SERVICES INC.,RI,99124053.85,high,4,gev_extreme_value,High confidence; 3+ independent signals
+376,1043224355,NEW YORK CITY HEALTH AND HOSPITALS CORPORATION,NY,100363318.66,high,10,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
+377,1700887411,MEMORIAL HOSPITAL FOR CANCER AND ALLIED DISEASES,NY,100322526.38,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+378,1801270137,SAC HEALTH SYSTEM,CA,100175648.06,high,8,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+379,1891989794,RESOURCE CENTER FOR INDEPENDENT LIVING,NY,99524803.05,high,5,gev_extreme_value,High confidence; 3+ independent signals
+380,1366519431,M A C T HEALTH BOARD INCORPORATED,CA,99332437.92,high,6,specialty_peer_comparison,High confidence; 3+ independent signals; Sudden growth or stop pattern
+381,1265782395,DIVERSIFIED ASSESSMENT & THERAPY SERVICES,WV,99296304.93,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+382,1346330610,"UNITED MEDICAL IMAGING HEALTHCARE, INC.",CA,99190979.61,high,8,specialty_peer_comparison,High confidence; 3+ independent signals; Sudden growth or stop pattern
+383,1336435031,WEST BAY RESIDENTIAL SERVICES INC.,RI,99124053.85,high,6,gev_extreme_value,High confidence; 3+ independent signals
 384,1821036807,"LENOX HILL RADIOLOGY & MEDICAL IMAGING ASSOCIATES, PC",NY,99118796.93,high,4,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-385,1912976408,"PLANNED PARENTHOOD/ORANGE AND SAN BERNARDINO COUNTIES, INC.",CA,98893348.32,high,6,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
-386,1730438706,HUMAN CARE LLC,NY,98749168.24,high,6,no_days_off,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
-387,1336238237,MERIDIAN SERVICES,IN,98604892.96,high,4,new_relationship_high_volume,High confidence; 3+ independent signals
-388,1679504864,KENNEBEC VALLEY MENTAL HEALTH CENTER,ME,98505983.93,high,3,iqr_outlier,High confidence; 3+ independent signals
-389,1831363324,LIFE PATTERNS,KS,98414095.78,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-390,1659406296,VERMONT DEPARTMENT OF MENTAL HEALTH,VT,98106793.38,high,5,change_point_cusum,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-391,1710918545,REGENTS OF THE UNIVERSITY OF CALIFORNIA,CA,98099463.27,high,4,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
-392,1861675506,TEXAS CHILDREN'S PHYSICIAN GROUP,TX,98034911.84,high,9,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+385,1912976408,"PLANNED PARENTHOOD/ORANGE AND SAN BERNARDINO COUNTIES, INC.",CA,98893348.32,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
+386,1730438706,HUMAN CARE LLC,NY,98749168.24,high,7,no_days_off,High confidence; 3+ independent signals; Billed every day; Sudden growth or stop pattern
+387,1336238237,MERIDIAN SERVICES,IN,98604892.96,high,5,captive_referral,High confidence; 3+ independent signals
+388,1679504864,KENNEBEC VALLEY MENTAL HEALTH CENTER,ME,98505983.93,high,5,iqr_outlier,High confidence; 3+ independent signals
+389,1831363324,LIFE PATTERNS,KS,98414095.78,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+390,1659406296,VERMONT DEPARTMENT OF MENTAL HEALTH,VT,98106793.38,high,6,change_point_cusum,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+391,1710918545,REGENTS OF THE UNIVERSITY OF CALIFORNIA,CA,98099463.27,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
+392,1861675506,TEXAS CHILDREN'S PHYSICIAN GROUP,TX,98034911.84,high,10,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
 393,1649259797,APPLE HOMECARE MEDICAL SUPPLY LLC,TX,97930369.39,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-394,1295994804,SPURWINK SERVICES,ME,97439457.62,medium,2,zscore_paid_per_bene,Statistical outlier vs peers
-395,1699782722,AEGIS SCIENCES CORPORATION,TN,97247151.09,high,4,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
-396,1427246669,"NATIONAL MENTOR SERVICES, LLC",MO,96872098.73,high,4,iqr_outlier,High confidence; 3+ independent signals
-397,1396728630,SHARP CHULA VISTA MEDICAL CENTER,CA,96810740.52,medium,2,iqr_outlier,Statistical outlier vs peers
+394,1295994804,SPURWINK SERVICES,ME,97439457.62,high,3,zscore_paid_per_bene,High confidence; 3+ independent signals
+395,1699782722,AEGIS SCIENCES CORPORATION,TN,97247151.09,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
+396,1427246669,"NATIONAL MENTOR SERVICES, LLC",MO,96872098.73,high,5,iqr_outlier,High confidence; 3+ independent signals
+397,1396728630,SHARP CHULA VISTA MEDICAL CENTER,CA,96810740.52,high,3,iqr_outlier,High confidence; 3+ independent signals
 398,1588937486,"NATIONAL MENTOR HEALTHCARE, LLC",DE,96511313.77,high,4,gev_extreme_value,High confidence; 3+ independent signals
 399,1104202761,VANDERBILT UNIVERSITY MEDICAL CENTER,TN,96453206.49,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
-400,1689744450,"ARTHUR M. BLANK HOSPITAL, INC.",GA,95955905.20,high,9,captive_servicing,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-401,1306878798,"ACT HOME HEALTH SERVICES, INC",PA,95768236.72,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-402,1447457148,FOUNDATION FOR THE ELDERLY,NY,95594178.39,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-403,1215003603,"GENOMIC HEALTH, INC.",CA,95450737.29,high,3,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern
+400,1689744450,"ARTHUR M. BLANK HOSPITAL, INC.",GA,95955905.20,high,10,captive_servicing,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+401,1306878798,"ACT HOME HEALTH SERVICES, INC",PA,95768236.72,high,9,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+402,1447457148,FOUNDATION FOR THE ELDERLY,NY,95594178.39,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+403,1215003603,"GENOMIC HEALTH, INC.",CA,95450737.29,high,4,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern
 404,1659424448,HAMPTON NEWPORT NEWS COMMUNITY SERVICES BOARD,VA,95339343.92,high,3,iqr_outlier,High confidence; 3+ independent signals
-405,1780708263,NORTHWESTERN COUNSELING & SUPPORT SERVICES,VT,94979727.54,medium,2,iqr_outlier,Statistical outlier vs peers
-406,1386746592,KENNEDY UNIVERSITY HOSPITAL INC.,NJ,94973572.52,high,3,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+405,1780708263,NORTHWESTERN COUNSELING & SUPPORT SERVICES,VT,94979727.54,high,3,iqr_outlier,High confidence; 3+ independent signals
+406,1386746592,KENNEDY UNIVERSITY HOSPITAL INC.,NJ,94973572.52,high,5,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
 407,1629080254,D & D SERVICES INC,OK,94350872.41,medium,2,gev_extreme_value,Statistical outlier vs peers
-408,1124595764,"SAFE RESIDENTIAL CARE, LLC",ME,94230115.61,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-409,1093787095,"JUSTICE RESOURCE INSTITUTE, INC",MA,94133233.94,medium,2,iqr_outlier,Statistical outlier vs peers
-410,1942217054,RUTGERS HEALTH - UNIVERSITY BEHAVIORAL HEALTH CARE,NJ,94132883.44,low,1,gev_extreme_value,Public entity; policy review likely
-411,1861554438,"UNIVERSITY MEDICAL CENTER, INC",KY,94092065.21,high,3,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+408,1124595764,"SAFE RESIDENTIAL CARE, LLC",ME,94230115.61,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+409,1093787095,"JUSTICE RESOURCE INSTITUTE, INC",MA,94133233.94,high,3,iqr_outlier,High confidence; 3+ independent signals
+410,1942217054,RUTGERS HEALTH - UNIVERSITY BEHAVIORAL HEALTH CARE,NJ,94132883.44,medium,2,specialty_peer_comparison,Public entity; policy review likely
+411,1861554438,"UNIVERSITY MEDICAL CENTER, INC",KY,94092065.21,high,4,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
 412,1952690463,"BARRIO COMPREHENSIVE FAMILY HEALTH CARE CENTER, INC.",TX,94039552.23,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-413,1063567691,YUKON-KUSKOKWIM HEALTH CORPORATION,AK,93842264.95,high,4,iqr_outlier,High confidence; 3+ independent signals
-414,1003914946,COUNTY OF MUSKEGON,MI,93766149.23,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-415,1528105558,COUNTY OF TULARE,CA,93429629.46,high,8,upcoding,High confidence; 3+ independent signals; Implausible volume or upcoding signal; Sudden growth or stop pattern; Public entity; policy review likely
-416,1043243538,AMERICAN MEDICAL RESPONSE OF CONNECTICUT INCORPORATED,CT,93128284.44,high,3,kmeans,High confidence; 3+ independent signals
-417,1427070168,COUNTY OF LOS ANGELES,CA,93099643.21,high,5,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-418,1871651588,"SOUTH SHORE HOME HEALTH SERVICE, INC.",NY,93068755.73,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+413,1063567691,YUKON-KUSKOKWIM HEALTH CORPORATION,AK,93842264.95,high,6,iqr_outlier,High confidence; 3+ independent signals
+414,1003914946,COUNTY OF MUSKEGON,MI,93766149.23,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+415,1528105558,COUNTY OF TULARE,CA,93429629.46,high,9,upcoding,High confidence; 3+ independent signals; Implausible volume or upcoding signal; Sudden growth or stop pattern; Public entity; policy review likely
+416,1043243538,AMERICAN MEDICAL RESPONSE OF CONNECTICUT INCORPORATED,CT,93128284.44,medium,2,iqr_outlier,Statistical outlier vs peers
+417,1427070168,COUNTY OF LOS ANGELES,CA,93099643.21,high,6,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
+418,1871651588,"SOUTH SHORE HOME HEALTH SERVICE, INC.",NY,93068755.73,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 419,1407839921,SHARP MEMORIAL HOSPITAL,CA,92849861.68,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-420,1235148594,"IHC HEALTH SERVICES, INC.",UT,92822802.23,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-421,1588744015,"LOUISIANA UNITED METHODIST CHILDREN & FAMILY SERVICES, INC",LA,92648126.95,medium,2,code_concentration_per_provider,Statistical outlier vs peers
+420,1235148594,"IHC HEALTH SERVICES, INC.",UT,92822802.23,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+421,1588744015,"LOUISIANA UNITED METHODIST CHILDREN & FAMILY SERVICES, INC",LA,92648126.95,high,3,gev_extreme_value,High confidence; 3+ independent signals
 422,1114052057,"KYPPEC,INC",KY,92628812.29,low,1,gev_extreme_value,Statistical outlier vs peers
-423,1497014252,ADVANTAGE MANAGEMENT ASSOCIATES INC.,NY,92381280.67,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-424,1700012101,FRONTLINE COMMUNITY SERVICES,MD,92265089.16,high,3,zscore_paid_per_bene,High confidence; 3+ independent signals; Sudden growth or stop pattern
-425,1265820179,BANNER - UNIVERSITY MEDICAL CENTER TUCSON CAMPUS LLC,AZ,92231606.91,medium,2,iqr_outlier,Public entity; policy review likely
-426,1245370808,"COVENANT CARE SERVICES, LLC",MO,92164356.66,medium,2,gev_extreme_value,Sudden growth or stop pattern
-427,1427131424,"TACTILE SYSTEMS TECHNOLOGY, INC",MN,91975314.43,high,3,hhi_per_code,High confidence; 3+ independent signals; Sudden growth or stop pattern
-428,1972598449,COUNTY OF SANTA CLARA,CA,91810177.97,high,6,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
-429,1831236009,DEVELOPMENTAL DISABILITIES CENTER,CO,91735393.87,medium,2,gev_extreme_value,Statistical outlier vs peers
-430,1174758478,INTELLICHOICE STAFFING LLC,NC,91682910.19,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-431,1992012306,ROLLING HILLS CLINIC,CA,91436461.91,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-432,1184791998,BAY AREA COMMUNITY HEALTH,CA,91363089.93,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-433,1578554630,SUNY HEALTH SCIENCE CENTER AT SYRACUSE,NY,91194311.35,high,7,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+423,1497014252,ADVANTAGE MANAGEMENT ASSOCIATES INC.,NY,92381280.67,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+424,1700012101,FRONTLINE COMMUNITY SERVICES,MD,92265089.16,high,4,specialty_peer_comparison,High confidence; 3+ independent signals; Sudden growth or stop pattern
+425,1265820179,BANNER - UNIVERSITY MEDICAL CENTER TUCSON CAMPUS LLC,AZ,92231606.91,high,3,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+426,1245370808,"COVENANT CARE SERVICES, LLC",MO,92164356.66,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+427,1427131424,"TACTILE SYSTEMS TECHNOLOGY, INC",MN,91975314.43,high,5,hhi_per_code,High confidence; 3+ independent signals; Sudden growth or stop pattern
+428,1972598449,COUNTY OF SANTA CLARA,CA,91810177.97,high,7,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
+429,1831236009,DEVELOPMENTAL DISABILITIES CENTER,CO,91735393.87,high,3,specialty_peer_comparison,High confidence; 3+ independent signals
+430,1174758478,INTELLICHOICE STAFFING LLC,NC,91682910.19,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+431,1992012306,ROLLING HILLS CLINIC,CA,91436461.91,high,7,specialty_peer_comparison,High confidence; 3+ independent signals; Sudden growth or stop pattern
+432,1184791998,BAY AREA COMMUNITY HEALTH,CA,91363089.93,high,8,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+433,1578554630,SUNY HEALTH SCIENCE CENTER AT SYRACUSE,NY,91194311.35,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
 434,1255468435,CITY OF PHILADELPHIA,PA,91133713.51,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern; Public entity; policy review likely
-435,1841476009,INFINITI HOME CARE INC,NY,90916429.34,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+435,1841476009,INFINITI HOME CARE INC,NY,90916429.34,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 436,1649833286,LIFETREE INC.,AZ,90807059.49,high,4,change_point_cusum,High confidence; 3+ independent signals; Sudden growth or stop pattern
-437,1043554348,GENESEE HEALTH SYSTEM,MI,90513514.61,high,4,iqr_outlier,High confidence; 3+ independent signals
-438,1528423589,"RESCARE ARIZONA, INC.",AZ,90473044.39,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-439,1396812897,"ASTROCARE CLASS, INC.",TX,90350966.56,high,4,iqr_outlier,High confidence; 3+ independent signals
-440,1922141167,"MALVERN INSTITUTE FOR PSYCHIATRIC AND ALCOHOLIC STUDIES, INC.",PA,90242291.48,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+437,1043554348,GENESEE HEALTH SYSTEM,MI,90513514.61,high,7,aba_peer_cpb,High confidence; 3+ independent signals
+438,1528423589,"RESCARE ARIZONA, INC.",AZ,90473044.39,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+439,1396812897,"ASTROCARE CLASS, INC.",TX,90350966.56,high,5,iqr_outlier,High confidence; 3+ independent signals
+440,1922141167,"MALVERN INSTITUTE FOR PSYCHIATRIC AND ALCOHOLIC STUDIES, INC.",PA,90242291.48,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 441,1992863583,"COMMUNITY SYSTEMS, INC.",DE,90165494.83,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-442,1518094176,EASY LIVING INC.,MO,89669485.78,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-443,1245520386,THE NEMOURS FOUNDATION,FL,89366060.48,high,6,change_point_cusum,High confidence; 3+ independent signals; Sudden growth or stop pattern
+442,1518094176,EASY LIVING INC.,MO,89669485.78,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+443,1245520386,THE NEMOURS FOUNDATION,FL,89366060.48,high,7,change_point_cusum,High confidence; 3+ independent signals; Sudden growth or stop pattern
 444,1376598326,ENT AND ALLERGY ASSOCIATES LLP,NY,89340394.04,high,4,billing_fan_out,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-445,1851569834,NORMAL LIFE OF GEORGIA,GA,88891527.49,high,4,gev_extreme_value,High confidence; 3+ independent signals
-446,1902341050,NEMO HOME CARE,NY,88760471.12,high,8,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-447,1972545945,FOUR COUNTY COMPREHENSIVE MENTAL HEALTH CENTER INC,IN,88648313.17,medium,2,iqr_outlier,Public entity; policy review likely
-448,1265462659,PALMETTO INFUSION SERVICES LLC,SC,88529432.88,high,3,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+445,1851569834,NORMAL LIFE OF GEORGIA,GA,88891527.49,high,5,gev_extreme_value,High confidence; 3+ independent signals
+446,1902341050,NEMO HOME CARE,NY,88760471.12,high,9,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+447,1972545945,FOUR COUNTY COMPREHENSIVE MENTAL HEALTH CENTER INC,IN,88648313.17,high,3,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+448,1265462659,PALMETTO INFUSION SERVICES LLC,SC,88529432.88,high,4,pharmacy_rate_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
 449,1336234194,APRIA HEALTHCARE LLC,IN,88518959.72,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-450,1487187704,"YOUTH OPPORTUNITY INVESTMENTS, LLC",TX,88394014.72,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-451,1831151455,"UMASS MEMORIAL MEDICAL CENTER, INC.",MA,88332724.35,high,6,upcoding,High confidence; 3+ independent signals; Implausible volume or upcoding signal
-452,1720011810,BANNER DESERT MEDICAL CENTER,AZ,88298409.17,high,4,iqr_outlier,High confidence; 3+ independent signals
-453,1417027558,BRONXCARE HEALTH SYSTEM,NY,88133136.39,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-454,1467536276,SEATTLE CHILDREN'S HOSPITAL,WA,88079081.84,high,5,iqr_outlier,High confidence; 3+ independent signals
-455,1720125115,"NORTH METRO COMMUNITY SERVICES, INC.",CO,88064060.66,medium,2,gev_extreme_value,Statistical outlier vs peers
-456,1700099959,"NATIONAL CHILDREN'S CENTER, INC.",DC,88013584.61,low,1,gev_extreme_value,Statistical outlier vs peers
-457,1639132442,COUNTY OF WASHTENAW,MI,87693749.89,high,4,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
-458,1336467166,"ALAMO CONSUMER DIRECT, LLC",TX,87645995.96,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-459,1003961251,CHILDREN'S HOSPITAL & RESEARCH CENTER AT OAKLAND,CA,87312212.37,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
-460,1821103821,"TRILOGY, INC.",IL,87054246.34,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-461,1407932775,COMPREHAB LLC,NC,86845335.28,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-462,1518406636,GENTECH LABORATORIES LLC,TX,86758448.28,high,3,change_point_cusum,High confidence; 3+ independent signals; Sudden growth or stop pattern
-463,1639131436,FALCK MOBILE HEALTH CORP,CA,86612993.79,high,3,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-464,1548507296,CONNECT HOME HEALTH LLC,TX,86610636.23,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-465,1902999022,SATE OF ALABAMA DEPT OF FINANCE,AL,86348819.55,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-466,1912021452,"RESCARE, INC",IA,86279114.79,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
+450,1487187704,"YOUTH OPPORTUNITY INVESTMENTS, LLC",TX,88394014.72,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+451,1831151455,"UMASS MEMORIAL MEDICAL CENTER, INC.",MA,88332724.35,high,8,upcoding,High confidence; 3+ independent signals; Implausible volume or upcoding signal
+452,1720011810,BANNER DESERT MEDICAL CENTER,AZ,88298409.17,high,5,iqr_outlier,High confidence; 3+ independent signals
+453,1417027558,BRONXCARE HEALTH SYSTEM,NY,88133136.39,high,7,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+454,1467536276,SEATTLE CHILDREN'S HOSPITAL,WA,88079081.84,high,7,iqr_outlier,High confidence; 3+ independent signals
+455,1720125115,"NORTH METRO COMMUNITY SERVICES, INC.",CO,88064060.66,high,3,specialty_peer_comparison,High confidence; 3+ independent signals
+456,1700099959,"NATIONAL CHILDREN'S CENTER, INC.",DC,88013584.61,medium,2,specialty_peer_comparison,Statistical outlier vs peers
+457,1639132442,COUNTY OF WASHTENAW,MI,87693749.89,high,6,iqr_outlier,High confidence; 3+ independent signals; Public entity; policy review likely
+458,1336467166,"ALAMO CONSUMER DIRECT, LLC",TX,87645995.96,high,8,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+459,1003961251,CHILDREN'S HOSPITAL & RESEARCH CENTER AT OAKLAND,CA,87312212.37,high,6,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern
+460,1821103821,"TRILOGY, INC.",IL,87054246.34,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+461,1407932775,COMPREHAB LLC,NC,86845335.28,high,6,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+462,1518406636,GENTECH LABORATORIES LLC,TX,86758448.28,high,4,specialty_peer_comparison,High confidence; 3+ independent signals; Sudden growth or stop pattern
+463,1639131436,FALCK MOBILE HEALTH CORP,CA,86612993.79,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+464,1548507296,CONNECT HOME HEALTH LLC,TX,86610636.23,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+465,1902999022,SATE OF ALABAMA DEPT OF FINANCE,AL,86348819.55,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+466,1912021452,"RESCARE, INC",IA,86279114.79,high,6,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern
 467,1619987302,UAHSF NEONATOLOGY,AL,86261211.73,low,1,gev_extreme_value,Statistical outlier vs peers
-468,1235569112,REM EAST LLC,MS,86228428.67,medium,2,gev_extreme_value,Sudden growth or stop pattern
-469,1912510041,"RWJBH EMERGENCY MEDICINE ASSOCIATES, LLC",NJ,86003428.24,high,4,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-470,1730466590,"PRECISION TOXICOLOGY, LLC",CA,85761297.29,medium,2,iqr_outlier,Statistical outlier vs peers
-471,1780806828,ST. JOHN'S COMMUNITY SERVICES-DC,DC,85747818.75,low,1,gev_extreme_value,Statistical outlier vs peers
-472,1972579837,WAKEMED,NC,85584404.47,high,5,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-473,1790994952,"STELLA ORTON HOME CARE AGENCY, INC.",NY,85352876.00,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+468,1235569112,REM EAST LLC,MS,86228428.67,high,3,specialty_peer_comparison,High confidence; 3+ independent signals; Sudden growth or stop pattern
+469,1912510041,"RWJBH EMERGENCY MEDICINE ASSOCIATES, LLC",NJ,86003428.24,high,6,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+470,1730466590,"PRECISION TOXICOLOGY, LLC",CA,85761297.29,high,3,iqr_outlier,High confidence; 3+ independent signals
+471,1780806828,ST. JOHN'S COMMUNITY SERVICES-DC,DC,85747818.75,medium,2,gev_extreme_value,Statistical outlier vs peers
+472,1972579837,WAKEMED,NC,85584404.47,high,6,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+473,1790994952,"STELLA ORTON HOME CARE AGENCY, INC.",NY,85352876.00,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 474,1386854370,ARIZONA CONSUMER DIRECT PERSONAL CARE,AZ,85083068.89,high,3,gev_extreme_value,High confidence; 3+ independent signals
-475,1134377781,EUROFINS DIATHERIX LABORATORIES LLC,AL,84996845.90,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+475,1134377781,EUROFINS DIATHERIX LABORATORIES LLC,AL,84996845.90,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
 476,1124236724,PEABODY RESIDENT SERVICES INC,MA,84730408.83,medium,2,gev_extreme_value,Statistical outlier vs peers
 477,1235125055,CUMBERLAND MOUNTAIN COMMUNITY SERVICES,VA,84604435.52,high,4,gev_extreme_value,High confidence; 3+ independent signals
-478,1235574617,KELSCH ASSOCIATES,NJ,84533760.33,high,7,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern
-479,1326657602,"COMMUNITY LIVING SERVICES, INC",ND,84399919.11,low,1,gev_extreme_value,Statistical outlier vs peers
-480,1275683260,SOUTHEAST KANSAS INDEPENDENT LIVING RESOURCE CENTER INC,KS,84349927.98,high,4,iqr_outlier,High confidence; 3+ independent signals
-481,1790735827,"TEXAS VISITING NURSE SERVICE, LTD.",TX,84348793.62,high,4,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
-482,1366527111,"CAPITAL CARE, INC",MD,84307791.40,low,1,gev_extreme_value,Statistical outlier vs peers
-483,1285006379,WIND RIVER FAMILY & COMMUNITY HEALTHC CARE,WY,83984801.17,high,7,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern
-484,1003813718,"SEASONS HOSPICE & PALLIATIVE CARE OF MARYLAND, LLC",MD,83685745.39,high,3,gev_extreme_value,High confidence; 3+ independent signals
-485,1447335930,STATE OF ALABAMA DEPT OF FINANCE,AL,83585031.46,medium,2,gev_extreme_value,Public entity; policy review likely
-486,1407909930,ALABAMA DEPARTMENT OF MENTAL HEALTH AND MENTAL RETARDATION,AL,83038070.37,high,3,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
-487,1821032913,NEW VISTA OF THE BLUEGRASS INC,KY,82730466.48,high,3,iqr_outlier,High confidence; 3+ independent signals
-488,1518259035,ASTRA HOME CARE,NY,82712245.38,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+478,1235574617,KELSCH ASSOCIATES,NJ,84533760.33,high,9,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern
+479,1326657602,"COMMUNITY LIVING SERVICES, INC",ND,84399919.11,medium,2,specialty_peer_comparison,Statistical outlier vs peers
+480,1275683260,SOUTHEAST KANSAS INDEPENDENT LIVING RESOURCE CENTER INC,KS,84349927.98,high,5,iqr_outlier,High confidence; 3+ independent signals
+481,1790735827,"TEXAS VISITING NURSE SERVICE, LTD.",TX,84348793.62,high,5,iqr_outlier,High confidence; 3+ independent signals; Sudden growth or stop pattern
+482,1366527111,"CAPITAL CARE, INC",MD,84307791.40,medium,2,specialty_peer_comparison,Statistical outlier vs peers
+483,1285006379,WIND RIVER FAMILY & COMMUNITY HEALTHC CARE,WY,83984801.17,high,8,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern
+484,1003813718,"SEASONS HOSPICE & PALLIATIVE CARE OF MARYLAND, LLC",MD,83685745.39,high,4,gev_extreme_value,High confidence; 3+ independent signals
+485,1447335930,STATE OF ALABAMA DEPT OF FINANCE,AL,83585031.46,high,3,gev_extreme_value,High confidence; 3+ independent signals; Public entity; policy review likely
+486,1407909930,ALABAMA DEPARTMENT OF MENTAL HEALTH AND MENTAL RETARDATION,AL,83038070.37,high,4,gev_extreme_value,High confidence; 3+ independent signals; Network or middleman billing pattern; Public entity; policy review likely
+487,1821032913,NEW VISTA OF THE BLUEGRASS INC,KY,82730466.48,high,4,iqr_outlier,High confidence; 3+ independent signals
+488,1518259035,ASTRA HOME CARE,NY,82712245.38,high,5,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 489,1063568764,"JHC OPERATIONS, LLC",TX,82641998.00,high,6,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-490,1336293000,COUNTY OF CHESTERFIELD VIRGINIA,VA,82489896.95,medium,2,gev_extreme_value,Public entity; policy review likely
-491,1821011248,BEXAR COUNTY HOSPITAL DISTRICT,TX,82247743.16,high,8,isolation_forest,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
-492,1023354933,"SOUTHWEST BROOKLYN HEALTH HOME, LLC",NY,82228264.46,high,5,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern
+490,1336293000,COUNTY OF CHESTERFIELD VIRGINIA,VA,82489896.95,high,3,specialty_peer_comparison,High confidence; 3+ independent signals; Public entity; policy review likely
+491,1821011248,BEXAR COUNTY HOSPITAL DISTRICT,TX,82247743.16,high,9,iqr_outlier,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern; Public entity; policy review likely
+492,1023354933,"SOUTHWEST BROOKLYN HEALTH HOME, LLC",NY,82228264.46,high,6,code_concentration_per_provider,High confidence; 3+ independent signals; Sudden growth or stop pattern
 493,1639160708,180 MEDICAL INC,OK,81908573.81,medium,2,iqr_outlier,Statistical outlier vs peers
-494,1316061658,"KENTUCKY RIVER COMMUNITY CARE, INC",KY,81791795.41,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
-495,1356583876,"EMPLOYMENT SPECIALISTS OF MAINE, INC.",ME,81759309.34,high,4,high_risk_category,High confidence; 3+ independent signals
-496,1609024397,"BYRAM HEALTHCARE CENTERS, INC.",WA,81646433.39,medium,2,gev_extreme_value,Sudden growth or stop pattern
-497,1821201278,TANANA CHIEFS CONFERENCE,AK,81571155.98,high,5,billing_only_provider,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
-498,1659435840,MEDICAL UNIVERSITY HOSPITAL AUTHORITY,SC,81351573.73,high,4,upcoding,High confidence; 3+ independent signals; Implausible volume or upcoding signal; Public entity; policy review likely
-499,1699840967,"SELFHELP COMMUNITY SERVICES, INC",NY,81306354.09,high,3,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
+494,1316061658,"KENTUCKY RIVER COMMUNITY CARE, INC",KY,81791795.41,high,4,specialty_peer_comparison,High confidence; 3+ independent signals; Sudden growth or stop pattern
+495,1356583876,"EMPLOYMENT SPECIALISTS OF MAINE, INC.",ME,81759309.34,high,6,high_risk_category,High confidence; 3+ independent signals
+496,1609024397,"BYRAM HEALTHCARE CENTERS, INC.",WA,81646433.39,high,3,specialty_peer_comparison,High confidence; 3+ independent signals; Sudden growth or stop pattern
+497,1821201278,TANANA CHIEFS CONFERENCE,AK,81571155.98,high,7,billing_only_provider,High confidence; 3+ independent signals; Network or middleman billing pattern; Sudden growth or stop pattern
+498,1659435840,MEDICAL UNIVERSITY HOSPITAL AUTHORITY,SC,81351573.73,high,6,upcoding,High confidence; 3+ independent signals; Implausible volume or upcoding signal; Public entity; policy review likely
+499,1699840967,"SELFHELP COMMUNITY SERVICES, INC",NY,81306354.09,high,4,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern
 500,1083743678,RESOURCES FOR HUMAN DEVELOPMENT INC.,DE,81146985.27,high,7,gev_extreme_value,High confidence; 3+ independent signals; Sudden growth or stop pattern

@@ -192,7 +192,7 @@ def _query_monthly_spend(con, npis):
 def _query_top_codes(con):
     rows = con.execute(f"""
         WITH top_providers AS (
-            SELECT DISTINCT npi FROM read_csv_auto('{RISK_QUEUE}')
+            SELECT DISTINCT CAST(npi AS VARCHAR) AS npi FROM read_csv_auto('{RISK_QUEUE}')
         ),
         code_totals AS (
             SELECT

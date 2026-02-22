@@ -1,17 +1,27 @@
 """DuckDB connection and formatting utilities for Medicaid analysis."""
 
 import os
+import sys
 import duckdb
 
-DB_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'medicaid.duckdb')
+# Import centralized config (with fallback for standalone execution)
+try:
+    _project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    if _project_root not in sys.path:
+        sys.path.insert(0, _project_root)
+    from config.project_config import DB_PATH, DB_WRITE_THREADS, DB_WRITE_MEMORY_LIMIT
+except ImportError:
+    DB_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'medicaid.duckdb')
+    DB_WRITE_THREADS = 16
+    DB_WRITE_MEMORY_LIMIT = '96GB'
 
 
 def get_connection(read_only=True):
     """Returns a DuckDB connection to medicaid.duckdb with appropriate settings."""
     con = duckdb.connect(DB_PATH, read_only=read_only)
     if not read_only:
-        con.execute("SET threads TO 16")
-        con.execute("SET memory_limit = '96GB'")
+        con.execute(f"SET threads TO {DB_WRITE_THREADS}")
+        con.execute(f"SET memory_limit = '{DB_WRITE_MEMORY_LIMIT}'")
     return con
 
 

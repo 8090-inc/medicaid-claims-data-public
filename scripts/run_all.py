@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """Master orchestrator: runs all milestones in sequence.
 
-Usage: python3 scripts/run_all.py
+Usage:
+    python3 scripts/run_all.py                    # Run full pipeline
+    python3 scripts/run_all.py --start-from 5     # Resume from milestone 5
+    python3 scripts/run_all.py --skip 13 131      # Skip milestones 13 and 13b
+    python3 scripts/run_all.py --resume            # Resume from last checkpoint
 """
 
+import argparse
 import os
 import sys
 import subprocess
@@ -12,43 +17,27 @@ import time
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPTS_DIR)
 
-MILESTONES = [
-    ('00_data_quality.py', 'Milestone 0: CSV Data Quality Scan'),
-    ('01_setup_and_ingest.py', 'Milestone 1: Data Ingestion'),
-    ('02_enrich_references.py', 'Milestone 2: Reference Data Enrichment'),
-    ('03_eda.py', 'Milestone 3: Exploratory Data Analysis'),
-    ('04_generate_hypotheses.py', 'Milestone 4: Hypothesis Generation'),
-    ('12_feasibility_matrix.py', 'Milestone 12: Hypothesis Feasibility Matrix'),
-    ('05_run_hypotheses_1_to_5.py', 'Milestone 5: Parallel Hypothesis Testing (Cat 1-5)'),
-    ('06_run_ml_hypotheses.py', 'Milestone 6: ML/DL Anomaly Detection'),
-    ('07_run_domain_rules.py', 'Milestone 7: Domain-Specific Rules'),
-    ('08_run_crossref_composite.py', 'Milestone 8: Cross-Reference & Composite'),
-    ('15_build_dq_atlas_weights.py', 'Milestone 15: Build DQ Atlas State Weights'),
-    ('09_financial_impact.py', 'Milestone 9: Financial Impact & Deduplication'),
-    ('16_generate_current_pack.py', 'Milestone 16: Current Risk Queue Pack'),
-    ('10_generate_charts.py', 'Milestone 10: Chart Generation'),
-    ('11_generate_report.py', 'Milestone 11: Report Assembly'),
-    ('13_panel_build.py', 'Milestone 13: Longitudinal Panel Build'),
-    ('13_longitudinal_multivariate_analysis.py', 'Milestone 13b: Longitudinal Multivariate Analysis'),
-    ('14_validation_calibration.py', 'Milestone 14: Validation & Calibration'),
-    ('12_validate_hypotheses.py', 'Milestone 12b: Hypothesis Validation Summary'),
-    ('18_generate_hypothesis_cards.py', 'Milestone 18: Hypothesis Cards'),
-    ('17_generate_cards.py', 'Milestone 17: Executive Dashboard Cards'),
-    ('19_generate_executive_brief.py', 'Milestone 19: Executive Brief'),
-    ('20_generate_merged_cards.py', 'Milestone 20: Merged Aggregate + Hypothesis Cards'),
-    ('21_generate_fraud_patterns.py', 'Milestone 21: Fraud Pattern Summary'),
-    ('22_generate_action_plan.py', 'Milestone 22: Action Plan Memo + Priority Queue'),
-    ('23_generate_provider_validation_scores.py', 'Milestone 23: Provider Validation Scores'),
-]
+# Ensure project root is on path for config imports
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
+from config.project_config import CSV_PATH, CHECKPOINT_PATH, OUTPUT_DIR
+from config.logging_config import setup_logging, get_logger
+from scripts.orchestration.milestone_manager import (
+    MILESTONES,
+    CheckpointManager,
+    get_milestone_sequence,
+)
+from scripts.orchestration.execution_logger import ExecutionLogger
+from scripts.orchestration.audit_logger import AuditLogger
+from scripts.orchestration.data_manager import verify_inputs, verify_outputs
+
+logger = get_logger('run_all')
 
 
 def run_milestone(script_name, description):
     """Run a single milestone script, returning True on success."""
     script_path = os.path.join(SCRIPTS_DIR, script_name)
-    print(f'\n{"="*70}')
-    print(f'  {description}')
-    print(f'  Running: python3 {script_path}')
-    print(f'{"="*70}\n')
 
     start = time.time()
     result = subprocess.run(
@@ -58,53 +47,116 @@ def run_milestone(script_name, description):
     )
     elapsed = time.time() - start
 
-    if result.returncode != 0:
-        print(f'\n  FAILED: {description} (exit code {result.returncode}, {elapsed:.1f}s)')
-        return False
-    else:
-        print(f'\n  COMPLETED: {description} ({elapsed:.1f}s)')
-        return True
+    return result.returncode == 0, elapsed
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Medicaid FWA Analytics Pipeline')
+    parser.add_argument('--start-from', dest='start_from', default=None,
+                        help='Start from a specific milestone (script name or number)')
+    parser.add_argument('--skip', nargs='*', default=[],
+                        help='Skip specific milestones (script names or numbers)')
+    parser.add_argument('--resume', action='store_true',
+                        help='Resume from the last checkpoint')
+    parser.add_argument('--reset', action='store_true',
+                        help='Clear checkpoints and start fresh')
+    parser.add_argument('--log-level', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
+                        help='Logging level (default: INFO)')
+    return parser.parse_args()
 
 
 def main():
+    args = parse_args()
+
+    # Initialize logging
+    import logging
+    level = getattr(logging, args.log_level)
+    setup_logging(level=level)
+
+    # Initialize checkpoint manager
+    checkpoint = CheckpointManager()
+    if args.reset:
+        checkpoint.reset()
+        print('  Checkpoints cleared.')
+
     t0 = time.time()
 
-    print('='*70)
+    print('=' * 70)
     print('  MEDICAID PROVIDER SPENDING: FRAUD, WASTE & ABUSE ANALYSIS')
     print('  Full Pipeline Execution')
-    print('='*70)
+    print('=' * 70)
 
     # Check for CSV
-    csv_path = os.path.join(PROJECT_ROOT, 'medicaid-provider-spending.csv')
-    if not os.path.exists(csv_path):
-        print(f'\nERROR: CSV file not found at {csv_path}')
+    if not os.path.exists(CSV_PATH):
+        print(f'\nERROR: CSV file not found at {CSV_PATH}')
         print('Please ensure medicaid-provider-spending.csv is in the project root.')
         sys.exit(1)
 
-    print(f'\nCSV file found: {csv_path}')
-    csv_size = os.path.getsize(csv_path) / (1024**3)
+    csv_size = os.path.getsize(CSV_PATH) / (1024 ** 3)
+    print(f'\nCSV file found: {CSV_PATH}')
     print(f'CSV size: {csv_size:.2f} GB')
 
-    results = []
-    for script_name, description in MILESTONES:
-        success = run_milestone(script_name, description)
-        results.append((description, success))
-        if not success:
+    # Determine starting point
+    start_from = args.start_from
+    if args.resume:
+        resume_point = checkpoint.get_resume_point()
+        if resume_point:
+            start_from = resume_point
+            print(f'\n  Resuming from: {resume_point}')
+        else:
+            print('\n  No checkpoint found — starting from beginning.')
+
+    skip = set(args.skip)
+
+    # Get filtered milestone sequence
+    sequence = get_milestone_sequence(start_from=start_from, skip=skip)
+    if not sequence:
+        print('\n  No milestones to execute.')
+        sys.exit(0)
+
+    # Initialize execution tracking
+    exec_logger = ExecutionLogger(len(sequence))
+    audit = AuditLogger()
+    audit.log_pipeline_start({
+        'start_from': start_from,
+        'skip': list(skip),
+        'total_milestones': len(sequence),
+    })
+    checkpoint.mark_pipeline_start()
+
+    # Execute milestones
+    for i, (script_name, description, milestone_num) in enumerate(sequence):
+        # Pre-flight input check
+        inputs_ok, missing = verify_inputs(script_name)
+        if not inputs_ok:
+            logger.warning(f'Missing inputs for {script_name}: {missing}')
+
+        exec_logger.log_milestone_start(description, script_name, i)
+        audit.log_milestone_start(description, milestone_num)
+
+        success, elapsed = run_milestone(script_name, description)
+
+        exec_logger.log_milestone_end(description, success, elapsed)
+        audit.log_milestone_end(description, success, elapsed)
+
+        if success:
+            checkpoint.mark_completed(script_name, elapsed)
+            # Post-flight output check
+            verify_outputs(script_name)
+        else:
             print(f'\nPipeline stopped at: {description}')
-            print('Fix the error and re-run from this milestone.')
+            print('Fix the error and re-run with: python3 scripts/run_all.py --resume')
             break
 
     # Summary
-    print(f'\n{"="*70}')
-    print('  PIPELINE SUMMARY')
-    print(f'{"="*70}')
-    for desc, success in results:
-        status = 'PASS' if success else 'FAIL'
-        print(f'  [{status}] {desc}')
-    print(f'\n  Total time: {time.time() - t0:.0f}s ({(time.time() - t0) / 60:.1f} min)')
+    exec_logger.log_pipeline_summary()
+    audit.log_pipeline_end(
+        [(d, s) for d, s, _ in exec_logger.get_results()],
+        time.time() - t0,
+    )
 
     # Check final output
-    report_path = os.path.join(PROJECT_ROOT, 'output', 'cms_administrator_report.md')
+    report_path = os.path.join(OUTPUT_DIR, 'cms_administrator_report.md')
     if os.path.exists(report_path):
         size = os.path.getsize(report_path)
         print(f'\n  Final report: {report_path} ({size:,} bytes)')

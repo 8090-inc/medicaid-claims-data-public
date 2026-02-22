@@ -2,42 +2,42 @@
 
 ## Summary
 
-- Total findings: 591181
-- High confidence: 10913
-- Medium confidence: 19379
-- Low confidence: 560889
-- Total estimated recoverable (standardized, provider-level): $354,986,926,844
+- Total findings: 607522
+- High confidence: 15583
+- Medium confidence: 27354
+- Low confidence: 564585
+- Total estimated recoverable (standardized, provider-level): $355,781,963,848
 - Systemic exposure (state/code aggregates): $116,147,010,551
-- Quality-weighted recoverable: $325,267,268,838
+- Quality-weighted recoverable: $325,993,532,034
 - Pruned methods: 4
-- Pruned methods file: /Users/rohitkelapure/medicaid-claims-data/output/analysis/pruned_methods.csv
+- Pruned methods file: /Users/rohitkelapure/projects/medicaid-claims-data/output/analysis/pruned_methods.csv
 - Quality weights applied: True
 
 ## Top 10 States by Weighted Impact
 
-- CA: $43,314,138,776
-- NY: $28,489,245,390
-- TX: $17,189,095,124
-- MA: $17,132,046,623
-- NJ: $14,034,393,687
-- MI: $12,223,592,380
-- AZ: $10,402,442,216
-- FL: $10,124,181,740
-- NC: $9,858,751,639
-- VA: $9,732,925,757
+- CA: $43,418,481,333
+- NY: $28,529,728,790
+- TX: $17,255,731,525
+- MA: $17,157,526,801
+- NJ: $14,046,013,195
+- MI: $12,234,548,768
+- AZ: $10,413,024,910
+- FL: $10,171,023,624
+- NC: $9,884,526,544
+- VA: $9,739,499,702
 
 ## Top 10 Methods by Weighted Impact (multi-method providers counted per method)
 
-- gev_extreme_value: $324,445,103,897
+- gev_extreme_value: $325,863,383,655
+- specialty_peer_comparison: $158,952,873,352
 - iqr_outlier: $115,535,241,879
 - volume_vs_median: $95,702,637,424
 - paid_per_claim_vs_median: $85,049,807,256
 - change_point_cusum: $65,035,548,628
+- state_peer_comparison: $62,539,997,305
 - yoy_growth: $48,256,984,641
 - zscore_paid_per_claim: $34,638,815,484
 - code_concentration_per_provider: $32,195,830,196
-- claims_per_bene_vs_median: $27,854,056,508
-- billing_fan_out: $22,070,980,471
 
 ## Top 20 Risk Queue (weighted impact)
 

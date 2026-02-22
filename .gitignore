@@ -29,5 +29,17 @@ card1-full-monthly-spending.png
 card2-full-top-procedures.png
 card3-full-top-providers.png
 
+# Environment files
+.env
+
+# Logs (regenerable)
+logs/
+
+# Pipeline checkpoints
+pipeline_checkpoints.json
+
+# MCP config (contains API keys)
+.mcp.json
+
 # OS
 .DS_Store

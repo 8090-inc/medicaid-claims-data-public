@@ -1,0 +1,107 @@
+# Medicaid FWA Analytics Pipeline — Master Configuration
+# All values here override hardcoded defaults in config/ modules.
+
+pipeline:
+  name: "Medicaid FWA Analytics Pipeline"
+  version: "2.0.0"
+  max_workers: 10
+  halt_on_failure: true
+  checkpoint_enabled: true
+
+database:
+  path: "medicaid.duckdb"
+  threads: 16
+  memory_limit: "96GB"
+  read_only_default: true
+
+output:
+  base_dir: "output"
+  analysis_dir: "output/analysis"
+  charts_dir: "output/charts"
+  hypotheses_dir: "output/hypotheses"
+  findings_dir: "output/findings"
+  qa_dir: "output/qa"
+  cards_dir: "output/cards"
+  chart_dpi: 150
+  chart_format: "png"
+
+detection:
+  # Toggle individual methods on/off
+  methods:
+    z_score: true
+    iqr_outlier: true
+    gev_extreme_value: true
+    benfords_law: true
+    isolation_forest: true
+    random_forest: true
+    xgboost: true
+    dbscan: true
+    kmeans: true
+    lof: true
+    autoencoder: true
+    vae: true
+    lstm: true
+    transformer: true
+    impossible_volumes: true
+    upcoding: true
+    leie_exclusion: true
+    nppes_deactivation: true
+
+thresholds:
+  z_score_high: 3.0
+  z_score_medium: 2.5
+  z_score_low: 2.0
+  iqr_multiplier_high: 3.0
+  iqr_multiplier_medium: 1.5
+  min_claims: 10
+  min_peers: 20
+  min_excess_amount: 10000
+  confidence_high: 0.8
+  confidence_medium: 0.5
+  confidence_low: 0.2
+  cusum_threshold: 5.0
+  spike_multiplier: 3.0
+  prune_min_flagged: 50
+  prune_holdout_rate_mult: 0.5
+  prune_z_delta: -0.5
+
+hypotheses:
+  total: 1000
+  batch_size: 50
+  z_threshold: 3.0
+  min_claims: 10
+  min_peers: 20
+  min_excess: 10000
+  max_workers: 10
+  timeout_per_hypothesis: 300
+
+logging:
+  level: "INFO"
+  console: true
+  file: true
+  log_dir: "logs"
+  max_bytes: 52428800  # 50 MB
+  backup_count: 5
+
+reference_data:
+  nppes_dir: "reference_data/nppes"
+  hcpcs_dir: "reference_data/hcpcs"
+  leie_dir: "reference_data/leie"
+  dq_atlas_dir: "reference_data/dq_atlas"
+
+design:
+  # 8090 Design System tokens for reports and visualizations
+  brand_blue: "#0052CC"
+  bg_canvas: "#f8fafc"
+  surface: "#ffffff"
+  border: "#e2e8f0"
+  text_body: "#334155"
+  text_headline: "#020617"
+  text_secondary: "#64748b"
+  font_sans: "IBM Plex Sans"
+  font_mono: "Geist Mono"
+  # HHS OpenData tokens for matplotlib charts
+  hhs_amber: "#F59F0A"
+  hhs_dark: "#221E1C"
+  hhs_muted: "#78716D"
+  chart_dpi: 150

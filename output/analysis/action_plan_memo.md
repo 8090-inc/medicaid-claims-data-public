@@ -1,14 +1,12 @@
 # CEO Action Plan — Medicaid Fraud, Waste, and Abuse
 
-![Fraud Pattern Heat Map](../charts/fraud_heatmap_aligned.png)
-
 ## Executive Summary
 
-- Provider‑level exposure totals about $354,986,926,844.
+- Provider‑level exposure totals about $355,781,963,848.
 - A separate $116,147,010,551 reflects state/code rate issues; treat as policy work, not enforcement.
 - The top 10 providers account for $17,697,096,555 (5.0% of provider exposure).
 - The top 100 providers account for $51,131,158,301 (14.4% of provider exposure).
-- Most high‑risk providers show multiple independent red flags (top 500: 450).
+- Most high‑risk providers show multiple independent red flags (top 500: 484).
 - 11 of the top 20 are public entities; focus on policy and rate fixes there.
 
 ## Immediate Actions (Next 30 Days)
@@ -25,14 +23,10 @@
 - Prioritize personal care and community support services for stronger controls.
 - Require extra oversight for billing‑only or middleman structures.
 
-![Top 20 Flagged Providers](../charts/top20_flagged_providers.png)
-
-![Flagged Spending by State](../charts/state_heatmap.png)
-
 ## Where the Risk Concentrates
 
-- Public agencies with outlier billing: 19815 providers
-- Network or middleman billing: 2699 providers
+- Public agencies with outlier billing: 20115 providers
+- Network or middleman billing: 2690 providers
 - Sudden starts or stops: 2433 providers
 - Implausible volume or upcoding: 36 providers
 - Billing every day: 20 providers
@@ -40,10 +34,10 @@
 
 ## Deliverables
 
-- Priority queue (validated + sorted): `/Users/rohitkelapure/medicaid-claims-data/output/analysis/priority_queue_with_notes.csv`
-- Top 50 priority list: `/Users/rohitkelapure/medicaid-claims-data/output/analysis/top50_priority_list.md`
-- Top 100 priority list: `/Users/rohitkelapure/medicaid-claims-data/output/analysis/top100_priority_list.md`
-- Top 200 priority list: `/Users/rohitkelapure/medicaid-claims-data/output/analysis/top200_priority_list.md`
+- Priority queue (validated + sorted): `/Users/rohitkelapure/projects/medicaid-claims-data/output/analysis/priority_queue_with_notes.csv`
+- Top 50 priority list: `/Users/rohitkelapure/projects/medicaid-claims-data/output/analysis/top50_priority_list.md`
+- Top 100 priority list: `/Users/rohitkelapure/projects/medicaid-claims-data/output/analysis/top100_priority_list.md`
+- Top 200 priority list: `/Users/rohitkelapure/projects/medicaid-claims-data/output/analysis/top200_priority_list.md`
 - Provider/systemic risk queues in `output/analysis/` (top100/top500 each).
 - Fraud pattern summary: `output/analysis/fraud_patterns.md`
 

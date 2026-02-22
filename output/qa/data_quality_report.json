@@ -1,5 +1,5 @@
 {
-  "csv_path": "/Users/rohitkelapure/medicaid-claims-data/medicaid-provider-spending.csv",
+  "csv_path": "/Users/rohitkelapure/projects/medicaid-claims-data/medicaid-provider-spending.csv",
   "total_rows_scanned": 227083361,
   "valid_rows": 225042949,
   "invalid_rows": 2040412,
@@ -191,5 +191,5 @@
     "2018-04": 8762406621.419735,
     "2024-12": 4199354837.1303525
   },
-  "generated_at": "2026-02-14 19:16:24"
+  "generated_at": "2026-02-21 23:40:19"
 }
