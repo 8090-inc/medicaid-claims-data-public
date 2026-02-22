@@ -20,7 +20,7 @@ One important note: December 2024 data appears incomplete in many states. Provid
 
 ## The Ten Patterns We Found
 
-### 1. Home Health and Personal Care — $55.1B, 20,047 providers
+### 1. Home Health and Personal Care — $55.1B, 20,041 providers
 
 ![Top 20 Procedures by Total Spending](../charts/top20_flagged_procedures.png)
 
