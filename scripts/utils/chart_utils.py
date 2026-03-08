@@ -180,13 +180,24 @@ def create_line_chart(x, y, title, subtitle, output_path, color=HHS_AMBER,
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
 
-    # Rotate x labels if many
+    # Thin x-axis labels for readability
     if len(x) > 20:
-        plt.xticks(rotation=45, ha='right')
+        step = max(1, len(x) // 7)  # aim for ~7 labels
+        tick_indices = list(range(0, len(x), step))
+        ax.set_xticks(tick_indices)
+        tick_labels = []
+        for i in tick_indices:
+            lbl = str(x[i])
+            # Simplify YYYY-MM or YYYY-MM-DD to just YYYY for yearly+ intervals
+            if step >= 10 and len(lbl) >= 7:
+                tick_labels.append(lbl[:4])
+            else:
+                tick_labels.append(lbl)
+        ax.set_xticklabels(tick_labels, rotation=0, ha='center')
 
     add_hhs_border(fig)
     add_hhs_branding(fig)
-    plt.tight_layout()
+    plt.tight_layout(rect=[0, 0, 1, 0.88])
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     fig.savefig(output_path, facecolor=fig.get_facecolor(), edgecolor=fig.get_edgecolor())
     plt.close(fig)

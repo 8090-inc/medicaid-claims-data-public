@@ -55,6 +55,11 @@ def chart_monthly_spending(con):
     months = [r[0] for r in rows]
     paid = [r[1] for r in rows]
 
+    # Drop final month if incomplete (>50% drop from prior month)
+    if len(paid) >= 2 and paid[-1] < paid[-2] * 0.5:
+        months = months[:-1]
+        paid = paid[:-1]
+
     create_line_chart(
         months, paid,
         'Monthly Medicaid Provider Spending',
